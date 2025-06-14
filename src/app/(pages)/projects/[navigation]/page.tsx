@@ -1,31 +1,25 @@
 import { notFound } from "next/navigation";
-import ProjectDetails from "./ProjectDetails";
+import ProjectDetails from "@/app/(pages)/projects/[navigation]/ProjectDetails";
 
-type Props = {
-  params: {
+interface PageProps {
+  params: Promise<{
     navigation: string;
-  };
-};
-
-export async function generateStaticParams(): Promise<
-  { navigation: string }[]
-> {
+  }>;
+}
+export async function generateStaticParams() {
   const { projects } = await import("@/app/data/projects");
   return projects.map((project) => ({
     navigation: project.navigation,
   }));
 }
 
-export default async function ProjectDetailsViewPage({ params }: Props) {
+export default async function Page({ params }: PageProps) {
   const { projects } = await import("@/app/data/projects");
 
-  const project = projects.find(
-    (project) => project.navigation === params.navigation
-  );
+  const navigation = (await params).navigation;
+  const project = projects.find((project) => project.navigation === navigation);
 
-  if (!project) {
-    notFound();
-  }
+  if (!project) notFound();
 
   return <ProjectDetails project={project} />;
 }
