@@ -1,18 +1,22 @@
 import { notFound } from "next/navigation";
 import ProjectDetails from "./ProjectDetails";
 
-export async function generateStaticParams() {
+type Props = {
+  params: {
+    navigation: string;
+  };
+};
+
+export async function generateStaticParams(): Promise<
+  { navigation: string }[]
+> {
   const { projects } = await import("@/app/data/projects");
   return projects.map((project) => ({
     navigation: project.navigation,
   }));
 }
 
-export default async function ProjectDetailsViewPage({
-  params,
-}: {
-  params: { navigation: string };
-}) {
+export default async function ProjectDetailsViewPage({ params }: Props) {
   const { projects } = await import("@/app/data/projects");
 
   const project = projects.find(
