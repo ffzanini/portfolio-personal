@@ -1,0 +1,261 @@
+{
+  "title": "From Code to Delivery",
+  "breadcrumb_begin": "Projects",
+  "breadcrumb_end": "Specifications",
+  "sub_title": "Throughout my career, I’ve participated in the creation of projects that positively impacted people and businesses. Here you can browse through various websites I’ve developed, used by thousands of people every day. Most of the projects listed here are still active, some have been discontinued, and others are not included due to contractual reasons.",
+  "projects_title": "Featured Projects",
+  "projects_all": "Full list of projects",
+  "github": "Project available on GitHub",
+  "projects": [
+    {
+      "id": 1,
+      "title": "Personal portfolio built with Next.js, Tailwind, and TypeScript",
+      "description": "An interactive showcase of my skills, projects, and experiments with new technologies — all designed with a focus on usability and constant evolution.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "Welcome to my portfolio! This project was designed to showcase my skills, experiences, and the work I've done throughout my career. Here you'll find a detailed collection of my projects, highlighting my capabilities and the dedication I bring to each one.",
+        "The design is inspired by usability and mobile-first principles, ensuring intuitive navigation so visitors can easily explore each section and gain a complete view of my work — and about myself.",
+        "This project also serves as my testing lab, where I implement new libraries and technologies before using them in real-world applications. It helps me stay up-to-date with the latest market trends and maintain the quality and efficiency of my work."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Modern frontend with Next.js and TypeScript",
+        "Animations with Framer Motion",
+        "Responsive design with Tailwind CSS",
+        "Dark Mode",
+        "Functional contact form",
+        "Translation system",
+        "Custom component architecture",
+        "Smart preloading"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Efficient multilingual management",
+        "Precise animation control",
+        "Deploy and caching with Vercel",
+        "Safe sanitization of dynamic HTML",
+        "Language selected dynamically based on user location"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Refined and smooth UX",
+        "High performance",
+        "Internationalization ready for recruiters",
+        "Reusability and scalability",
+        "Integration with external services"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "DOVE Research Centre",
+      "description": "Clearly presenting research lines, providing access to publications, team profiles, and registration forms — all in a responsive and well-organized structure.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "The website of the DOVE Research Centre (Center for Research on Human Development and Violence) at the Federal University of Pelotas was developed as a bilingual institutional platform, offering content in both English and Portuguese. With a clear and modern layout, the site showcases the center's work in a highly accessible and well-structured way."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Multilingual navigation structure",
+        "Responsive and hierarchical menu",
+        "Newsletter signup form",
+        "Downloadable publications (PDFs)",
+        "News and reports section",
+        "‘People’ section with team profiles",
+        "List of research areas",
+        "Institutionalized content sections",
+        "Admin panel for full site control"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Internationalization for an institutional website",
+        "Efficient PDF management",
+        "Layout consistency across sections",
+        "SEO for academic and technical content",
+        "Data security and privacy",
+        "Lightweight and accessible design"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "International accessibility",
+        "Engagement with target audience",
+        "Academic transparency and visibility",
+        "Established institutional authority",
+        "Editorial scalability"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "JA Índio Jiu Jitsu",
+      "description": "A website developed to attract and engage potential students at any stage of their journey, from white belt to black belt. Featuring a responsive, appealing, and modern design.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "The JA Índio Jiu Jitsu project, located in the city of Pelotas - RS, was designed to be a responsive and organized site offering free class scheduling, class time information, descriptions of its programs (by level and audience), testimonials, contact information, and the academy's philosophy. The goal is to showcase the excellent work of the academy, inspire new students, and create a deeper connection with the audience."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Institutional presentation of the academy",
+        "Class calendar",
+        "Detailed program descriptions",
+        "Call to action with online registration",
+        "Responsive layout",
+        "Photo gallery",
+        "Pages for promoting courses"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Dynamic organization of class schedules",
+        "Lightweight and accessible gallery",
+        "Local SEO and performance optimization",
+        "Responsiveness and cross-platform compatibility"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Significant improvement in professional image",
+        "Higher student conversion",
+        "Greater audience engagement",
+        "Improved visibility of the location",
+        "Increased course sales"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "EducaCross",
+      "description": "A hybrid and gamified educational platform with over 2,000 games aligned with the BNCC, adapted to each student's needs. It offers dashboards for teachers, pedagogical support, and multiplatform usage.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "While working at nav9.tech, I had the opportunity to be a tech partner to several companies, including contributing to various development areas of EducaCross platform version 2.0.",
+        "It’s a robust and modern EdTech platform focused on teaching Math, Portuguese, Logic, and literacy, especially for Early Childhood and Elementary Education. With over 2,000 digital games aligned with the BNCC (Brazilian National Common Core), the platform combines adaptive gamification, hybrid learning, and real-time reporting to engage children aged 3 to 12.",
+        "Educators and school managers have access to advanced dashboards that allow the creation of personalized learning paths, student progress monitoring, and data aligned with the BNCC. There is also pedagogical support and ongoing training for teachers, effectively connecting technology with educational practice.",
+        "The platform is compatible with classroom, lab, mobile, and offline environments, promoting digital inclusion in schools. Its hybrid architecture prioritizes security (LGPD), accessibility, and scalability, currently used in over 1,700 schools with thousands of active users."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Gamified educational platform",
+        "Full management of learning paths via backoffice",
+        "Analytical reports for teachers and managers",
+        "Usage in multiple environments",
+        "Family engagement tools",
+        "Extra content such as videos and EdTech forum",
+        "Exclusive access design"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Scalability and distributed infrastructure",
+        "Online/offline synchronization",
+        "Data protection and school privacy",
+        "Multiplatform compatibility",
+        "Alignment with educational standards (BNCC)",
+        "Custom layout depending on login type"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Wide adoption across institutions (+1700 schools)",
+        "Improved student learning and focus",
+        "Student and family engagement",
+        "Continuous innovation of the platform"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Shoppings Iguatemi",
+      "description": "The Iguatemi Portal is a secure B2B platform allowing store owners to access contract info, submit documents, and engage in marketing opportunities within the Iguatemi network, all in compliance with LGPD.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "While working at nav9.tech, I had the opportunity to collaborate for over 3 years on the development of Iguatemi's products, especially the Store Owner Portal.",
+        "The portal is an exclusive area for store owners and their teams, focused on corporate communication, sales info, contract management, tax audits, invoice handling, benefits, news, promotions, and internal processes. Users log in through a secure and encrypted interface, with user/password authentication and full LGPD compliance, ensuring access based on their role and contract."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Login area for store owners",
+        "Sales reporting",
+        "Service requests",
+        "User management",
+        "Invoice dashboard with history",
+        "Tax audit system",
+        "Benefit redemption and tracking",
+        "Shopping mall geolocation"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Parallel access management",
+        "LGPD compliance and data security",
+        "Secure handling of school-related data",
+        "Corporate financial reporting",
+        "SEO and performance across multiple sections"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Scalable platform covering 15 malls and over 2800 stores",
+        "83% increase in tax audits",
+        "Full control over reported sales",
+        "Improved validation of store and contract information",
+        "78% increase in service request approvals"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Portfolio v2",
+      "description": "Version 2.0 of my personal portfolio, now discontinued.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "The goal was the same as the current version: to showcase my work, studies, and experiments. Feel free to explore the previous version of the site."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Modern frontend with Next.js and TypeScript",
+        "Animations with Framer Motion",
+        "Responsive design with Tailwind CSS",
+        "Dark mode",
+        "Functional contact form",
+        "Translation system"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Efficient multilingual management",
+        "Precise animation control",
+        "Deploy and caching with Vercel",
+        "Secure sanitization of dynamic HTML"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "High performance",
+        "Internationalization ready for recruiters",
+        "Reusability and scalability"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Currículum Online",
+      "description": "A minimalist and highly functional online résumé page, featuring clear sections for experience, stack, projects, and contact — with light animations, responsive design, and optimized performance.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "The goal is to provide a high-performance, clear, and responsive online résumé. Built with modern technologies, the site has a clean and organized structure, enabling smooth navigation across sections. It is entirely mobile-first, offering a great reading and interaction experience on any device, with smooth transitions and subtle animations."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Modern frontend with Next.js and TypeScript",
+        "Animations with Framer Motion",
+        "Responsive design with Tailwind CSS",
+        "Translation system"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Efficient multilingual management",
+        "Deploy and caching with Vercel",
+        "Secure sanitization of dynamic HTML"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "High performance",
+        "Internationalization ready for recruiters"
+      ]
+    }
+  ]
+}

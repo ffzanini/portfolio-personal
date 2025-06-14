@@ -1,0 +1,17 @@
+{
+  "title": "Chama no inbox digital",
+  "sub_title": "Fique à vontade para se conectar comigo, seja por aqui ou no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Estou disponível para discussões sobre oportunidades, insights no desenvolvimento web e no mundo do desenvolvimento de jogos. Vamos estabelecer uma conexão e explorar essas áreas juntos!",
+  "form": {
+    "title": "Manda um salve!",
+    "sub_title": "Nenhum middleware entre a gente — pode falar direto.",
+    "name": "Seu nome",
+    "email": "E-mail",
+    "message": "Digite sua mensagem"
+  },
+  "loading": "Enviando mensagem...",
+  "success": "Mensagem enviada com sucesso!",
+  "error": "Sua mensagem não foi enviada, tente novamente mais tarde.",
+  "tooltip": "Algum campo faltando ou e-mail inserido errado",
+  "button_text_ready": "Pronto, agora é só enviar!",
+  "button_text_not_ready": "Aguardando preenchimento..."
+}

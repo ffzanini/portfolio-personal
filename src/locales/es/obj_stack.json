@@ -1,0 +1,47 @@
+{
+  "title": "Stack tecnológico",
+  "sub_title": "Muchas personas me preguntan qué herramientas, lenguajes y servicios utilizo o he utilizado en el desarrollo de mis proyectos — así que decidí reunir todo en un solo lugar.",
+
+  "mainSpecialties": "Principales especialidades",
+  "knownTech": "Tecnologías que manejo",
+
+  "frontend": "Creando interfaces modernas y responsivas",
+  "backend": "Desarrollando APIs robustas y escalables",
+  "devops": "Experiencia con infraestructura moderna",
+
+  "strengths": {
+    "title": "Competencias más allá del código",
+    "sub_title": "Habilidades que desarrollé a lo largo del camino para construir productos digitales de calidad.",
+    "items": [
+      {
+        "title": "Desarrollo Frontend",
+        "description": "Interfaces que combinan rendimiento, accesibilidad y diseño moderno — siempre pensadas para quien realmente las va a usar."
+      },
+      {
+        "title": "Diseño Responsivo",
+        "description": "Interfaces diseñadas con enfoque mobile first, adaptadas a diferentes tamaños de pantalla y centradas en la usabilidad en cualquier dispositivo."
+      },
+      {
+        "title": "Arquitectura de Software",
+        "description": "Aplicaciones diseñadas para crecer: siguiendo principios de DDD y buenas prácticas de ingeniería para crear arquitecturas escalables, organizadas y sostenibles."
+      },
+      {
+        "title": "Metodologías Ágiles",
+        "description": "Aplicación de prácticas ágiles como Navway, Scrum y Kanban para entregar valor de forma continua y colaborativa."
+      },
+      {
+        "title": "Liderazgo Técnico",
+        "description": "Coordinación de equipos de desarrollo con foco en calidad, estandarización del código, alineación técnica y mentorías."
+      },
+      {
+        "title": "Trabajo en equipo",
+        "description": "Colaboración efectiva con distintos perfiles profesionales como stakeholders, diseñadores y desarrolladores, promoviendo comunicación y resultados conjuntos."
+      }
+    ]
+  },
+
+  "footer": {
+    "title": "¡Mi historia no termina aquí!",
+    "message": "Consulta mi <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículum completo</a></b> y descubre en detalle todo lo que he producido en más de 10 años de experiencia en el área de tecnología."
+  }
+}

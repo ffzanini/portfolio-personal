@@ -1,0 +1,289 @@
+{
+  "title": "Do código à entrega",
+  "breadcrumb_begin": "Projetos",
+  "breadcrumb_end": "Especificações",
+  "sub_title": "Ao longo da minha carreira, participei na criação de projetos que impactaram positivamente pessoas e negócios. Aqui  é possível navegar por diferentes sites que desenvolvi, que são usados por milhares de pessoas todos os dias. Aqui se encontram a maioria dos projetos que ainda estão ativos, outros foram descontinuados, e alguns não estão listados aqui por motivos contratuais.",
+  "projects_title": "Projetos em foco",
+  "projects_all": "Lista completa de projetos",
+  "github": "Projeto disponível no github",
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portifólio pessoal feito com Next.js, Tailwind e TypeScript",
+      "description": "Uma vitrine interativa das minhas habilidades, projetos e testes com novas tecnologias — tudo pensado com foco em usabilidade e evolução constante.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "Bem-vindo ao meu portfólio! Este projeto foi criado e pensado para servir como uma vitrine das minhas habilidades, experiências e projetos realizados ao longo da minha carreira. Aqui, você encontrará uma coleção detalhada do meu trabalho, destacando minhas competências e a dedicação que coloco em cada projeto.",
+        "O design foi inspirado pelos princípios de usabilidade e mobile first, garantindo ao máximo uma navegação intuitiva para que se possa explorar facilmente cada seção e com isso, fornecer uma visão completa dos meus trabalhos como também, ao meu respeito.",
+        "Além disso, este projeto também serve como meu laboratório de testes, onde implemento novas bibliotecas e tecnologias antes de utilizá-las em projetos reais. Isso me permite estar sempre atualizado com as últimas tecnologias do mercado e garantir a qualidade e eficiência em meus trabalhos."
+      ],
+
+      "stackTitle": "Stack Tecnológico",
+
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Frontend moderno com Next.js e TypeScript",
+        "Animações com Framer Motion",
+        "Design responsivo com Tailwind CSS",
+        "Dark Mode",
+        "Formulário de contato funcional",
+        "Sistema de traduções",
+        "Componentização personalizada",
+        "Preloading inteligente"
+      ],
+
+      "challengesTitle": "Desafios técnicos",
+      "challenges": [
+        "Gerenciamento multilingue eficiente",
+        "Controle preciso de animações",
+        "Deploy e cache com a Vercel",
+        "Sanitização segura de HTML dinâmico",
+        "Linguagem selecionada dinamicamente baseada na localidade de acesso"
+      ],
+
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "UX refinada e fluida",
+        "Alta performance",
+        "Internacionalização pronta para recrutadores",
+        "Reutilização e escalabilidade",
+        "Integração com produtos externos"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "DOVE Research Centre",
+      "description": "Apresentar com clareza linhas de pesquisa, oferecer acesso a publicações científicas, perfis de equipe, inscrições para o grupo, tudo em uma estrutura responsiva e organizada.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "O site do DOVE Research Centre (Centro de Pesquisas em Desenvolvimento Humano e Violência) da Universidade Federal de Pelotas foi desenvolvido como uma plataforma institucional bilíngue, oferecendo seu conteúdo em inglês e português. Com uma apresentação clara e moderna, o site destaca o trabalho realizado pelo centro de forma extremamente acessível e bem estruturada."
+      ],
+
+      "stackTitle": "Stack Tecnológico",
+
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Estrutura de navegação multilingue",
+        "Menu responsivo e hierarquizado",
+        "Formulário de assinatura de newsletter",
+        "Download de publicações (PDFs)",
+        "Seção de notícias e relatórios",
+        "Seção de equipes ('People') com perfis",
+        "Lista de áreas de pesquisa",
+        "Recursos institucionalizados",
+        "Painel administrativo para controle total das páginas do site "
+      ],
+
+      "challengesTitle": "Desafios técnicos",
+      "challenges": [
+        "Internacionalização em site institucional",
+        "Gerenciamento eficiente de PDFs",
+        "Consistência de layout em diversas seções",
+        "SEO para conteúdo técnico e acadêmico",
+        "Segurança e privacidade de dados",
+        "Design leve e acessível"
+      ],
+
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Acessibilidade internacional",
+        "Engajamento com o público-alvo",
+        "Transparência e visibilidade acadêmica",
+        "Autoridade institucional consolidada",
+        "Escalabilidade editorial"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "JA Índio Jiu Jitsu",
+      "description": "Um site desenvolvido para atrair e envolver possíveis alunos em qualquer estágio jornada, do faixa branca ao faixa preta. Com um design responsivo, atrativo e moderno.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "O projeto da JA Índio Jiu Jitsu, situado na cidade de Pelotas - RS, foi idealizada para ser um site responsivo e organizado que oferece agendamento de aulas gratuitas, informações sobre os horários de aulas, descrições de seus programas (por nível e público), depoimentos, informações de contato e filosofia da academia, com a intenção de divulgar o excelente trabalho da academia, inspirar novos alunos e gerar mais conexão com o público."
+      ],
+
+      "stackTitle": "Stack Tecnológico",
+
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Apresentação institucional da academia",
+        "Calendário de aulas",
+        "Detalhamento da apresentação dos programas da academia",
+        "CTA com possibilidade de inscrição online",
+        "Layout responsivo",
+        "Galeria de fotos",
+        "Páginas para divulgação de cursos"
+      ],
+
+      "challengesTitle": "Desafios técnicos",
+      "challenges": [
+        "Organização dinâmica dos horários das aulas",
+        "Galeria leve e acessível",
+        "SEO local e performance aumentada",
+        "Responsividade e compatibilidade multiplataforma"
+      ],
+
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Melhora significativa no visual profissional",
+        "Maior conversão de alunos",
+        "Engajamento com o público",
+        "Melhor exposição do local",
+        "Aumento nas vendas dos cursos"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "EducaCross",
+      "description": "Plataforma educativa híbrida e gamificada, com mais de 2.000 jogos alinhados à BNCC, adaptadas às necessidades de cada aluno. Oferece dashboards para professores, suporte pedagógico e uso multiplataforma.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "Durante meu período de trabalho na nav9.tech, tive a oportunidade de ser um parceiro de tecnologia de várias empresas e dentre elas, tive o prazer de trabalhar em diversas frentes de desenvolvimento da versão 2.0 da plataforma da Educacross.",
+        "É uma plataforma de EdTech robusta e moderna voltada para o ensino de Matemática, Língua Portuguesa, Lógica e alfabetização, com foco em Educação Infantil e Ensino Fundamental. Conta com mais de 2.000 jogos digitais alinhados à BNCC (Base Nacional Comum Curricular), a plataforma combina gamificação adaptativa, aprendizagem híbrida e relatórios em tempo real para envolver crianças de 3 a 12 anos.",
+        "Educadores e gestores têm acesso a dashboards avançados que permitem traçar trilhas personalizadas, monitorar o progresso dos alunos, e visualizar dados alinhados à BNCC. Além disso, há suporte pedagógico e formação continuada para professores, criando uma conexão efetiva entre tecnologia e prática educativa.",
+        "A plataforma é compatível com uso em sala de aula, laboratórios, dispositivos móveis e offline, promovendo inclusão digital nas escolas. A arquitetura híbrida do produto prioriza segurança (LGPD), acessibilidade e escalabilidade, já que está presente em mais de 1.700 escolas, com milhares de usuários ativos."
+      ],
+
+      "stackTitle": "Stack Tecnológico",
+
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Plataforma educacional gamificada",
+        "Gerenciamento de todas trilhas e plataforma através do backoffice",
+        "Relatórios analíticos para professores e gestores",
+        "Uso em múltiplos ambientes",
+        "Engajamento familiar",
+        "Recursos extras como vídeos e fórum EdTech",
+        "Design exlcusivo de acesso"
+      ],
+
+      "challengesTitle": "Desafios técnicos",
+      "challenges": [
+        "Escalabilidade e infraestrutura distribuída",
+        "Sincronização online/offline",
+        "Segurança e proteção de dados escolares",
+        "Compatibilidade multiplataforma",
+        "Alinhamento com padrões educacionais (BNCC)",
+        "Formatação de design exclusiva para escolas dependendo do tipo de login acesso"
+      ],
+
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Adoção ampla em instituições (+1700 escolas)",
+        "Aumento na aprendizagem e atenção do aluno",
+        "Engajamento estudantil e familiar",
+        "Inovação contínua das plataformas"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Shoppings Iguatemi",
+      "description": "O Portal Iguatemi é um B2B bem protegido que permite o lojista acessar informações de seu contrato, enviar documentos e participar de oportunidades de marketing dentro da rede Iguatemi, tudo seguindo os padrões de LGPD.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "Durante meu período de trabalho na nav9.tech, tive a oportunidade de ser um parceiro de tecnologia de várias empresas e dentre elas, tive o prazer de colaborar por mais de 3 anos no desenvolvimento dos produtos dos shoppings Iguatemi, tendo como principal o Portal do Lojista.",
+        "O Portal do Lojista é uma área exclusiva para donos de loja e seus colaboradores, voltada à comunicação corporativa, informação de vendas, gestão de contratos, auditoria fiscal, recebimento de boletos, resgate de benefícios, notícias, promoções e demais processos internos. Os usuários realizam login em uma interface encriptada e segura, com autenticação por usuário e senha, seguindo todos padrões de segurança do LGPD para fornecer o acesso as funções respectivas do usuário e contrato."
+      ],
+
+      "stackTitle": "Stack Tecnológico",
+
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Área de login para lojistas",
+        "Informe de vendas",
+        "Solicitação de serviços",
+        "Controle de usuários",
+        "Painel de boletos para pagar e histórico",
+        "Aduitoria Fiscal",
+        "Resgate e visualizaçao de benefícios",
+        "Geolocalização de shoppings"
+      ],
+
+      "challengesTitle": "Desafios técnicos",
+      "challenges": [
+        "Gestão de acessos paralelos",
+        "Conformidade com LGPD e segurança da informação",
+        "Segurança e proteção de dados escolares",
+        "Relatórios financeiros corporativos",
+        "SEO e performance para múltiplas seções"
+      ],
+
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Empreendimento amplo e escalável contemplando 15 shoppings e mais de 2800 lojas",
+        "Aumento de 83% nas auditorias fiscais",
+        "Controle total das vendas informadas",
+        "Facilitação na validação de informações das lojas e contratos",
+        "Aumento nas aprovações de solicitação de servço em 78%"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Portifólio v2",
+      "description": "Versão 2.0 do meu portifólio, que agora está descontinuado.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "O objetivo é o mesmo da versão atual, divulgação do trabalho, estudos e testes. Fique a vontade para acessa-lo e explorar a antiga versão."
+      ],
+
+      "stackTitle": "Stack Tecnológico",
+
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Frontend moderno com Next.js e TypeScript",
+        "Animações com Framer Motion",
+        "Design responsivo com Tailwind CSS",
+        "Dark Mode",
+        "Formulário de contato funcional",
+        "Sistema de traduções"
+      ],
+
+      "challengesTitle": "Desafios técnicos",
+      "challenges": [
+        "Gerenciamento multilingue eficiente",
+        "Controle preciso de animações",
+        "Deploy e cache com a Vercel",
+        "Sanitização segura de HTML dinâmico"
+      ],
+
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Alta performance",
+        "Internacionalização pronta para recrutadores",
+        "Reutilização e escalabilidade"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Currículo online",
+      "description": "Uma página de currículo online minimalista e altamente funcional, exibindo seções claras de experiência, stack, projetos e contato, com animações leves, design responsivo e performance otimizada.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "O objetivo é ser uma página de currículo online com foco em performance, clareza e responsividade. Criado com tecnologias modernas, o site apresenta uma estrutura limpa e organizada, que permite a navegação fluida pelas seções de apresentação. Ele é inteiramente mobile-first, garantindo ótima experiência de leitura e interação em qualquer dispositivo, com transições suaves e animações discretas."
+      ],
+
+      "stackTitle": "Stack Tecnológico",
+
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Frontend moderno com Next.js e TypeScript",
+        "Animações com Framer Motion",
+        "Design responsivo com Tailwind CSS",
+        "Sistema de traduções"
+      ],
+
+      "challengesTitle": "Desafios técnicos",
+      "challenges": [
+        "Gerenciamento multilingue eficiente",
+        "Deploy e cache com a Vercel",
+        "Sanitização segura de HTML dinâmico"
+      ],
+
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Alta performance",
+        "Internacionalização pronta para recrutadores"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Behind the Code",
+  "sub_title": "My mission is to connect people with technology through programming and digital content — creating experiences that inspire, educate, and transform.",
+  "description": {
+    "title": "The road so far",
+    "begin": "Nice to meet you! My name is Felipe Frantz Zanini, a software engineer passionate about jiu-jitsu, running, indie game development, Dota 2, storytelling, pixel art, music, and investments. I'm 31 years old and currently live in Pelotas, Rio Grande do Sul, Brazil.",
+    "middle": "My journey in software development began in 2008, during technical school. In 2010, after finishing the course, I started my first internship in programming and have never stopped learning and evolving. After being hired as a software engineer, I took part in more than <b>50 projects</b>, using various technologies, with an emphasis on PHP.",
+    "education": "Passionate about the field and always looking to improve, I earned a Bachelor's Degree in IT Management and a Specialization in IT Management. I also started a Master's in Computer Science.",
+    "end": "I currently work as a Senior Software Engineer & Tech Lead specializing in frontend development at <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b>, where I have the privilege of being a tech partner to several companies such as <b>Shoppings Iguatemi</b>, <b>UFC Fantasy</b>, <b>EducaCross</b>, <b>Grupo SEB</b>, <b>Rede AZ</b>, <b>Vittude</b>, supporting them in building the best product solutions for the web."
+  },
+
+  "skills": {
+    "title": "From imagination to deploy",
+    "subtitle": "A look into my process for turning ideas into digital products",
+    "process": [
+      {
+        "id": 1,
+        "title": "Understanding the pain",
+        "description": "Everything starts with a good conversation. I listen to your ideas, understand your needs and motivations, translate them into something practical, and think about the best way to turn them into something visually appealing and functional."
+      },
+      {
+        "id": 2,
+        "title": "Building the structure",
+        "description": "Before thinking about looks, I define the structure of the project: which pages are needed, how the elements will behave, and how everything will be logically and efficiently connected."
+      },
+      {
+        "id": 3,
+        "title": "Bringing code to life",
+        "description": "Time to bring the project to life! I develop interfaces focused on usability, responsiveness, and performance. Each element is optimized to work well on any device, ensuring fast loading and smooth navigation."
+      },
+      {
+        "id": 4,
+        "title": "External integrations",
+        "description": "When the project needs forms, authentication, or integration with other systems, I've got that covered too — always focusing on security, stability, and reliability."
+      },
+      {
+        "id": 5,
+        "title": "Testing and quality assurance",
+        "description": "Before launching, I perform various tests to ensure everything works as expected — across different browsers, devices, resolutions, and usage contexts."
+      },
+      {
+        "id": 6,
+        "title": "Time to go live!",
+        "description": "To wrap it all up, I publish the project and make sure everything is ready for the world to see — keeping an eye out and providing support in the first few days to fix any detail that might come up."
+      }
+    ]
+  },
+
+  "stack": {
+    "title": "The gears behind the process",
+    "description": "Behind every click and line of code are technologies chosen with care and purpose. If you'd like to see the full stack or send a message, just click the buttons below.",
+    "button": "View full stack",
+    "contact": "Send message"
+  },
+
+  "site": {
+    "title": "Coffee, code & deploy",
+    "subtitle": "A technical summary of the technologies and tools that make this site truly mine — everything that happened behind the clicks.",
+    "description": "This site was developed using <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b> concepts, with the <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b> framework, deployed via <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, styled using <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animated with <b><a href='https://motion.dev/' target='_blank'>Framer-Motion</a></b>, and featuring icons from <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. The typography is based on <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>MavenPro</a></b>. This portfolio also serves as a showcase for future content and a testing lab — where I experiment with libraries and tools — and as a home for some of my ",
+    "projects": "projects."
+  },
+
+  "contact": {
+    "title": "Ready for a pull request of ideas",
+    "description": "I’m open to new projects, consulting opportunities, or just chatting about building digital products or game development. Feel free to message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a message on the ",
+    "contact": "contact page."
+  }
+}

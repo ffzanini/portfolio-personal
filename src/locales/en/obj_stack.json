@@ -1,0 +1,47 @@
+{
+  "title": "Tech Stack",
+  "sub_title": "Many people ask me which tools, languages, and services I use or have used in the development of my projects — so I decided to gather everything in one place.",
+
+  "mainSpecialties": "Main specialties",
+  "knownTech": "Technologies I'm familiar with",
+
+  "frontend": "Building modern and responsive interfaces",
+  "backend": "Developing robust and scalable APIs",
+  "devops": "Experience with modern infrastructure",
+
+  "strengths": {
+    "title": "Skills beyond code",
+    "sub_title": "Skills I've developed along the journey to build high-quality digital products.",
+    "items": [
+      {
+        "title": "Frontend Development",
+        "description": "Interfaces that combine performance, accessibility, and modern design — always focused on the real user experience."
+      },
+      {
+        "title": "Responsive Design",
+        "description": "Interfaces designed with a mobile-first approach, adapted for different screen sizes, and focused on usability across all devices."
+      },
+      {
+        "title": "Software Architecture",
+        "description": "Applications designed to scale: following DDD principles and engineering best practices to create scalable, organized, and sustainable architectures."
+      },
+      {
+        "title": "Agile Methodologies",
+        "description": "Application of agile practices such as Navway, Scrum, and Kanban to deliver value continuously and collaboratively."
+      },
+      {
+        "title": "Technical Leadership",
+        "description": "Leading development teams with a focus on quality, code standardization, technical alignment, and mentoring."
+      },
+      {
+        "title": "Teamwork",
+        "description": "Effective collaboration with different professional profiles such as stakeholders, designers, and developers, promoting communication and joint results."
+      }
+    ]
+  },
+
+  "footer": {
+    "title": "My story doesn’t end here!",
+    "message": "Check out my <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">full résumé</a></b> and discover in detail everything I’ve produced over more than 10 years of experience in the tech industry."
+  }
+}

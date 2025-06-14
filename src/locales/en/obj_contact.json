@@ -1,0 +1,17 @@
+{
+  "title": "Ping me in the digital inbox",
+  "sub_title": "Feel free to connect with me here or on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. I'm available to talk about opportunities, web development insights, and the world of game development. Let’s connect and explore these areas together!",
+  "form": {
+    "title": "Drop a line!",
+    "sub_title": "No middleware between us — talk straight.",
+    "name": "Your name",
+    "email": "Email",
+    "message": "Type your message"
+  },
+  "loading": "Sending message...",
+  "success": "Message sent successfully!",
+  "error": "Your message wasn't sent, please try again later.",
+  "tooltip": "Some fields are missing or the email is invalid",
+  "button_text_ready": "All set, just send now!",
+  "button_text_not_ready": "Waiting for you..."
+}

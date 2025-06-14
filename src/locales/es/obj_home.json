@@ -1,0 +1,19 @@
+{
+  "welcome": "Bienvenido! Mucho gusto en conocerte.",
+  "name": "Soy Felipe",
+  "roles": [
+    "Ingeniero de Software",
+    "Escritor y Guionista",
+    "Desarrollador de Videojuegos Indie",
+    "Cinturón Marrón de Jiu Jitsu"
+  ],
+
+  "description": "Actualmente soy instructor en <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu - Pelotas</a></b> y Ingeniero de Software Senior & Tech Lead en <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b> centrado en el desarrollo frontend, trabajando como compañero tecnológico y ayudando a construir la próxima generación de aplicaciones web.",
+  "location": "Pelotas - RS, Brasil",
+  "experience": "+10 años de experiencia",
+  "projects": "+50 proyectos desarrollados",
+  "stack": "Stack Principal",
+  "textButtonAbout": "Leer más sobre mí",
+  "textButtonResume": "Ver mi currículum",
+  "textButtonStack": "Más tecnologías"
+}

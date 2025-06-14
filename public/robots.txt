@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ffzanini.dev
+
+# Sitemaps
+Sitemap: https://ffzanini.dev/sitemap.xml

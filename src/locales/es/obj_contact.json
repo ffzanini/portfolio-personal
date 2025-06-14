@@ -1,0 +1,17 @@
+{
+  "title": "Mándame un mensaje digital",
+  "sub_title": "Siéntete libre de contactarme por aquí o en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Estoy disponible para charlas sobre oportunidades, ideas en desarrollo web y el mundo del desarrollo de juegos. ¡Conectémonos y exploremos estas áreas juntos!",
+  "form": {
+    "title": "¡Manda un saludo!",
+    "sub_title": "Sin middleware entre nosotros — habla directo.",
+    "name": "Tu nombre",
+    "email": "Correo electrónico",
+    "message": "Escribe tu mensaje"
+  },
+  "loading": "Enviando mensaje...",
+  "success": "¡Mensaje enviado con éxito!",
+  "error": "Tu mensaje no fue enviado, intenta nuevamente más tarde.",
+  "tooltip": "Faltan algunos campos o el correo es inválido",
+  "button_text_ready": "¡Listo, solo envía!",
+  "button_text_not_ready": "Esperando que completes todo..."
+}

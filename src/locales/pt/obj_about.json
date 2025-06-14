@@ -1,0 +1,68 @@
+{
+  "title": "Por trás do Código",
+  "sub_title": "Minha missão é unir pessoas com a tecnologia por meio da programação e conteúdo digital — criando experiências que inspiram, ensinam e transformam.",
+  "description": {
+    "title": "A estrada até aqui",
+    "begin": "Prazer, meu nome é Felipe Frantz Zanini, um engenheiro de software apaixonado por jiu jitsu, corrida, desenvolvimento de jogos independentes, dota 2, roteiros, pixel art, música e investimentos. Tenho 31 anos e atualmente moro em Pelotas, Rio Grande do Sul, Brasil.",
+    "middle": "Minha jornada no desenvolvimento de software começou em 2008, durante o ensino técnico. Em 2010, após concluir o curso, iniciei meu primeiro estágio em programação e, desde então, nunca parei de estudar e evoluir. Ao ser efetivado como engenheiro de software, participei de mais de <b>50 projetos</b>, utilizando diversas tecnologias, com ênfase em PHP.",
+    "education": "Apaixonado pela área e sempre buscando aprimoramento, obtive a Graduação em Tecnologia em Gestão da TI e uma Especialização em Gestão de TI. Também iniciei um Mestrado em Ciência da Computação.",
+    "end": "Atualmente ocupo o cargo de Engenheiro de Software Sênior & Tech Lead especializado em desenvolvimento frontend na <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b> onde tenho o privilégio de ser parceiro tecnológico de diversas empresas como <b>Shoppings Iguatemi</b>, <b>UFC Fantasy</b>, <b>EducaCross</b>, <b>Grupo SEB</b>, <b>Rede AZ</b>, <b>Vittude</b> e os auxiliando na criação das melhores soluções de produtos para a web."
+  },
+
+  "skills": {
+    "title": "Da imaginação ao deploy",
+    "subtitle": "Um olhar sobre meu processo para transformar ideias em produtos digitais",
+    "process": [
+      {
+        "id": 1,
+        "title": "Entendendo a dor",
+        "description": "Tudo começa com uma boa conversa. Ouço suas ideias, entendo suas necessidades, motivações, as traduzo em algo prático e penso na melhor forma de transformá-las em algo visualmente atrativo e funcional."
+      },
+      {
+        "id": 2,
+        "title": "Montando a estrutura",
+        "description": "Antes de pensar na aparência, é definida a estrutura do projeto: quais páginas serão necessárias, como os elementos irão se comportar e de que forma tudo estará conectado de uma forma lógica e eficiente."
+      },
+      {
+        "id": 3,
+        "title": "Código ganhando vida",
+        "description": "É hora de dar vida ao projeto! Desenvolvo interfaces focadas em usabilidade, responsividade e performance. Cada elemento é otimizado para funcionar bem em qualquer dispositivo, garantindo um carregamento ágil e uma navegação fluida."
+      },
+      {
+        "id": 4,
+        "title": "Integrações externas",
+        "description": "Quando o projeto precisa de formulários, autenticação ou integração com outros sistemas, pode contar comigo pra isso também. Tudo é desenvolvido com foco em segurança, estabilidade e confiabilidade."
+      },
+      {
+        "id": 5,
+        "title": "Testes e garantia de qualidade",
+        "description": "Antes de publicar o projeto, realizo diversos testes para garantir que tudo funcione conforme o planejado — testando em diferentes navegadores, dispositivos, resoluções e contextos de uso."
+      },
+      {
+        "id": 6,
+        "title": "Hora de mostrar pro mundo!",
+        "description": "Pra fechar com chave de ouro, coloco o projeto no ar e deixo tudo prontinho pra todo mundo acessar. E é claro, ficando de olho e prestando suporte nos primeiros dias pra ajustar qualquer detalhe que aparecer."
+      }
+    ]
+  },
+
+  "stack": {
+    "title": "As engrenagens por trás do processo",
+    "description": "Por trás de cada clique e linha de código, estão tecnologias escolhidas com cuidado e propósito. Se quiser conhecer a stack completa ou já enviar uma mensagem, é só clicar nos botões abaixo.",
+    "button": "Acessar stack completa",
+    "contact": "Disparar mensagem"
+  },
+
+  "site": {
+    "title": "Café, código & deploy",
+    "subtitle": "Um resumo técnico das tecnologias e ferramentas que tornam este site a minha cara — tudo o que aconteceu por trás dos cliques.",
+    "description": "Este site foi desenvolvido utilizando os conceitos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, com o framework <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, deploy realizado na <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, estilização feita com <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animações com a biblioteca <b><a href='https://motion.dev/' target='_blank'>Framer-Motion</a></b> e ícones fornecidos pela biblioteca <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. A tipografia utilizada é do estilo <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>MavenPro</a></b>. Além disso, este portfólio funciona como vitrine de futuros conteúdos e laboratório de testes — onde experimento diversas bibliotecas e ferramentas — além de reunir alguns dos meus ",
+    "projects": "projetos."
+  },
+
+  "contact": {
+    "title": "Pronto para um pull request de ideias",
+    "description": "Estou aberto para novos projetos, consultorias e trocar informações sobre construção de produtos digitais ou desenvolvimento de jogos, sinta-se à vontade para me enviar uma mensagem no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou deixar um recado na ",
+    "contact": "página de contato."
+  }
+}
