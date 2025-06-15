@@ -77,7 +77,7 @@ export default function About() {
                 />
                 <SanitizedText json={translations.about.description.end} />
               </div>
-              <div className="2xl:grid grid-cols-5 flex flex-col gap-4 pb-6 hidden 2xl:block">
+              <div className="md:grid grid-cols-5 flex flex-col gap-4 pb-6 hidden md:block">
                 {photos.map((photo, index) => (
                   <ZoomImage
                     key={index}

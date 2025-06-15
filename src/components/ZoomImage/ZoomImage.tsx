@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { LuLoader } from "react-icons/lu";
+
 import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
@@ -25,10 +27,9 @@ export function ZoomImage({
   return (
     <div className="relative">
       {!isLoaded && (
-        <div
-          className={`absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse rounded-md`}
-          style={{ width, height }}
-        />
+        <div className="absolute inset-0 bg-gray-300/30 dark:bg-gray-700/20 animate-pulse backdrop-blur-sm rounded-md z-10 flex items-center justify-center">
+          <LuLoader className="h-6 w-6 text-white dark:text-gray-200 animate-spin" />
+        </div>
       )}
       <Zoom classDialog="custom-zoom">
         <Image
