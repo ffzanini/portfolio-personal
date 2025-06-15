@@ -131,20 +131,20 @@ export default function About() {
               <div className="text-lg space-y-4 leading-relaxed pb-2">
                 {translations.about.stack.description}
               </div>
-              <div className="flex flex-col lg:flex-row justify-start items-start gap-2">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                 <Link
                   href="/stack"
                   className="flex flex-row justify-center items-center border border-primary-600 bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-4 py-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                 >
                   {translations.about.stack.button}
-                  <LuArrowRight className="hidden lg:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <LuArrowRight className="hidden md:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/contact"
                   className="flex flex-row justify-center items-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-4 py-2 rounded-xl backdrop-blur-sm group"
                 >
                   {translations.about.stack.contact}
-                  <LuSend className="hidden lg:flex ml-3 h-5 w-5 group-hover:rotate-360 duration-500 transition-transform" />
+                  <LuSend className="hidden md:flex ml-3 h-5 w-5 group-hover:rotate-360 duration-500 transition-transform" />
                 </Link>
               </div>
             </div>

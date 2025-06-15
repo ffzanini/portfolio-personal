@@ -6,6 +6,7 @@ interface PageProps {
     navigation: string;
   }>;
 }
+
 export async function generateStaticParams() {
   const { projects } = await import("@/app/data/projects");
   return projects.map((project) => ({

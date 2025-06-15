@@ -1,11 +1,11 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { LuExternalLink, LuGithub, LuSparkles } from "react-icons/lu";
 
 import { Project } from "@/app/data/projects";
 import { cn } from "@/libs/cn";
 import { useTranslation } from "@/context";
+import { ZoomImage } from "../ZoomImage";
 
 interface CardProps {
   project: Project;
@@ -26,10 +26,10 @@ export function Card({ project, index, lower }: Readonly<CardProps>) {
         style={{ animationDelay: `${index * 0.2}s` }}
       >
         <div className="aspect-video overflow-hidden border-b border-black/10 dark:border-black/40">
-          <Image
+          <ZoomImage
             className="aspect-video w-full object-cover group-hover:scale-125 transition-transform duration-700"
-            width={500}
-            height={500}
+            width={1200}
+            height={1200}
             src={project.image}
             alt={String(projectTranslate?.title)}
           />

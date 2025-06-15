@@ -18,7 +18,6 @@ export default function Contact() {
         <Navbar />
         <main className="pt-20 lg:pt-32 pb-4 lg:pb-18">
           <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-            {/* Hero Section */}
             <div className="text-center animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
                 {translations.contact.title}

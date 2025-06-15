@@ -19,6 +19,38 @@
   --color-primary-950: #52001e;
 }
 
+@layer utilities {
+  @keyframes toast-fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes toast-fade-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  .toast-animate-fade-in {
+    animation: toast-fade-in 0.3s ease-out forwards;
+  }
+
+  .toast-animate-fade-out {
+    animation: toast-fade-out 0.2s ease-in forwards;
+  }
+}
+
 :root {
   --background: var(--color-white-theme);
   --foreground: var(--color-dark-theme);

@@ -7,11 +7,11 @@ import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 import { FaBars, FaXmark } from "react-icons/fa6";
-import { LuMoonStar, LuSun } from "react-icons/lu";
+import { LuMoonStar, LuSun, LuX } from "react-icons/lu";
 
 import { fontRyanaLovely } from "@/app/fonts";
-import { Tooltip } from "@/components";
-import { languages, navItems } from "@/constants/navbar";
+import { LanguageSelect, Tooltip } from "@/components";
+import { navItems } from "@/constants/navbar";
 import { nightStalker, dawnbreaker } from "@/constants/phrases";
 import { useTranslation } from "@/context";
 import { cn } from "@/libs/cn";
@@ -19,7 +19,7 @@ import toast from "react-hot-toast";
 import Image from "next/image";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [checkTheme, setCheckTheme] = useState<string | undefined>();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -39,29 +39,6 @@ export function Navbar() {
     } else {
       setTheme("dark");
     }
-  };
-
-  const selectLocation = (tag: string) => {
-    switch (tag) {
-      case "pt":
-        setLocation("pt");
-        break;
-      case "en":
-        setLocation("en");
-        break;
-      case "es":
-        setLocation("es");
-        break;
-      default:
-        setLocation("pt");
-    }
-
-    const url = new URL(window.location.href);
-    url.searchParams.set("lang", tag);
-    window.history.pushState({}, "", url.toString());
-
-    url.searchParams.delete("lang");
-    window.history.replaceState({}, "", url.pathname);
   };
 
   const renderText = (name: string) => {
@@ -94,10 +71,11 @@ export function Navbar() {
   const renderPhrase = () => {
     toast.custom((t) => (
       <div
+        key={t.id}
         className={`${
-          t.visible ? "animate-enter" : "animate-leave"
-        } max-w-md w-full shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black/10 dark:ring-white/10 
-      bg-white/80 dark:bg-black/40 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50`}
+          t.visible ? "toast-animate-fade-in" : "toast-animate-fade-out"
+        } relative z-[9999] max-w-md w-full shadow-lg rounded-lg flex ring-1 ring-black/10 dark:ring-white/10 
+      bg-white-theme dark:bg-dark-theme border border-gray-200/50 dark:border-gray-700/50`}
       >
         <div className="flex-1 w-0 p-4">
           <div className="flex items-start">
@@ -111,17 +89,24 @@ export function Navbar() {
                 }
                 width={100}
                 height={100}
-                alt="Dota Heroes"
+                alt="Dota Hero"
+                loading="lazy"
               />
             </div>
             <div className="ml-3 flex-1">
-              <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                 {theme === "dark" ? "Dawnbreaker" : "Night Stalker"}
               </p>
-              <p className="mt-1 text-md text-gray-700 dark:text-gray-300">
+              <p className="mt-1 text-base text-gray-700 dark:text-gray-300">
                 {phrases}
               </p>
             </div>
+            <button
+              onClick={() => toast.dismiss(t.id)}
+              className="ml-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            >
+              <LuX className="h-5 w-5" />
+            </button>
           </div>
         </div>
       </div>
@@ -199,21 +184,9 @@ export function Navbar() {
             ))}
           </div>
           <div className="hidden xl:flex items-center space-x-6">
-            <select
-              value={location}
-              onChange={(e) => selectLocation(e.target.value)}
-              className="bg-gray-100 border border-gray-300 text-gray-900 font-semibold text-sm rounded-lg focus:ring-primary-800 focus:border-primary-800 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-300 dark:focus:border-primary-300"
-            >
-              {languages.map((lang) => (
-                <option
-                  key={lang.code}
-                  value={lang.code}
-                  className="flex items-center"
-                >
-                  {`${lang.flag} ${lang.label}`}
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <LanguageSelect selected={location} onChange={setLocation} />
+            </div>
             <Tooltip
               text={`${checkTheme !== "dark" ? "To the Dark" : "To the Light"}`}
             >
@@ -237,9 +210,9 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <motion.button
             className="xl:hidden"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpenMenu(!isOpenMenu)}
           >
-            {isOpen ? (
+            {isOpenMenu ? (
               <FaXmark className="h-5 w-5" />
             ) : (
               <FaBars className="h-5 w-5" />
@@ -248,7 +221,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+        {isOpenMenu && (
           <div className="xl:hidden pb-6 border-t border-gray-200/50 dark:border-white/10">
             <div className="flex flex-col space-y-2 pt-6">
               {navItems.map((item) => (
@@ -260,38 +233,27 @@ export function Navbar() {
                       ? "font-bold text-white bg-gradient-to-r from-primary-950 via-primary-600 to-primary-300"
                       : "font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10"
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpenMenu(false)}
                 >
                   {renderText(item.label)}
                 </Link>
               ))}
 
               <div className="flex items-center justify-between px-4 py-3 mt-4 border-t border-gray-200/50 dark:border-white/10">
-                <select
-                  value={location}
-                  onChange={(e) => {
-                    selectLocation(e.target.value);
-                    setIsOpen(false);
-                  }}
-                  className="bg-gray-100 border border-gray-300 text-gray-900 font-semibold text-sm rounded-lg focus:ring-primary-800 focus:border-primary-800 block w-full/2 p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-300 dark:focus:border-primary-300"
-                >
-                  {languages.map((lang) => (
-                    <option
-                      key={lang.code}
-                      value={lang.code}
-                      className="flex items-center"
-                    >
-                      {`${lang.flag} ${lang.label}`}
-                    </option>
-                  ))}
-                </select>
+                <div className="relative">
+                  <LanguageSelect
+                    selected={location}
+                    onChange={setLocation}
+                    setIsOpenMenu={setIsOpenMenu}
+                  />
+                </div>
 
                 <motion.button
                   onClick={() => {
                     toggleTheme();
                     showRandomPhrases();
                     renderPhrase();
-                    setIsOpen(false);
+                    setIsOpenMenu(false);
                   }}
                   className="cursor-pointer"
                 >
