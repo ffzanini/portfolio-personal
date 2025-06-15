@@ -1,14 +1,26 @@
 "use client";
 import { cn } from "@/libs/cn";
-import { useState, useRef, useEffect, SetStateAction, Dispatch } from "react";
+import {
+  useState,
+  useRef,
+  useEffect,
+  SetStateAction,
+  Dispatch,
+  ReactElement,
+} from "react";
 import { LuArrowDown } from "react-icons/lu";
+import {
+  US as USFlag,
+  BR as BRFlag,
+  ES as ESFlag,
+} from "country-flag-icons/react/3x2";
 
 type Locations = "pt" | "en" | "es";
 
-const languages: { code: Locations; label: string; flag: string }[] = [
-  { code: "pt", label: "PT", flag: "🇧🇷" },
-  { code: "en", label: "EN", flag: "🇺🇸" },
-  { code: "es", label: "ES", flag: "🇪🇸" },
+const languages: { code: Locations; label: string; flag: ReactElement }[] = [
+  { code: "pt", label: "PT", flag: <BRFlag className="w-5 h-auto" /> },
+  { code: "en", label: "EN", flag: <USFlag className="w-5 h-auto" /> },
+  { code: "es", label: "ES", flag: <ESFlag className="w-5 h-auto" /> },
 ];
 
 interface LanguageSelectProps {
@@ -62,7 +74,7 @@ export function LanguageSelect({
       </button>
 
       {open && (
-        <ul className="absolute z-10 mt-2 w-full bg-gray-100 dark:bg-gray-800 xl:bg-black/5 xl:dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-lg shadow-lg">
+        <ul className="absolute z-10 mt-2 w-full bg-gray-100 dark:bg-dark-theme xl:bg-black/5 xl:dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-lg shadow-lg">
           {languages.map((lang, index) => (
             <li
               key={lang.code}

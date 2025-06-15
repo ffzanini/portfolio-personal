@@ -39,64 +39,62 @@ export default function Projects() {
             />
           </div>
 
-          <div className="mb-20">
+          <h2 className="text-3xl font-bold my-8 flex items-center">
+            <span className="w-2 h-8 bg-gradient-to-b from-primary-700 to-primary-800 dark:from-primary-400 dark:to-primary-500 rounded mr-4"></span>
+            {translations.projects.projects_title}
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredProjects.slice(0, 2).map((project, index) => (
+              <Card
+                key={project.id}
+                project={project}
+                index={index}
+                lower={false}
+              />
+            ))}
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-2 my-8">
+            <LuFilter className="h-7 w-7 " />
+            {filters.map((filter) => (
+              <button
+                key={filter.id}
+                className={`py-1 px-2 rounded-md font-semibold cursor-pointer ${
+                  activeFilter === filter.id
+                    ? "bg-primary-600 hover:bg-primary-700"
+                    : "border border-black/20 hover:bg-black/10 dark:border-white/20 dark:hover:bg-white/10"
+                }`}
+                onClick={() => setActiveFilter(filter.id)}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+          {filteredProjects.length !== 0 && (
             <h2 className="text-3xl font-bold my-8 flex items-center">
               <span className="w-2 h-8 bg-gradient-to-b from-primary-700 to-primary-800 dark:from-primary-400 dark:to-primary-500 rounded mr-4"></span>
-              {translations.projects.projects_title}
+              {translations.projects.projects_all}
             </h2>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredProjects.slice(0, 2).map((project, index) => (
-                <Card
-                  key={project.id}
-                  project={project}
-                  index={index}
-                  lower={false}
-                />
-              ))}
-            </div>
-
-            <div className="flex flex-wrap justify-center items-center gap-2 my-8">
-              <LuFilter className="h-7 w-7 " />
-              {filters.map((filter) => (
-                <button
-                  key={filter.id}
-                  className={`py-1 px-2 rounded-md font-semibold cursor-pointer ${
-                    activeFilter === filter.id
-                      ? "bg-primary-600 hover:bg-primary-700"
-                      : "border border-black/20 hover:bg-black/10 dark:border-white/20 dark:hover:bg-white/10"
-                  }`}
-                  onClick={() => setActiveFilter(filter.id)}
-                >
-                  {filter.label}
-                </button>
-              ))}
-            </div>
-            {filteredProjects.length !== 0 && (
-              <h2 className="text-3xl font-bold my-8 flex items-center">
-                <span className="w-2 h-8 bg-gradient-to-b from-primary-700 to-primary-800 dark:from-primary-400 dark:to-primary-500 rounded mr-4"></span>
-                {translations.projects.projects_all}
-              </h2>
-            )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.map((project, index) => (
-                <Card
-                  key={project.id}
-                  project={project}
-                  index={index}
-                  lower={true}
-                />
-              ))}
-            </div>
-
-            {filteredProjects.length === 0 && (
-              <div className="text-center py-20">
-                <p className="text-xl text-gray-400">
-                  Nenhum projeto encontrado para o filtro selecionado.
-                </p>
-              </div>
-            )}
+          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => (
+              <Card
+                key={project.id}
+                project={project}
+                index={index}
+                lower={true}
+              />
+            ))}
           </div>
+
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-20">
+              <p className="text-xl text-gray-400">
+                Nenhum projeto encontrado para o filtro selecionado.
+              </p>
+            </div>
+          )}
         </div>
       </main>
       <Footer />
