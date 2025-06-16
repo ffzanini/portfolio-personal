@@ -7,6 +7,8 @@ import {
   LuMail,
   LuMessageSquareMore,
   LuSend,
+  LuQuote,
+  LuHandshake,
 } from "react-icons/lu";
 
 import toast from "react-hot-toast";
@@ -72,7 +74,7 @@ export default function Contact() {
                   {translations.contact.next.steps.map((step, index) => (
                     <div
                       key={index}
-                      className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8"
+                      className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                     >
                       <div className="flex flex-row justify-center items-center gap-2 pb-2">
                         <div className="w-28 h-28 min-w-28 bg-primary-100 dark:bg-primary-800/70 rounded-full flex items-center justify-center border-[5px] border-primary-600 dark:border-primary-300">
@@ -84,6 +86,42 @@ export default function Contact() {
                       </span>
                     </div>
                   ))}
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col mt-8 lg:mt-16">
+              <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
+                <div className="flex flex-row items-start mb-6">
+                  <div className="w-12 h-12 min-w-12 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                    <LuHandshake className="h-6 w-6" />
+                  </div>
+                  <div className="flex flex-col items-start">
+                    <h2 className="text-3xl font-bold">
+                      {translations.contact.testimonials.title}
+                    </h2>
+                    <span className="text-xs">
+                      {translations.contact.testimonials.sub_title}
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {translations.contact.testimonials.testimonials.map(
+                    (testimonial, index) => (
+                      <div
+                        key={index}
+                        className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                      >
+                        <LuQuote className="w-8 h-8 text-primary-600 mb-4 flex-shrink-0" />
+                        <p className="italic mb-6 flex-grow">
+                          &quot;{testimonial.quote}&quot;
+                        </p>
+                        <div className="mt-auto">
+                          <p className="font-semibold ">{testimonial.name}</p>
+                          <p className="text-sm ">{testimonial.title}</p>
+                        </div>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </div>

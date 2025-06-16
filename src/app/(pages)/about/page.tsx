@@ -113,7 +113,7 @@ export default function About() {
                 {translations.about.skills.process.map((process, index) => (
                   <div
                     key={index}
-                    className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4"
+                    className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                   >
                     <div className="flex flex-row items-center gap-2 pb-2">
                       <div className="w-8 h-8 min-w-8 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">

@@ -128,7 +128,7 @@ export default function Stack() {
               {translations.stack.strengths.items.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4"
+                  className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                 >
                   <div className="flex flex-row items-center gap-2 pb-2">
                     <h4 className="text-xl font-semibold">{item.title}</h4>

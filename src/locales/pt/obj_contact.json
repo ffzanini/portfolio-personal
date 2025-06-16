@@ -34,6 +34,22 @@
       }
     ]
   },
+  "testimonials": {
+    "title": "Comentários de quem já contou comigo",
+    "sub_title": "Quem já trabalhou comigo tem algo a dizer — e eu só tenho a agradecer.",
+    "testimonials": [
+      {
+        "quote": "Foi gratificante ver a repercussão positiva do site desde seu lançamento. A recepção foi extremamente calorosa! O visual, layout, conteúdo, navegação... tudo tem sido elogiado com entusiasmo. Até mesmo meu pai, que deu uma olhada no código, comentou que estava “limpo” — o que vindo dele, é um baita elogio! Só no lançamento, tivemos mais de 1.000 visitantes! Recebo mensagens individuais destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente ao trabalho de todos os envolvidos nesse processo. Sem dúvida, um sucesso!",
+        "name": "Joseph Murray",
+        "title": "Diretor da DOVE Research"
+      },
+      {
+        "quote": "Felipe foi um dos melhores profissionais com que tive oportunidade de trabalhar, sempre esforçado e 100% focado em entregar os projetos independente dos desafios e com qualidade, se importa com todas as partes do processo de desenvolvimento, não se restringindo a apenas programar, nos projetos que trabalhamos juntos, desempenhava bem seu papel de tech lead no cliente, conseguia realizar grandes entregas junto ao time, tem uma boa desenvoltura em comunicação e sabe se sobressair em momento difíceis. Felipe tem muita facilidade no aprendizado técnico e grande autonomia para tocar qualquer projeto.",
+        "name": "Igor Casconi de Oliveira",
+        "title": "Engenheiro de Software"
+      }
+    ]
+  },
   "loading": "Enviando mensagem...",
   "success": "Mensagem enviada com sucesso!",
   "error": "Sua mensagem não foi enviada, tente novamente mais tarde.",
