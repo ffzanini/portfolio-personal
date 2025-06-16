@@ -1,13 +1,40 @@
 {
   "title": "Mándame un mensaje digital",
-  "sub_title": "Siéntete libre de contactarme por aquí o en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Estoy disponible para charlas sobre oportunidades, ideas en desarrollo web y el mundo del desarrollo de juegos. ¡Conectémonos y exploremos estas áreas juntos!",
+  "sub_title": "Siéntete libre en escribirme por aquí o en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Siempre estoy disponible para charlar sobre desarrollo, proyectos o lo que surja. ¡Conectemos y conversemos!",
   "form": {
     "title": "¡Manda un saludo!",
-    "sub_title": "Sin middleware entre nosotros — habla directo.",
+    "sub_title": "Sin middleware entre nosotros — hablemos.",
     "name": "Tu nombre",
     "email": "Correo electrónico",
     "message": "Escribe tu mensaje"
   },
+  "next": {
+    "title": "Próximos Pasos",
+    "sub_title": "Entiende cómo funciona el proceso inicial — desde el envío de tu idea hasta la propuesta.",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Envío",
+        "description": "Completas el formulario con el tema de la conversación y compartes algunos detalles sobre tu idea o proyecto."
+      },
+      {
+        "id": 2,
+        "title": "Respuesta",
+        "description": "En cuanto recibo tu mensaje, te respondo en un plazo de 48 horas para agendar una conversación."
+      },
+      {
+        "id": 3,
+        "title": "Alineación",
+        "description": "Agendamos una reunión para alinear todos los detalles, objetivos y requisitos del proyecto."
+      },
+      {
+        "id": 4,
+        "title": "Propuesta",
+        "description": "Con base en nuestra conversación, preparo una propuesta personalizada con todos los detalles para que la revises con calma."
+      }
+    ]
+  },
+
   "loading": "Enviando mensaje...",
   "success": "¡Mensaje enviado con éxito!",
   "error": "Tu mensaje no fue enviado, intenta nuevamente más tarde.",

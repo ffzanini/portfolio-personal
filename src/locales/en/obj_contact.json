@@ -1,12 +1,38 @@
 {
   "title": "Ping me in the digital inbox",
-  "sub_title": "Feel free to connect with me here or on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. I'm available to talk about opportunities, web development insights, and the world of game development. Let’s connect and explore these areas together!",
+  "sub_title": "Feel free to hit me up here or on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. I'm always down to chat about development, projects, or whatever else comes up. Let’s connect and talk!",
   "form": {
     "title": "Drop a line!",
-    "sub_title": "No middleware between us — talk straight.",
+    "sub_title": "No middleware between us — let's talk.",
     "name": "Your name",
     "email": "Email",
     "message": "Type your message"
+  },
+  "next": {
+    "title": "Next Steps",
+    "sub_title": "Understand how the initial process works — from submitting your idea to receiving a proposal.",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Submission",
+        "description": "You fill out the form with the topic of the conversation and share some details about your idea or project."
+      },
+      {
+        "id": 2,
+        "title": "Response",
+        "description": "As soon as I receive your message, I reply within 48 hours to schedule a conversation."
+      },
+      {
+        "id": 3,
+        "title": "Alignment",
+        "description": "We schedule a meeting to align all the details, goals, and requirements of the project."
+      },
+      {
+        "id": 4,
+        "title": "Proposal",
+        "description": "Based on our conversation, I prepare a personalized proposal with all the details for you to review carefully."
+      }
+    ]
   },
   "loading": "Sending message...",
   "success": "Message sent successfully!",

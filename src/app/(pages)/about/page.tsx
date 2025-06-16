@@ -26,19 +26,21 @@ export default function About() {
   const { translations } = useTranslation();
 
   const renderIco = (id: number) => {
+    const iconClass = "h-6 w-6";
+
     switch (id) {
       case 1:
-        return <RiNumber1 className="h-6 w-6" />;
+        return <RiNumber1 className={iconClass} />;
       case 2:
-        return <RiNumber2 className="h-6 w-6" />;
+        return <RiNumber2 className={iconClass} />;
       case 3:
-        return <RiNumber3 className="h-6 w-6" />;
+        return <RiNumber3 className={iconClass} />;
       case 4:
-        return <RiNumber4 className="h-6 w-6" />;
+        return <RiNumber4 className={iconClass} />;
       case 5:
-        return <RiNumber5 className="h-6 w-6" />;
+        return <RiNumber5 className={iconClass} />;
       case 6:
-        return <RiNumber6 className="h-6 w-6" />;
+        return <RiNumber6 className={iconClass} />;
       default:
     }
   };

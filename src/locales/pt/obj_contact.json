@@ -1,12 +1,38 @@
 {
   "title": "Chama no inbox digital",
-  "sub_title": "Fique à vontade para se conectar comigo, seja por aqui ou no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Estou disponível para discussões sobre oportunidades, insights no desenvolvimento web e no mundo do desenvolvimento de jogos. Vamos estabelecer uma conexão e explorar essas áreas juntos!",
+  "sub_title": "Fica à vontade pra me chamar por aqui ou lá no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Tô sempre disponível pra trocar ideia sobre desenvolvimento, projetos e o que mais surgir. Bora se conectar e conversar!",
   "form": {
     "title": "Manda um salve!",
-    "sub_title": "Nenhum middleware entre a gente — pode falar direto.",
+    "sub_title": "Nenhum middleware entre a gente — vamos conversar.",
     "name": "Seu nome",
     "email": "E-mail",
     "message": "Digite sua mensagem"
+  },
+  "next": {
+    "title": "Próximos passos",
+    "sub_title": "Entenda como funciona o processo inicial — do envio da sua ideia até a proposta.",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Envio",
+        "description": "Você preenche o formulário com o tema da conversa e compartilha alguns detalhes da sua ideia ou projeto."
+      },
+      {
+        "id": 2,
+        "title": "Retorno",
+        "description": "Assim que recebo sua mensagem, respondo em até 48h para agendarmos uma conversa."
+      },
+      {
+        "id": 3,
+        "title": "Alinhamento",
+        "description": "Agendamos uma reunião para alinhar todos os detalhes, objetivos e requisitos do projeto."
+      },
+      {
+        "id": 4,
+        "title": "Proposta",
+        "description": "Com base na nossa conversa, preparo uma proposta personalizada com todos os detalhes para você avaliar com calma."
+      }
+    ]
   },
   "loading": "Enviando mensagem...",
   "success": "Mensagem enviada com sucesso!",

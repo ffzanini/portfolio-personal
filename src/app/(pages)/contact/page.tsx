@@ -1,6 +1,13 @@
 "use client";
 import { useForm } from "react-hook-form";
-import { LuMail } from "react-icons/lu";
+import {
+  LuFootprints,
+  LuCalendarDays,
+  LuFileText,
+  LuMail,
+  LuMessageSquareMore,
+  LuSend,
+} from "react-icons/lu";
 
 import toast from "react-hot-toast";
 import axios from "axios";
@@ -12,9 +19,26 @@ import { cn } from "@/libs/cn";
 export default function Contact() {
   const { translations } = useTranslation();
 
+  const renderIco = (id: number) => {
+    const iconClass = "h-12 w-12 text-primary-500 dark:text-primary-100";
+
+    switch (id) {
+      case 1:
+        return <LuSend className={iconClass} />;
+      case 2:
+        return <LuCalendarDays className={iconClass} />;
+      case 3:
+        return <LuMessageSquareMore className={iconClass} />;
+      case 4:
+        return <LuFileText className={iconClass} />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
-      <div className="relative flex flex-col lg:h-screen">
+      <div className="relative flex flex-col">
         <Navbar />
         <main className="pt-20 lg:pt-32 pb-4 lg:pb-18">
           <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -29,6 +53,40 @@ export default function Contact() {
             </div>
 
             <ContactForm />
+            <div className="flex flex-col mt-8 lg:mt-16">
+              <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
+                <div className="flex flex-row items-start mb-6">
+                  <div className="w-12 h-12 min-w-12 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                    <LuFootprints className="h-6 w-6" />
+                  </div>
+                  <div className="flex flex-col items-start">
+                    <h2 className="text-3xl font-bold">
+                      {translations.contact.next.title}
+                    </h2>
+                    <span className="text-xs">
+                      {translations.contact.next.sub_title}
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                  {translations.contact.next.steps.map((step, index) => (
+                    <div
+                      key={index}
+                      className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8"
+                    >
+                      <div className="flex flex-row justify-center items-center gap-2 pb-2">
+                        <div className="w-28 h-28 min-w-28 bg-primary-100 dark:bg-primary-800/70 rounded-full flex items-center justify-center border-[5px] border-primary-600 dark:border-primary-300">
+                          {renderIco(step.id)}
+                        </div>
+                      </div>
+                      <span className="text-base text-black dark:text-white">
+                        {step.description}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </main>
       </div>
@@ -85,6 +143,7 @@ function ContactForm() {
             </span>
           </div>
         </div>
+
         <form className="space-y-6" onSubmit={onSubmit}>
           <div className="flex flex-col lg:flex-row gap-6">
             <input
