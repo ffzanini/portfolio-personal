@@ -22,8 +22,8 @@ export const metadata: Metadata = {
       "Software Engineer, Writer and Screenwriter, Indie Game Developer, Jiu Jitsu Brown Belt",
     images: [
       {
-        url: "/images/visit-card.webp",
-        width: 1200,
+        url: "/images/visit-card.png",
+        width: 1120,
         height: 630,
         alt: "Felipe Frant Zanini | Software Engineer",
       },

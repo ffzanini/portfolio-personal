@@ -39,9 +39,9 @@
       }
     ]
   },
-
   "footer": {
-    "title": "My story doesn’t end here!",
-    "message": "Check out my <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">full résumé</a></b> and discover in detail everything I’ve produced over more than 10 years of experience in the tech industry."
+    "title": "From code to the world: see the results!",
+    "message": "Skills and tools are just the beginning. What truly makes the difference is how we bring real, functional, and well-designed solutions to life. Discover some of these results by visiting the ",
+    "project": "projects page."
   }
 }

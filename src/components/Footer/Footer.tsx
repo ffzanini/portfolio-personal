@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 
 import { socials } from "@/constants/socials";
@@ -10,14 +9,14 @@ export function Footer() {
   return (
     <motion.footer className="flex flex-col lg:flex-row justify-between items-center">
       <div className="px-6 pt-6 lg:pt-0">
-        <div className="container flex justify-center">
+        <div className="flex justify-center">
           <p className="flex flex-col lg:flex-row">
             ©{yearNow} Felipe Frantz Zanini
           </p>
         </div>
       </div>
       <div className="px-6 pt-6">
-        <div className="container mb-6 flex justify-center">
+        <div className="mb-6 flex justify-center">
           <div className="flex flex-row gap-3 items-center">
             {socials.map(({ href, icon: Icon, name }) => (
               <Tooltip

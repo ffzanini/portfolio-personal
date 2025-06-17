@@ -257,5 +257,11 @@
         "Internacionalización lista para reclutadores"
       ]
     }
-  ]
+  ],
+  "load": "Cargar más",
+  "contact": {
+    "title": "Listo para un pull request de ideas",
+    "description": "Estoy abierto a nuevos proyectos, consultorías o intercambiar ideas sobre creación de productos digitales o desarrollo de juegos. Siéntete libre de enviarme un mensaje en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o dejar un mensaje en la ",
+    "contact": "página de contacto."
+  }
 }

@@ -10,7 +10,7 @@
   },
 
   "skills": {
-    "title": "From imagination to deploy",
+    "title": "From imagination to impact",
     "subtitle": "A look into my process for turning ideas into digital products",
     "process": [
       {
@@ -58,11 +58,5 @@
     "subtitle": "A technical summary of the technologies and tools that make this site truly mine — everything that happened behind the clicks.",
     "description": "This site was developed using <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b> concepts, with the <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b> framework, deployed via <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, styled using <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animated with <b><a href='https://motion.dev/' target='_blank'>Framer-Motion</a></b>, and featuring icons from <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. The typography is based on <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>MavenPro</a></b>. This portfolio also serves as a showcase for future content and a testing lab — where I experiment with libraries and tools — and as a home for some of my ",
     "projects": "projects."
-  },
-
-  "contact": {
-    "title": "Ready for a pull request of ideas",
-    "description": "I’m open to new projects, consulting opportunities, or just chatting about building digital products or game development. Feel free to message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a message on the ",
-    "contact": "contact page."
   }
 }

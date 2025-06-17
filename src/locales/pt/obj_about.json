@@ -10,7 +10,7 @@
   },
 
   "skills": {
-    "title": "Da imaginação ao deploy",
+    "title": "Da imaginação ao impacto",
     "subtitle": "Um olhar sobre meu processo para transformar ideias em produtos digitais",
     "process": [
       {
@@ -58,11 +58,5 @@
     "subtitle": "Um resumo técnico das tecnologias e ferramentas que tornam este site a minha cara — tudo o que aconteceu por trás dos cliques.",
     "description": "Este site foi desenvolvido utilizando os conceitos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, com o framework <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, deploy realizado na <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, estilização feita com <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animações com a biblioteca <b><a href='https://motion.dev/' target='_blank'>Framer-Motion</a></b> e ícones fornecidos pela biblioteca <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. A tipografia utilizada é do estilo <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>MavenPro</a></b>. Além disso, este portfólio funciona como vitrine de futuros conteúdos e laboratório de testes — onde experimento diversas bibliotecas e ferramentas — além de reunir alguns dos meus ",
     "projects": "projetos."
-  },
-
-  "contact": {
-    "title": "Pronto para um pull request de ideias",
-    "description": "Estou aberto para novos projetos, consultorias e trocar informações sobre construção de produtos digitais ou desenvolvimento de jogos, sinta-se à vontade para me enviar uma mensagem no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou deixar um recado na ",
-    "contact": "página de contato."
   }
 }

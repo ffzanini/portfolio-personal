@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { RiGithubLine } from "react-icons/ri";
+import { LuBadgeCheck, LuReply, LuServerCrash, LuTrophy } from "react-icons/lu";
 
 import { Project } from "@/app/data/projects";
 import { Breadcrumb, Footer, Navbar, ZoomImage } from "@/components";
 import { useTranslation } from "@/context";
-import { LuBadgeCheck, LuReply, LuServerCrash, LuTrophy } from "react-icons/lu";
+
 import { cn } from "@/libs/cn";
 
 interface ProjectDetailsViewProps {

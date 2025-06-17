@@ -32,7 +32,7 @@
         "Preloading inteligente"
       ],
 
-      "challengesTitle": "Desafios técnicos",
+      "challengesTitle": "Desafios Técnicos",
       "challenges": [
         "Gerenciamento multilingue eficiente",
         "Controle preciso de animações",
@@ -68,13 +68,13 @@
         "Formulário de assinatura de newsletter",
         "Download de publicações (PDFs)",
         "Seção de notícias e relatórios",
-        "Seção de equipes ('People') com perfis",
+        "Seção de equipes 'People' com perfis",
         "Lista de áreas de pesquisa",
         "Recursos institucionalizados",
         "Painel administrativo para controle total das páginas do site "
       ],
 
-      "challengesTitle": "Desafios técnicos",
+      "challengesTitle": "Desafios Técnicos",
       "challenges": [
         "Internacionalização em site institucional",
         "Gerenciamento eficiente de PDFs",
@@ -115,7 +115,7 @@
         "Páginas para divulgação de cursos"
       ],
 
-      "challengesTitle": "Desafios técnicos",
+      "challengesTitle": "Desafios Técnicos",
       "challenges": [
         "Organização dinâmica dos horários das aulas",
         "Galeria leve e acessível",
@@ -157,7 +157,7 @@
         "Design exlcusivo de acesso"
       ],
 
-      "challengesTitle": "Desafios técnicos",
+      "challengesTitle": "Desafios Técnicos",
       "challenges": [
         "Escalabilidade e infraestrutura distribuída",
         "Sincronização online/offline",
@@ -199,7 +199,7 @@
         "Geolocalização de shoppings"
       ],
 
-      "challengesTitle": "Desafios técnicos",
+      "challengesTitle": "Desafios Técnicos",
       "challenges": [
         "Gestão de acessos paralelos",
         "Conformidade com LGPD e segurança da informação",
@@ -238,7 +238,7 @@
         "Sistema de traduções"
       ],
 
-      "challengesTitle": "Desafios técnicos",
+      "challengesTitle": "Desafios Técnicos",
       "challenges": [
         "Gerenciamento multilingue eficiente",
         "Controle preciso de animações",
@@ -272,7 +272,7 @@
         "Sistema de traduções"
       ],
 
-      "challengesTitle": "Desafios técnicos",
+      "challengesTitle": "Desafios Técnicos",
       "challenges": [
         "Gerenciamento multilingue eficiente",
         "Deploy e cache com a Vercel",
@@ -285,5 +285,12 @@
         "Internacionalização pronta para recrutadores"
       ]
     }
-  ]
+  ],
+  "load": "Carregar mais",
+
+  "contact": {
+    "title": "Pronto para um pull request de ideias",
+    "description": "Estou aberto para novos projetos, consultorias e trocar informações sobre construção de produtos digitais ou desenvolvimento de jogos, sinta-se à vontade para me enviar uma mensagem no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou deixar um recado na ",
+    "contact": "página de contato."
+  }
 }

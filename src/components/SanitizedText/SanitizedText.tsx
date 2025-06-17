@@ -1,5 +1,3 @@
-"use client";
-
 import DOMPurify from "dompurify";
 import { useMemo } from "react";
 

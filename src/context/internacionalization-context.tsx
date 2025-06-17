@@ -36,7 +36,7 @@ const useTranslation = () => {
 };
 
 const getInitialLanguage = (): Locations => {
-  if (typeof window === "undefined") return "pt";
+  if (typeof window === "undefined") return "en";
 
   const urlParams = new URLSearchParams(window.location.search);
   const lang = urlParams.get("lang");
@@ -48,7 +48,7 @@ const getInitialLanguage = (): Locations => {
     return browserLang as Locations;
   }
 
-  return "pt";
+  return "en";
 };
 
 const InternacionalizationProvider = ({

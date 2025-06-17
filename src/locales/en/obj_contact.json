@@ -55,5 +55,10 @@
   "error": "Your message wasn't sent, please try again later.",
   "tooltip": "Some fields are missing or the email is invalid",
   "button_text_ready": "All set, just send now!",
-  "button_text_not_ready": "Waiting for you..."
+  "button_text_not_ready": "Waiting for you...",
+
+  "footer": {
+    "title": "My story doesn’t end here!",
+    "message": "Check out my <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">full résumé</a></b> and discover in detail everything I’ve produced over more than 10 years of experience in the tech industry."
+  }
 }

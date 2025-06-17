@@ -257,5 +257,11 @@
         "Internationalization ready for recruiters"
       ]
     }
-  ]
+  ],
+  "load": "Load more",
+  "contact": {
+    "title": "Ready for a pull request of ideas",
+    "description": "I’m open to new projects, consulting opportunities, or just chatting about building digital products or game development. Feel free to message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a message on the ",
+    "contact": "contact page."
+  }
 }

@@ -39,7 +39,7 @@
     "sub_title": "Quem já trabalhou comigo tem algo a dizer — e eu só tenho a agradecer.",
     "testimonials": [
       {
-        "quote": "Foi gratificante ver a repercussão positiva do site desde seu lançamento. A recepção foi extremamente calorosa! O visual, layout, conteúdo, navegação... tudo tem sido elogiado com entusiasmo. Até mesmo meu pai, que deu uma olhada no código, comentou que estava “limpo” — o que vindo dele, é um baita elogio! Só no lançamento, tivemos mais de 1.000 visitantes! Recebo mensagens individuais destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente ao trabalho de todos os envolvidos nesse processo. Sem dúvida, um sucesso!",
+        "quote": "Foi gratificante ver a repercussão positiva do site desde seu lançamento. A recepção foi extremamente calorosa! O visual, layout, conteúdo, navegação... tudo tem sido elogiado com entusiasmo. Até mesmo meu pai, que deu uma olhada no código, comentou que estava “limpo” — o que vindo dele, é um grande elogio! Só no lançamento, tivemos mais de 1.000 visitantes! Recebo mensagens individuais destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente ao trabalho de todos os envolvidos nesse processo. Sem dúvida, um sucesso!",
         "name": "Joseph Murray",
         "title": "Diretor da DOVE Research"
       },
@@ -55,5 +55,10 @@
   "error": "Sua mensagem não foi enviada, tente novamente mais tarde.",
   "tooltip": "Algum campo faltando ou e-mail inserido errado",
   "button_text_ready": "Pronto, agora é só enviar!",
-  "button_text_not_ready": "Aguardando preenchimento..."
+  "button_text_not_ready": "Aguardando preenchimento...",
+
+  "footer": {
+    "title": "Minha história não para por aqui!",
+    "message": "Confira meu <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículo completo</a></b> e descubra em detalhes tudo o que já produzi ao longo de mais de 10 anos de experiência na área de tecnologia."
+  }
 }

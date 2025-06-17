@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { LuBriefcaseBusiness, LuStar } from "react-icons/lu";
 
 import { Footer, Navbar, SanitizedText } from "@/components";
@@ -150,6 +151,12 @@ export default function Stack() {
                   typeText="span"
                   className="text-lg"
                 />
+                <Link
+                  href="/projects"
+                  className="font-bold text-lg hover:text-primary-800 dark:hover:text-primary-300"
+                >
+                  {translations.stack.footer.project}
+                </Link>
               </p>
             </div>
           </div>

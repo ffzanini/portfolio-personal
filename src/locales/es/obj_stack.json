@@ -39,9 +39,9 @@
       }
     ]
   },
-
   "footer": {
-    "title": "¡Mi historia no termina aquí!",
-    "message": "Consulta mi <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículum completo</a></b> y descubre en detalle todo lo que he producido en más de 10 años de experiencia en el área de tecnología."
+    "title": "Del código al mundo: ¡mira los resultados!",
+    "message": "Las habilidades y herramientas son solo el comienzo. Lo que realmente marca la diferencia es cómo damos vida a soluciones reales, funcionales y bien pensadas. Descubre algunos de estos resultados visitando la ",
+    "project": "página de proyectos."
   }
 }

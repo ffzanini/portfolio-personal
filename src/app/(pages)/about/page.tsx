@@ -48,7 +48,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <Navbar />
-      <main className="pt-20 lg:pt-32 pb-4 lg:pb-18">
+      <main className="pt-20 lg:pt-32 pb-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
@@ -177,27 +177,6 @@ export default function About() {
                   className="font-bold hover:text-primary-800 dark:hover:text-primary-300"
                 >
                   {translations.about.site.projects}
-                </Link>
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex flex-col items-start gap-3">
-              <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
-                {translations.about.contact.title}
-              </h1>
-
-              <p className="inline-block">
-                <SanitizedText
-                  json={translations.about.contact.description}
-                  typeText="span"
-                  className="text-lg"
-                />
-                <Link
-                  href="/contact"
-                  className="font-bold text-lg hover:text-primary-800 dark:hover:text-primary-300"
-                >
-                  {translations.about.contact.contact}
                 </Link>
               </p>
             </div>

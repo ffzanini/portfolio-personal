@@ -1,4 +1,3 @@
-"use client";
 import { ThemeProvider } from "next-themes";
 import { InternacionalizationProvider } from "@/context/internacionalization-context";
 

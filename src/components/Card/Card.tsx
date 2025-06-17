@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { LuExternalLink, LuGithub, LuSparkles } from "react-icons/lu";
 
@@ -34,7 +33,7 @@ export function Card({ project, index, lower }: Readonly<CardProps>) {
             alt={String(projectTranslate?.title)}
           />
         </div>
-        <div className="flex flex-col flex-1 px-4 pt-4 pb-6">
+        <div className="flex flex-col bg-white-theme/80 dark:bg-dark-theme/80 flex-1 px-4 pt-4 pb-6">
           <div className="flex items-start justify-between gap-2 mb-2">
             <h3 className="text-2xl font-bold leading-snug truncate">
               {projectTranslate?.title}

@@ -55,5 +55,10 @@
   "error": "Tu mensaje no fue enviado, intenta nuevamente más tarde.",
   "tooltip": "Faltan algunos campos o el correo es inválido",
   "button_text_ready": "¡Listo, solo envía!",
-  "button_text_not_ready": "Esperando que completes todo..."
+  "button_text_not_ready": "Esperando que completes todo...",
+
+  "footer": {
+    "title": "¡Mi historia no termina aquí!",
+    "message": "Consulta mi <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículum completo</a></b> y descubre en detalle todo lo que he producido en más de 10 años de experiencia en el área de tecnología."
+  }
 }
