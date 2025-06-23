@@ -42,7 +42,7 @@ export default function Contact() {
     <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <div className="relative flex flex-col">
         <Navbar />
-        <main className="pt-20 lg:pt-32 pb-4 lg:pb-18">
+        <main className="pt-20 lg:pt-32 pb-8">
           <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">

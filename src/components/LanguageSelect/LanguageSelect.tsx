@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/libs/cn";
 import {
   useState,
   useRef,
@@ -14,6 +13,8 @@ import {
   BR as BRFlag,
   ES as ESFlag,
 } from "country-flag-icons/react/3x2";
+
+import { cn } from "@/libs/cn";
 
 type Locations = "pt" | "en" | "es";
 

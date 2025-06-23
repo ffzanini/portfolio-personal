@@ -32,7 +32,7 @@ export default function ProjectDetailsView({
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <Navbar />
-      <main className="pt-20 lg:pt-32 pb-4 lg:pb-18">
+      <main className="pt-20 lg:pt-32 pb-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <Breadcrumb path={breadcrumb} />
           <div className="text-center animate-fade-in">
@@ -87,7 +87,7 @@ export default function ProjectDetailsView({
             )}
           </div>
 
-          <div className="mb-4">
+          <div className="mb-8 lg:mb-4">
             <h1 className="text-xl mb-2 font-bold">
               {projectTranslate?.longDescriptionTitle}
             </h1>
@@ -98,7 +98,7 @@ export default function ProjectDetailsView({
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-2 mb-12 lg:mb-4">
             {project.technologies.map((tag) => (
               <span
                 key={tag}
@@ -112,7 +112,7 @@ export default function ProjectDetailsView({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            <div className="mb-4 bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4">
+            <div className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4">
               <div className="flex flex-row items-center gap-2 pb-2">
                 <div className="w-8 h-8 min-w-8 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
                   <LuBadgeCheck className="w-5 h-5" />
@@ -129,7 +129,7 @@ export default function ProjectDetailsView({
               ))}
             </div>
 
-            <div className="mb-4 bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4">
+            <div className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4">
               <div className="flex flex-row items-center gap-2 pb-2">
                 <div className="w-8 h-8 min-w-8 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
                   <LuServerCrash className="w-5 h-5" />

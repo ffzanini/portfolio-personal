@@ -28,7 +28,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <div className="relative flex flex-col h-screen">
         <Navbar />
-        <main className="flex flex-col justify-center items-center lg:h-screen z-10 max-w-7xl mx-auto w-full">
+        <main className="flex flex-col justify-center items-center lg:h-screen z-10 max-w-7xl mx-auto w-full pb-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center mx-auto px-3">
             <div className="space-y-4 sm:space-y-6 xl:space-y-8 animate-fade-in order-2 lg:order-1 pt-12 xl:pt-0">
               <div className="space-y-2 sm:space-y-4">

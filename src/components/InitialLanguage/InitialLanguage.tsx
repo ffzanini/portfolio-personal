@@ -1,6 +1,6 @@
 "use client";
-
 import { useEffect } from "react";
+
 import { useTranslation } from "@/context";
 import { getBrowserLanguage } from "@/libs/browser";
 

@@ -7,5 +7,6 @@ export * from "./InitialLanguage";
 export * from "./LanguageSelect";
 export * from "./Navbar";
 export * from "./SanitizedText";
+export * from "./ScrollToTop";
 export * from "./Tooltip";
 export * from "./ZoomImage";

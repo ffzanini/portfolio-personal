@@ -3,7 +3,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 import AppProvider from "@/providers/AppProvider";
-import { ClientToaster, SetInitialLanguage } from "@/components";
+import {
+  ClientToaster,
+  ScrollToTopButton,
+  SetInitialLanguage,
+} from "@/components";
 
 import { fontMavenPro } from "./fonts";
 import "./globals.css";
@@ -66,6 +70,7 @@ export default function RootLayout({
           <ClientToaster />
           <Analytics mode="production" />
           <SpeedInsights />
+          <ScrollToTopButton />
         </AppProvider>
       </body>
     </html>

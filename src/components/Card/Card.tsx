@@ -4,7 +4,7 @@ import { LuExternalLink, LuGithub, LuSparkles } from "react-icons/lu";
 import { Project } from "@/app/data/projects";
 import { cn } from "@/libs/cn";
 import { useTranslation } from "@/context";
-import { ZoomImage } from "../ZoomImage";
+import { ZoomImage } from "@/components";
 
 interface CardProps {
   project: Project;

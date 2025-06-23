@@ -1,5 +1,4 @@
 "use client";
-
 import {
   createContext,
   useContext,
@@ -9,6 +8,7 @@ import {
   useEffect,
   ReactNode,
 } from "react";
+
 import { en, es, pt } from "../locales";
 
 type Locations = "en" | "es" | "pt";

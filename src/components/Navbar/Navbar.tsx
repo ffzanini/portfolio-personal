@@ -1,7 +1,9 @@
 "use client";
 import { useState, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
@@ -15,8 +17,6 @@ import { navItems } from "@/constants/navbar";
 import { nightStalker, dawnbreaker } from "@/constants/phrases";
 import { useTranslation } from "@/context";
 import { cn } from "@/libs/cn";
-import toast from "react-hot-toast";
-import Image from "next/image";
 
 export function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);

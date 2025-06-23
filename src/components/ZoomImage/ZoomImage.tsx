@@ -4,6 +4,7 @@ import { LuLoader } from "react-icons/lu";
 
 import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
+
 import "react-medium-image-zoom/dist/styles.css";
 import "./custom-zoom.css";
 

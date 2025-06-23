@@ -151,7 +151,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col my-8 lg:my-16">
+          <div className="flex flex-col mt-8 lg:mt-16">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
                 <div className="w-12 h-12 min-w-12 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
