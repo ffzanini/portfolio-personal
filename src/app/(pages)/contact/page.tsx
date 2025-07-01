@@ -12,7 +12,6 @@ import {
 } from "react-icons/lu";
 
 import toast from "react-hot-toast";
-import axios from "axios";
 
 import { useTranslation } from "@/context";
 import { Footer, Navbar, SanitizedText, Tooltip } from "@/components";
@@ -161,13 +160,18 @@ function ContactForm() {
 
   const enableSubmit = formState.isDirty && formState.isValid;
 
-  const onSubmit = handleSubmit(({ name, email, message }) => {
+  const onSubmit = handleSubmit(async ({ name, email, message }) => {
     toast.promise(
-      axios
-        .post("api/contact", {
-          name,
-          email,
-          message,
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("Erro na requisição");
+          return res.json();
         })
         .then(() => {
           reset();
