@@ -30,7 +30,7 @@ export default function Home() {
         <Navbar />
         <main className="flex flex-col justify-center items-center lg:h-screen z-10 max-w-7xl mx-auto w-full pb-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center mx-auto px-3">
-            <div className="space-y-4 sm:space-y-6 xl:space-y-8 animate-fade-in order-2 lg:order-1 pt-12 xl:pt-0">
+            <div className="space-y-4 sm:space-y-6 xl:space-y-8 order-2 lg:order-1 pt-12 xl:pt-0">
               <div className="space-y-2 sm:space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-xl text-gray-600 dark:text-gray-400 font-medium">
@@ -88,7 +88,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="flex justify-center lg:justify-end animate-fade-in order-1 lg:order-2 mt-28 xl:pt-0"
+              className="flex justify-center lg:justify-end order-1 lg:order-2 mt-28 xl:pt-0"
               style={{ animationDelay: "0.2s" }}
             >
               <div className="relative">
