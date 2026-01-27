@@ -136,7 +136,7 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                 <Link
                   href="/stack"
-                  className="flex flex-row justify-center items-center border border-primary-600 bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-4 py-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                  className="flex flex-row justify-center items-center border border-primary-600 bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-4 py-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                 >
                   {translations.about.stack.button}
                   <LuArrowRight className="hidden md:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />

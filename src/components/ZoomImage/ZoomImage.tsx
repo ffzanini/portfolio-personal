@@ -14,6 +14,7 @@ interface ZoomImageProps {
   width?: number;
   height?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export function ZoomImage({
@@ -22,6 +23,7 @@ export function ZoomImage({
   width,
   height,
   className,
+  style,
 }: Readonly<ZoomImageProps>) {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -43,6 +45,7 @@ export function ZoomImage({
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
           loading={typeof window === "undefined" ? "eager" : "lazy"}
+          style={style}
         />
       </Zoom>
     </div>

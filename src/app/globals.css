@@ -49,6 +49,47 @@
   .toast-animate-fade-out {
     animation: toast-fade-out 0.2s ease-in forwards;
   }
+
+  @keyframes float-up {
+    0%, 100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float-down {
+    0%, 100% {
+      transform: translateY(10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float-up {
+    animation: float-up 3s ease-in-out infinite;
+  }
+
+  .animate-float-down {
+    animation: float-down 3s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  /* Otimizações de performance para transições */
+  .transition-transform {
+    will-change: transform;
+  }
+
+  /* Otimização para elementos com hover */
+  .group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+  }
+
+  .group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+  }
 }
 
 :root {

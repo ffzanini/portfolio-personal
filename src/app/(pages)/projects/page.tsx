@@ -1,5 +1,5 @@
 "use client";
-import { useLayoutEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { LuFilter } from "react-icons/lu";
 
@@ -32,7 +32,7 @@ export default function Projects() {
   const visibleProjects = filteredProjects.slice(0, visibleCount);
   const hasMore = visibleCount < filteredProjects.length;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setVisibleCount(3);
   }, [activeFilter]);
 

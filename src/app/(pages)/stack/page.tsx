@@ -80,19 +80,20 @@ export default function Stack() {
                       }}
                     >
                       <div
-                        className="p-3 rounded-2xl bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 transition-all duration-300 group-hover/tech:scale-105"
+                        className="p-3 rounded-2xl bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 transition-[transform,border-color] duration-300 group-hover/tech:scale-105"
                         onMouseEnter={(e) => {
                           e.currentTarget.style.borderColor = tech.color;
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.borderColor = "";
                         }}
+                        style={{ willChange: "transform, border-color" }}
                       >
                         <div className="flex flex-col items-center space-y-2">
                           <div className="relative">
                             <tech.icon
                               className="w-10 h-10 transition-transform duration-300 group-hover/tech:scale-110"
-                              style={{ color: tech.color }}
+                              style={{ color: tech.color, willChange: "transform" }}
                             />
                             {tech.featured && (
                               <LuStar className="absolute -top-1 -right-1 w-3 h-3 text-yellow-400 fill-yellow-400" />

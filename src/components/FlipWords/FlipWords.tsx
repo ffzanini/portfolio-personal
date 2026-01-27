@@ -57,7 +57,7 @@ export const FlipWords = ({
         transition={{ type: "spring", stiffness: 100, damping: 10 }}
         className={cn(
           "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100",
-          className
+          className,
         )}
       >
         {currentWord.split(" ").map((word, wordIndex) => (

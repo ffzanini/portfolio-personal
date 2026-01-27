@@ -31,6 +31,7 @@ export function Card({ project, index, lower }: Readonly<CardProps>) {
             height={1200}
             src={project.image}
             alt={String(projectTranslate?.title)}
+            style={{ willChange: "transform" }}
           />
         </div>
         <div className="flex flex-col bg-white-theme/80 dark:bg-dark-theme/80 flex-1 px-4 pt-4 pb-6">

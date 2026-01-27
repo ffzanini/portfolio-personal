@@ -1,5 +1,5 @@
 "use client";
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
@@ -27,7 +27,7 @@ export function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const [phrases, setPhrases] = useState(
-    theme === "dark" ? "Face the light!" : "Darkness reigns!"
+    theme === "dark" ? "Face the light!" : "Darkness reigns!",
   );
 
   const pathname = usePathname();
@@ -74,12 +74,12 @@ export function Navbar() {
         key={t.id}
         className={`${
           t.visible ? "toast-animate-fade-in" : "toast-animate-fade-out"
-        } relative z-[9999] max-w-md w-full shadow-lg rounded-lg flex ring-1 ring-black/10 dark:ring-white/10 
+        } relative z-9999 max-w-md w-full shadow-lg rounded-lg flex ring-1 ring-black/10 dark:ring-white/10 
       bg-white-theme dark:bg-dark-theme border border-gray-200/50 dark:border-gray-700/50`}
       >
         <div className="flex-1 w-0 p-4">
           <div className="flex items-start">
-            <div className="flex-shrink-0 pt-0.5">
+            <div className="shrink-0 pt-0.5">
               <Image
                 className="rounded-sm"
                 src={
@@ -113,18 +113,26 @@ export function Navbar() {
     ));
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (theme) {
       setCheckTheme(theme);
     }
   }, [theme]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 10);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -135,7 +143,7 @@ export function Navbar() {
           isScrolled
             ? "border-b border-gray-200/40 dark:border-gray-800/40"
             : ""
-        }`
+        }`,
       )}
     >
       <div className="mx-auto px-6 xl:px-8">
@@ -148,7 +156,7 @@ export function Navbar() {
                   `${fontRyanaLovely.className} opacity-60 transition-opacity duration-200 hover:opacity-100 text-3xl`,
                   {
                     "opacity-100": pathname === "/",
-                  }
+                  },
                 )}
                 title="Felipe Frantz Zanini"
               >
@@ -168,17 +176,17 @@ export function Navbar() {
                     isActive(item.path)
                       ? "font-bold text-black dark:text-white"
                       : "font-medium text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white"
-                  }`
+                  }`,
                 )}
               >
                 {renderText(item.label)}
 
                 {isActive(item.path) && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-300 to-primary-800" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-primary-300 to-primary-800" />
                 )}
 
                 {!isActive(item.path) && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-300 to-primary-800 scale-x-0 group-hover:scale-x-100 transition-transform  origin-left" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-primary-300 to-primary-800 scale-x-0 group-hover:scale-x-100 transition-transform  origin-left" />
                 )}
               </Link>
             ))}
@@ -230,7 +238,7 @@ export function Navbar() {
                   href={item.path}
                   className={`px-4 py-3 rounded-xl transition-all  ${
                     isActive(item.path)
-                      ? "font-bold text-white bg-gradient-to-r from-primary-950 via-primary-600 to-primary-300"
+                      ? "font-bold text-white bg-linear-to-r from-primary-950 via-primary-600 to-primary-300"
                       : "font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10"
                   }`}
                   onClick={() => setIsOpenMenu(false)}
