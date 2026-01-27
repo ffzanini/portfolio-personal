@@ -68,10 +68,10 @@ export default function RootLayout({
           <SetInitialLanguage />
           {children}
           <ClientToaster />
-          <Analytics mode="production" />
-          <SpeedInsights />
           <ScrollToTopButton />
         </AppProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

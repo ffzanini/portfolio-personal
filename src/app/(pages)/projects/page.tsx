@@ -41,12 +41,12 @@ export default function Projects() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
+    <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <Navbar />
       <main className="pt-20 lg:pt-32 pb-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
+            <h1 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
               {translations.projects.title}
             </h1>
             <SanitizedText
@@ -56,7 +56,7 @@ export default function Projects() {
           </div>
 
           <h2 className="text-3xl font-bold my-8 flex items-center">
-            <span className="w-2 h-8 bg-gradient-to-b from-primary-700 to-primary-800 dark:from-primary-400 dark:to-primary-500 rounded mr-4"></span>
+            <span className="w-2 h-8 bg-linear-to-b from-primary-700 to-primary-800 dark:from-primary-400 dark:to-primary-500 rounded mr-4"></span>
             {translations.projects.projects_title}
           </h2>
 
@@ -71,7 +71,7 @@ export default function Projects() {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-2 my-8 lg:my-16">
+          <div className="flex flex-wrap justify-center items-center gap-2 my-8">
             <LuFilter className="h-7 w-7 " />
             {filters.map((filter) => (
               <button
@@ -87,10 +87,10 @@ export default function Projects() {
               </button>
             ))}
           </div>
-          <div className="flex flex-col my-8 lg:my-16">
+          <div className="flex flex-col my-8">
             {filteredProjects.length !== 0 && (
               <h2 className="text-3xl font-bold mb-8 flex items-center">
-                <span className="w-2 h-8 bg-gradient-to-b from-primary-700 to-primary-800 dark:from-primary-400 dark:to-primary-500 rounded mr-4"></span>
+                <span className="w-2 h-8 bg-linear-to-b from-primary-700 to-primary-800 dark:from-primary-400 dark:to-primary-500 rounded mr-4"></span>
                 {translations.projects.projects_all}
               </h2>
             )}
@@ -126,7 +126,7 @@ export default function Projects() {
               <div className="flex justify-center mt-8">
                 <button
                   onClick={handleLoadMore}
-                  className="flex flex-row justify-center items-center bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 cursor-pointer"
+                  className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 cursor-pointer"
                 >
                   {translations.projects.load}
                 </button>
@@ -143,7 +143,7 @@ export default function Projects() {
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col items-start gap-3">
-              <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
                 {translations.projects.contact.title}
               </h1>
 

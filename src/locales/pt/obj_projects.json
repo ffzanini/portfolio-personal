@@ -6,6 +6,7 @@
   "projects_title": "Projetos em foco",
   "projects_all": "Lista completa de projetos",
   "github": "Projeto disponível no github",
+  "return": "Voltar",
   "projects": [
     {
       "id": 1,
@@ -154,7 +155,7 @@
         "Uso em múltiplos ambientes",
         "Engajamento familiar",
         "Recursos extras como vídeos e fórum EdTech",
-        "Design exlcusivo de acesso"
+        "Design exclusivo de acesso"
       ],
 
       "challengesTitle": "Desafios Técnicos",
@@ -195,7 +196,7 @@
         "Controle de usuários",
         "Painel de boletos para pagar e histórico",
         "Aduitoria Fiscal",
-        "Resgate e visualizaçao de benefícios",
+        "Resgate e visualização de benefícios",
         "Geolocalização de shoppings"
       ],
 
@@ -214,7 +215,7 @@
         "Aumento de 83% nas auditorias fiscais",
         "Controle total das vendas informadas",
         "Facilitação na validação de informações das lojas e contratos",
-        "Aumento nas aprovações de solicitação de servço em 78%"
+        "Aumento nas aprovações de solicitação de serviço em 78%"
       ]
     },
     {

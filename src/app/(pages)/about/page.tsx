@@ -46,22 +46,22 @@ export default function About() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
+    <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <Navbar />
       <main className="pt-20 lg:pt-32 pb-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
+            <h1 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
               {translations.about.title}
             </h1>
             <p className="text-xl max-w-5xl mx-auto leading-relaxed">
               {translations.about.sub_title}
             </p>
           </div>
-          <div className="flex flex-col my-8 lg:my-16">
+          <div className="flex flex-col my-8 ">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
                   <LuCarFront className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">
@@ -79,7 +79,7 @@ export default function About() {
                 />
                 <SanitizedText json={translations.about.description.end} />
               </div>
-              <div className="md:grid grid-cols-5 flex flex-col gap-4 pb-6 hidden md:block">
+              <div className="md:grid grid-cols-5 gap-4 pb-6 hidden">
                 {photos.map((photo, index) => (
                   <ZoomImage
                     key={index}
@@ -93,10 +93,10 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col my-8 lg:my-16">
+          <div className="flex flex-col my-8">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
                   <LuBrain className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">
@@ -116,7 +116,7 @@ export default function About() {
                     className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                   >
                     <div className="flex flex-row items-center gap-2 pb-2">
-                      <div className="w-8 h-8 min-w-8 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 min-w-8 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
                         {renderIco(process.id)}
                       </div>
                       <h4 className="text-xl font-medium">{process.title}</h4>
@@ -151,10 +151,10 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col mt-8 lg:mt-16">
+          <div className="flex flex-col mt-8">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
                   <LuCoffee className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">

@@ -21,7 +21,7 @@ export default function ProjectDetailsView({
   const { translations } = useTranslation();
 
   const projectTranslate = translations.projects.projects.find(
-    (translate) => translate.id === project.id
+    (translate) => translate.id === project.id,
   );
 
   const breadcrumb = [
@@ -30,13 +30,13 @@ export default function ProjectDetailsView({
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-200 via-white-theme to-white-theme dark:bg-gradient-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
+    <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <Navbar />
       <main className="pt-20 lg:pt-32 pb-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <Breadcrumb path={breadcrumb} />
           <div className="text-center animate-fade-in">
-            <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
+            <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
               {projectTranslate?.title}
             </h1>
           </div>
@@ -103,7 +103,7 @@ export default function ProjectDetailsView({
               <span
                 key={tag}
                 className={cn(
-                  "text-base font-medium px-3 py-1 bg-primary-300/50 dark:bg-primary-800/50 backdrop-blur-sm border border-primary-800/50 dark:border-primary-300/50 rounded-2xl"
+                  "text-base font-medium px-3 py-1 bg-primary-300/50 dark:bg-primary-800/50 backdrop-blur-sm border border-primary-800/50 dark:border-primary-300/50 rounded-2xl",
                 )}
               >
                 {tag}
@@ -111,10 +111,10 @@ export default function ProjectDetailsView({
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            <div className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+            <div className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 flex flex-col">
               <div className="flex flex-row items-center gap-2 pb-2">
-                <div className="w-8 h-8 min-w-8 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 min-w-8 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
                   <LuBadgeCheck className="w-5 h-5" />
                 </div>
                 <h4 className="text-xl font-medium">
@@ -129,9 +129,9 @@ export default function ProjectDetailsView({
               ))}
             </div>
 
-            <div className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4">
+            <div className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 flex flex-col">
               <div className="flex flex-row items-center gap-2 pb-2">
-                <div className="w-8 h-8 min-w-8 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 min-w-8 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
                   <LuServerCrash className="w-5 h-5" />
                 </div>
                 <h4 className="text-xl font-medium">
@@ -146,9 +146,9 @@ export default function ProjectDetailsView({
               ))}
             </div>
 
-            <div className="mb-4 bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4">
+            <div className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 flex flex-col">
               <div className="flex flex-row items-center gap-2 pb-2">
-                <div className="w-8 h-8 min-w-8 bg-gradient-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 min-w-8 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
                   <LuTrophy className="w-5 h-5" />
                 </div>
                 <h4 className="text-xl font-medium">
@@ -163,13 +163,13 @@ export default function ProjectDetailsView({
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center align-center gap-2">
+          <div className="flex flex-col items-center align-center gap-2 mt-6">
             <Link
               href="/projects"
-              className="flex flex-row justify-center items-center bg-gradient-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+              className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
             >
               <LuReply className="mr-2 h-5 w-5" />
-              Voltar
+              {translations.projects.return}
             </Link>
           </div>
         </div>

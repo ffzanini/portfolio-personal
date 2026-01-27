@@ -6,6 +6,7 @@
   "projects_title": "Proyectos Destacados",
   "projects_all": "Lista completa de proyectos",
   "github": "Proyecto disponible en GitHub",
+  "return": "Volver",
   "projects": [
     {
       "id": 1,
