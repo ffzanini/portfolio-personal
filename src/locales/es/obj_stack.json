@@ -1,12 +1,12 @@
 {
   "title": "Stack tecnológico",
-  "sub_title": "Muchas personas me preguntan qué herramientas, lenguajes y servicios utilizo o he utilizado en el desarrollo de mis proyectos — así que decidí reunir todo en un solo lugar.",
+  "sub_title": "Muchas personas me preguntan qué herramientas, lenguajes y servicios uso o he usado en los proyectos — así que reuní todo en un solo lugar.",
 
   "mainSpecialties": "Principales especialidades",
-  "knownTech": "Tecnologías que manejo",
+  "knownTech": "Tecnologías con las que trabajo",
 
-  "frontend": "Creando interfaces modernas y responsivas",
-  "backend": "Desarrollando APIs robustas y escalables",
+  "frontend": "Interfaces modernas y responsivas",
+  "backend": "APIs robustas y escalables",
   "devops": "Experiencia con infraestructura moderna",
 
   "strengths": {
@@ -14,34 +14,34 @@
     "sub_title": "Habilidades que desarrollé a lo largo del camino para construir productos digitales de calidad.",
     "items": [
       {
-        "title": "Desarrollo Frontend",
-        "description": "Interfaces que combinan rendimiento, accesibilidad y diseño moderno — siempre pensadas para quien realmente las va a usar."
+        "title": "Desarrollo frontend",
+        "description": "Interfaces que combinan rendimiento, accesibilidad y diseño moderno — siempre pensadas en quienes las van a usar."
       },
       {
-        "title": "Diseño Responsivo",
+        "title": "Diseño responsivo",
         "description": "Interfaces diseñadas con enfoque mobile first, adaptadas a diferentes tamaños de pantalla y centradas en la usabilidad en cualquier dispositivo."
       },
       {
-        "title": "Arquitectura de Software",
+        "title": "Arquitectura de software",
         "description": "Aplicaciones diseñadas para crecer: siguiendo principios de DDD y buenas prácticas de ingeniería para crear arquitecturas escalables, organizadas y sostenibles."
       },
       {
-        "title": "Metodologías Ágiles",
+        "title": "Metodologías ágiles",
         "description": "Aplicación de prácticas ágiles como Navway, Scrum y Kanban para entregar valor de forma continua y colaborativa."
       },
       {
-        "title": "Liderazgo Técnico",
-        "description": "Coordinación de equipos de desarrollo con foco en calidad, estandarización del código, alineación técnica y mentorías."
+        "title": "Liderazgo técnico",
+        "description": "Coordinación de equipos de desarrollo con foco en calidad, estandarización del código, alineación técnica y mentoría."
       },
       {
         "title": "Trabajo en equipo",
-        "description": "Colaboración efectiva con distintos perfiles profesionales como stakeholders, diseñadores y desarrolladores, promoviendo comunicación y resultados conjuntos."
+        "description": "Colaboración efectiva con distintos perfiles — stakeholders, diseñadores y desarrolladores — promoviendo comunicación y resultados conjuntos."
       }
     ]
   },
   "footer": {
-    "title": "Del código al mundo: ¡mira los resultados!",
-    "message": "Las habilidades y herramientas son solo el comienzo. Lo que realmente marca la diferencia es cómo damos vida a soluciones reales, funcionales y bien pensadas. Descubre algunos de estos resultados visitando la ",
+    "title": "Del código al mundo: mira los resultados",
+    "message": "Las competencias y herramientas son solo el comienzo. Lo que marca la diferencia es cómo damos vida a soluciones reales, funcionales y bien pensadas. Descubre algunos de estos resultados en la ",
     "project": "página de proyectos."
   }
 }

@@ -1,48 +1,48 @@
 {
   "title": "Stack de tecnologia",
-  "sub_title": "Muitas pessoas me perguntam quais ferramentas, linguagens e serviços eu uso e já usei no desenvolvimento dos meus projetos — então decidi reunir tudo em um só lugar.",
+  "sub_title": "Muitas pessoas me perguntam quais ferramentas, linguagens e serviços eu uso ou já usei nos projetos — então reuni tudo em um só lugar.",
 
   "mainSpecialties": "Principais especialidades",
-  "knownTech": "Tecnologias que sou familiar",
+  "knownTech": "Tecnologias com as quais trabalho",
 
-  "frontend": "Criando interfaces mdodernas e responsivas",
-  "backend": "Desenvolvendo APIs robustas e escaláveis",
+  "frontend": "Interfaces modernas e responsivas",
+  "backend": "APIs robustas e escaláveis",
   "devops": "Experiência com infraestrutura moderna",
 
   "strengths": {
     "title": "Competências além do código",
-    "sub_title": "Habilidades que desenvolvi ao longo da jornada para construir produtos digitais com qualidade.",
+    "sub_title": "Habilidades que desenvolvi ao longo da jornada para construir produtos digitais de qualidade.",
     "items": [
       {
-        "title": "Desenvolvimento Frontend",
-        "description": "Interfaces que combinam performance, acessibilidade e design moderno — tudo sempre pensado para quem realmente vai utilizar."
+        "title": "Desenvolvimento frontend",
+        "description": "Interfaces que combinam performance, acessibilidade e design moderno — sempre pensadas em quem vai utilizá-las."
       },
       {
-        "title": "Design Responsivo",
-        "description": "Interfaces pensadas com abordagem mobile first, adaptadas para diferentes tamanhos de tela e com foco na usabilidade em qualquer dispositivo."
+        "title": "Design responsivo",
+        "description": "Interfaces pensadas com abordagem mobile first, adaptadas a diferentes tamanhos de tela e com foco em usabilidade em qualquer dispositivo."
       },
       {
-        "title": "Arquitetura de Software",
+        "title": "Arquitetura de software",
         "description": "Aplicações pensadas para crescer: seguindo princípios de DDD e boas práticas de engenharia para criar arquiteturas escaláveis, organizadas e sustentáveis."
       },
       {
-        "title": "Metodologias Ágeis",
+        "title": "Metodologias ágeis",
         "description": "Aplicação de práticas ágeis como Navway, Scrum e Kanban para entregar valor de forma contínua e colaborativa."
       },
       {
-        "title": "Liderança Técnica",
-        "description": "Coordenação de times de desenvolvimento com foco em qualidade, padronização de código, alinhamento técnico e mentorias."
+        "title": "Liderança técnica",
+        "description": "Coordenação de times de desenvolvimento com foco em qualidade, padronização de código, alinhamento técnico e mentoria."
       },
       {
         "title": "Trabalho em equipe",
-        "description": "Colaboração eficaz com diferentes perfis profissionais, como stakeholders, designers e desenvolvedores, promovendo comunicação e resultados em conjunto."
+        "description": "Colaboração eficaz com diferentes perfis — stakeholders, designers e desenvolvedores — promovendo comunicação e resultados em conjunto."
       }
     ]
   },
 
   "footer": {
-    "title": "Do código pro mundo: veja os resultados!",
-    "message": "As competências e ferramentas são apenas o começo. O que realmente faz a diferença é como damos vida a soluções reais, funcionais e bem pensadas. Conheça alguns desses resultados acessando a ",
+    "title": "Do código ao mundo: veja os resultados",
+    "message": "Competências e ferramentas são apenas o começo. O que faz a diferença é como damos vida a soluções reais, funcionais e bem pensadas. Conheça alguns desses resultados na ",
     "project": "página de projetos."
   }
 }

@@ -122,7 +122,7 @@ export default function Home() {
                       <div className="w-full h-full flex items-center justify-center">
                         <ZoomImage
                           src="/images/me-desenho.jpeg"
-                          alt="Profile photo"
+                          alt="Felipe Frantz Zanini - Software Engineer e desenvolvedor ffzanini"
                           width={180}
                           height={180}
                           className="rounded-xl"

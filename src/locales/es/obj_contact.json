@@ -1,16 +1,16 @@
 {
-  "title": "Mándame un mensaje digital",
-  "sub_title": "Siéntete libre en escribirme por aquí o en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Siempre estoy disponible para charlar sobre desarrollo, proyectos o lo que surja. ¡Conectemos y conversemos!",
+  "title": "Ponte en contacto",
+  "sub_title": "Siéntete libre de escribirme por aquí o en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Siempre estoy disponible para charlar sobre desarrollo, proyectos o lo que surja.",
   "form": {
-    "title": "¡Manda un saludo!",
-    "sub_title": "Sin middleware entre nosotros — hablemos.",
+    "title": "Envía un mensaje",
+    "sub_title": "Sin intermediarios — vamos al grano.",
     "name": "Tu nombre",
     "email": "Correo electrónico",
     "message": "Escribe tu mensaje"
   },
   "next": {
-    "title": "Próximos Pasos",
-    "sub_title": "Entiende cómo funciona el proceso inicial — desde el envío de tu idea hasta la propuesta.",
+    "title": "Próximos pasos",
+    "sub_title": "Entiende cómo funciona el proceso — desde el envío de tu idea hasta la propuesta.",
     "steps": [
       {
         "id": 1,
@@ -25,7 +25,7 @@
       {
         "id": 3,
         "title": "Alineación",
-        "description": "Agendamos una reunión para alinear todos los detalles, objetivos y requisitos del proyecto."
+        "description": "Agendamos una reunión para alinear detalles, objetivos y requisitos del proyecto."
       },
       {
         "id": 4,
@@ -35,30 +35,30 @@
     ]
   },
   "testimonials": {
-    "title": "Comentarios de quienes ya trabajaron conmigo",
-    "sub_title": "Quienes han trabajado conmigo tienen algo que decir — y yo solo tengo palabras de agradecimiento.",
+    "title": "Testimonios de quienes ya trabajaron conmigo",
+    "sub_title": "Quienes han trabajado conmigo tienen algo que decir — y yo solo tengo que agradecer.",
     "testimonials": [
       {
-        "quote": "Fue gratificante ver la repercusión positiva del sitio desde su lanzamiento. ¡La recepción fue sumamente cálida! El diseño, el layout, el contenido, la navegación… todo ha sido elogiado con entusiasmo. Incluso mi padre, que echó un vistazo al código, comentó que estaba 'limpio' — ¡lo cual, viniendo de él, es un gran elogio! Solo en el lanzamiento, tuvimos más de 1.000 visitantes. He recibido mensajes destacando la organización, claridad e identidad de DOVE, que se ha fortalecido aún más con la presencia online. Estoy profundamente agradecido con el trabajo de todos los involucrados. ¡Sin duda, un éxito!",
+        "quote": "Fue gratificante ver la repercusión positiva del sitio desde su lanzamiento. La recepción fue sumamente cálida. El diseño, el layout, el contenido, la navegación — todo ha sido elogiado con entusiasmo. Incluso mi padre, que echó un vistazo al código, comentó que estaba “limpio”; viniendo de él, es un gran elogio. Solo en el lanzamiento tuvimos más de 1.000 visitantes. He recibido mensajes destacando la organización, claridad e identidad de DOVE, que se ha fortalecido aún más con la presencia online. Estoy profundamente agradecido con todos los involucrados. Sin duda, un éxito.",
         "name": "Joseph Murray",
         "title": "Director de DOVE Research"
       },
       {
-        "quote": "Felipe fue uno de los mejores profesionales con los que tuve la oportunidad de trabajar. Siempre comprometido y 100% enfocado en entregar los proyectos con calidad, sin importar los desafíos. Se preocupa por todas las etapas del proceso de desarrollo, no se limita solo a programar. En los proyectos en los que colaboramos, desempeñaba muy bien su papel de tech lead frente al cliente, logrando grandes entregas junto al equipo. Tiene una excelente comunicación y sabe actuar en momentos difíciles. Felipe aprende con rapidez y tiene gran autonomía para liderar cualquier proyecto.",
+        "quote": "Felipe fue uno de los mejores profesionales con los que he tenido la oportunidad de trabajar — siempre dedicado y 100% enfocado en entregar los proyectos con calidad, sin importar los desafíos. Se preocupa por todas las etapas del proceso de desarrollo, no limitándose solo a programar. En los proyectos en los que colaboramos, desempeñó muy bien su papel de tech lead frente al cliente y logró grandes entregas junto al equipo. Se comunica con claridad y sabe actuar en momentos difíciles. Felipe aprende con rapidez y tiene gran autonomía para liderar cualquier proyecto.",
         "name": "Igor Casconi de Oliveira",
         "title": "Ingeniero de Software"
       }
     ]
   },
   "loading": "Enviando mensaje...",
-  "success": "¡Mensaje enviado con éxito!",
-  "error": "Tu mensaje no fue enviado, intenta nuevamente más tarde.",
-  "tooltip": "Faltan algunos campos o el correo es inválido",
-  "button_text_ready": "¡Listo, solo envía!",
-  "button_text_not_ready": "Esperando que completes todo...",
+  "success": "Mensaje enviado con éxito.",
+  "error": "Tu mensaje no fue enviado. Intenta nuevamente más tarde.",
+  "tooltip": "Completa todos los campos y usa un correo válido",
+  "button_text_ready": "Listo para enviar",
+  "button_text_not_ready": "Esperando que completes",
 
   "footer": {
-    "title": "¡Mi historia no termina aquí!",
-    "message": "Consulta mi <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículum completo</a></b> y descubre en detalle todo lo que he producido en más de 10 años de experiencia en el área de tecnología."
+    "title": "Mi historia no termina aquí",
+    "message": "Consulta mi <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículum completo</a></b> y descubre en detalle todo lo que he producido en más de 10 años de experiencia en tecnología."
   }
 }

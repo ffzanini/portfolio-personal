@@ -2,7 +2,7 @@
   "title": "Del Código a la Entrega",
   "breadcrumb_begin": "Proyectos",
   "breadcrumb_end": "Especificaciones",
-  "sub_title": "A lo largo de mi carrera, participé en la creación de proyectos que impactaron positivamente a personas y negocios. Aquí puedes navegar por diferentes sitios que desarrollé, usados por miles de personas todos los días. La mayoría de los proyectos listados aquí siguen activos, otros fueron descontinuados, y algunos no están incluidos por motivos contractuales.",
+  "sub_title": "A lo largo de mi carrera he participado en la creación de proyectos que impactaron positivamente a personas y negocios. Aquí puedes navegar por sitios que desarrollé y que son usados por miles de personas cada día. La mayoría de los proyectos listados siguen activos; otros fueron descontinuados y algunos no figuran por motivos contractuales.",
   "projects_title": "Proyectos Destacados",
   "projects_all": "Lista completa de proyectos",
   "github": "Proyecto disponible en GitHub",
@@ -14,8 +14,8 @@
       "description": "Una vitrina interactiva de mis habilidades, proyectos y experimentos con nuevas tecnologías — todo enfocado en usabilidad y evolución constante.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "¡Bienvenido a mi portafolio! Este proyecto fue creado para ser una vitrina de mis habilidades, experiencias y los trabajos que he realizado a lo largo de mi carrera. Aquí encontrarás una colección detallada que resalta mis competencias y la dedicación que pongo en cada proyecto.",
-        "El diseño está inspirado en los principios de usabilidad y mobile first, garantizando una navegación intuitiva que permite explorar cada sección fácilmente y así obtener una visión completa de mis trabajos — y también sobre mí.",
+        "Bienvenido a mi portafolio. Este proyecto fue pensado como vitrina de mis habilidades, experiencias y trabajos a lo largo de mi carrera. Aquí encontrarás una colección que resalta mis competencias y la dedicación que pongo en cada proyecto.",
+        "El diseño está inspirado en los principios de usabilidad y mobile first, garantizando una navegación lo más intuitiva posible, para que cada sección sea fácil de explorar y se tenga una visión completa de mis trabajos y de quién soy.",
         "Además, este proyecto también sirve como mi laboratorio de pruebas, donde implemento nuevas bibliotecas y tecnologías antes de usarlas en proyectos reales. Esto me permite estar siempre actualizado con las últimas tendencias del mercado y asegurar calidad y eficiencia en mi trabajo."
       ],
       "stackTitle": "Stack Tecnológico",
@@ -89,10 +89,10 @@
     {
       "id": 3,
       "title": "JA Índio Jiu Jitsu",
-      "description": "Un sitio web desarrollado para atraer e involucrar a posibles alumnos en cualquier etapa de su camino, desde cinturón blanco hasta cinturón negro. Con un diseño moderno, atractivo y responsivo.",
+      "description": "Sitio desarrollado para atraer e involucrar a posibles alumnos en cualquier etapa del camino, del cinturón blanco al negro, con diseño moderno, atractivo y responsivo.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "El proyecto JA Índio Jiu Jitsu, situado en la ciudad de Pelotas - RS, fue diseñado para ser un sitio web responsivo y organizado que ofrece programación de clases gratuitas, información sobre los horarios, descripciones de sus programas (por nivel y público), testimonios, información de contacto y filosofía de la academia. El objetivo es divulgar el excelente trabajo de la academia, inspirar a nuevos estudiantes y crear una mayor conexión con el público."
+        "El proyecto JA Índio Jiu Jitsu, en Pelotas (RS), fue diseñado como un sitio responsivo y organizado que ofrece programación de clases gratuitas, horarios, descripción de programas (por nivel y público), testimonios, contacto y filosofía de la academia — con el objetivo de divulgar el trabajo de la academia, inspirar a nuevos estudiantes y fortalecer la conexión con el público."
       ],
       "stackTitle": "Stack Tecnológico",
       "featuresTitle": "Funcionalidades Implementadas",
@@ -124,11 +124,11 @@
     {
       "id": 4,
       "title": "EducaCross",
-      "description": "Plataforma educativa híbrida y gamificada, con más de 2.000 juegos alineados con la BNCC, adaptados a las necesidades de cada alumno. Ofrece dashboards para profesores, soporte pedagógico y uso multiplataforma.",
+      "description": "Plataforma educativa híbrida y gamificada, con más de 2.000 juegos alineados con la BNCC y adaptados a las necesidades de cada alumno. Ofrece dashboards para profesores, soporte pedagógico y uso multiplataforma.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "Durante mi período en nav9.tech, tuve la oportunidad de ser socio tecnológico de varias empresas, y entre ellas, colaboré en múltiples frentes del desarrollo de la versión 2.0 de la plataforma EducaCross.",
-        "Es una plataforma EdTech robusta y moderna orientada a la enseñanza de Matemáticas, Lengua Portuguesa, Lógica y alfabetización, enfocada en Educación Infantil y Primaria. Con más de 2.000 juegos digitales alineados con la BNCC (Base Nacional Común Curricular), la plataforma combina gamificación adaptativa, aprendizaje híbrido y reportes en tiempo real para involucrar a niños de 3 a 12 años.",
+        "Durante mi período en nav9.tech, actué como socio tecnológico de varias empresas; entre ellas, trabajé en varios frentes del desarrollo de la versión 2.0 de la plataforma EducaCross.",
+        "Es una plataforma EdTech robusta y moderna orientada a la enseñanza de Matemáticas, Lengua Portuguesa, Lógica y alfabetización, enfocada en Educación Infantil y Primaria. Con más de 2.000 juegos digitales alineados con la BNCC (Base Nacional Común Curricular), combina gamificación adaptativa, aprendizaje híbrido y reportes en tiempo real para involucrar a niños de 3 a 12 años.",
         "Educadores y gestores escolares tienen acceso a dashboards avanzados que permiten crear rutas personalizadas, monitorear el progreso de los alumnos y visualizar datos alineados con la BNCC. Además, ofrece soporte pedagógico y formación continua para docentes, creando un vínculo efectivo entre tecnología y práctica educativa.",
         "La plataforma es compatible con el uso en aulas, laboratorios, dispositivos móviles y offline, promoviendo la inclusión digital en las escuelas. Su arquitectura híbrida prioriza la seguridad (LGPD), accesibilidad y escalabilidad, y ya está presente en más de 1.700 escuelas, con miles de usuarios activos."
       ],
@@ -150,7 +150,7 @@
         "Protección de datos escolares",
         "Compatibilidad multiplataforma",
         "Alineación con los estándares educativos (BNCC)",
-        "Formato visual personalizado según tipo de acceso"
+        "Diseño exclusivo según tipo de acceso (perfil de escuela)"
       ],
       "achievementsTitle": "Resultados Alcanzados",
       "achievements": [
@@ -166,8 +166,8 @@
       "description": "El Portal Iguatemi es una plataforma B2B segura que permite a los comerciantes acceder a la información de su contrato, enviar documentos y participar en acciones de marketing dentro de la red Iguatemi, todo cumpliendo con la LGPD.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "Durante mi período en nav9.tech, tuve la oportunidad de colaborar durante más de 3 años en el desarrollo de los productos de los shoppings Iguatemi, destacándose el Portal del Comerciante.",
-        "Este portal es un área exclusiva para dueños de tiendas y sus colaboradores, orientado a la comunicación corporativa, informes de ventas, gestión de contratos, auditoría fiscal, boletos de pago, beneficios, noticias, promociones y procesos internos. Los usuarios acceden mediante una interfaz segura y encriptada, con autenticación de usuario y contraseña, cumpliendo con todos los estándares de seguridad de la LGPD para garantizar acceso según el rol y contrato."
+        "Durante mi período en nav9.tech, colaboré durante más de 3 años en el desarrollo de los productos de los Shoppings Iguatemi, con foco en el Portal del Comerciante.",
+        "Este portal es un área exclusiva para dueños de tiendas y sus colaboradores, orientado a la comunicación corporativa, informes de ventas, gestión de contratos, auditoría fiscal, boletos de pago, beneficios, noticias, promociones y procesos internos. Los usuarios acceden por una interfaz segura y cifrada, con autenticación de usuario y contraseña, en conformidad con la LGPD, garantizando acceso a las funciones según perfil y contrato."
       ],
       "stackTitle": "Stack Tecnológico",
       "featuresTitle": "Funcionalidades Implementadas",
@@ -185,7 +185,7 @@
       "challenges": [
         "Gestión de accesos simultáneos",
         "Cumplimiento de LGPD y seguridad de la información",
-        "Manejo seguro de datos escolares",
+        "Manejo seguro de datos de inquilinos y contratos",
         "Reportes financieros corporativos",
         "SEO y rendimiento para múltiples secciones"
       ],
@@ -201,10 +201,10 @@
     {
       "id": 6,
       "title": "Portafolio v2",
-      "description": "Versión 2.0 de mi portafolio personal, actualmente descontinuado.",
+      "description": "Versión 2.0 de mi portafolio personal, descontinuado.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "El objetivo era el mismo que la versión actual: mostrar mi trabajo, estudios y pruebas. Siéntete libre de explorarlo y conocer la versión anterior."
+        "El objetivo era el mismo que la versión actual: mostrar mi trabajo, estudios y pruebas. Siéntete libre de explorar la versión anterior."
       ],
       "stackTitle": "Stack Tecnológico",
       "featuresTitle": "Funcionalidades Implementadas",
@@ -236,7 +236,7 @@
       "description": "Una página de currículum online minimalista y altamente funcional, con secciones claras de experiencia, stack, proyectos y contacto, con animaciones ligeras, diseño responsivo y rendimiento optimizado.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "El objetivo es ser una página de currículum online centrada en el rendimiento, claridad y responsividad. Creada con tecnologías modernas, la estructura es limpia y organizada, permitiendo una navegación fluida entre las secciones. Es completamente mobile-first, asegurando una excelente experiencia de lectura e interacción en cualquier dispositivo, con transiciones suaves y animaciones sutiles."
+        "El objetivo es ofrecer una página de currículum online centrada en rendimiento, claridad y responsividad. Desarrollada con tecnologías modernas, la estructura es limpia y organizada, con navegación fluida entre las secciones. Es completamente mobile-first, con buena experiencia de lectura e interacción en cualquier dispositivo, transiciones suaves y animaciones sutiles."
       ],
       "stackTitle": "Stack Tecnológico",
       "featuresTitle": "Funcionalidades Implementadas",
@@ -262,7 +262,7 @@
   "load": "Cargar más",
   "contact": {
     "title": "Listo para un pull request de ideas",
-    "description": "Estoy abierto a nuevos proyectos, consultorías o intercambiar ideas sobre creación de productos digitales o desarrollo de juegos. Siéntete libre de enviarme un mensaje en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o dejar un mensaje en la ",
+    "description": "Estoy abierto a nuevos proyectos, consultorías e intercambios sobre creación de productos digitales o desarrollo de juegos. Siéntete libre de enviarme un mensaje en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o dejar un recado en la ",
     "contact": "página de contacto."
   }
 }

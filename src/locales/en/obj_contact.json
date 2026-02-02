@@ -1,16 +1,16 @@
 {
-  "title": "Ping me in the digital inbox",
-  "sub_title": "Feel free to hit me up here or on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. I'm always down to chat about development, projects, or whatever else comes up. Let’s connect and talk!",
+  "title": "Get in touch",
+  "sub_title": "Feel free to reach out here or on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. I am always available to chat about development, projects, or whatever comes up.",
   "form": {
-    "title": "Drop a line!",
-    "sub_title": "No middleware between us — let's talk.",
+    "title": "Send a message",
+    "sub_title": "No middleman — straight to the point.",
     "name": "Your name",
     "email": "Email",
     "message": "Type your message"
   },
   "next": {
-    "title": "Next Steps",
-    "sub_title": "Understand how the initial process works — from submitting your idea to receiving a proposal.",
+    "title": "Next steps",
+    "sub_title": "Understand how the process works — from submitting your idea to receiving a proposal.",
     "steps": [
       {
         "id": 1,
@@ -25,40 +25,39 @@
       {
         "id": 3,
         "title": "Alignment",
-        "description": "We schedule a meeting to align all the details, goals, and requirements of the project."
+        "description": "We schedule a meeting to align details, goals, and project requirements."
       },
       {
         "id": 4,
         "title": "Proposal",
-        "description": "Based on our conversation, I prepare a personalized proposal with all the details for you to review carefully."
+        "description": "Based on our conversation, I prepare a personalized proposal with all the details for you to review at your pace."
       }
     ]
   },
   "testimonials": {
-    "title": "Words from those who have worked with me",
-    "sub_title": "Those who’ve worked with me have something to say — and I’m truly grateful.",
+    "title": "Testimonials from those who have worked with me",
+    "sub_title": "Those who have worked with me have something to say — and I am truly grateful.",
     "testimonials": [
       {
-        "quote": "It was rewarding to see the positive response to the website since its launch. The reception was incredibly warm! The visuals, layout, content, navigation… everything has been enthusiastically praised. Even my father, who took a look at the code, said it was 'clean' — which coming from him, is a huge compliment! On launch day alone, we had over 1,000 visitors! I’ve received individual messages highlighting the organization, clarity, and identity of DOVE, which has become even stronger with our online presence. I’m deeply grateful for the work of everyone involved. Without a doubt, a success!",
+        "quote": "It was rewarding to see the positive response to the website since its launch. The reception was incredibly warm. The visuals, layout, content, navigation — everything has been enthusiastically praised. Even my father, who took a look at the code, said it was “clean”; coming from him, that is a huge compliment. On launch day alone we had over 1,000 visitors. I have received messages highlighting the organization, clarity, and identity of DOVE, which has become even stronger with our online presence. I am deeply grateful to everyone involved. Without a doubt, a success.",
         "name": "Joseph Murray",
         "title": "Director at DOVE Research"
       },
       {
-        "quote": "Felipe was one of the best professionals I’ve had the opportunity to work with — always dedicated and 100% focused on delivering projects regardless of the challenges, and with great quality. He cares about all aspects of the development process, not limiting himself to just coding. In the projects we worked on together, he performed very well as a tech lead with the client, managing to deliver outstanding results with the team. He communicates effectively and knows how to handle tough situations. Felipe learns technical concepts quickly and has great autonomy to lead any project.",
+        "quote": "Felipe was one of the best professionals I have had the opportunity to work with — always dedicated and 100% focused on delivering projects with quality, regardless of the challenges. He cares about every stage of the development process, not limiting himself to coding. In the projects we worked on together, he performed very well as tech lead with the client and achieved strong results with the team. He communicates effectively and knows how to stand out in difficult situations. Felipe learns quickly and has great autonomy to lead any project.",
         "name": "Igor Casconi de Oliveira",
         "title": "Software Engineer"
       }
     ]
   },
   "loading": "Sending message...",
-  "success": "Message sent successfully!",
-  "error": "Your message wasn't sent, please try again later.",
-  "tooltip": "Some fields are missing or the email is invalid",
-  "button_text_ready": "All set, just send now!",
-  "button_text_not_ready": "Waiting for you...",
-
+  "success": "Message sent successfully.",
+  "error": "Your message was not sent. Please try again later.",
+  "tooltip": "Fill in all fields and use a valid email",
+  "button_text_ready": "Ready to send",
+  "button_text_not_ready": "Waiting for input",
   "footer": {
-    "title": "My story doesn’t end here!",
-    "message": "Check out my <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">full résumé</a></b> and discover in detail everything I’ve produced over more than 10 years of experience in the tech industry."
+    "title": "My story does not end here",
+    "message": "Check out my <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">full résumé</a></b> and discover in detail everything I have produced over more than 10 years of experience in tech."
   }
 }

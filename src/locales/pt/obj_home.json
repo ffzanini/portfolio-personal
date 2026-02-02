@@ -1,19 +1,18 @@
 {
-  "welcome": "Bem-vindo! Prazer em te conhecer.",
-  "name": "Sou Felipe",
+  "welcome": "Bem-vindo! Prazer em conhecê-lo.",
+  "name": "Sou o Felipe",
   "roles": [
     "Engenheiro de Software",
     "Escritor e Roteirista",
     "Desenvolvedor de Jogos Indie",
-    "Faixa Marrom de Jiu Jitsu"
+    "Faixa Marrom de Jiu-Jitsu"
   ],
-
-  "description": "Atualmente sou Engenheiro de Software Sênior & Tech Lead na <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b> focado em desenvolvimento frontend, atuando como um parceiro de tecnologia e auxiliando a construir a próxima geração de aplicações web. Nas horas vagas também sou instrutor na <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu - Pelotas</a></b>.",
-  "location": "Pelotas - RS, Brasil",
-  "experience": "+10 anos experiência",
+  "description": "Atualmente sou Engenheiro de Software Sênior e Tech Lead na <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b>, com foco em frontend, atuando como parceiro de tecnologia na construção da próxima geração de aplicações web. No tempo livre, sou instrutor na <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu — Pelotas</a></b>.",
+  "location": "Pelotas — RS, Brasil",
+  "experience": "+10 anos de experiência",
   "projects": "+50 projetos desenvolvidos",
-  "stack": "Principal Stack",
-  "textButtonAbout": "Leia mais sobre mim",
-  "textButtonResume": "Visite meu currículo",
-  "textButtonStack": "Mais tecnologias"
+  "stack": "Stack principal",
+  "textButtonAbout": "Saiba mais sobre mim",
+  "textButtonResume": "Acessar meu currículo",
+  "textButtonStack": "Ver tecnologias"
 }

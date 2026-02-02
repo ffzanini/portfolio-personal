@@ -1,19 +1,18 @@
 {
-  "welcome": "Bienvenido! Mucho gusto en conocerte.",
+  "welcome": "¡Bienvenido! Mucho gusto en conocerte.",
   "name": "Soy Felipe",
   "roles": [
     "Ingeniero de Software",
     "Escritor y Guionista",
-    "Desarrollador de Videojuegos Indie",
-    "Cinturón Marrón de Jiu Jitsu"
+    "Desarrollador de Juegos Indie",
+    "Cinturón Marrón de Jiu-Jitsu"
   ],
-
-  "description": "Actualmente soy Ingeniero de Software Senior & Tech Lead en <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b> centrado en el desarrollo frontend, trabajando como compañero tecnológico y ayudando a construir la próxima generación de aplicaciones web. En mi tiempo libre, también soy instructor en <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu - Pelotas</a></b>.",
-  "location": "Pelotas - RS, Brasil",
+  "description": "Soy Ingeniero de Software Senior y Tech Lead en <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b>, centrado en frontend y trabajando como socio tecnológico en la construcción de la próxima generación de aplicaciones web. En mi tiempo libre soy instructor en <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu — Pelotas</a></b>.",
+  "location": "Pelotas — RS, Brasil",
   "experience": "+10 años de experiencia",
   "projects": "+50 proyectos desarrollados",
-  "stack": "Stack Principal",
-  "textButtonAbout": "Leer más sobre mí",
+  "stack": "Stack principal",
+  "textButtonAbout": "Conocer más sobre mí",
   "textButtonResume": "Ver mi currículum",
-  "textButtonStack": "Más tecnologías"
+  "textButtonStack": "Ver tecnologías"
 }

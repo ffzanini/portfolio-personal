@@ -5,15 +5,14 @@
     "Software Engineer",
     "Writer and Screenwriter",
     "Indie Game Developer",
-    "Jiu Jitsu Brown Belt"
+    "Jiu-Jitsu Brown Belt"
   ],
-
-  "description": "I’m currently Senior Software Engineer & Tech Lead at <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b> focused on frontend development, working as a tech solving partner and helping to build the next generation of web applications. In my free time, I’m also teacher at <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu - Pelotas</a></b>.",
-  "location": "Pelotas - RS, Brazil",
+  "description": "I am a Senior Software Engineer and Tech Lead at <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b>, focused on frontend and working as a technology partner to build the next generation of web applications. In my free time, I am an instructor at <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu — Pelotas</a></b>.",
+  "location": "Pelotas — RS, Brazil",
   "experience": "+10 years of experience",
-  "projects": "+50 developed projects",
-  "stack": "Main Tech Stack",
-  "textButtonAbout": "Read more about me",
-  "textButtonResume": "Visit my resume",
-  "textButtonStack": "More technologies"
+  "projects": "+50 projects delivered",
+  "stack": "Main tech stack",
+  "textButtonAbout": "Learn more about me",
+  "textButtonResume": "View my résumé",
+  "textButtonStack": "View technologies"
 }

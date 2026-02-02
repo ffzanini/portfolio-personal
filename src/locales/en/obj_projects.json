@@ -2,7 +2,7 @@
   "title": "From Code to Delivery",
   "breadcrumb_begin": "Projects",
   "breadcrumb_end": "Specifications",
-  "sub_title": "Throughout my career, I’ve participated in the creation of projects that positively impacted people and businesses. Here you can browse through various websites I’ve developed, used by thousands of people every day. Most of the projects listed here are still active, some have been discontinued, and others are not included due to contractual reasons.",
+  "sub_title": "Throughout my career, I have participated in the creation of projects that positively impacted people and businesses. Here you can browse through sites I have developed that are used by thousands of people every day. Most of the projects listed are still active; some have been discontinued, and others are not included due to contractual reasons.",
   "projects_title": "Featured Projects",
   "projects_all": "Full list of projects",
   "github": "Project available on GitHub",
@@ -14,8 +14,8 @@
       "description": "An interactive showcase of my skills, projects, and experiments with new technologies — all designed with a focus on usability and constant evolution.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "Welcome to my portfolio! This project was designed to showcase my skills, experiences, and the work I've done throughout my career. Here you'll find a detailed collection of my projects, highlighting my capabilities and the dedication I bring to each one.",
-        "The design is inspired by usability and mobile-first principles, ensuring intuitive navigation so visitors can easily explore each section and gain a complete view of my work — and about myself.",
+        "Welcome to my portfolio. This project was designed as a showcase of my skills, experiences, and work throughout my career. Here you will find a collection of my projects, highlighting my capabilities and the dedication I bring to each one.",
+        "The design is inspired by usability and mobile-first principles, ensuring navigation is as intuitive as possible so each section is easy to explore and visitors get a complete view of my work and who I am.",
         "This project also serves as my testing lab, where I implement new libraries and technologies before using them in real-world applications. It helps me stay up-to-date with the latest market trends and maintain the quality and efficiency of my work."
       ],
       "stackTitle": "Technology Stack",
@@ -92,7 +92,7 @@
       "description": "A website developed to attract and engage potential students at any stage of their journey, from white belt to black belt. Featuring a responsive, appealing, and modern design.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "The JA Índio Jiu Jitsu project, located in the city of Pelotas - RS, was designed to be a responsive and organized site offering free class scheduling, class time information, descriptions of its programs (by level and audience), testimonials, contact information, and the academy's philosophy. The goal is to showcase the excellent work of the academy, inspire new students, and create a deeper connection with the audience."
+        "The JA Índio Jiu Jitsu project, in Pelotas, RS, was designed as a responsive, organized site offering free class scheduling, class times, program descriptions (by level and audience), testimonials, contact information, and the academy's philosophy — with the goal of showcasing the academy's work, inspiring new students, and strengthening the connection with the audience."
       ],
       "stackTitle": "Technology Stack",
       "featuresTitle": "Implemented Features",
@@ -124,11 +124,11 @@
     {
       "id": 4,
       "title": "EducaCross",
-      "description": "A hybrid and gamified educational platform with over 2,000 games aligned with the BNCC, adapted to each student's needs. It offers dashboards for teachers, pedagogical support, and multiplatform usage.",
+      "description": "A hybrid, gamified educational platform with over 2,000 games aligned with the BNCC and adapted to each student's needs. It offers dashboards for teachers, pedagogical support, and multiplatform usage.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "While working at nav9.tech, I had the opportunity to be a tech partner to several companies, including contributing to various development areas of EducaCross platform version 2.0.",
-        "It’s a robust and modern EdTech platform focused on teaching Math, Portuguese, Logic, and literacy, especially for Early Childhood and Elementary Education. With over 2,000 digital games aligned with the BNCC (Brazilian National Common Core), the platform combines adaptive gamification, hybrid learning, and real-time reporting to engage children aged 3 to 12.",
+        "While at nav9.tech, I had the opportunity to act as a tech partner to several companies; among them, I worked on several fronts of the EducaCross platform version 2.0.",
+        "It is a robust and modern EdTech platform focused on teaching Math, Portuguese, Logic, and literacy, especially for Early Childhood and Elementary Education. With over 2,000 digital games aligned with the BNCC (Brazilian National Common Core), it combines adaptive gamification, hybrid learning, and real-time reporting to engage children aged 3 to 12.",
         "Educators and school managers have access to advanced dashboards that allow the creation of personalized learning paths, student progress monitoring, and data aligned with the BNCC. There is also pedagogical support and ongoing training for teachers, effectively connecting technology with educational practice.",
         "The platform is compatible with classroom, lab, mobile, and offline environments, promoting digital inclusion in schools. Its hybrid architecture prioritizes security (LGPD), accessibility, and scalability, currently used in over 1,700 schools with thousands of active users."
       ],
@@ -150,7 +150,7 @@
         "Data protection and school privacy",
         "Multiplatform compatibility",
         "Alignment with educational standards (BNCC)",
-        "Custom layout depending on login type"
+        "Exclusive layout based on access type (school profile)"
       ],
       "achievementsTitle": "Achievements",
       "achievements": [
@@ -166,8 +166,8 @@
       "description": "The Iguatemi Portal is a secure B2B platform allowing store owners to access contract info, submit documents, and engage in marketing opportunities within the Iguatemi network, all in compliance with LGPD.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "While working at nav9.tech, I had the opportunity to collaborate for over 3 years on the development of Iguatemi's products, especially the Store Owner Portal.",
-        "The portal is an exclusive area for store owners and their teams, focused on corporate communication, sales info, contract management, tax audits, invoice handling, benefits, news, promotions, and internal processes. Users log in through a secure and encrypted interface, with user/password authentication and full LGPD compliance, ensuring access based on their role and contract."
+        "While at nav9.tech, I had the opportunity to collaborate for over 3 years on the development of Iguatemi's products, with a focus on the Store Owner Portal.",
+        "The portal is an exclusive area for store owners and their teams, focused on corporate communication, sales info, contract management, tax audits, invoice handling, benefits, news, promotions, and internal processes. Users access through a secure, encrypted interface with user/password authentication, in full compliance with LGPD, ensuring access to functions according to profile and contract."
       ],
       "stackTitle": "Technology Stack",
       "featuresTitle": "Implemented Features",
@@ -185,7 +185,7 @@
       "challenges": [
         "Parallel access management",
         "LGPD compliance and data security",
-        "Secure handling of school-related data",
+        "Secure handling of tenant and contract data",
         "Corporate financial reporting",
         "SEO and performance across multiple sections"
       ],
@@ -204,7 +204,7 @@
       "description": "Version 2.0 of my personal portfolio, now discontinued.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "The goal was the same as the current version: to showcase my work, studies, and experiments. Feel free to explore the previous version of the site."
+        "The goal was the same as the current version: to showcase my work, studies, and experiments. Feel free to explore the previous version."
       ],
       "stackTitle": "Technology Stack",
       "featuresTitle": "Implemented Features",
@@ -236,7 +236,7 @@
       "description": "A minimalist and highly functional online résumé page, featuring clear sections for experience, stack, projects, and contact — with light animations, responsive design, and optimized performance.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "The goal is to provide a high-performance, clear, and responsive online résumé. Built with modern technologies, the site has a clean and organized structure, enabling smooth navigation across sections. It is entirely mobile-first, offering a great reading and interaction experience on any device, with smooth transitions and subtle animations."
+        "The goal is to offer a high-performance, clear, and responsive online résumé. Built with modern technologies, the site has a clean, organized structure with smooth navigation across sections. It is entirely mobile-first, with a strong reading and interaction experience on any device, smooth transitions, and subtle animations."
       ],
       "stackTitle": "Technology Stack",
       "featuresTitle": "Implemented Features",
@@ -262,7 +262,7 @@
   "load": "Load more",
   "contact": {
     "title": "Ready for a pull request of ideas",
-    "description": "I’m open to new projects, consulting opportunities, or just chatting about building digital products or game development. Feel free to message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a message on the ",
+    "description": "I am open to new projects, consulting, and conversations about building digital products or game development. Feel free to message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a message on the ",
     "contact": "contact page."
   }
 }

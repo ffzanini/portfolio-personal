@@ -10,3 +10,4 @@ export * from "./SanitizedText";
 export * from "./ScrollToTop";
 export * from "./Tooltip";
 export * from "./ZoomImage";
+export * from "./JsonLd";

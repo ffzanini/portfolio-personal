@@ -1,47 +1,47 @@
 {
-  "title": "Tech Stack",
-  "sub_title": "Many people ask me which tools, languages, and services I use or have used in the development of my projects — so I decided to gather everything in one place.",
+  "title": "Tech stack",
+  "sub_title": "Many people ask me which tools, languages, and services I use or have used in the projects — so I gathered everything in one place.",
 
   "mainSpecialties": "Main specialties",
-  "knownTech": "Technologies I'm familiar with",
+  "knownTech": "Technologies I work with",
 
-  "frontend": "Building modern and responsive interfaces",
-  "backend": "Developing robust and scalable APIs",
+  "frontend": "Modern and responsive interfaces",
+  "backend": "Robust and scalable APIs",
   "devops": "Experience with modern infrastructure",
 
   "strengths": {
     "title": "Skills beyond code",
-    "sub_title": "Skills I've developed along the journey to build high-quality digital products.",
+    "sub_title": "Skills I have developed along the way to build high-quality digital products.",
     "items": [
       {
-        "title": "Frontend Development",
-        "description": "Interfaces that combine performance, accessibility, and modern design — always focused on the real user experience."
+        "title": "Frontend development",
+        "description": "Interfaces that combine performance, accessibility, and modern design — always focused on the people who will use them."
       },
       {
-        "title": "Responsive Design",
-        "description": "Interfaces designed with a mobile-first approach, adapted for different screen sizes, and focused on usability across all devices."
+        "title": "Responsive design",
+        "description": "Interfaces designed with a mobile-first approach, adapted to different screen sizes, and focused on usability across all devices."
       },
       {
-        "title": "Software Architecture",
+        "title": "Software architecture",
         "description": "Applications designed to scale: following DDD principles and engineering best practices to create scalable, organized, and sustainable architectures."
       },
       {
-        "title": "Agile Methodologies",
+        "title": "Agile methodologies",
         "description": "Application of agile practices such as Navway, Scrum, and Kanban to deliver value continuously and collaboratively."
       },
       {
-        "title": "Technical Leadership",
+        "title": "Technical leadership",
         "description": "Leading development teams with a focus on quality, code standardization, technical alignment, and mentoring."
       },
       {
         "title": "Teamwork",
-        "description": "Effective collaboration with different professional profiles such as stakeholders, designers, and developers, promoting communication and joint results."
+        "description": "Effective collaboration with different profiles — stakeholders, designers, and developers — promoting communication and joint results."
       }
     ]
   },
   "footer": {
-    "title": "From code to the world: see the results!",
-    "message": "Skills and tools are just the beginning. What truly makes the difference is how we bring real, functional, and well-designed solutions to life. Discover some of these results by visiting the ",
+    "title": "From code to the world: see the results",
+    "message": "Skills and tools are just the beginning. What truly makes the difference is how we bring real, functional, and well-designed solutions to life. Discover some of these results on the ",
     "project": "projects page."
   }
 }

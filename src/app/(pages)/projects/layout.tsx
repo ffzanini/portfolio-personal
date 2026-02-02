@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
+import { SITE_URL, PERSON } from "@/constants/seo";
 
 export const metadata: Metadata = {
-  title: "Projects | Felipe Frant Zanini",
+  title: "Projetos",
   description:
-    "Explore the main projects developed by Felipe Frant Zanini, focused on technology, accessibility, usability, and digital impact.",
+    "Projetos desenvolvidos por Felipe Frantz Zanini (ffzanini): desenvolvimento web, React, Next.js, TypeScript. Portfólio de software engineer com foco em tecnologia e impacto digital.",
+  keywords: [
+    "projetos",
+    "Felipe Frantz Zanini",
+    "ffzanini",
+    "desenvolvimento",
+    "portfolio",
+    "React",
+    "Next.js",
+  ],
+  alternates: { canonical: `${SITE_URL}/projects` },
+  openGraph: {
+    title: `Projetos | ${PERSON.name}`,
+    url: `${SITE_URL}/projects`,
+  },
 };
 
 export default function ProjectsLayout({

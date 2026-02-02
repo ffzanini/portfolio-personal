@@ -1,62 +1,59 @@
 {
-  "title": "Detrás del Código",
-  "sub_title": "Mi misión es conectar a las personas con la tecnología mediante la programación y contenido digital — creando experiencias que inspiran, educan y transforman.",
+  "title": "Detrás del código",
+  "sub_title": "Mi misión es acercar a las personas y la tecnología mediante la programación y el contenido digital — creando experiencias que inspiran, enseñan y transforman.",
   "description": {
     "title": "El camino hasta aquí",
-    "begin": "Mucho gusto, mi nombre es Felipe Frantz Zanini, un ingeniero de software apasionado por el jiu-jitsu, correr, el desarrollo de juegos independientes, Dota 2, los guiones, el pixel art, la música y las inversiones. Tengo 31 años y actualmente vivo en Pelotas, Rio Grande do Sul, Brasil.",
-    "middle": "Mi camino en el desarrollo de software comenzó en 2008, durante la escuela técnica. En 2010, después de completar el curso, comencé mi primera pasantía en programación y, desde entonces, nunca dejé de estudiar y evolucionar. Al ser contratado como ingeniero de software, participé en más de <b>50 proyectos</b> utilizando diversas tecnologías, con énfasis en PHP.",
-    "education": "Apasionado por el área y siempre en busca de mejora, obtuve una Licenciatura en Gestión de TI y una Especialización en Gestión de TI. También inicié una Maestría en Ciencia de la Computación.",
-    "end": "Actualmente soy Ingeniero de Software Senior y Tech Lead especializado en desarrollo frontend en <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b>, donde tengo el privilegio de ser socio tecnológico de varias empresas como <b>Shoppings Iguatemi</b>, <b>UFC Fantasy</b>, <b>EducaCross</b>, <b>Grupo SEB</b>, <b>Rede AZ</b>, <b>Vittude</b>, ayudándolas a construir las mejores soluciones de productos para la web."
+    "begin": "Mucho gusto. Mi nombre es Felipe Frantz Zanini, ingeniero de software apasionado por el jiu-jitsu, el running, el desarrollo de juegos independientes, Dota 2, los guiones, el pixel art, la música y las inversiones. Tengo 31 años y vivo en Pelotas, Rio Grande do Sul, Brasil.",
+    "middle": "Mi camino en el desarrollo de software comenzó en 2008, durante la escuela técnica. En 2010, tras completar el curso, inicié mi primera pasantía en programación y, desde entonces, nunca he dejado de estudiar y evolucionar. Al ser contratado como ingeniero de software, he participado en más de <b>50 proyectos</b>, usando diversas tecnologías, con énfasis en PHP.",
+    "education": "Apasionado por el área y en constante búsqueda de mejora, obtuve la Licenciatura en Gestión de TI y la Especialización en Gestión de TI. También inicié la Maestría en Ciencias de la Computación.",
+    "end": "Soy Ingeniero de Software Senior y Tech Lead especializado en desarrollo frontend en <b><a href=\"https://www.nav9.tech\" target=\"_blank\">nav9</a></b>, donde tengo el privilegio de ser socio tecnológico de empresas como <b>Shoppings Iguatemi</b>, <b>UFC Fantasy</b>, <b>EducaCross</b>, <b>Grupo SEB</b>, <b>Rede AZ</b> y <b>Vittude</b>, ayudándolas a crear las mejores soluciones de productos para la web."
   },
-
   "skills": {
-    "title": "De la Imaginación al impacto",
+    "title": "De la imaginación al impacto",
     "subtitle": "Una mirada a mi proceso para convertir ideas en productos digitales",
     "process": [
       {
         "id": 1,
         "title": "Entendiendo la motivación",
-        "description": "Todo comienza con una buena conversación. Escucho tus ideas, comprendo tus necesidades y motivaciones, las traduzco en algo práctico y pienso en la mejor forma de convertirlas en algo visualmente atractivo y funcional."
+        "description": "Todo comienza con una buena conversación. Escucho tus ideas, comprendo necesidades y motivaciones, traduzco eso en algo práctico y pienso en la mejor forma de convertirlo en algo visualmente atractivo y funcional."
       },
       {
         "id": 2,
         "title": "Montando la estructura",
-        "description": "Antes de pensar en la apariencia, se define la estructura del proyecto: qué páginas serán necesarias, cómo se comportarán los elementos y cómo todo estará conectado de forma lógica y eficiente."
+        "description": "Antes de la apariencia, defino la estructura del proyecto: qué páginas serán necesarias, cómo se comportarán los elementos y de qué forma todo quedará conectado de manera lógica y eficiente."
       },
       {
         "id": 3,
         "title": "El código cobra vida",
-        "description": "¡Es hora de dar vida al proyecto! Desarrollo interfaces centradas en usabilidad, responsividad y rendimiento. Cada elemento está optimizado para funcionar bien en cualquier dispositivo, garantizando carga rápida y navegación fluida."
+        "description": "Es hora de dar vida al proyecto. Desarrollo interfaces centradas en usabilidad, responsividad y rendimiento. Cada elemento está optimizado para funcionar bien en cualquier dispositivo, con carga rápida y navegación fluida."
       },
       {
         "id": 4,
         "title": "Integraciones externas",
-        "description": "Cuando el proyecto necesita formularios, autenticación o integración con otros sistemas, también me encargo de eso — siempre con foco en seguridad, estabilidad y confiabilidad."
+        "description": "Cuando el proyecto requiere formularios, autenticación o integración con otros sistemas, también me encargo de ello — siempre con foco en seguridad, estabilidad y confiabilidad."
       },
       {
         "id": 5,
-        "title": "Pruebas y control de calidad",
-        "description": "Antes de publicar el proyecto, realizo varias pruebas para asegurarme de que todo funcione como se espera — en diferentes navegadores, dispositivos, resoluciones y contextos de uso."
+        "title": "Pruebas y garantía de calidad",
+        "description": "Antes de publicar, realizo diversas pruebas para garantizar que todo funcione según lo previsto — en distintos navegadores, dispositivos, resoluciones y contextos de uso."
       },
       {
         "id": 6,
-        "title": "¡Hora de mostrarlo al mundo!",
-        "description": "Para cerrar con broche de oro, publico el proyecto y dejo todo listo para que todos puedan acceder. Y, por supuesto, brindo soporte en los primeros días para ajustar cualquier detalle que surja."
+        "title": "Hora de mostrarlo al mundo",
+        "description": "Para cerrar con broche de oro, publico el proyecto y dejo todo listo para su acceso. En los primeros días, acompaño y brindo soporte para ajustar cualquier detalle que aparezca."
       }
     ]
   },
-
   "stack": {
     "title": "Los engranajes detrás del proceso",
-    "description": "Detrás de cada clic y línea de código hay tecnologías elegidas con cuidado y propósito. Si quieres ver todo el stack o enviarme un mensaje, solo haz clic en los botones de abajo.",
+    "description": "Detrás de cada clic y línea de código hay tecnologías elegidas con cuidado y propósito. Si quieres ver el stack completo o enviar un mensaje, usa los botones de abajo.",
     "button": "Ver stack completo",
     "contact": "Enviar mensaje"
   },
-
   "site": {
-    "title": "Café, código & deploy",
-    "subtitle": "Un resumen técnico de las tecnologías y herramientas que hacen que este sitio tenga mi esencia — todo lo que ocurrió detrás de los clics.",
-    "description": "Este sitio fue desarrollado utilizando conceptos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, con el framework <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, deployment realizado en <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, estilizado con <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animaciones hechas con <b><a href='https://motion.dev/' target='_blank'>Framer-Motion</a></b> e íconos proporcionados por la librería <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. La tipografía utilizada es del estilo <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>MavenPro</a></b>. Además, este portafolio funciona como vitrina de contenidos futuros y laboratorio de pruebas — donde experimento con librerías y herramientas — y reúne algunos de mis ",
+    "title": "Café, código y deploy",
+    "subtitle": "Un resumen técnico de las tecnologías y herramientas que hacen de este sitio algo personal — todo lo que ocurre detrás de los clics.",
+    "description": "Este sitio fue desarrollado con los conceptos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, usando el framework <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, con deployment en <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, estilizado con <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animaciones con <b><a href='https://motion.dev/' target='_blank'>Framer-Motion</a></b> e íconos de la biblioteca <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. La tipografía es <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. Este portafolio también sirve como vitrina de contenidos futuros y laboratorio de pruebas — donde experimento con bibliotecas y herramientas — y reúne algunos de mis ",
     "projects": "proyectos."
   }
 }
