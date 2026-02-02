@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Pessoal
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://react.dev/)
 
-First, run the development server:
+Site institucional e portfólio profissional desenvolvido com foco em performance, internacionalização e experiência do usuário. Apresenta projetos, stack tecnológica, informações de contato e integração com Notion para gestão de mensagens.
+
+---
+
+## Objetivo do Projeto
+
+Este repositório concentra a **versão 3** do portfólio pessoal, com os seguintes objetivos:
+
+- **Apresentação profissional** — Página inicial, sobre mim, projetos e stack de forma clara e visual.
+- **Internacionalização (i18n)** — Suporte a **Português**, **Inglês** e **Espanhol** para ampliar o alcance.
+- **Contato integrado** — Formulário de contato que persiste mensagens em um banco **Notion**, facilitando a gestão.
+- **SEO e acessibilidade** — Metadados, sitemap, `robots.txt` e estrutura semântica para bons resultados em buscas e leitores de tela.
+- **Tema claro/escuro** — Alternância de tema com persistência de preferência do usuário.
+- **Responsividade** — Layout adaptado para mobile, tablet e desktop.
+
+---
+
+## Tecnologias
+
+### Core
+
+| Tecnologia | Uso |
+|------------|-----|
+| **Next.js 16** | Framework React com App Router, SSR e rotas dinâmicas |
+| **React 19** | Interface e componentes |
+| **TypeScript** | Tipagem estática e melhor DX |
+| **Tailwind CSS 4** | Estilização utilitária e tema (claro/escuro) |
+
+### UX e UI
+
+| Tecnologia | Uso |
+|------------|-----|
+| **Framer Motion** | Animações e transições |
+| **next-themes** | Tema claro/escuro com persistência |
+| **react-hot-toast** | Notificações (feedback de formulário, etc.) |
+| **react-medium-image-zoom** | Zoom em imagens (galeria, projetos) |
+| **react-icons** | Ícones (Lucide, Simple Icons, etc.) |
+| **country-flag-icons** | Bandeiras para seletor de idioma |
+
+### Formulários e dados
+
+| Tecnologia | Uso |
+|------------|-----|
+| **react-hook-form** | Formulário de contato com validação |
+| **@notionhq/client** | API do Notion para salvar mensagens de contato |
+| **DOMPurify** | Sanitização de conteúdo HTML (XSS) |
+
+### Utilitários e tooling
+
+| Tecnologia | Uso |
+|------------|-----|
+| **clsx** + **tailwind-merge** | Classes condicionais e merge de estilos Tailwind |
+| **dateformat** | Formatação de datas (ex.: mensagens no Notion) |
+| **next-sitemap** | Geração de `sitemap.xml` no build |
+| **Vercel Analytics / Speed Insights** | Métricas de uso e performance (opcional) |
+
+### Desenvolvimento
+
+| Tecnologia | Uso |
+|------------|-----|
+| **ESLint** | Linting e padrões de código |
+| **Turbopack** | Servidor de desenvolvimento mais rápido (`next dev --turbopack`) |
+
+---
+
+## Estrutura do Projeto
+
+A organização das pastas e a arquitetura estão descritas no documento **[ARCHITECTURE.md](./ARCHITECTURE.md)**, que inclui um sitemap ilustrativo da estrutura de diretórios.
+
+Resumo rápido:
+
+- **`src/app`** — Rotas (App Router), layouts, estilos globais, API e dados.
+- **`src/components`** — Componentes reutilizáveis (Navbar, Footer, Cards, etc.).
+- **`src/constants`** — Dados estáticos (stack, about, SEO, socials).
+- **`src/context`** — Contexto de internacionalização.
+- **`src/locales`** — Traduções (pt, en, es) por página.
+- **`src/providers`** — Providers (tema, i18n).
+- **`src/libs`** — Funções utilitárias (cn, animate, browser).
+- **`public`** — Imagens, fontes, PDFs e arquivos estáticos.
+
+---
+
+## Pré-requisitos
+
+- **Node.js** 18+ (recomendado 20+)
+- **npm**, **yarn** ou **pnpm**
+- Conta no **Notion** (opcional, apenas para o formulário de contato)
+
+### Variáveis de ambiente (formulário de contato)
+
+Para o envio de mensagens para o Notion, crie um arquivo `.env.local` na raiz:
+
+```env
+NEXT_PUBLIC_NOTION_API_KEY=sua_chave_integration
+NEXT_PUBLIC_NOTION_DATABASE_KEY=id_do_banco_de_dados
+```
+
+- **Notion API Key**: em [Notion Integrations](https://www.notion.so/my-integrations), crie uma integração e use o "Internal Integration Secret".
+- **Database ID**: no banco onde as mensagens serão salvas, use "Copy link" e pegue o ID na URL.
+
+Sem essas variáveis, o restante do site funciona; apenas o envio do formulário de contato ficará indisponível.
+
+---
+
+## Como rodar
+
+### Instalação
+
+```bash
+git clone https://github.com/ffzanini/portfolio-personal.git
+cd portfolio-personal
+npm install
+```
+
+### Desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000). O projeto usa Turbopack por padrão.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build e produção
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+O `postbuild` gera automaticamente o `sitemap.xml` (e `sitemap-0.xml` quando aplicável).
 
-To learn more about Next.js, take a look at the following resources:
+### Lint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Scripts disponíveis
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Script | Descrição |
+|--------|-----------|
+| `npm run dev` | Sobe o servidor de desenvolvimento (Turbopack) |
+| `npm run build` | Gera o build de produção |
+| `npm run start` | Inicia o servidor em modo produção |
+| `npm run lint` | Executa o ESLint |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Licença
+
+Este projeto está sob a licença definida no arquivo [LICENSE](./LICENSE).
+
+---
+
+## Contato
+
+Para dúvidas ou sugestões sobre este repositório, utilize o formulário de contato disponível no site ou os canais indicados no próprio portfólio.
