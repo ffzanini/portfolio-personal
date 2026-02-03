@@ -15,6 +15,7 @@ interface ZoomImageProps {
   height?: number;
   className?: string;
   style?: React.CSSProperties;
+  priority?: boolean;
 }
 
 export function ZoomImage({
@@ -24,6 +25,7 @@ export function ZoomImage({
   height,
   className,
   style,
+  priority = false,
 }: Readonly<ZoomImageProps>) {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -44,7 +46,8 @@ export function ZoomImage({
           className={`${className} overflow-hidden shadow-md transition-opacity duration-300 ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
-          loading={typeof window === "undefined" ? "eager" : "lazy"}
+          loading={priority ? "eager" : "lazy"}
+          priority={priority}
           style={style}
         />
       </Zoom>

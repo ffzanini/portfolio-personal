@@ -95,8 +95,12 @@ export default function RootLayout({
           <ClientToaster />
           <ScrollToTopButton />
         </AppProvider>
-        <Analytics />
-        <SpeedInsights />
+        {process.env.NEXT_PUBLIC_VERCEL_ENV === "production" && (
+          <>
+            <Analytics mode="production" />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   );

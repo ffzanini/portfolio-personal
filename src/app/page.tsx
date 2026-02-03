@@ -126,6 +126,7 @@ export default function Home() {
                           width={180}
                           height={180}
                           className="rounded-xl"
+                          priority
                         />
                       </div>
                     </div>
