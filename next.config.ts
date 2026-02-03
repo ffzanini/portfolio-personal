@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/images/:path*",
+        source: "/images/:rest*",
         headers: [
           {
             key: "Cache-Control",
@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/fonts/:path*",
+        source: "/fonts/:rest*",
         headers: [
           {
             key: "Cache-Control",
@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/sitemap-:path*.xml",
+        source: "/sitemap-:id.xml",
         headers: [
           {
             key: "Cache-Control",
