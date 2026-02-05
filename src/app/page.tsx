@@ -11,12 +11,7 @@ import {
 import { LiaHandSpock } from "react-icons/lia";
 
 import { useTranslation } from "@/context";
-import {
-  Footer,
-  Navbar,
-  ZoomImage,
-  Tooltip,
-} from "@/components/ui";
+import { Footer, Navbar, ZoomImage, Tooltip } from "@/components/ui";
 import { SanitizedText, PreloadImage } from "@/components/utils";
 import { mainTechStack } from "@/constants/stack";
 

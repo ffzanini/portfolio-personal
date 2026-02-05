@@ -94,7 +94,10 @@ export default function Stack() {
                           <div className="relative">
                             <tech.icon
                               className="w-10 h-10 transition-transform duration-300 group-hover/tech:scale-110"
-                              style={{ color: tech.color, willChange: "transform" }}
+                              style={{
+                                color: tech.color,
+                                willChange: "transform",
+                              }}
                             />
                             {tech.featured && (
                               <LuStar className="absolute -top-1 -right-1 w-3 h-3 text-yellow-400 fill-yellow-400" />
