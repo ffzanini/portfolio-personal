@@ -1,8 +1,3 @@
-/**
- * Constantes centralizadas para SEO e metadados.
- * Inclui palavras-chave para indexação: Felipe, Felipe Frantz Zanini, ffzanini, desenvolvimento, development.
- */
-
 export const SITE_URL = "https://ffzanini.dev" as const;
 
 export const PERSON = {
@@ -12,33 +7,114 @@ export const PERSON = {
   jobTitle: "Software Engineer",
   jobTitleEn: "Software Engineer",
   description:
-    "Software Engineer, Writer and Screenwriter, Indie Game Developer, Jiu Jitsu Brown Belt. Desenvolvimento web, frontend, fullstack. Portfolio ffzanini.",
+    "Felipe Frantz Zanini (ffzanini) - Software Engineer especializado em desenvolvimento web, frontend e fullstack. Desenvolvedor React, Next.js e TypeScript. Escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Portfolio com projetos, stack tecnológica e contato. Pelotas, Brasil.",
   descriptionLong:
-    "Felipe Frantz Zanini (ffzanini) - Software Engineer com foco em desenvolvimento web, frontend e fullstack. Desenvolvedor de software, escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Portfolio pessoal com projetos, stack e contato.",
+    "Felipe Frantz Zanini (ffzanini) - Software Engineer com foco em desenvolvimento web, frontend e fullstack. Especialista em React, Next.js, TypeScript e tecnologias modernas. Desenvolvedor de software, escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Portfolio pessoal com projetos desenvolvidos, stack tecnológica completa e formulário de contato. Localizado em Pelotas, Rio Grande do Sul, Brasil.",
 } as const;
 
 export const SEO_KEYWORDS = [
+  // Nome e variações
   "Felipe Frantz Zanini",
   "Felipe Frantz",
+  "Felipe Zanini",
   "Felipe",
   "ffzanini",
-  "desenvolvimento",
-  "development",
+  "ffzanini.dev",
+
+  // Profissão e títulos
   "software engineer",
   "engenheiro de software",
+  "desenvolvedor de software",
+  "software developer",
   "desenvolvedor",
   "developer",
-  "frontend",
-  "fullstack",
-  "web development",
-  "desenvolvimento web",
+  "programador",
+  "programmer",
+  "desenvolvedor web",
+  "web developer",
+  "desenvolvedor frontend",
+  "frontend developer",
+  "desenvolvedor fullstack",
+  "fullstack developer",
+  "full stack developer",
+
+  // Tecnologias e habilidades
   "React",
+  "React.js",
   "Next.js",
+  "NextJS",
   "TypeScript",
+  "JavaScript",
+  "Node.js",
+  "NodeJS",
+  "Tailwind CSS",
+  "TailwindCSS",
+  "CSS3",
+  "HTML5",
+  "frontend",
+  "front-end",
+  "fullstack",
+  "full-stack",
+  "back-end",
+  "backend",
+
+  // Áreas de atuação
+  "desenvolvimento",
+  "development",
+  "desenvolvimento web",
+  "web development",
+  "desenvolvimento de software",
+  "software development",
+  "desenvolvimento frontend",
+  "frontend development",
+  "desenvolvimento fullstack",
+  "fullstack development",
+  "programação",
+  "programming",
+  "codificação",
+  "coding",
+
+  // Portfolio e projetos
   "portfolio",
   "portfólio",
+  "portfólio pessoal",
+  "personal portfolio",
+  "portfólio profissional",
+  "professional portfolio",
+  "projetos",
+  "projects",
+  "portfólio de desenvolvedor",
+  "developer portfolio",
+
+  // Localização
   "Pelotas",
+  "Rio Grande do Sul",
+  "RS",
   "Brasil",
+  "Brazil",
+  "desenvolvedor Pelotas",
+  "developer Pelotas",
+  "software engineer Pelotas",
+
+  // Outros termos relevantes
+  "consultoria",
+  "consulting",
+  "freelancer",
+  "freelance",
+  "contratação",
+  "hire",
+  "contratar desenvolvedor",
+  "hire developer",
+  "escritor",
+  "writer",
+  "screenwriter",
+  "roteirista",
+  "game developer",
+  "desenvolvedor de jogos",
+  "indie games",
+  "jogos indie",
+  "Jiu Jitsu",
+  "BJJ",
 ] as const;
 
 export const DEFAULT_OG_IMAGE = {

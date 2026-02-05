@@ -5,6 +5,9 @@ export const fontMavenPro = mavenPro({
   subsets: ["latin"],
   variable: "--font-mavenPro",
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+  fallback: ["system-ui", "arial"],
 });
 
 export const fontRyanaLovely = localFont({

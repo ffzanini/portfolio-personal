@@ -6,7 +6,7 @@ import { RiGithubLine } from "react-icons/ri";
 import { LuBadgeCheck, LuReply, LuServerCrash, LuTrophy } from "react-icons/lu";
 
 import { Project } from "@/app/data/projects";
-import { Breadcrumb, Footer, Navbar, ZoomImage } from "@/components";
+import { Breadcrumb, Footer, Navbar, ZoomImage } from "@/components/ui";
 import { useTranslation } from "@/context";
 
 import { cn } from "@/libs/cn";
@@ -43,9 +43,10 @@ export default function ProjectDetailsView({
           <ZoomImage
             className="aspect-video w-full md:w-[70%] mx-auto rounded-3xl object-cover my-6"
             src={project.image}
-            alt={projectTranslate?.title ?? "project.id"}
+            alt={`${projectTranslate?.title ?? project.id} - Projeto desenvolvido por Felipe Frantz Zanini (ffzanini) usando ${project.technologies.slice(0, 3).join(", ")}`}
             width={1200}
-            height={800}
+            height={0}
+            priority
           />
           <div className="flex flex-col 2xl:flex-row justify-between mb-4">
             <div className="flex flex-row items-center align-center gap-2">
@@ -88,12 +89,12 @@ export default function ProjectDetailsView({
           </div>
 
           <div className="mb-8 lg:mb-4">
-            <h1 className="text-xl mb-2 font-bold">
+            <h2 className="text-xl mb-2 font-bold">
               {projectTranslate?.longDescriptionTitle}
-            </h1>
+            </h2>
             {projectTranslate?.longDescription.map((content, index) => (
               <div key={index} className="mb-2">
-                <h3 className="text-lg">{content}</h3>
+                <p className="text-lg">{content}</p>
               </div>
             ))}
           </div>
@@ -124,7 +125,7 @@ export default function ProjectDetailsView({
 
               {projectTranslate?.features.map((content, index) => (
                 <div key={index} className="mb-2 ">
-                  <h3 className="text-lg flex gap-2">‣ {content}</h3>
+                  <p className="text-lg flex gap-2">‣ {content}</p>
                 </div>
               ))}
             </div>
@@ -141,7 +142,7 @@ export default function ProjectDetailsView({
 
               {projectTranslate?.challenges.map((content, index) => (
                 <div key={index} className="mb-2">
-                  <h3 className="text-lg">‣ {content}</h3>
+                  <p className="text-lg">‣ {content}</p>
                 </div>
               ))}
             </div>
@@ -158,7 +159,7 @@ export default function ProjectDetailsView({
 
               {projectTranslate?.achievements.map((content, index) => (
                 <div key={index} className="mb-2">
-                  <h3 className="text-lg">‣ {content}</h3>
+                  <p className="text-lg">‣ {content}</p>
                 </div>
               ))}
             </div>

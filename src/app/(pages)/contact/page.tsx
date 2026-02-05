@@ -14,7 +14,8 @@ import {
 import toast from "react-hot-toast";
 
 import { useTranslation } from "@/context";
-import { Footer, Navbar, SanitizedText, Tooltip } from "@/components";
+import { Footer, Navbar, Tooltip } from "@/components/ui";
+import { SanitizedText } from "@/components/utils";
 import { cn } from "@/libs/cn";
 
 export default function Contact() {
@@ -126,9 +127,9 @@ export default function Contact() {
             </div>
             <div className="flex flex-col">
               <div className="flex flex-col items-start gap-3">
-                <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
+                <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
                   {translations.contact.footer.title}
-                </h1>
+                </h2>
 
                 <p className="inline-block">
                   <SanitizedText

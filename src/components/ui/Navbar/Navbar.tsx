@@ -12,7 +12,7 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 import { LuMoonStar, LuSun, LuX } from "react-icons/lu";
 
 import { fontRyanaLovely } from "@/app/fonts";
-import { LanguageSelect, Tooltip } from "@/components";
+import { LanguageSelect, Tooltip } from "@/components/ui";
 import { navItems } from "@/constants/navbar";
 import { nightStalker, dawnbreaker } from "@/constants/phrases";
 import { useTranslation } from "@/context";
@@ -20,18 +20,19 @@ import { cn } from "@/libs/cn";
 
 export function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [checkTheme, setCheckTheme] = useState<string | undefined>();
   const [isScrolled, setIsScrolled] = useState(false);
 
   const { translations, setLocation, location } = useTranslation();
   const { theme, setTheme } = useTheme();
 
-  const [phrases, setPhrases] = useState(
+  const [phrases, setPhrases] = useState(() =>
     theme === "dark" ? "Face the light!" : "Darkness reigns!",
   );
 
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
+
+  const currentTheme = theme || "dark";
 
   const toggleTheme = () => {
     if (theme === "dark") {
@@ -114,12 +115,6 @@ export function Navbar() {
   };
 
   useEffect(() => {
-    if (theme) {
-      setCheckTheme(theme);
-    }
-  }, [theme]);
-
-  useEffect(() => {
     let ticking = false;
 
     const handleScroll = () => {
@@ -196,7 +191,7 @@ export function Navbar() {
               <LanguageSelect selected={location} onChange={setLocation} />
             </div>
             <Tooltip
-              text={`${checkTheme !== "dark" ? "To the Dark" : "To the Light"}`}
+              text={`${currentTheme !== "dark" ? "To the Dark" : "To the Light"}`}
             >
               <motion.button
                 onClick={() => {
@@ -206,7 +201,7 @@ export function Navbar() {
                 }}
                 className="cursor-pointer"
               >
-                {checkTheme === "dark" ? (
+                {currentTheme === "dark" ? (
                   <LuSun className="h-5 w-5 hover:rotate-12 transition-transform" />
                 ) : (
                   <LuMoonStar className="h-5 w-5 hover:rotate-12 transition-transform" />
@@ -265,7 +260,7 @@ export function Navbar() {
                   }}
                   className="cursor-pointer"
                 >
-                  {checkTheme === "dark" ? (
+                  {currentTheme === "dark" ? (
                     <LuSun className="h-5 w-5" />
                   ) : (
                     <LuMoonStar className="h-5 w-5" />

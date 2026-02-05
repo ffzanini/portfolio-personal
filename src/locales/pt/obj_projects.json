@@ -178,7 +178,7 @@
     },
     {
       "id": 5,
-      "title": "Shoppings Iguatemi",
+      "title": "Iguatemi S.A.",
       "description": "O Portal Iguatemi é um B2B bem protegido que permite o lojista acessar informações de seu contrato, enviar documentos e participar de oportunidades de marketing dentro da rede Iguatemi, tudo seguindo os padrões de LGPD.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
@@ -284,6 +284,72 @@
       "achievements": [
         "Alta performance",
         "Internacionalização pronta para recrutadores"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "nav9.tech",
+      "description": "Site institucional da nav9.tech, empresa de tecnologia focada em desenvolvimento de soluções digitais inovadoras.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "O site da nav9.tech foi desenvolvido como plataforma institucional para apresentar a empresa, seus serviços e soluções tecnológicas. Com design moderno e responsivo, o site oferece uma experiência clara e profissional para visitantes interessados em conhecer os serviços oferecidos pela empresa."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Design responsivo e moderno",
+        "Apresentação institucional",
+        "Seções de serviços e soluções",
+        "Navegação intuitiva"
+      ],
+      "challengesTitle": "Desafios Técnicos",
+      "challenges": [
+        "Design profissional e atrativo",
+        "Performance e otimização",
+        "Responsividade multiplataforma"
+      ],
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Presença digital profissional",
+        "Melhor comunicação com clientes",
+        "Apresentação clara dos serviços"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "ICEH Retriever",
+      "description": "Plataforma abrangente de dados projetada para fornecer acesso aberto e fácil a dados padronizados sobre indicadores de Saúde Reprodutiva, Materna, Neonatal e Infantil e Nutrição (RMNCH+N) em todo o mundo.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "O ICEH Retriever é uma plataforma de dados abrangente desenvolvida para fornecer acesso aberto e fácil a dados padronizados sobre indicadores de Saúde Reprodutiva, Materna, Neonatal e Infantil e Nutrição (RMNCH+N) em todo o mundo. A plataforma cobre mais de 100 indicadores, mais de 120 países e utiliza dados de mais de 490 pesquisas nacionalmente representativas.",
+        "Todos os indicadores no ICEH Retriever são harmonizados e padronizados, garantindo comparabilidade ao longo do tempo e entre países. Os dados estão disponíveis desagregados por oito dimensões-chave de desigualdade, permitindo que os usuários explorem padrões e tendências que destacam onde o progresso é equitativo e onde as disparidades persistem.",
+        "A plataforma foi desenvolvida para apoiar acadêmicos, equipes de países e organizações internacionais no avanço da tomada de decisão baseada em evidências e na responsabilização pelos resultados de RMNCH+N."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Plataforma de dados interativa",
+        "Seleção de países e indicadores",
+        "Visualização de dados desagregados",
+        "Filtros avançados por dimensões de desigualdade",
+        "Download de dados",
+        "Interface multilingue",
+        "Design responsivo"
+      ],
+      "challengesTitle": "Desafios Técnicos",
+      "challenges": [
+        "Gerenciamento de grandes volumes de dados",
+        "Visualização complexa de indicadores",
+        "Performance com múltiplos filtros",
+        "Padronização e harmonização de dados",
+        "Interface intuitiva para dados técnicos"
+      ],
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Acesso facilitado a dados padronizados",
+        "Suporte à pesquisa e análise de políticas",
+        "Transparência em dados de saúde global",
+        "Ferramenta essencial para organizações internacionais"
       ]
     }
   ],

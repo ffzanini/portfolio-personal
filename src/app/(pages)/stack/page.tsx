@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { LuBriefcaseBusiness, LuStar } from "react-icons/lu";
 
-import { Footer, Navbar, SanitizedText } from "@/components";
+import { Footer, Navbar } from "@/components/ui";
+import { SanitizedText } from "@/components/utils";
 
 import { categories } from "@/constants/stack";
 import { useTranslation } from "@/context";

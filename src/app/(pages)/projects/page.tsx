@@ -1,18 +1,32 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useMemo, useState, useTransition } from "react";
+import dynamic from "next/dynamic";
 import { LuFilter } from "react-icons/lu";
 
 import Link from "next/link";
 
-import { Card, Footer, Navbar, SanitizedText } from "@/components";
+import { Footer, Navbar } from "@/components/ui";
+import { SanitizedText } from "@/components/utils";
 import { useTranslation } from "@/context";
 import { projects } from "@/app/data/projects";
+
+const MotionDiv = dynamic(
+  () => import("framer-motion").then((mod) => mod.motion.div),
+  { ssr: false },
+);
+
+const Card = dynamic(
+  () => import("@/components/ui/Card").then((mod) => mod.Card),
+  {
+    ssr: true,
+  },
+);
 
 export default function Projects() {
   const { translations } = useTranslation();
   const [activeFilter, setActiveFilter] = useState("all");
   const [visibleCount, setVisibleCount] = useState(3);
+  const [isPending, startTransition] = useTransition();
 
   const filters = [
     { id: "all", label: "Todos" },
@@ -27,7 +41,10 @@ export default function Projects() {
       : projects.filter((project) => project.category === activeFilter);
   }, [activeFilter]);
 
-  const featuredProjects = projects.filter((project) => project.featured);
+  const featuredProjects = useMemo(
+    () => projects.filter((project) => project.featured),
+    [],
+  );
 
   const visibleProjects = filteredProjects.slice(0, visibleCount);
   const hasMore = visibleCount < filteredProjects.length;
@@ -37,7 +54,15 @@ export default function Projects() {
   }, [activeFilter]);
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 3);
+    startTransition(() => {
+      setVisibleCount((prev) => prev + 3);
+    });
+  };
+
+  const handleFilterChange = (filterId: string) => {
+    startTransition(() => {
+      setActiveFilter(filterId);
+    });
   };
 
   return (
@@ -76,12 +101,15 @@ export default function Projects() {
             {filters.map((filter) => (
               <button
                 key={filter.id}
-                className={`py-1 px-2 rounded-md font-semibold cursor-pointer ${
+                className={`py-1 px-2 rounded-md font-semibold cursor-pointer transition-opacity ${
+                  isPending ? "opacity-50" : ""
+                } ${
                   activeFilter === filter.id
                     ? "bg-primary-600 hover:bg-primary-700"
                     : "border border-black/20 hover:bg-black/10 dark:border-white/20 dark:hover:bg-white/10"
                 }`}
-                onClick={() => setActiveFilter(filter.id)}
+                onClick={() => handleFilterChange(filter.id)}
+                disabled={isPending}
               >
                 {filter.label}
               </button>
@@ -95,7 +123,7 @@ export default function Projects() {
               </h2>
             )}
 
-            <motion.div
+            <MotionDiv
               key={activeFilter}
               initial="hidden"
               animate="visible"
@@ -108,7 +136,7 @@ export default function Projects() {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {visibleProjects.map((project, index) => (
-                <motion.div
+                <MotionDiv
                   key={project.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -118,9 +146,9 @@ export default function Projects() {
                   }}
                 >
                   <Card project={project} index={index} lower={true} />
-                </motion.div>
+                </MotionDiv>
               ))}
-            </motion.div>
+            </MotionDiv>
 
             {hasMore && (
               <div className="flex justify-center mt-8">
@@ -143,9 +171,9 @@ export default function Projects() {
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col items-start gap-3">
-              <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
                 {translations.projects.contact.title}
-              </h1>
+              </h2>
 
               <p className="inline-block">
                 <SanitizedText

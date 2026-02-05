@@ -162,7 +162,7 @@
     },
     {
       "id": 5,
-      "title": "Shoppings Iguatemi",
+      "title": "Iguatemi S.A.",
       "description": "El Portal Iguatemi es una plataforma B2B segura que permite a los comerciantes acceder a la información de su contrato, enviar documentos y participar en acciones de marketing dentro de la red Iguatemi, todo cumpliendo con la LGPD.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
@@ -256,6 +256,72 @@
       "achievements": [
         "Alto rendimiento",
         "Internacionalización lista para reclutadores"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "nav9.tech",
+      "description": "Sitio institucional de nav9.tech, empresa de tecnología enfocada en el desarrollo de soluciones digitales innovadoras.",
+      "longDescriptionTitle": "Resumen del Proyecto",
+      "longDescription": [
+        "El sitio web de nav9.tech fue desarrollado como plataforma institucional para presentar la empresa, sus servicios y soluciones tecnológicas. Con un diseño moderno y responsivo, el sitio ofrece una experiencia clara y profesional para visitantes interesados en conocer los servicios ofrecidos por la empresa."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Diseño moderno y responsivo",
+        "Presentación institucional",
+        "Secciones de servicios y soluciones",
+        "Navegación intuitiva"
+      ],
+      "challengesTitle": "Desafíos Técnicos",
+      "challenges": [
+        "Diseño profesional y atractivo",
+        "Rendimiento y optimización",
+        "Responsividad multiplataforma"
+      ],
+      "achievementsTitle": "Resultados Alcanzados",
+      "achievements": [
+        "Presencia digital profesional",
+        "Mejor comunicación con clientes",
+        "Presentación clara de servicios"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "ICEH Retriever",
+      "description": "Plataforma integral de datos diseñada para proporcionar acceso abierto y fácil a datos estandarizados sobre indicadores de Salud Reproductiva, Materna, Neonatal e Infantil y Nutrición (RMNCH+N) en todo el mundo.",
+      "longDescriptionTitle": "Resumen del Proyecto",
+      "longDescription": [
+        "El ICEH Retriever es una plataforma integral de datos desarrollada para proporcionar acceso abierto y fácil a datos estandarizados sobre indicadores de Salud Reproductiva, Materna, Neonatal e Infantil y Nutrición (RMNCH+N) en todo el mundo. La plataforma cubre más de 100 indicadores, más de 120 países y utiliza datos de más de 490 encuestas nacionalmente representativas.",
+        "Todos los indicadores en el ICEH Retriever están armonizados y estandarizados, garantizando comparabilidad a lo largo del tiempo y entre países. Los datos están disponibles desagregados por ocho dimensiones clave de desigualdad, permitiendo a los usuarios explorar patrones y tendencias que destacan dónde el progreso es equitativo y dónde persisten las disparidades.",
+        "La plataforma fue desarrollada para apoyar a académicos, equipos de países y organizaciones internacionales en el avance de la toma de decisiones basada en evidencia y la rendición de cuentas por los resultados de RMNCH+N."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Plataforma de datos interactiva",
+        "Selección de países e indicadores",
+        "Visualización de datos desagregados",
+        "Filtros avanzados por dimensiones de desigualdad",
+        "Descarga de datos",
+        "Interfaz multilingüe",
+        "Diseño responsivo"
+      ],
+      "challengesTitle": "Desafíos Técnicos",
+      "challenges": [
+        "Gestión de grandes volúmenes de datos",
+        "Visualización compleja de indicadores",
+        "Rendimiento con múltiples filtros",
+        "Estandarización y armonización de datos",
+        "Interfaz intuitiva para datos técnicos"
+      ],
+      "achievementsTitle": "Resultados Alcanzados",
+      "achievements": [
+        "Acceso facilitado a datos estandarizados",
+        "Apoyo a la investigación y análisis de políticas",
+        "Transparencia en datos de salud global",
+        "Herramienta esencial para organizaciones internacionales"
       ]
     }
   ],

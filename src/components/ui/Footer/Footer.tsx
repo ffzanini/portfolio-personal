@@ -1,14 +1,25 @@
 "use client";
-import { motion } from "framer-motion";
+import { memo } from "react";
+import dynamic from "next/dynamic";
 
 import { socials } from "@/constants/socials";
-import { Tooltip } from "@/components";
+import { Tooltip } from "@/components/ui";
 
-export function Footer() {
+const MotionFooter = dynamic(
+  () => import("framer-motion").then((mod) => mod.motion.footer),
+  { ssr: false },
+);
+
+const MotionA = dynamic(
+  () => import("framer-motion").then((mod) => mod.motion.a),
+  { ssr: false },
+);
+
+function FooterComponent() {
   const yearNow = new Date().getFullYear();
 
   return (
-    <motion.footer className="flex flex-col lg:flex-row justify-between items-center">
+    <MotionFooter className="flex flex-col lg:flex-row justify-between items-center">
       <div className="px-6 pt-6 lg:pt-0">
         <div className="flex justify-center">
           <p className="flex flex-col lg:flex-row">
@@ -26,20 +37,22 @@ export function Footer() {
                 position="top"
               >
                 <div className="footer-icon px-2">
-                  <motion.a
+                  <MotionA
                     aria-label={name}
                     target="_blank"
                     href={href}
                     className="flex justify-center items-center"
                   >
                     <Icon className="h-5 w-5" />
-                  </motion.a>
+                  </MotionA>
                 </div>
               </Tooltip>
             ))}
           </div>
         </div>
       </div>
-    </motion.footer>
+    </MotionFooter>
   );
 }
+
+export const Footer = memo(FooterComponent);

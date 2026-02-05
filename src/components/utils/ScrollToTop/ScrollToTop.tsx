@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import { Tooltip } from "@/components";
+import { Tooltip } from "@/components/ui";
 
 export function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,13 +13,16 @@ export function ScrollToTopButton() {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       if (window.scrollY > 100) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const goTop = () => {

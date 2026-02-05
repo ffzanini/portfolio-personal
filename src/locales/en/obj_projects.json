@@ -162,7 +162,7 @@
     },
     {
       "id": 5,
-      "title": "Shoppings Iguatemi",
+      "title": "Iguatemi S.A.",
       "description": "The Iguatemi Portal is a secure B2B platform allowing store owners to access contract info, submit documents, and engage in marketing opportunities within the Iguatemi network, all in compliance with LGPD.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
@@ -256,6 +256,72 @@
       "achievements": [
         "High performance",
         "Internationalization ready for recruiters"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "nav9.tech",
+      "description": "Institutional website for nav9.tech, a technology company focused on developing innovative digital solutions.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "The nav9.tech website was developed as an institutional platform to present the company, its services, and technological solutions. With a modern and responsive design, the site offers a clear and professional experience for visitors interested in learning about the services offered by the company."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Modern and responsive design",
+        "Institutional presentation",
+        "Services and solutions sections",
+        "Intuitive navigation"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Professional and attractive design",
+        "Performance and optimization",
+        "Cross-platform responsiveness"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Professional digital presence",
+        "Better communication with clients",
+        "Clear presentation of services"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "ICEH Retriever",
+      "description": "Comprehensive data platform designed to provide open and easy access to standardized data on Reproductive, Maternal, Newborn, and Child Health and Nutrition (RMNCH+N) indicators worldwide.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "The ICEH Retriever is a comprehensive data platform developed to provide open and easy access to standardized data on Reproductive, Maternal, Newborn, and Child Health and Nutrition (RMNCH+N) indicators worldwide. The platform covers over 100 indicators, more than 120 countries, and draws from more than 490 nationally representative surveys.",
+        "All indicators in the ICEH Retriever are harmonized and standardized, ensuring comparability over time and across countries. Data are available disaggregated by eight key inequality dimensions, enabling users to explore patterns and trends that highlight where progress is equitable—and where disparities persist.",
+        "The platform was developed to support academics, country teams, and international organizations in advancing evidence-based decision-making and accountability for RMNCH+N outcomes."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Interactive data platform",
+        "Country and indicator selection",
+        "Disaggregated data visualization",
+        "Advanced filters by inequality dimensions",
+        "Data download",
+        "Multilingual interface",
+        "Responsive design"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Management of large data volumes",
+        "Complex indicator visualization",
+        "Performance with multiple filters",
+        "Data standardization and harmonization",
+        "Intuitive interface for technical data"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Facilitated access to standardized data",
+        "Support for research and policy analysis",
+        "Transparency in global health data",
+        "Essential tool for international organizations"
       ]
     }
   ],

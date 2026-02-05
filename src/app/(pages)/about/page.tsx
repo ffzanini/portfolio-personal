@@ -18,7 +18,8 @@ import {
   RiNumber6,
 } from "react-icons/ri";
 
-import { Footer, Navbar, SanitizedText, ZoomImage } from "@/components";
+import { Footer, Navbar, ZoomImage } from "@/components/ui";
+import { SanitizedText } from "@/components/utils";
 import { useTranslation } from "@/context";
 import { photos } from "@/constants/about";
 

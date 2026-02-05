@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import {
   LuMapPin,
   LuCoffee,
@@ -11,20 +12,32 @@ import { LiaHandSpock } from "react-icons/lia";
 
 import { useTranslation } from "@/context";
 import {
-  FlipWords,
   Footer,
-  SanitizedText,
   Navbar,
   ZoomImage,
   Tooltip,
-} from "@/components";
+} from "@/components/ui";
+import { SanitizedText, PreloadImage } from "@/components/utils";
 import { mainTechStack } from "@/constants/stack";
+
+const FlipWords = dynamic(
+  () => import("@/components/ui/FlipWords").then((mod) => mod.FlipWords),
+  {
+    ssr: true,
+    loading: () => (
+      <span className="text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight">
+        ...
+      </span>
+    ),
+  },
+);
 
 export default function Home() {
   const { translations } = useTranslation();
 
   return (
     <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
+      <PreloadImage src="/images/me-desenho.jpeg" priority />
       <div className="relative flex flex-col h-screen">
         <Navbar />
         <main className="flex flex-col justify-center items-center lg:h-screen z-10 max-w-7xl mx-auto w-full pb-8">
@@ -74,7 +87,10 @@ export default function Home() {
                   style={{ willChange: "transform" }}
                 >
                   {translations.home.textButtonAbout}
-                  <LuArrowRight className="hidden lg:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" style={{ willChange: "transform" }} />
+                  <LuArrowRight
+                    className="hidden lg:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform"
+                    style={{ willChange: "transform" }}
+                  />
                 </Link>
 
                 <Link
@@ -83,7 +99,10 @@ export default function Home() {
                   className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl backdrop-blur-sm group"
                   style={{ willChange: "background-color" }}
                 >
-                  <LiaHandSpock className="hidden lg:flex mr-3 h-6 w-6 group-hover:rotate-360 duration-500 transition-transform" style={{ willChange: "transform" }} />
+                  <LiaHandSpock
+                    className="hidden lg:flex mr-3 h-6 w-6 group-hover:rotate-360 duration-500 transition-transform"
+                    style={{ willChange: "transform" }}
+                  />
                   {translations.home.textButtonResume}
                 </Link>
               </div>
@@ -122,7 +141,7 @@ export default function Home() {
                       <div className="w-full h-full flex items-center justify-center">
                         <ZoomImage
                           src="/images/me-desenho.jpeg"
-                          alt="Felipe Frantz Zanini - Software Engineer e desenvolvedor ffzanini"
+                          alt="Felipe Frantz Zanini (ffzanini) - Software Engineer especializado em React, Next.js e TypeScript. Desenvolvedor frontend e fullstack em Pelotas, Brasil."
                           width={180}
                           height={180}
                           className="rounded-xl"

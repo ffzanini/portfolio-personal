@@ -31,17 +31,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 ? "Iguatemi"
                 : navigation === "resume"
                   ? "Currículo"
-                  : navigation;
-  const title = `${projectTitle} | Projetos`;
-  const description = `Projeto desenvolvido por Felipe Frantz Zanini (ffzanini): ${projectTitle}. Stack: ${project.technologies.slice(0, 4).join(", ")}. Desenvolvimento e software engineer.`;
+                  : navigation === "nav9"
+                    ? "nav9.tech"
+                    : navigation === "iceh_retriever"
+                      ? "ICEH Retriever"
+                      : navigation;
+  const title = `${projectTitle} | Projetos | ${PERSON.name}`;
+  const technologiesList = project.technologies.slice(0, 6).join(", ");
+  const description = `Explore o projeto ${projectTitle} desenvolvido por Felipe Frantz Zanini (ffzanini). Stack tecnológica: ${technologiesList}. Desenvolvimento web, frontend e fullstack. Software engineer especializado em React, Next.js e TypeScript. Veja detalhes e entre em contato.`;
   const url = `${SITE_URL}/projects/${navigation}`;
   return {
     title,
     description,
-    alternates: { canonical: url },
+    keywords: [
+      projectTitle,
+      "projeto",
+      "Felipe Frantz Zanini",
+      "ffzanini",
+      "desenvolvimento",
+      "desenvolvimento web",
+      ...project.technologies.slice(0, 5),
+      "React",
+      "Next.js",
+      "TypeScript",
+      "portfolio",
+    ],
+    alternates: {
+      canonical: url,
+      languages: {
+        "pt-BR": `${url}?lang=pt`,
+        "en": `${url}?lang=en`,
+        "es": `${url}?lang=es`,
+      },
+    },
     openGraph: {
-      title: `${projectTitle} | ${PERSON.name}`,
+      title: `${projectTitle} | Projetos | ${PERSON.name}`,
+      description: `Explore o projeto ${projectTitle} desenvolvido por Felipe Frantz Zanini (ffzanini). Stack tecnológica: ${technologiesList}. Veja detalhes e entre em contato.`,
       url,
+      type: "website",
     },
   };
 }

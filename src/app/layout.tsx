@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
 
 import AppProvider from "@/providers/AppProvider";
 import {
+  AnalyticsWrapper,
   ClientToaster,
   JsonLd,
   ScrollToTopButton,
   SetInitialLanguage,
-} from "@/components";
+  TopProgressBar,
+} from "@/components/utils";
 import {
   SITE_URL,
   PERSON,
@@ -19,9 +19,9 @@ import {
 import { fontMavenPro } from "./fonts";
 import "./globals.css";
 
-const title = `${PERSON.name} | ${PERSON.jobTitle} | ffzanini`;
+const title = `${PERSON.name} | ${PERSON.jobTitle} | Desenvolvedor React & Next.js | ffzanini`;
 const description =
-  "Felipe Frantz Zanini (ffzanini) - Software Engineer, desenvolvimento e development web. Portfolio com projetos, stack e contato. Pelotas, Brasil.";
+  "Felipe Frantz Zanini (ffzanini) - Software Engineer especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -66,10 +66,19 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_URL,
+    languages: {
+      "pt-BR": SITE_URL,
+      en: `${SITE_URL}?lang=en`,
+      es: `${SITE_URL}?lang=es`,
+    },
   },
   category: "technology",
   other: {
     google: "notranslate",
+    "geo.region": "BR-RS",
+    "geo.placename": "Pelotas",
+    "geo.position": "-31.7613;-52.3371",
+    ICBM: "-31.7613, -52.3371",
   },
 };
 
@@ -87,20 +96,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt" translate="no" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
+        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+      </head>
       <body className={`${fontMavenPro.className} antialiased`}>
         <JsonLd />
         <AppProvider>
+          <TopProgressBar />
           <SetInitialLanguage />
           {children}
           <ClientToaster />
           <ScrollToTopButton />
         </AppProvider>
-        {process.env.NEXT_PUBLIC_VERCEL_ENV === "production" && (
-          <>
-            <Analytics mode="production" />
-            <SpeedInsights />
-          </>
-        )}
+        <AnalyticsWrapper />
       </body>
     </html>
   );
