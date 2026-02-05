@@ -7,7 +7,6 @@ import {
   JsonLd,
   ScrollToTopButton,
   SetInitialLanguage,
-  TopProgressBar,
 } from "@/components/utils";
 import {
   SITE_URL,
@@ -109,7 +108,6 @@ export default function RootLayout({
       <body className={`${fontMavenPro.className} antialiased`}>
         <JsonLd />
         <AppProvider>
-          <TopProgressBar />
           <SetInitialLanguage />
           {children}
           <ClientToaster />

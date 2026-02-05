@@ -6,4 +6,3 @@ export * from "./JsonLd";
 export * from "./PreloadImage";
 export * from "./SanitizedText";
 export * from "./ScrollToTop";
-export * from "./TopProgressBar";
