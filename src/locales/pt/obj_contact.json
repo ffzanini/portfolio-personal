@@ -56,6 +56,7 @@
   "tooltip": "Preencha todos os campos e use um e-mail válido",
   "button_text_ready": "Pronto para enviar",
   "button_text_not_ready": "Aguardando preenchimento",
+  "button_text_sending": "Enviando sua mensagem",
 
   "footer": {
     "title": "Minha história não para por aqui",

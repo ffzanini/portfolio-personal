@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   LuFootprints,
@@ -148,6 +149,7 @@ export function ContactContent() {
 
 function ContactForm() {
   const { translations } = useTranslation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { register, handleSubmit, formState, reset } = useForm<{
     name: string;
@@ -160,6 +162,7 @@ function ContactForm() {
   const enableSubmit = formState.isDirty && formState.isValid;
 
   const onSubmit = handleSubmit(async ({ name, email, message }) => {
+    setIsSubmitting(true);
     toast.promise(
       fetch("/api/contact", {
         method: "POST",
@@ -174,6 +177,9 @@ function ContactForm() {
         })
         .then(() => {
           reset();
+        })
+        .finally(() => {
+          setIsSubmitting(false);
         }),
       {
         loading: translations.contact.loading,
@@ -228,15 +234,17 @@ function ContactForm() {
             )}
           />
           <div className="flex flex-col 2xl:flex-row justify-center pb-4 2xl:pb-0 2xl:justify-center">
-            <Tooltip text={!enableSubmit && translations.contact.tooltip}>
+            <Tooltip text={!enableSubmit && !isSubmitting && translations.contact.tooltip}>
               <button
-                disabled={!enableSubmit}
+                disabled={!enableSubmit || isSubmitting}
                 type="submit"
                 className="disabled:grayscale disabled:cursor-not-allowed cursor-pointer w-full flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
               >
-                {enableSubmit
-                  ? translations.contact.button_text_ready
-                  : translations.contact.button_text_not_ready}
+                {isSubmitting
+                  ? (translations.contact as typeof translations.contact & { button_text_sending: string }).button_text_sending
+                  : enableSubmit
+                    ? translations.contact.button_text_ready
+                    : translations.contact.button_text_not_ready}
               </button>
             </Tooltip>
           </div>

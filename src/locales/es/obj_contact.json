@@ -56,6 +56,7 @@
   "tooltip": "Completa todos los campos y usa un correo válido",
   "button_text_ready": "Listo para enviar",
   "button_text_not_ready": "Esperando que completes",
+  "button_text_sending": "Enviando tu mensaje",
 
   "footer": {
     "title": "Mi historia no termina aquí",

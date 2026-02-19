@@ -56,6 +56,7 @@
   "tooltip": "Fill in all fields and use a valid email",
   "button_text_ready": "Ready to send",
   "button_text_not_ready": "Waiting for input",
+  "button_text_sending": "Sending your message",
   "footer": {
     "title": "My story does not end here",
     "message": "Check out my <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">full résumé</a></b> and discover in detail everything I have produced over more than 10 years of experience in tech."
