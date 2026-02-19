@@ -4,7 +4,7 @@ import { SITE_URL, PERSON } from "@/constants/seo";
 export const metadata: Metadata = {
   title: "Sobre Mim",
   description:
-    "Conheça Felipe Frantz Zanini (ffzanini): Software Engineer especializado em React, Next.js e TypeScript. Descubra minha trajetória profissional, experiência em desenvolvimento web, frontend e fullstack. Desenvolvedor, escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Saiba mais sobre minha jornada em Pelotas, Brasil.",
+    "Conheça Felipe Frantz Zanini (ffzanini): Senior Software Engineer & Frontend Architect especializado em React, Next.js e TypeScript. Descubra minha trajetória profissional, experiência em desenvolvimento web, frontend e fullstack. Desenvolvedor, escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Saiba mais sobre minha jornada em Pelotas, Brasil.",
   keywords: [
     "Felipe Frantz Zanini",
     "ffzanini",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: `Sobre Mim | ${PERSON.name} - Software Engineer`,
+    title: `Sobre Mim | ${PERSON.name} - ${PERSON.jobTitle}`,
     description:
-      "Conheça Felipe Frantz Zanini (ffzanini): Software Engineer especializado em React, Next.js e TypeScript. Descubra minha trajetória profissional e experiência em desenvolvimento web.",
+      "Conheça Felipe Frantz Zanini (ffzanini): Senior Software Engineer & Frontend Architect especializado em React, Next.js e TypeScript. Descubra minha trajetória profissional e experiência em desenvolvimento web.",
     url: `${SITE_URL}/about`,
     type: "profile",
   },

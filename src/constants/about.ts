@@ -1,7 +1,7 @@
 export const photos = [
   {
     src: "/images/about/me_in_beach.jpeg",
-    alt: "Felipe Frantz Zanini (ffzanini) - Software Engineer na praia em Pelotas, Brasil",
+    alt: "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect na praia em Pelotas, Brasil",
     width: 732,
     height: 1024,
     className: "rounded",

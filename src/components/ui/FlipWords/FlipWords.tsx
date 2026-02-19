@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useState, useMemo } from "react";
+import { useCallback, useEffect, useState, useMemo, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { cn } from "@/libs/cn";
@@ -13,21 +13,31 @@ export const FlipWords = ({
   duration?: number;
   className?: string;
 }) => {
-  const [currentWord, setCurrentWord] = useState(words[0]);
+  const [currentWord, setCurrentWord] = useState(words[0] || "");
   const [isAnimating, setIsAnimating] = useState(false);
   const [resetKey, setResetKey] = useState(0);
+  const wordsRef = useRef<string[]>(words);
 
   useEffect(() => {
-    setCurrentWord(words[0]);
-    setResetKey((prev) => prev + 1);
+    const wordsChanged =
+      words.length !== wordsRef.current.length ||
+      words[0] !== wordsRef.current[0];
+
+    if (wordsChanged && words.length > 0) {
+      setCurrentWord(words[0]);
+      setIsAnimating(false);
+      setResetKey((prev) => prev + 1);
+      wordsRef.current = words;
+    }
   }, [words]);
 
-  const currentIndex = useMemo(
-    () => words.indexOf(currentWord),
-    [currentWord, words],
-  );
+  const currentIndex = useMemo(() => {
+    const index = words.indexOf(currentWord);
+    return index >= 0 ? index : 0;
+  }, [currentWord, words]);
 
   const startAnimation = useCallback(() => {
+    if (words.length === 0) return;
     const nextIndex = (currentIndex + 1) % words.length;
     setCurrentWord(words[nextIndex]);
     setIsAnimating(true);

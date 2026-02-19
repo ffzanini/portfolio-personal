@@ -107,7 +107,7 @@ const websiteSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: `${PERSON.name} - Software Engineer`,
+  name: `${PERSON.name} - ${PERSON.jobTitle}`,
   url: SITE_URL,
   logo: `${SITE_URL}/images/visit-card.png`,
   sameAs: [

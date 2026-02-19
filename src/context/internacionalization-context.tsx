@@ -20,7 +20,7 @@ export interface InternacionalizationInterface {
 }
 
 const InternacionalizationContext = createContext(
-  {} as InternacionalizationInterface
+  {} as InternacionalizationInterface,
 );
 
 const useTranslation = () => {
@@ -28,20 +28,22 @@ const useTranslation = () => {
 
   if (context === undefined) {
     throw new Error(
-      "useTranslation must be used within InternacionalizationProvider"
+      "useTranslation must be used within InternacionalizationProvider",
     );
   }
 
   return context;
 };
 
+const LANGUAGE_STORAGE_KEY = "app-language";
+
 const getInitialLanguage = (): Locations => {
   if (typeof window === "undefined") return "en";
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const lang = urlParams.get("lang");
-
-  if (lang === "pt" || lang === "en" || lang === "es") return lang as Locations;
+  const storedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  if (storedLang === "pt" || storedLang === "en" || storedLang === "es") {
+    return storedLang as Locations;
+  }
 
   const browserLang = navigator.language?.split("-")[0];
   if (browserLang === "pt" || browserLang === "en" || browserLang === "es") {
@@ -56,11 +58,18 @@ const InternacionalizationProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [location, setLocation] = useState<Locations | null>(null);
+  const [location, setLocationState] = useState<Locations | null>(null);
 
   useEffect(() => {
     const initialLang = getInitialLanguage();
-    setLocation(initialLang);
+    setLocationState(initialLang);
+  }, []);
+
+  const setLocationWithPersistence = useCallback((lang: Locations) => {
+    setLocationState(lang);
+    if (typeof window !== "undefined") {
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+    }
   }, []);
 
   const getTranslations = useCallback(() => {
@@ -71,11 +80,11 @@ const InternacionalizationProvider = ({
 
   const objTranslations = useMemo(() => {
     return {
-      location: location || "pt",
-      setLocation,
+      location: location || "en",
+      setLocation: setLocationWithPersistence,
       translations: getTranslations(),
     };
-  }, [location, getTranslations]);
+  }, [location, getTranslations, setLocationWithPersistence]);
 
   if (location === null) return null;
 

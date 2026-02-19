@@ -2,15 +2,15 @@
   "welcome": "Welcome! Nice to meet you.",
   "name": "I'm Felipe",
   "roles": [
-    "Software Engineer",
+    "Senior Software Engineer",
     "Writer and Screenwriter",
     "Indie Game Developer",
     "Jiu-Jitsu Brown Belt"
   ],
-  "description": "I am currently a Senior Software Engineer at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A</b></a>, where I contribute to the development of innovative technological solutions. In my free time, I am an instructor at <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu — Pelotas</a></b>.",
+  "description": "I am currently a Senior Software Engineer & Frontend Architect at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A</b></a>, where I contribute to the development of innovative technological solutions. In my free time, I am an instructor at <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu — Pelotas</a></b>.",
   "location": "Pelotas — RS, Brazil",
   "experience": "+10 years of experience",
-  "projects": "+50 projects delivered",
+  "projects": "+90 projects delivered",
   "stack": "Main tech stack",
   "textButtonAbout": "Learn more about me",
   "textButtonResume": "View my résumé",

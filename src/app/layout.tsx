@@ -5,9 +5,8 @@ import {
   AnalyticsWrapper,
   ClientToaster,
   JsonLd,
-  ScrollToTopButton,
-  SetInitialLanguage,
 } from "@/components/utils";
+import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import {
   SITE_URL,
   PERSON,
@@ -20,7 +19,7 @@ import "./globals.css";
 
 const title = `${PERSON.name} | ${PERSON.jobTitle} | Desenvolvedor React & Next.js | ffzanini`;
 const description =
-  "Felipe Frantz Zanini (ffzanini) - Software Engineer especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
+  "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -96,22 +95,16 @@ export default function RootLayout({
   return (
     <html lang="pt" translate="no" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
+        <link rel="preload" as="image" href="/images/me-desenho.jpeg" fetchPriority="high" />
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
         <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
         <JsonLd />
         <AppProvider>
-          <SetInitialLanguage />
           {children}
           <ClientToaster />
-          <ScrollToTopButton />
+          <LazyScrollToTop />
         </AppProvider>
         <AnalyticsWrapper />
       </body>

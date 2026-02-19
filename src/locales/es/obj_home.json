@@ -2,15 +2,15 @@
   "welcome": "¡Bienvenido! Mucho gusto en conocerte.",
   "name": "Soy Felipe",
   "roles": [
-    "Ingeniero de Software",
+    "Ingeniero de Software Senior",
     "Escritor y Guionista",
     "Desarrollador de Juegos Indie",
     "Cinturón Marrón de Jiu-Jitsu"
   ],
-  "description": "Actualmente soy Ingeniero de Software Senior en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A</b></a>, donde contribuyo al desarrollo de soluciones tecnológicas innovadoras. En mi tiempo libre soy instructor en <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu — Pelotas</a></b>.",
+  "description": "Actualmente soy Ingeniero de Software Senior & Arquitecto Frontend en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A</b></a>, donde contribuyo al desarrollo de soluciones tecnológicas innovadoras. En mi tiempo libre soy instructor en <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu — Pelotas</a></b>.",
   "location": "Pelotas — RS, Brasil",
   "experience": "+10 años de experiencia",
-  "projects": "+50 proyectos desarrollados",
+  "projects": "+90 proyectos desarrollados",
   "stack": "Stack principal",
   "textButtonAbout": "Conocer más sobre mí",
   "textButtonResume": "Ver mi currículum",

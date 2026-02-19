@@ -4,12 +4,12 @@ export const PERSON = {
   name: "Felipe Frantz Zanini",
   nameShort: "Felipe Frantz",
   nickname: "ffzanini",
-  jobTitle: "Software Engineer",
-  jobTitleEn: "Software Engineer",
+  jobTitle: "Senior Software Engineer & Frontend Architect",
+  jobTitleEn: "Senior Software Engineer & Frontend Architect",
   description:
-    "Felipe Frantz Zanini (ffzanini) - Software Engineer especializado em desenvolvimento web, frontend e fullstack. Desenvolvedor React, Next.js e TypeScript. Escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Portfolio com projetos, stack tecnológica e contato. Pelotas, Brasil.",
+    "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em desenvolvimento web, frontend e fullstack. Desenvolvedor React, Next.js e TypeScript. Escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Portfolio com projetos, stack tecnológica e contato. Pelotas, Brasil.",
   descriptionLong:
-    "Felipe Frantz Zanini (ffzanini) - Software Engineer com foco em desenvolvimento web, frontend e fullstack. Especialista em React, Next.js, TypeScript e tecnologias modernas. Desenvolvedor de software, escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Portfolio pessoal com projetos desenvolvidos, stack tecnológica completa e formulário de contato. Localizado em Pelotas, Rio Grande do Sul, Brasil.",
+    "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect com foco em desenvolvimento web, frontend e fullstack. Especialista em React, Next.js, TypeScript e tecnologias modernas. Desenvolvedor de software, escritor, desenvolvedor de jogos indie e faixa marrom de Jiu Jitsu. Portfolio pessoal com projetos desenvolvidos, stack tecnológica completa e formulário de contato. Localizado em Pelotas, Rio Grande do Sul, Brasil.",
 } as const;
 
 export const SEO_KEYWORDS = [
@@ -24,6 +24,11 @@ export const SEO_KEYWORDS = [
   // Profissão e títulos
   "software engineer",
   "engenheiro de software",
+  "senior software engineer",
+  "engenheiro de software sênior",
+  "frontend architect",
+  "arquiteto de frontend",
+  "arquiteto frontend",
   "desenvolvedor de software",
   "software developer",
   "desenvolvedor",
@@ -121,5 +126,5 @@ export const DEFAULT_OG_IMAGE = {
   url: "/images/visit-card.png",
   width: 1120,
   height: 630,
-  alt: "Felipe Frantz Zanini | Software Engineer | ffzanini.dev",
+  alt: "Felipe Frantz Zanini | Senior Software Engineer & Frontend Architect | ffzanini.dev",
 } as const;

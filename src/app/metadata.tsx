@@ -3,7 +3,7 @@ import { SITE_URL, PERSON, SEO_KEYWORDS, DEFAULT_OG_IMAGE } from "@/constants/se
 
 const title = `${PERSON.name} | ${PERSON.jobTitle} | Desenvolvedor React & Next.js | ffzanini`;
 const description =
-  "Felipe Frantz Zanini (ffzanini) - Software Engineer especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
+  "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
 
 export const homeMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),

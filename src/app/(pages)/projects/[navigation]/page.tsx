@@ -1,5 +1,6 @@
 import { cache } from "react";
 import { notFound } from "next/navigation";
+import { Navbar } from "@/components/ui";
 import ProjectDetails from "@/app/(pages)/projects/[navigation]/ProjectDetails";
 
 interface PageProps {
@@ -27,5 +28,10 @@ export default async function Page({ params }: PageProps) {
 
   if (!project) notFound();
 
-  return <ProjectDetails project={project} />;
+  return (
+    <>
+      <Navbar />
+      <ProjectDetails project={project} />
+    </>
+  );
 }
