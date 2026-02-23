@@ -6,10 +6,11 @@ import {
   useMemo,
   useCallback,
   useEffect,
+  useRef,
   ReactNode,
 } from "react";
 
-import { en, es, pt } from "../locales";
+import pt from "../locales/pt";
 
 type Locations = "en" | "es" | "pt";
 
@@ -38,7 +39,7 @@ const useTranslation = () => {
 const LANGUAGE_STORAGE_KEY = "app-language";
 
 const getInitialLanguage = (): Locations => {
-  if (typeof window === "undefined") return "en";
+  if (typeof window === "undefined") return "pt";
 
   const storedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
   if (storedLang === "pt" || storedLang === "en" || storedLang === "es") {
@@ -50,43 +51,57 @@ const getInitialLanguage = (): Locations => {
     return browserLang as Locations;
   }
 
-  return "en";
+  return "pt";
 };
+
+const DEFAULT_LOCATION: Locations = "pt";
 
 const InternacionalizationProvider = ({
   children,
 }: {
   children: ReactNode;
 }) => {
-  const [location, setLocationState] = useState<Locations | null>(null);
+  const [location, setLocationState] = useState<Locations>(DEFAULT_LOCATION);
+  const [translations, setTranslationsState] = useState<typeof pt>(pt);
+  const loadedLocales = useRef<{ en?: typeof pt; es?: typeof pt }>({});
 
   useEffect(() => {
     const initialLang = getInitialLanguage();
     setLocationState(initialLang);
   }, []);
 
+  useEffect(() => {
+    if (location === "pt") {
+      setTranslationsState(pt);
+      return;
+    }
+    const cached = loadedLocales.current[location];
+    if (cached) {
+      setTranslationsState(cached);
+      return;
+    }
+    import(`../locales/${location}`).then((mod) => {
+      const locale = mod.default;
+      loadedLocales.current[location] = locale;
+      setTranslationsState(locale);
+    });
+  }, [location]);
+
   const setLocationWithPersistence = useCallback((lang: Locations) => {
     setLocationState(lang);
     if (typeof window !== "undefined") {
       localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+      document.cookie = `${LANGUAGE_STORAGE_KEY}=${lang};path=/;max-age=31536000;samesite=lax`;
     }
   }, []);
 
-  const getTranslations = useCallback(() => {
-    if (location === "en") return en;
-    if (location === "es") return es;
-    return pt;
-  }, [location]);
-
   const objTranslations = useMemo(() => {
     return {
-      location: location || "en",
+      location,
       setLocation: setLocationWithPersistence,
-      translations: getTranslations(),
+      translations,
     };
-  }, [location, getTranslations, setLocationWithPersistence]);
-
-  if (location === null) return null;
+  }, [location, translations, setLocationWithPersistence]);
 
   return (
     <InternacionalizationContext.Provider value={objTranslations}>

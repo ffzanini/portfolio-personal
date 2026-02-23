@@ -4,6 +4,8 @@ import { Navbar } from "@/components/ui";
 import { HomeContent } from "@/components/pages/home/HomeContent";
 import { SITE_URL, DEFAULT_OG_IMAGE, PERSON } from "@/constants/seo";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
