@@ -11,6 +11,7 @@ import {
 } from "react";
 
 import pt from "../locales/pt";
+import { LocaleLoader } from "@/components/ui/LocaleLoader";
 
 type Locations = "en" | "es" | "pt";
 
@@ -63,14 +64,28 @@ const InternacionalizationProvider = ({
 }) => {
   const [location, setLocationState] = useState<Locations>(DEFAULT_LOCATION);
   const [translations, setTranslationsState] = useState<typeof pt>(pt);
+  const [isLocaleReady, setIsLocaleReady] = useState(false);
   const loadedLocales = useRef<{ en?: typeof pt; es?: typeof pt }>({});
 
   useEffect(() => {
     const initialLang = getInitialLanguage();
-    setLocationState(initialLang);
+    if (initialLang === "pt") {
+      setLocationState("pt");
+      setTranslationsState(pt);
+      setIsLocaleReady(true);
+      return;
+    }
+    import(`../locales/${initialLang}`).then((mod) => {
+      const locale = mod.default;
+      loadedLocales.current[initialLang] = locale;
+      setLocationState(initialLang);
+      setTranslationsState(locale);
+      setIsLocaleReady(true);
+    });
   }, []);
 
   useEffect(() => {
+    if (!isLocaleReady) return;
     if (location === "pt") {
       setTranslationsState(pt);
       return;
@@ -85,7 +100,7 @@ const InternacionalizationProvider = ({
       loadedLocales.current[location] = locale;
       setTranslationsState(locale);
     });
-  }, [location]);
+  }, [location, isLocaleReady]);
 
   const setLocationWithPersistence = useCallback((lang: Locations) => {
     setLocationState(lang);
@@ -105,7 +120,7 @@ const InternacionalizationProvider = ({
 
   return (
     <InternacionalizationContext.Provider value={objTranslations}>
-      {children}
+      {!isLocaleReady ? <LocaleLoader /> : children}
     </InternacionalizationContext.Provider>
   );
 };
