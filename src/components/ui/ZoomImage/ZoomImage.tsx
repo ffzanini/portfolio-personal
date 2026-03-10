@@ -15,6 +15,7 @@ interface ZoomImageProps {
   className?: string;
   style?: React.CSSProperties;
   priority?: boolean;
+  sizes?: string;
 }
 
 function ImageContent({
@@ -25,6 +26,7 @@ function ImageContent({
   className,
   style,
   priority,
+  sizes,
   isLoaded,
   onLoad,
   onFirstClick,
@@ -44,16 +46,12 @@ function ImageContent({
       onLoad={onLoad}
       onClick={priority ? onFirstClick : undefined}
       className={`${className} overflow-hidden shadow-md transition-opacity duration-300 ${
-        isLoaded ? "opacity-100" : "opacity-0"
+        priority || isLoaded ? "opacity-100" : "opacity-0"
       } ${priority && onFirstClick ? "cursor-zoom-in" : ""}`}
       loading={priority ? "eager" : "lazy"}
       priority={priority}
       quality={priority ? 90 : 85}
-      sizes={
-        priority
-          ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      }
+      sizes={sizes ?? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
       style={style}
       placeholder="blur"
       blurDataURL={BLUR_PLACEHOLDER}
@@ -69,6 +67,7 @@ export function ZoomImage({
   className,
   style,
   priority = false,
+  sizes,
 }: Readonly<ZoomImageProps>) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [ZoomWrapper, setZoomWrapper] = useState<React.ComponentType<{ children: React.ReactNode }> | null>(null);
@@ -104,6 +103,7 @@ export function ZoomImage({
       className={className}
       style={style}
       priority={priority}
+      sizes={sizes}
       isLoaded={isLoaded}
       onLoad={() => setIsLoaded(true)}
       onFirstClick={ZoomWrapper ? undefined : loadZoom}

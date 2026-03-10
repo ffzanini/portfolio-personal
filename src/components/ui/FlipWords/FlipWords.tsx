@@ -17,6 +17,7 @@ export const FlipWords = ({
   const [isAnimating, setIsAnimating] = useState(false);
   const [resetKey, setResetKey] = useState(0);
   const wordsRef = useRef<string[]>(words);
+  const hasStartedCycleRef = useRef(false);
 
   useEffect(() => {
     const wordsChanged =
@@ -39,6 +40,7 @@ export const FlipWords = ({
   const startAnimation = useCallback(() => {
     if (words.length === 0) return;
     const nextIndex = (currentIndex + 1) % words.length;
+    hasStartedCycleRef.current = true;
     setCurrentWord(words[nextIndex]);
     setIsAnimating(true);
   }, [currentIndex, words]);
@@ -59,7 +61,9 @@ export const FlipWords = ({
     >
       <motion.div
         key={currentWord}
-        initial={{ opacity: 0, y: 10 }}
+        initial={
+          hasStartedCycleRef.current ? { opacity: 0, y: 10 } : { opacity: 1, y: 0 }
+        }
         animate={{ opacity: 1, y: 0 }}
         exit={{
           opacity: 0,

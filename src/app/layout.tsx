@@ -95,7 +95,6 @@ export default function RootLayout({
   return (
     <html lang="pt" translate="no" suppressHydrationWarning>
       <head>
-        <link rel="preload" as="image" href="/images/me-desenho.jpeg" fetchPriority="high" />
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
         <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
       </head>

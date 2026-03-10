@@ -138,6 +138,7 @@ export function HomeContent() {
                           width={180}
                           height={180}
                           className="rounded-xl"
+                          sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 200px"
                           priority
                         />
                       </div>
