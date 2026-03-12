@@ -50,7 +50,7 @@ function ImageContent({
       } ${priority && onFirstClick ? "cursor-zoom-in" : ""}`}
       loading={priority ? "eager" : "lazy"}
       priority={priority}
-      quality={priority ? 90 : 85}
+      quality={priority ? 85 : 80}
       sizes={sizes ?? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
       style={style}
       placeholder="blur"

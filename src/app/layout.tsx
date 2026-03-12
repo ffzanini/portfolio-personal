@@ -21,6 +21,8 @@ const title = `${PERSON.name} | ${PERSON.jobTitle} | Desenvolvedor React & Next.
 const description =
   "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -97,6 +99,7 @@ export default function RootLayout({
       <head>
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
         <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+        <link rel="preload" href="/images/me-desenho.jpeg" as="image" />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
         <JsonLd />
