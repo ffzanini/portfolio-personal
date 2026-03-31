@@ -20,6 +20,15 @@
 }
 
 @layer utilities {
+  @keyframes loading-slide {
+    0% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(420%);
+    }
+  }
+
   @keyframes toast-fade-in {
     0% {
       opacity: 0;
