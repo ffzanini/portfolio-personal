@@ -1,6 +1,6 @@
 import {
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiTailwindcss,
   SiMui,
   SiBootstrap,
@@ -61,7 +61,7 @@ export const categories = [
       { name: "Vue.js", icon: SiVuedotjs, featured: false, color: "#4FC08D" },
       { name: "Vite", icon: SiVite, featured: true, color: "#646CFF" },
       { name: "HTML5", icon: SiHtml5, featured: true, color: "#E34F26" },
-      { name: "CSS3", icon: SiCss3, featured: true, color: "#1572B6" },
+      { name: "CSS3", icon: SiCss, featured: true, color: "#1572B6" },
       {
         name: "Tailwind",
         icon: SiTailwindcss,

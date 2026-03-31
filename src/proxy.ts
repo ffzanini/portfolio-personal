@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isValidLocale, resolvePreferredLocale } from "@/libs/i18n";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   if (
@@ -31,7 +31,8 @@ export function middleware(req: NextRequest) {
   });
 
   const url = req.nextUrl.clone();
-  url.pathname = pathname === "/" ? `/${resolvedLocale}` : `/${resolvedLocale}${pathname}`;
+  url.pathname =
+    pathname === "/" ? `/${resolvedLocale}` : `/${resolvedLocale}${pathname}`;
   const response = NextResponse.redirect(url);
   response.cookies.set("app-language", resolvedLocale, {
     path: "/",
