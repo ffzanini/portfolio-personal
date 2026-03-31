@@ -2,18 +2,23 @@
 import {
   createContext,
   useContext,
-  useState,
   useMemo,
   useCallback,
   useEffect,
-  useRef,
   ReactNode,
 } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
-import pt from "../locales/pt";
-import { LocaleLoader } from "@/components/ui/LocaleLoader";
+import { en, es, pt } from "@/locales";
+import {
+  DEFAULT_LOCALE,
+  getLocaleFromBrowserLanguage,
+  isValidLocale,
+  type Locale,
+  withLocalePath,
+} from "@/libs/i18n";
 
-type Locations = "en" | "es" | "pt";
+type Locations = Locale;
 
 export interface InternacionalizationInterface {
   location: Locations;
@@ -39,76 +44,61 @@ const useTranslation = () => {
 
 const LANGUAGE_STORAGE_KEY = "app-language";
 
-const getInitialLanguage = (): Locations => {
-  if (typeof window === "undefined") return "pt";
-
-  const storedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  if (storedLang === "pt" || storedLang === "en" || storedLang === "es") {
-    return storedLang as Locations;
-  }
-
-  const browserLang = navigator.language?.split("-")[0];
-  if (browserLang === "pt" || browserLang === "en" || browserLang === "es") {
-    return browserLang as Locations;
-  }
-
-  return "pt";
-};
-
-const DEFAULT_LOCATION: Locations = "pt";
-
 const InternacionalizationProvider = ({
   children,
+  initialLocale = DEFAULT_LOCALE,
 }: {
   children: ReactNode;
+  initialLocale?: Locations;
 }) => {
-  const [location, setLocationState] = useState<Locations>(DEFAULT_LOCATION);
-  const [translations, setTranslationsState] = useState<typeof pt>(pt);
-  const [isLocaleReady, setIsLocaleReady] = useState(false);
-  const loadedLocales = useRef<{ en?: typeof pt; es?: typeof pt }>({});
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const translationsMap: Record<Locations, typeof pt> = useMemo(
+    () => ({
+      pt,
+      en,
+      es,
+    }),
+    [],
+  );
+
+  const pathnameLocale = useMemo(() => {
+    const firstSegment = (pathname || "/").split("/").filter(Boolean)[0];
+    if (firstSegment && isValidLocale(firstSegment)) {
+      return firstSegment;
+    }
+    return null;
+  }, [pathname]);
+
+  const location = useMemo<Locations>(() => {
+    if (pathnameLocale) return pathnameLocale;
+    if (typeof window !== "undefined") {
+      const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+      if (storedLanguage && isValidLocale(storedLanguage)) {
+        return storedLanguage;
+      }
+      return getLocaleFromBrowserLanguage(window.navigator.language);
+    }
+    return initialLocale;
+  }, [initialLocale, pathnameLocale]);
 
   useEffect(() => {
-    const initialLang = getInitialLanguage();
-    if (initialLang === "pt") {
-      setLocationState("pt");
-      setTranslationsState(pt);
-      setIsLocaleReady(true);
-      return;
-    }
-    import(`../locales/${initialLang}`).then((mod) => {
-      const locale = mod.default;
-      loadedLocales.current[initialLang] = locale;
-      setLocationState(initialLang);
-      setTranslationsState(locale);
-      setIsLocaleReady(true);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!isLocaleReady) return;
-    if (location === "pt") {
-      setTranslationsState(pt);
-      return;
-    }
-    const cached = loadedLocales.current[location];
-    if (cached) {
-      setTranslationsState(cached);
-      return;
-    }
-    import(`../locales/${location}`).then((mod) => {
-      const locale = mod.default;
-      loadedLocales.current[location] = locale;
-      setTranslationsState(locale);
-    });
-  }, [location, isLocaleReady]);
+    if (typeof window === "undefined") return;
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, location);
+    document.cookie = `${LANGUAGE_STORAGE_KEY}=${location};path=/;max-age=31536000;samesite=lax`;
+  }, [location]);
 
   const setLocationWithPersistence = useCallback((lang: Locations) => {
-    setLocationState(lang);
     if (typeof window !== "undefined") {
       localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
       document.cookie = `${LANGUAGE_STORAGE_KEY}=${lang};path=/;max-age=31536000;samesite=lax`;
     }
-  }, []);
+    const nextPath = withLocalePath(lang, pathname || "/");
+    router.push(nextPath);
+  }, [pathname, router]);
+
+  const translations = translationsMap[location] ?? pt;
 
   const objTranslations = useMemo(() => {
     return {
@@ -116,11 +106,11 @@ const InternacionalizationProvider = ({
       setLocation: setLocationWithPersistence,
       translations,
     };
-  }, [location, translations, setLocationWithPersistence]);
+  }, [location, setLocationWithPersistence, translations]);
 
   return (
     <InternacionalizationContext.Provider value={objTranslations}>
-      {!isLocaleReady ? <LocaleLoader /> : children}
+      {children}
     </InternacionalizationContext.Provider>
   );
 };

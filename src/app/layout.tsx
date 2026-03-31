@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import { cookies } from "next/headers";
+import { headers } from "next/headers";
 
 import AppProvider from "@/providers/AppProvider";
 import {
@@ -13,6 +15,7 @@ import {
   SEO_KEYWORDS,
   DEFAULT_OG_IMAGE,
 } from "@/constants/seo";
+import { DEFAULT_LOCALE, resolvePreferredLocale } from "@/libs/i18n";
 
 import { fontMavenPro } from "./fonts";
 import "./globals.css";
@@ -20,8 +23,6 @@ import "./globals.css";
 const title = `${PERSON.name} | ${PERSON.jobTitle} | Desenvolvedor React & Next.js | ffzanini`;
 const description =
   "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
-
-export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -65,11 +66,11 @@ export const metadata: Metadata = {
     creator: "@ffzanini",
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: `${SITE_URL}/pt`,
     languages: {
-      "pt-BR": SITE_URL,
-      en: `${SITE_URL}?lang=en`,
-      es: `${SITE_URL}?lang=es`,
+      "pt-BR": `${SITE_URL}/pt`,
+      en: `${SITE_URL}/en`,
+      es: `${SITE_URL}/es`,
     },
   },
   category: "technology",
@@ -89,13 +90,22 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const headerStore = await headers();
+  const localeCookie = cookieStore.get("app-language")?.value;
+  const acceptLanguage = headerStore.get("accept-language");
+  const locale = resolvePreferredLocale({
+    cookieLocale: localeCookie ?? DEFAULT_LOCALE,
+    acceptLanguage,
+  });
+
   return (
-    <html lang="pt" translate="no" suppressHydrationWarning>
+    <html lang={locale} translate="no" suppressHydrationWarning>
       <head>
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
         <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
@@ -103,7 +113,7 @@ export default function RootLayout({
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
         <JsonLd />
-        <AppProvider>
+        <AppProvider initialLocale={locale}>
           {children}
           <ClientToaster />
           <LazyScrollToTop />

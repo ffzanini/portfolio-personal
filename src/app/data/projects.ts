@@ -192,6 +192,26 @@ const projectsData: Project[] = [
     github: "",
     date: "2026-01-01",
   },
+  {
+    id: 10,
+    navigation: "portocon",
+    image: "/images/projects/portocon.png",
+    category: "frontend",
+    technologies: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "CSS3",
+      "TailwindCSS",
+      "Vercel",
+    ],
+    featured: false,
+    active: true,
+    demo: "https://www.contabilidadeportocon.com.br/",
+    github: "https://github.com/ffzanini/contador-portocon",
+    date: "2026-03-31",
+  },
 ];
 
 export const projects: Project[] = [...projectsData].sort(

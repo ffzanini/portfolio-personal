@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useId } from "react";
 import { cn } from "@/libs/cn";
 
 interface TooltipProps {
@@ -8,8 +8,9 @@ interface TooltipProps {
 }
 
 export function Tooltip({ text, children, position = "bottom" }: TooltipProps) {
+  const tooltipId = useId();
   const base =
-    "absolute px-2 py-1 text-[12px] rounded shadow whitespace-nowrap z-50 opacity-0 group-hover:opacity-100 transition";
+    "absolute px-2 py-1 text-[12px] rounded shadow whitespace-nowrap z-50 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-[opacity,transform] duration-150";
 
   const positions = {
     top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
@@ -29,9 +30,11 @@ export function Tooltip({ text, children, position = "bottom" }: TooltipProps) {
 
   return (
     <div className="relative group inline-block">
-      {children}
+      <span aria-describedby={text ? tooltipId : undefined}>{children}</span>
       {text && (
         <div
+          id={tooltipId}
+          role="tooltip"
           className={cn(
             base,
             "bg-black text-white dark:bg-white dark:text-black before:content-[''] before:absolute",

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion, useScroll } from "framer-motion";
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,6 +9,7 @@ import { Tooltip } from "@/components/ui";
 
 export function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
   const { scrollY } = useScroll();
   const pathname = usePathname();
 
@@ -28,7 +29,7 @@ export function ScrollToTopButton() {
   const goTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: shouldReduceMotion ? "auto" : "smooth",
     });
   };
 
@@ -45,8 +46,8 @@ export function ScrollToTopButton() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          whileHover={{ y: -8 }}
+          transition={{ duration: shouldReduceMotion ? 0.1 : 0.3, ease: "easeOut" }}
+          whileHover={shouldReduceMotion ? undefined : { y: -8 }}
           onClick={goTop}
         >
           <Tooltip text="Back to top" position="top">

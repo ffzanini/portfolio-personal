@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
@@ -17,6 +17,7 @@ import { navItems } from "@/constants/navbar";
 import { nightStalker, dawnbreaker } from "@/constants/phrases";
 import { useTranslation } from "@/context";
 import { cn } from "@/libs/cn";
+import { withLocalePath } from "@/libs/i18n";
 
 export function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -30,7 +31,11 @@ export function Navbar() {
   );
 
   const pathname = usePathname();
-  const isActive = (path: string) => pathname === path;
+  const localizedPath = useCallback(
+    (path: string) => withLocalePath(location, path),
+    [location],
+  );
+  const isActive = (path: string) => pathname === localizedPath(path);
 
   const currentTheme = theme || "dark";
 
@@ -146,7 +151,7 @@ export function Navbar() {
           <div className="flex items-center space-x-8">
             <Tooltip text="Back to home">
               <Link
-                href="/"
+                href={localizedPath("/")}
                 className={cn(
                   `${fontRyanaLovely.className} opacity-60 transition-opacity duration-200 hover:opacity-100 text-3xl`,
                   {
@@ -165,9 +170,9 @@ export function Navbar() {
             {navItems.map((item) => (
               <Link
                 key={item.path}
-                href={item.path}
+                href={localizedPath(item.path)}
                 className={cn(
-                  `relative py-2 text-sm transition-all  group text-[1rem] ${
+                  `relative py-2 text-sm transition-colors group text-[1rem] ${
                     isActive(item.path)
                       ? "font-bold text-black dark:text-white"
                       : "font-medium text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white"
@@ -230,8 +235,8 @@ export function Navbar() {
               {navItems.map((item) => (
                 <Link
                   key={item.path}
-                  href={item.path}
-                  className={`px-4 py-3 rounded-xl transition-all  ${
+                  href={localizedPath(item.path)}
+                  className={`px-4 py-3 rounded-xl transition-colors ${
                     isActive(item.path)
                       ? "font-bold text-white bg-linear-to-r from-primary-950 via-primary-600 to-primary-300"
                       : "font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10"

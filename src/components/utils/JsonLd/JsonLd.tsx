@@ -98,7 +98,7 @@ const websiteSchema = {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/projects?search={search_term_string}`,
+      urlTemplate: `${SITE_URL}/pt/projects?search={search_term_string}`,
     },
     "query-input": "required name=search_term_string",
   },
@@ -119,7 +119,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Professional",
-    url: `${SITE_URL}/contact`,
+    url: `${SITE_URL}/pt/contact`,
   },
 };
 

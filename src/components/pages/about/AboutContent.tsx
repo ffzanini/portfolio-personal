@@ -23,9 +23,10 @@ import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { photos } from "@/constants/about";
 import { useTranslation } from "@/context";
+import { withLocalePath } from "@/libs/i18n";
 
 export function AboutContent() {
-  const { translations } = useTranslation();
+  const { translations, location } = useTranslation();
   const renderIco = (id: number) => {
     const iconClass = "h-6 w-6";
 
@@ -114,7 +115,7 @@ export function AboutContent() {
                 {translations.about.skills.process.map((process, index) => (
                   <div
                     key={index}
-                    className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                    className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                   >
                     <div className="flex flex-row items-center gap-2 pb-2">
                       <div className="w-8 h-8 min-w-8 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
@@ -136,14 +137,14 @@ export function AboutContent() {
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                 <Link
-                  href="/stack"
-                  className="flex flex-row justify-center items-center border border-primary-600 bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-4 py-2 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                  href={withLocalePath(location, "/stack")}
+                  className="flex flex-row justify-center items-center border border-primary-600 bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-4 py-2 rounded-xl transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                 >
                   {translations.about.stack.button}
                   <LuArrowRight className="hidden md:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  href="/contact"
+                  href={withLocalePath(location, "/contact")}
                   className="flex flex-row justify-center items-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-4 py-2 rounded-xl backdrop-blur-sm group"
                 >
                   {translations.about.stack.contact}
@@ -174,7 +175,7 @@ export function AboutContent() {
                   className="text-base"
                 />
                 <Link
-                  href="/projects"
+                  href={withLocalePath(location, "/projects")}
                   className="font-bold hover:text-primary-800 dark:hover:text-primary-300"
                 >
                   {translations.about.site.projects}

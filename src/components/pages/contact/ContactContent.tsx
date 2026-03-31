@@ -74,7 +74,7 @@ export function ContactContent() {
                 {translations.contact.next.steps.map((step, index) => (
                   <div
                     key={index}
-                    className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                    className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                   >
                     <div className="flex flex-row justify-center items-center gap-2 pb-2">
                       <div className="w-28 h-28 min-w-28 bg-primary-100 dark:bg-primary-800/70 rounded-full flex items-center justify-center border-[5px] border-primary-600 dark:border-primary-300">
@@ -109,7 +109,7 @@ export function ContactContent() {
                   (testimonial, index) => (
                     <div
                       key={index}
-                      className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                      className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                     >
                       <LuQuote className="w-8 h-8 text-primary-600 mb-4 shrink-0" />
                       <p className="italic mb-6 grow">
@@ -238,7 +238,7 @@ function ContactForm() {
               <button
                 disabled={!enableSubmit || isSubmitting}
                 type="submit"
-                className="disabled:grayscale disabled:cursor-not-allowed cursor-pointer w-full flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                className="disabled:grayscale disabled:cursor-not-allowed cursor-pointer w-full flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
               >
                 {isSubmitting
                   ? (translations.contact as typeof translations.contact & { button_text_sending: string }).button_text_sending

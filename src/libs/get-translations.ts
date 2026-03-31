@@ -1,4 +1,5 @@
 import { en, es, pt } from "@/locales";
+import { DEFAULT_LOCALE, isValidLocale } from "@/libs/i18n";
 
 type Locations = "en" | "es" | "pt";
 
@@ -12,8 +13,8 @@ export function getLanguageFromSearchParams(
   searchParams?: { lang?: string } | null,
 ): Locations {
   const lang = searchParams?.lang;
-  if (lang === "pt" || lang === "en" || lang === "es") {
+  if (lang && isValidLocale(lang)) {
     return lang as Locations;
   }
-  return "pt";
+  return DEFAULT_LOCALE;
 }

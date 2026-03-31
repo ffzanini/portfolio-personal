@@ -6,6 +6,7 @@ import { Project } from "@/app/data/projects";
 import { cn } from "@/libs/cn";
 import { useTranslation } from "@/context";
 import { ZoomImage } from "@/components/ui";
+import { withLocalePath } from "@/libs/i18n";
 
 interface CardProps {
   project: Project;
@@ -14,7 +15,7 @@ interface CardProps {
 }
 
 function CardComponent({ project, index, lower }: Readonly<CardProps>) {
-  const { translations } = useTranslation();
+  const { translations, location } = useTranslation();
   const projectTranslate = translations.projects.projects.find(
     (translate) => translate.id === project.id,
   );
@@ -80,7 +81,7 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
                     <Link
                       href={project.github}
                       target="_blank"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
                       <LuGithub className="md:mr-2 h-4 w-4" />
                       <span className="hidden md:flex">GitHub</span>
@@ -90,14 +91,17 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
                     <Link
                       href={project.demo}
                       target="_blank"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
                       <LuExternalLink className="md:mr-2 h-4 w-4" />
                       <span className="hidden md:flex">Demo</span>
                     </Link>
                   )}
                   <Link
-                    href={`/projects/${project.navigation}`}
+                    href={withLocalePath(
+                      location,
+                      `/projects/${project.navigation}`,
+                    )}
                     className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-3 py-1.5 rounded-sm backdrop-blur-sm group/sparkles"
                   >
                     <LuSparkles className="hidden md:flex mr-2 h-4 w-4 group-hover/sparkles:rotate-360 duration-500 transition-transform" />
@@ -110,7 +114,7 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
                     <Link
                       href={project.github}
                       target="_blank"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
                       <LuGithub className="h-5 w-5" />
                     </Link>
@@ -119,13 +123,16 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
                     <Link
                       href={project.demo}
                       target="_blank"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
                       <LuExternalLink className="h-5 w-5" />
                     </Link>
                   )}
                   <Link
-                    href={`/projects/${project.navigation}`}
+                    href={withLocalePath(
+                      location,
+                      `/projects/${project.navigation}`,
+                    )}
                     className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-2 py-1 rounded-sm backdrop-blur-sm group"
                   >
                     Ver detalhes

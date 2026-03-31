@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/ui";
 import { ContactContent } from "@/components/pages/contact/ContactContent";
 
-export default function Contact() {
+export default function LocaleContactPage() {
   return (
     <>
       <Navbar />

@@ -6,9 +6,10 @@ import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { categories } from "@/constants/stack";
 import { useTranslation } from "@/context";
+import { withLocalePath } from "@/libs/i18n";
 
 export function StackContent() {
-  const { translations } = useTranslation();
+  const { translations, location } = useTranslation();
   const renderText = (name: string) => {
     switch (name) {
       case "frontend":
@@ -132,7 +133,7 @@ export function StackContent() {
               {translations.stack.strengths.items.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-all hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                  className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                 >
                   <div className="flex flex-row items-center gap-2 pb-2">
                     <h4 className="text-xl font-semibold">{item.title}</h4>
@@ -144,9 +145,9 @@ export function StackContent() {
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col items-start gap-3">
-              <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
                 {translations.stack.footer.title}
-              </h1>
+              </h2>
 
               <p className="inline-block">
                 <SanitizedText
@@ -155,7 +156,7 @@ export function StackContent() {
                   className="text-lg"
                 />
                 <Link
-                  href="/projects"
+                  href={withLocalePath(location, "/projects")}
                   className="font-bold text-lg hover:text-primary-800 dark:hover:text-primary-300"
                 >
                   {translations.stack.footer.project}

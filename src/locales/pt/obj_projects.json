@@ -351,6 +351,43 @@
         "Transparência em dados de saúde global",
         "Ferramenta essencial para organizações internacionais"
       ]
+    },
+    {
+      "id": 10,
+      "title": "PortoCon Contabilidade",
+      "description": "Site institucional focado em conversão local para captação de clientes em serviços contábeis, com comunicação clara, atendimento humanizado e jornada orientada por CTAs.",
+      "longDescriptionTitle": "Visão geral do projeto",
+      "longDescription": [
+        "A PortoCon é uma contabilidade de Brusque com posicionamento centrado em atendimento personalizado, clareza no processo e segurança empresarial. O projeto foi desenvolvido como um site institucional para transformar esse posicionamento em uma jornada digital objetiva e confiável.",
+        "A arquitetura de conteúdo foi pensada para reduzir fricção na tomada de decisão: proposta de valor já no topo da página, seções com diferenciais de serviço e blocos de orientação para ações de alto interesse, como abrir empresa e trocar de contador.",
+        "Também houve atenção especial para performance, responsividade e SEO local, com estrutura de páginas dedicada para fortalecer buscas relacionadas a contabilidade na região e aumentar a taxa de contato comercial."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Site institucional com páginas dedicadas (Sobre, Abrir empresa, Mudar de contador e Escritório)",
+        "Estrutura de conteúdo orientada a conversão com CTAs estratégicos",
+        "Metadados e sitemap para indexação em mecanismos de busca",
+        "Layout responsivo com experiência consistente em mobile e desktop",
+        "Integração de contato via WhatsApp para atendimento rápido",
+        "Organização visual focada em legibilidade e confiança"
+      ],
+      "challengesTitle": "Desafios Técnicos",
+      "challenges": [
+        "Equilibrar linguagem comercial com conteúdo técnico de contabilidade",
+        "Estruturar páginas de serviço sem poluir a experiência de navegação",
+        "Garantir performance em páginas com várias seções visuais",
+        "Consolidar SEO local para intenção de busca regional",
+        "Manter consistência de identidade visual em todos os pontos de contato"
+      ],
+      "achievementsTitle": "Resultados Alcançados",
+      "achievements": [
+        "Presença digital institucional sólida e profissional",
+        "Jornada de contato mais clara para novos clientes",
+        "Melhor organização das ofertas de serviço",
+        "Base técnica preparada para crescimento orgânico",
+        "Experiência acessível e responsiva em diferentes dispositivos"
+      ]
     }
   ],
   "load": "Carregar mais",

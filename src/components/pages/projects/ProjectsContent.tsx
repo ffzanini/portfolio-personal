@@ -9,6 +9,7 @@ import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { projects } from "@/app/data/projects";
+import { withLocalePath } from "@/libs/i18n";
 
 const MotionDiv = dynamic(
   () => import("framer-motion").then((mod) => mod.motion.div),
@@ -23,7 +24,7 @@ const Card = dynamic(
 );
 
 export function ProjectsContent() {
-  const { translations } = useTranslation();
+  const { translations, location } = useTranslation();
   const [activeFilter, setActiveFilter] = useState("all");
   const [visibleCount, setVisibleCount] = useState(3);
   const [isPending, startTransition] = useTransition();
@@ -153,7 +154,7 @@ export function ProjectsContent() {
               <div className="flex justify-center mt-8">
                 <button
                   onClick={handleLoadMore}
-                  className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 cursor-pointer"
+                  className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 cursor-pointer"
                 >
                   {translations.projects.load}
                 </button>
@@ -181,7 +182,7 @@ export function ProjectsContent() {
                   className="text-lg"
                 />
                 <Link
-                  href="/contact"
+                  href={withLocalePath(location, "/contact")}
                   className="font-bold text-lg hover:text-primary-800 dark:hover:text-primary-300"
                 >
                   {translations.projects.contact.contact}

@@ -323,6 +323,43 @@
         "Transparency in global health data",
         "Essential tool for international organizations"
       ]
+    },
+    {
+      "id": 10,
+      "title": "PortoCon Accounting",
+      "description": "Institutional website focused on local conversion for accounting client acquisition, with clear communication, humanized service, and a CTA-driven journey.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "PortoCon is an accounting firm based in Brusque with a positioning centered on personalized service, process clarity, and business security. The project was built as an institutional website to translate that positioning into an objective and trustworthy digital journey.",
+        "The content architecture was designed to reduce decision friction: value proposition at the top of the page, clear service differentiators, and guidance blocks for high-intent actions such as opening a company and switching accountants.",
+        "Special attention was also given to performance, responsiveness, and local SEO, with dedicated page structure to strengthen accounting-related regional searches and improve contact conversion."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented Features",
+      "features": [
+        "Institutional website with dedicated pages (About, Open Company, Switch Accountant, and Office)",
+        "Conversion-oriented content structure with strategic CTAs",
+        "Metadata and sitemap configured for search indexing",
+        "Responsive layout with consistent mobile and desktop experience",
+        "WhatsApp contact integration for fast customer support",
+        "Visual organization focused on readability and trust"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Balancing commercial language with technical accounting content",
+        "Structuring service pages without overloading navigation",
+        "Ensuring strong performance on section-rich pages",
+        "Consolidating local SEO for regional search intent",
+        "Maintaining visual identity consistency across all touchpoints"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Strong and professional institutional digital presence",
+        "Clearer contact journey for new clients",
+        "Better organization of service offerings",
+        "Technical foundation prepared for organic growth",
+        "Accessible and responsive experience across devices"
+      ]
     }
   ],
   "load": "Load more",

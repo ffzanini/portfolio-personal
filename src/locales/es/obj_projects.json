@@ -323,6 +323,43 @@
         "Transparencia en datos de salud global",
         "Herramienta esencial para organizaciones internacionales"
       ]
+    },
+    {
+      "id": 10,
+      "title": "PortoCon Contabilidad",
+      "description": "Sitio institucional enfocado en conversión local para captar clientes de servicios contables, con comunicación clara, atención humanizada y recorrido guiado por CTAs.",
+      "longDescriptionTitle": "Resumen del Proyecto",
+      "longDescription": [
+        "PortoCon es una firma contable de Brusque con un posicionamiento centrado en atención personalizada, claridad de procesos y seguridad empresarial. El proyecto se desarrolló como un sitio institucional para convertir ese posicionamiento en una experiencia digital objetiva y confiable.",
+        "La arquitectura de contenido fue diseñada para reducir fricción en la toma de decisión: propuesta de valor en el primer bloque, secciones con diferenciales de servicio y módulos de orientación para acciones de alta intención, como abrir empresa o cambiar de contador.",
+        "También se priorizaron rendimiento, responsividad y SEO local, con estructura de páginas dedicada para fortalecer búsquedas regionales relacionadas con contabilidad y aumentar la conversión de contacto comercial."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades Implementadas",
+      "features": [
+        "Sitio institucional con páginas dedicadas (Sobre, Abrir empresa, Cambiar de contador y Oficina)",
+        "Estructura de contenido orientada a conversión con CTAs estratégicos",
+        "Metadatos y sitemap configurados para indexación en buscadores",
+        "Diseño responsivo con experiencia consistente en móvil y escritorio",
+        "Integración de contacto por WhatsApp para atención rápida",
+        "Organización visual enfocada en legibilidad y confianza"
+      ],
+      "challengesTitle": "Desafíos Técnicos",
+      "challenges": [
+        "Equilibrar lenguaje comercial con contenido técnico contable",
+        "Estructurar páginas de servicio sin sobrecargar la navegación",
+        "Garantizar buen rendimiento en páginas con múltiples secciones",
+        "Consolidar SEO local para intención de búsqueda regional",
+        "Mantener consistencia de identidad visual en todos los puntos de contacto"
+      ],
+      "achievementsTitle": "Resultados Alcanzados",
+      "achievements": [
+        "Presencia digital institucional sólida y profesional",
+        "Recorrido de contacto más claro para nuevos clientes",
+        "Mejor organización de la oferta de servicios",
+        "Base técnica preparada para crecimiento orgánico",
+        "Experiencia accesible y responsiva en distintos dispositivos"
+      ]
     }
   ],
   "load": "Cargar más",

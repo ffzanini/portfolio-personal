@@ -9,6 +9,8 @@ import { Project } from "@/app/data/projects";
 import { Breadcrumb, ZoomImage } from "@/components/ui";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
+import { withLocalePath } from "@/libs/i18n";
+import { SITE_URL } from "@/constants/seo";
 
 import { cn } from "@/libs/cn";
 
@@ -19,21 +21,38 @@ interface ProjectDetailsContentProps {
 export function ProjectDetailsContent({
   project,
 }: Readonly<ProjectDetailsContentProps>) {
-  const { translations } = useTranslation();
+  const { translations, location } = useTranslation();
 
   const projectTranslate = translations.projects.projects.find(
     (translate) => translate.id === project.id,
   );
 
   const breadcrumb = [
-    { label: translations.projects.breadcrumb_begin, link: "/projects" },
+    {
+      label: translations.projects.breadcrumb_begin,
+      link: withLocalePath(location, "/projects"),
+    },
     { label: translations.projects.breadcrumb_end },
   ];
+
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    name: projectTranslate?.title ?? project.navigation,
+    description: projectTranslate?.description ?? "",
+    url: `${SITE_URL}${withLocalePath(location, `/projects/${project.navigation}`)}`,
+    programmingLanguage: project.technologies,
+    codeRepository: project.github || undefined,
+  };
 
   return (
     <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <main className="pt-20 lg:pt-32 pb-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+          />
           <Breadcrumb path={breadcrumb} />
           <div className="text-center animate-fade-in">
             <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
@@ -166,8 +185,8 @@ export function ProjectDetailsContent({
           </div>
           <div className="flex flex-col items-center align-center gap-2 mt-6">
             <Link
-              href="/projects"
-              className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+              href={withLocalePath(location, "/projects")}
+              className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
             >
               <LuReply className="mr-2 h-5 w-5" />
               {translations.projects.return}

@@ -37,6 +37,7 @@ export function LanguageSelect({
 }: LanguageSelectProps) {
   const [open, setOpen] = useState(false);
   const selectRef = useRef<HTMLDivElement>(null);
+  const listboxId = "language-select-listbox";
 
   const selectedLang =
     languages.find((l) => l.code === selected) || languages[0];
@@ -60,7 +61,14 @@ export function LanguageSelect({
       className="relative inline-block w-24 text-sm font-semibold"
     >
       <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-controls={listboxId}
         onClick={() => setOpen((prev) => !prev)}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") setOpen(false);
+        }}
         className="flex items-center justify-between w-full bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 px-3 py-2 rounded-lg hover:outline-none hover:ring-1 hover:ring-primary-800 dark:hover:ring-primary-300"
       >
         <span className="flex items-center gap-2">
@@ -75,16 +83,18 @@ export function LanguageSelect({
       </button>
 
       {open && (
-        <ul className="absolute z-10 mt-2 w-full bg-gray-100 dark:bg-dark-theme xl:bg-black/5 xl:dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-lg shadow-lg">
+        <ul
+          id={listboxId}
+          role="listbox"
+          tabIndex={-1}
+          className="absolute z-10 mt-2 w-full bg-gray-100 dark:bg-dark-theme xl:bg-black/5 xl:dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-lg shadow-lg"
+        >
           {languages.map((lang, index) => (
             <li
               key={lang.code}
-              onClick={() => {
-                onChange(lang.code);
-                setOpen(false);
-                if (setIsOpenMenu) setIsOpenMenu(false);
-              }}
-              className={cn(`flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-black/15 dark:hover:bg-white/15
+              role="option"
+              aria-selected={selected === lang.code}
+              className={cn(`hover:bg-black/15 dark:hover:bg-white/15
                             ${
                               selected === lang.code
                                 ? "bg-black/15 dark:bg-white/15"
@@ -98,8 +108,29 @@ export function LanguageSelect({
                             }
                           `)}
             >
-              <span>{lang.flag}</span>
-              <span>{lang.label}</span>
+              <button
+                type="button"
+                className="flex w-full items-center gap-2 px-4 py-2 text-left cursor-pointer"
+                onClick={() => {
+                  onChange(lang.code);
+                  setOpen(false);
+                  if (setIsOpenMenu) setIsOpenMenu(false);
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    onChange(lang.code);
+                    setOpen(false);
+                    if (setIsOpenMenu) setIsOpenMenu(false);
+                  }
+                  if (event.key === "Escape") {
+                    setOpen(false);
+                  }
+                }}
+              >
+                <span>{lang.flag}</span>
+                <span>{lang.label}</span>
+              </button>
             </li>
           ))}
         </ul>

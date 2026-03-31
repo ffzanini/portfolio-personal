@@ -15,6 +15,7 @@ import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { mainTechStack } from "@/constants/stack";
 import { useTranslation } from "@/context";
+import { withLocalePath } from "@/libs/i18n";
 
 const FlipWords = dynamic(
   () => import("@/components/ui/FlipWords").then((mod) => mod.FlipWords),
@@ -29,7 +30,7 @@ const FlipWords = dynamic(
 );
 
 export function HomeContent() {
-  const { translations } = useTranslation();
+  const { translations, location } = useTranslation();
   return (
     <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <div className="relative flex flex-col h-screen">
@@ -38,14 +39,14 @@ export function HomeContent() {
             <div className="space-y-4 sm:space-y-6 xl:space-y-8 order-2 lg:order-1 pt-12 xl:pt-0">
               <div className="space-y-2 sm:space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-xl text-gray-600 dark:text-gray-400 font-medium">
+                  <p className="text-xl text-gray-600 dark:text-gray-400 font-medium">
                     {translations.home.welcome}
-                  </h1>
-                  <h2 className="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                  </p>
+                  <h1 className="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                     <span className="bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
                       {translations.home.name}
                     </span>
-                  </h2>
+                  </h1>
                 </div>
                 <FlipWords
                   words={translations.home.roles}
@@ -75,7 +76,7 @@ export function HomeContent() {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                 <Link
-                  href="/about"
+                  href={withLocalePath(location, "/about")}
                   className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-transform duration-300 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                   style={{ willChange: "transform" }}
                 >
@@ -176,7 +177,7 @@ export function HomeContent() {
                       ))}
                     </div>
                     <Link
-                      href="/stack"
+                      href={withLocalePath(location, "/stack")}
                       className="underline underline-offset-4 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white font-semibold"
                     >
                       {translations.home.textButtonStack}
