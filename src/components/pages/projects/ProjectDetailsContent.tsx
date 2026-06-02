@@ -40,7 +40,7 @@ export function ProjectDetailsContent({
     "@type": "SoftwareSourceCode",
     name: projectTranslate?.title ?? project.navigation,
     description: projectTranslate?.description ?? "",
-    url: `${SITE_URL}${withLocalePath(location, `/projects/${project.navigation}`)}`,
+    url: SITE_URL + withLocalePath(location, `/projects/${project.navigation}`),
     programmingLanguage: project.technologies,
     codeRepository: project.github || undefined,
   };
@@ -98,6 +98,7 @@ export function ProjectDetailsContent({
                 <Link
                   href={project.github}
                   target="_blank"
+                  rel="noreferrer"
                   className="flex flex-row items-center gap-2"
                 >
                   <RiGithubLine />
@@ -111,8 +112,8 @@ export function ProjectDetailsContent({
             <h2 className="text-xl mb-2 font-bold">
               {projectTranslate?.longDescriptionTitle}
             </h2>
-            {projectTranslate?.longDescription.map((content, index) => (
-              <div key={index} className="mb-2">
+            {projectTranslate?.longDescription.map((content) => (
+              <div key={content} className="mb-2">
                 <p className="text-lg">{content}</p>
               </div>
             ))}
@@ -142,8 +143,8 @@ export function ProjectDetailsContent({
                 </h4>
               </div>
 
-              {projectTranslate?.features.map((content, index) => (
-                <div key={index} className="mb-2 ">
+              {projectTranslate?.features.map((content) => (
+                <div key={content} className="mb-2">
                   <p className="text-lg flex gap-2">‣ {content}</p>
                 </div>
               ))}
@@ -159,8 +160,8 @@ export function ProjectDetailsContent({
                 </h4>
               </div>
 
-              {projectTranslate?.challenges.map((content, index) => (
-                <div key={index} className="mb-2">
+              {projectTranslate?.challenges.map((content) => (
+                <div key={content} className="mb-2">
                   <p className="text-lg">‣ {content}</p>
                 </div>
               ))}
@@ -176,8 +177,8 @@ export function ProjectDetailsContent({
                 </h4>
               </div>
 
-              {projectTranslate?.achievements.map((content, index) => (
-                <div key={index} className="mb-2">
+              {projectTranslate?.achievements.map((content) => (
+                <div key={content} className="mb-2">
                   <p className="text-lg">‣ {content}</p>
                 </div>
               ))}

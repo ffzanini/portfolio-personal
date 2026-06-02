@@ -8,11 +8,11 @@ export const FlipWords = ({
   words,
   duration = 3000,
   className,
-}: {
+}: Readonly<{
   words: string[];
   duration?: number;
   className?: string;
-}) => {
+}>) => {
   const shouldReduceMotion = useReducedMotion();
   const [currentWord, setCurrentWord] = useState(words[0] || "");
   const [isAnimating, setIsAnimating] = useState(false);
@@ -34,8 +34,7 @@ export const FlipWords = ({
   }, [words]);
 
   const currentIndex = useMemo(() => {
-    const index = words.indexOf(currentWord);
-    return index >= 0 ? index : 0;
+    return Math.max(0, words.indexOf(currentWord));
   }, [currentWord, words]);
 
   const startAnimation = useCallback(() => {
@@ -47,12 +46,9 @@ export const FlipWords = ({
   }, [currentIndex, words]);
 
   useEffect(() => {
-    if (!isAnimating) {
-      const timer = setTimeout(() => {
-        startAnimation();
-      }, duration);
-      return () => clearTimeout(timer);
-    }
+    if (isAnimating) return;
+    const timer = setTimeout(startAnimation, duration);
+    return () => clearTimeout(timer);
   }, [isAnimating, duration, startAnimation]);
 
   return (

@@ -26,7 +26,7 @@ export const socials = [
   {
     icon: RiTwitterXLine,
     href: "https://www.twitter.com/ffzanini/",
-    name: "LinkedIn",
+    name: "Twitter",
   },
   {
     icon: RiYoutubeLine,

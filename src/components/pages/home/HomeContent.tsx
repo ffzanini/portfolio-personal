@@ -17,16 +17,18 @@ import { mainTechStack } from "@/constants/stack";
 import { useTranslation } from "@/context";
 import { withLocalePath } from "@/libs/i18n";
 
+function FlipWordsLoading() {
+  const { translations } = useTranslation();
+  return (
+    <span className="text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight">
+      {translations.home.roles[0]}
+    </span>
+  );
+}
+
 const FlipWords = dynamic(
   () => import("@/components/ui/FlipWords").then((mod) => mod.FlipWords),
-  {
-    ssr: true,
-    loading: () => (
-      <span className="text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight">
-        ...
-      </span>
-    ),
-  },
+  { ssr: false, loading: FlipWordsLoading },
 );
 
 export function HomeContent() {
@@ -48,10 +50,12 @@ export function HomeContent() {
                     </span>
                   </h1>
                 </div>
-                <FlipWords
-                  words={translations.home.roles}
-                  className="text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight"
-                />
+                <div className="min-h-7.5 lg:min-h-[2.344rem] xl:min-h-[2.813rem]">
+                  <FlipWords
+                    words={translations.home.roles}
+                    className="text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight"
+                  />
+                </div>
                 <SanitizedText
                   json={translations.home.description}
                   className="text-base text-gray-600 dark:text-gray-300 leading-relaxed"
@@ -90,6 +94,7 @@ export function HomeContent() {
                 <Link
                   href="https://resume.ffzanini.dev"
                   target="_blank"
+                  rel="noreferrer"
                   className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl backdrop-blur-sm group"
                   style={{ willChange: "background-color" }}
                 >

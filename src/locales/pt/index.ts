@@ -14,4 +14,6 @@ const pt = {
   stack,
 };
 
+export type Translations = typeof pt;
+
 export default pt;

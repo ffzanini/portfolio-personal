@@ -15,19 +15,19 @@ export function ScrollToTopButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (globalThis.window.scrollY > 100) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    globalThis.window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => globalThis.window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const goTop = () => {
-    window.scrollTo({
+    globalThis.window.scrollTo({
       top: 0,
       behavior: shouldReduceMotion ? "auto" : "smooth",
     });

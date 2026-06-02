@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 
 export default function StackLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return <>{children}</>;
 }

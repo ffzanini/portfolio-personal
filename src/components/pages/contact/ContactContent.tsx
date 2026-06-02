@@ -71,9 +71,9 @@ export function ContactContent() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-                {translations.contact.next.steps.map((step, index) => (
+                {translations.contact.next.steps.map((step) => (
                   <div
-                    key={index}
+                    key={step.id}
                     className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                   >
                     <div className="flex flex-row justify-center items-center gap-2 pb-2">
@@ -106,9 +106,9 @@ export function ContactContent() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {translations.contact.testimonials.testimonials.map(
-                  (testimonial, index) => (
+                  (testimonial) => (
                     <div
-                      key={index}
+                      key={testimonial.name}
                       className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                     >
                       <LuQuote className="w-8 h-8 text-primary-600 mb-4 shrink-0" />

@@ -97,7 +97,7 @@ export function ProjectsContent() {
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-2 my-8">
-            <LuFilter className="h-7 w-7 " />
+            <LuFilter className="h-7 w-7" aria-hidden={true} />
             {filters.map((filter) => (
               <button
                 key={filter.id}

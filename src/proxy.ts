@@ -12,7 +12,7 @@ export function proxy(req: NextRequest) {
     return NextResponse.next();
   }
 
-  const firstSegment = pathname.split("/").filter(Boolean)[0];
+  const firstSegment = pathname.split("/").find(Boolean);
   if (firstSegment && isValidLocale(firstSegment)) {
     const response = NextResponse.next();
     response.cookies.set("app-language", firstSegment, {

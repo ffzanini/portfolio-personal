@@ -10,7 +10,7 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-import { en, es, pt } from "@/locales";
+import { loadLocale, type Translations } from "@/locales";
 import {
   DEFAULT_LOCALE,
   getLocaleFromBrowserLanguage,
@@ -24,7 +24,7 @@ type Locations = Locale;
 export interface InternacionalizationInterface {
   location: Locations;
   setLocation: (location: Locations) => void;
-  translations: typeof pt;
+  translations: Translations;
   isLanguageSwitching: boolean;
 }
 
@@ -49,25 +49,23 @@ const LANGUAGE_STORAGE_KEY = "app-language";
 const InternacionalizationProvider = ({
   children,
   initialLocale = DEFAULT_LOCALE,
-}: {
+  initialTranslations,
+}: Readonly<{
   children: ReactNode;
   initialLocale?: Locations;
-}) => {
+  initialTranslations: Translations;
+}>) => {
   const pathname = usePathname();
   const router = useRouter();
   const [isLanguageSwitching, setIsLanguageSwitching] = useState(false);
 
-  const translationsMap: Record<Locations, typeof pt> = useMemo(
-    () => ({
-      pt,
-      en,
-      es,
-    }),
-    [],
-  );
+  // Cache starts with the locale provided by the server — no client-side fetch on first load
+  const [translationsCache, setTranslationsCache] = useState<
+    Partial<Record<Locale, Translations>>
+  >({ [initialLocale]: initialTranslations });
 
   const pathnameLocale = useMemo(() => {
-    const firstSegment = (pathname || "/").split("/").filter(Boolean)[0];
+    const firstSegment = (pathname || "/").split("/").find(Boolean);
     if (firstSegment && isValidLocale(firstSegment)) {
       return firstSegment;
     }
@@ -77,14 +75,25 @@ const InternacionalizationProvider = ({
   const location = useMemo<Locations>(() => {
     if (pathnameLocale) return pathnameLocale;
     if (typeof window !== "undefined") {
-      const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+      const storedLanguage = globalThis.window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
       if (storedLanguage && isValidLocale(storedLanguage)) {
         return storedLanguage;
       }
-      return getLocaleFromBrowserLanguage(window.navigator.language);
+      return getLocaleFromBrowserLanguage(globalThis.window.navigator.language);
     }
     return initialLocale;
   }, [initialLocale, pathnameLocale]);
+
+  // Load locale chunk on demand — fires only when navigating to an uncached locale
+  useEffect(() => {
+    if (translationsCache[location]) return;
+    loadLocale(location).then((loaded) => {
+      setTranslationsCache((prev) => {
+        if (prev[location]) return prev;
+        return { ...prev, [location]: loaded };
+      });
+    });
+  }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -94,32 +103,35 @@ const InternacionalizationProvider = ({
 
   useEffect(() => {
     if (isLanguageSwitching) {
-      const timer = window.setTimeout(() => {
+      const timer = setTimeout(() => {
         setIsLanguageSwitching(false);
       }, 220);
-      return () => window.clearTimeout(timer);
+      return () => clearTimeout(timer);
     }
   }, [location, isLanguageSwitching]);
 
-  const setLocationWithPersistence = useCallback((lang: Locations) => {
-    if (lang === location) return;
-    setIsLanguageSwitching(true);
-    if (typeof window !== "undefined") {
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
-      document.cookie = `${LANGUAGE_STORAGE_KEY}=${lang};path=/;max-age=31536000;samesite=lax`;
-    }
-    const nextPath = withLocalePath(lang, pathname || "/");
-    const docWithTransition = document as Document & {
-      startViewTransition?: (cb: () => void) => void;
-    };
-    if (docWithTransition.startViewTransition) {
-      docWithTransition.startViewTransition(() => router.push(nextPath));
-      return;
-    }
-    router.push(nextPath);
-  }, [location, pathname, router]);
+  const setLocationWithPersistence = useCallback(
+    (lang: Locations) => {
+      if (lang === location) return;
+      setIsLanguageSwitching(true);
+      if (typeof window !== "undefined") {
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+        document.cookie = `${LANGUAGE_STORAGE_KEY}=${lang};path=/;max-age=31536000;samesite=lax`;
+      }
+      const nextPath = withLocalePath(lang, pathname || "/");
+      const docWithTransition = document as Document & {
+        startViewTransition?: (cb: () => void) => void;
+      };
+      if (docWithTransition.startViewTransition) {
+        docWithTransition.startViewTransition(() => router.push(nextPath));
+        return;
+      }
+      router.push(nextPath);
+    },
+    [location, pathname, router],
+  );
 
-  const translations = translationsMap[location] ?? pt;
+  const translations = translationsCache[location] ?? initialTranslations;
 
   const objTranslations = useMemo(() => {
     return {

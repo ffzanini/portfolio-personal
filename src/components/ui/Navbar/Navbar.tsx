@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
 import Image from "next/image";
@@ -125,15 +124,15 @@ export function Navbar() {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 10);
+          setIsScrolled(globalThis.window.scrollY > 10);
           ticking = false;
         });
         ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    globalThis.window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => globalThis.window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -172,11 +171,10 @@ export function Navbar() {
                 key={item.path}
                 href={localizedPath(item.path)}
                 className={cn(
-                  `relative py-2 text-sm transition-colors group text-[1rem] ${
-                    isActive(item.path)
-                      ? "font-bold text-black dark:text-white"
-                      : "font-medium text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white"
-                  }`,
+                  "relative py-2 text-sm transition-colors group text-[1rem]",
+                  isActive(item.path)
+                    ? "font-bold text-black dark:text-white"
+                    : "font-medium text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white",
                 )}
               >
                 {renderText(item.label)}
@@ -198,12 +196,13 @@ export function Navbar() {
             <Tooltip
               text={`${currentTheme !== "dark" ? "To the Dark" : "To the Light"}`}
             >
-              <motion.button
+              <button
                 onClick={() => {
                   toggleTheme();
                   showRandomPhrases();
                   renderPhrase();
                 }}
+                aria-label={currentTheme !== "dark" ? "Switch to light mode" : "Switch to dark mode"}
                 className="cursor-pointer"
               >
                 {currentTheme === "dark" ? (
@@ -211,21 +210,23 @@ export function Navbar() {
                 ) : (
                   <LuMoonStar className="h-5 w-5 hover:rotate-12 transition-transform" />
                 )}
-              </motion.button>
+              </button>
             </Tooltip>
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.button
+          <button
             className="xl:hidden"
             onClick={() => setIsOpenMenu(!isOpenMenu)}
+            aria-label={isOpenMenu ? "Close menu" : "Open menu"}
+            aria-expanded={isOpenMenu}
           >
             {isOpenMenu ? (
               <FaXmark className="h-5 w-5" />
             ) : (
               <FaBars className="h-5 w-5" />
             )}
-          </motion.button>
+          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -256,13 +257,14 @@ export function Navbar() {
                   />
                 </div>
 
-                <motion.button
+                <button
                   onClick={() => {
                     toggleTheme();
                     showRandomPhrases();
                     renderPhrase();
                     setIsOpenMenu(false);
                   }}
+                  aria-label={currentTheme !== "dark" ? "Switch to light mode" : "Switch to dark mode"}
                   className="cursor-pointer"
                 >
                   {currentTheme === "dark" ? (
@@ -270,7 +272,7 @@ export function Navbar() {
                   ) : (
                     <LuMoonStar className="h-5 w-5" />
                   )}
-                </motion.button>
+                </button>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ type Props = {
   params: Promise<{ navigation: string }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Readonly<Props>): Promise<Metadata> {
   const { navigation } = await params;
   const project = projects.find((item) => item.navigation === navigation);
 
@@ -42,6 +42,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProjectDetailsLayout({ children }: Props) {
+export default function ProjectDetailsLayout({ children }: Readonly<Props>) {
   return <>{children}</>;
 }

@@ -1,14 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { cookies } from "next/headers";
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 
-import AppProvider from "@/providers/AppProvider";
-import {
-  AnalyticsWrapper,
-  ClientToaster,
-  JsonLd,
-} from "@/components/utils";
-import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
+import { ThemeProvider } from "next-themes";
+import { AnalyticsWrapper, JsonLd } from "@/components/utils";
 import {
   SITE_URL,
   PERSON,
@@ -16,7 +10,6 @@ import {
   DEFAULT_OG_IMAGE,
 } from "@/constants/seo";
 import { DEFAULT_LOCALE, resolvePreferredLocale } from "@/libs/i18n";
-
 import { fontMavenPro } from "./fonts";
 import "./globals.css";
 
@@ -109,21 +102,13 @@ export default async function RootLayout({
       <head>
         <link rel="preconnect" href="https://vitals.vercel-insights.com" />
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
-        <link
-          rel="preload"
-          href="/images/me-desenho.jpeg"
-          as="image"
-          fetchPriority="high"
-        />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
-        <JsonLd />
-        <AppProvider initialLocale={locale}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <JsonLd />
           {children}
-          <ClientToaster />
-          <LazyScrollToTop />
-        </AppProvider>
-        <AnalyticsWrapper />
+          <AnalyticsWrapper />
+        </ThemeProvider>
       </body>
     </html>
   );

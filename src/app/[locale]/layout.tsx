@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
-import type { Locale } from "@/libs/i18n";
+
+import AppProvider from "@/providers/AppProvider";
+import { ClientToaster } from "@/components/utils";
+import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import { isValidLocale, SUPPORTED_LOCALES } from "@/libs/i18n";
+import { loadLocale } from "@/locales";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
@@ -14,11 +18,20 @@ export function generateStaticParams() {
 export default async function LocaleLayout({
   children,
   params,
-}: LocaleLayoutProps) {
+}: Readonly<LocaleLayoutProps>) {
   const { locale } = await params;
+
   if (!isValidLocale(locale)) {
     notFound();
   }
 
-  return <>{children}</>;
+  const initialTranslations = await loadLocale(locale);
+
+  return (
+    <AppProvider initialLocale={locale} initialTranslations={initialTranslations}>
+      {children}
+      <ClientToaster />
+      <LazyScrollToTop />
+    </AppProvider>
+  );
 }

@@ -34,7 +34,7 @@ export function LanguageSelect({
   selected,
   onChange,
   setIsOpenMenu,
-}: LanguageSelectProps) {
+}: Readonly<LanguageSelectProps>) {
   const [open, setOpen] = useState(false);
   const selectRef = useRef<HTMLDivElement>(null);
   const listboxId = "language-select-listbox";
@@ -62,7 +62,7 @@ export function LanguageSelect({
     >
       <button
         type="button"
-        aria-haspopup="listbox"
+        aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={listboxId}
         onClick={() => setOpen((prev) => !prev)}
@@ -76,40 +76,31 @@ export function LanguageSelect({
           <span>{selectedLang.label}</span>
         </span>
         <LuArrowDown
-          className={cn(
-            `ml-2 transition-transform duration-200 ${open ? "rotate-180" : ""}`
-          )}
+          className={cn("ml-2 transition-transform duration-200", open && "rotate-180")}
         />
       </button>
 
       {open && (
         <ul
           id={listboxId}
-          role="listbox"
+          role="menu"
           tabIndex={-1}
           className="absolute z-10 mt-2 w-full bg-gray-100 dark:bg-dark-theme xl:bg-black/5 xl:dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-lg shadow-lg"
         >
           {languages.map((lang, index) => (
             <li
               key={lang.code}
-              role="option"
-              aria-selected={selected === lang.code}
-              className={cn(`hover:bg-black/15 dark:hover:bg-white/15
-                            ${
-                              selected === lang.code
-                                ? "bg-black/15 dark:bg-white/15"
-                                : ""
-                            }
-                            ${index === 0 ? "rounded-t-lg" : ""}
-                            ${
-                              index === languages.length - 1
-                                ? "rounded-b-lg"
-                                : ""
-                            }
-                          `)}
+              className={cn(
+                "hover:bg-black/15 dark:hover:bg-white/15",
+                selected === lang.code && "bg-black/15 dark:bg-white/15",
+                index === 0 && "rounded-t-lg",
+                index === languages.length - 1 && "rounded-b-lg",
+              )}
             >
               <button
                 type="button"
+                role="menuitemradio"
+                aria-checked={selected === lang.code}
                 className="flex w-full items-center gap-2 px-4 py-2 text-left cursor-pointer"
                 onClick={() => {
                   onChange(lang.code);

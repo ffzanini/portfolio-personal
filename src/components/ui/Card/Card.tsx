@@ -41,7 +41,7 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
             <h3 className="text-2xl font-bold leading-snug truncate">
               {projectTranslate?.title}
             </h3>
-            {lower === false && (
+            {!lower && (
               <div className="font-semibold bg-primary-300 border border-primary-800 dark:border-primary-300 dark:bg-primary-800 px-2 rounded-full whitespace-nowrap">
                 Destaque
               </div>
@@ -75,12 +75,13 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
             </div>
 
             <div className="flex space-x-2">
-              {lower === false ? (
+              {!lower ? (
                 <>
                   {project.github && (
                     <Link
                       href={project.github}
                       target="_blank"
+                      rel="noreferrer"
                       className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
                       <LuGithub className="md:mr-2 h-4 w-4" />
@@ -91,6 +92,7 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
                     <Link
                       href={project.demo}
                       target="_blank"
+                      rel="noreferrer"
                       className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
                       <LuExternalLink className="md:mr-2 h-4 w-4" />
@@ -114,18 +116,22 @@ function CardComponent({ project, index, lower }: Readonly<CardProps>) {
                     <Link
                       href={project.github}
                       target="_blank"
+                      rel="noreferrer"
+                      aria-label="GitHub"
                       className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
-                      <LuGithub className="h-5 w-5" />
+                      <LuGithub className="h-5 w-5" aria-hidden={true} />
                     </Link>
                   )}
                   {project.demo && (
                     <Link
                       href={project.demo}
                       target="_blank"
+                      rel="noreferrer"
+                      aria-label="Demo"
                       className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                     >
-                      <LuExternalLink className="h-5 w-5" />
+                      <LuExternalLink className="h-5 w-5" aria-hidden={true} />
                     </Link>
                   )}
                   <Link

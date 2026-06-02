@@ -6,7 +6,7 @@ interface PreloadImageProps {
   priority?: boolean;
 }
 
-export function PreloadImage({ src, priority = false }: PreloadImageProps) {
+export function PreloadImage({ src, priority = false }: Readonly<PreloadImageProps>) {
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "preload";

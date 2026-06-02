@@ -82,9 +82,9 @@ export function AboutContent() {
                 <SanitizedText json={translations.about.description.end} />
               </div>
               <div className="md:grid grid-cols-5 gap-4 pb-6 hidden">
-                {photos.map((photo, index) => (
+                {photos.map((photo) => (
                   <ZoomImage
-                    key={index}
+                    key={photo.src}
                     src={photo.src}
                     alt={photo.alt}
                     width={photo.width}
@@ -112,9 +112,9 @@ export function AboutContent() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                {translations.about.skills.process.map((process, index) => (
+                {translations.about.skills.process.map((process) => (
                   <div
-                    key={index}
+                    key={process.id}
                     className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                   >
                     <div className="flex flex-row items-center gap-2 pb-2">

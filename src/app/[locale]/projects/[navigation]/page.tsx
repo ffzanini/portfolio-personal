@@ -26,7 +26,7 @@ export async function generateStaticParams() {
   );
 }
 
-export default async function LocaleProjectDetailsPage({ params }: PageProps) {
+export default async function LocaleProjectDetailsPage({ params }: Readonly<PageProps>) {
   const projects = await getProjects();
   const navigation = (await params).navigation;
   const project = projects.find((item) => item.navigation === navigation);

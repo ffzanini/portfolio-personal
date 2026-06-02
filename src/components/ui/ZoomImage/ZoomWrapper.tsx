@@ -6,8 +6,8 @@ import "./custom-zoom.css";
 
 export function ZoomWrapper({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return <Zoom classDialog="custom-zoom">{children}</Zoom>;
 }

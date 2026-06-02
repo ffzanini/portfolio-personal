@@ -7,7 +7,7 @@ interface TooltipProps {
   position?: "top" | "bottom" | "left" | "right";
 }
 
-export function Tooltip({ text, children, position = "bottom" }: TooltipProps) {
+export function Tooltip({ text, children, position = "bottom" }: Readonly<TooltipProps>) {
   const tooltipId = useId();
   const base =
     "absolute px-2 py-1 text-[12px] rounded shadow whitespace-nowrap z-50 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-[opacity,transform] duration-150";

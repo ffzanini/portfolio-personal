@@ -130,9 +130,9 @@ export function StackContent() {
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {translations.stack.strengths.items.map((item, index) => (
+              {translations.stack.strengths.items.map((item) => (
                 <div
-                  key={index}
+                  key={item.title}
                   className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                 >
                   <div className="flex flex-row items-center gap-2 pb-2">
