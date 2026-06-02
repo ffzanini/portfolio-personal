@@ -105,11 +105,16 @@ export default async function RootLayout({
   });
 
   return (
-    <html lang={locale} translate="no" suppressHydrationWarning>
+    <html lang={locale} translate="no" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
+        <link rel="preconnect" href="https://vitals.vercel-insights.com" />
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
-        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
-        <link rel="preload" href="/images/me-desenho.jpeg" as="image" />
+        <link
+          rel="preload"
+          href="/images/me-desenho.jpeg"
+          as="image"
+          fetchPriority="high"
+        />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
         <JsonLd />
