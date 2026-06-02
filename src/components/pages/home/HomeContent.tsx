@@ -139,6 +139,7 @@ export function HomeContent() {
                           width={180}
                           height={180}
                           className="rounded-xl"
+                          style={{ width: "100%", height: "auto" }}
                           sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 200px"
                           priority
                         />
