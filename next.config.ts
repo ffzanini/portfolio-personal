@@ -55,11 +55,11 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/(pages)/:path*",
+        source: "/:locale(pt|en|es)/:path*",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, s-maxage=86400, stale-while-revalidate=2592000",
+            value: "public, s-maxage=3600, stale-while-revalidate=86400",
           },
         ],
       },

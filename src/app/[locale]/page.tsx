@@ -1,7 +1,16 @@
+import { type Locale } from "@/libs/i18n";
+import { loadLocale } from "@/locales";
 import { Navbar } from "@/components/ui";
 import { HomeContent } from "@/components/pages/home/HomeContent";
 
-export default function LocaleHomePage() {
+export default async function LocaleHomePage({
+  params,
+}: Readonly<{
+  params: Promise<{ locale: string }>;
+}>) {
+  const { locale } = await params;
+  const translations = await loadLocale(locale as Locale);
+
   return (
     <>
       <link
@@ -11,7 +20,7 @@ export default function LocaleHomePage() {
         fetchPriority="high"
       />
       <Navbar />
-      <HomeContent />
+      <HomeContent translations={translations} locale={locale as Locale} />
     </>
   );
 }

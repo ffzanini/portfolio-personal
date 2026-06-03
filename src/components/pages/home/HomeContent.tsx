@@ -1,6 +1,4 @@
-"use client";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import {
   LuMapPin,
   LuCoffee,
@@ -11,28 +9,22 @@ import {
 import { LiaHandSpock } from "react-icons/lia";
 
 import { ZoomImage, Tooltip } from "@/components/ui";
+import { FlipWords } from "@/components/ui/FlipWords";
 import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { mainTechStack } from "@/constants/stack";
-import { useTranslation } from "@/context";
-import { withLocalePath } from "@/libs/i18n";
+import { withLocalePath, type Locale } from "@/libs/i18n";
+import type { Translations } from "@/locales";
 
-function FlipWordsLoading() {
-  const { translations } = useTranslation();
-  return (
-    <span className="text-2xl lg:text-3xl xl:text-4xl font-medium leading-tight">
-      {translations.home.roles[0]}
-    </span>
-  );
+interface HomeContentProps {
+  translations: Translations;
+  locale: Locale;
 }
 
-const FlipWords = dynamic(
-  () => import("@/components/ui/FlipWords").then((mod) => mod.FlipWords),
-  { ssr: false, loading: FlipWordsLoading },
-);
-
-export function HomeContent() {
-  const { translations, location } = useTranslation();
+export function HomeContent({
+  translations,
+  locale,
+}: Readonly<HomeContentProps>) {
   return (
     <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
       <div className="relative flex flex-col h-screen">
@@ -80,7 +72,7 @@ export function HomeContent() {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                 <Link
-                  href={withLocalePath(location, "/about")}
+                  href={withLocalePath(locale, "/about")}
                   className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-transform duration-300 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                   style={{ willChange: "transform" }}
                 >
@@ -135,7 +127,7 @@ export function HomeContent() {
                 </div>
                 <div className="relative bg-white/80 dark:bg-black/50 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl">
                   <div className="relative mx-auto w-32 sm:w-40 lg:w-50 h-32 sm:h-40 lg:h-50 mb-4 sm:mb-6">
-                    <div className="absolute inset-0 bg-linear-to-br from-primary-400 via-primary-600 to-primary-800 rounded-4xl animate-pulse opacity-80"></div>
+                    <div className="absolute inset-0 bg-linear-to-br from-primary-400 via-primary-600 to-primary-800 rounded-4xl opacity-80" />
                     <div className="relative w-full h-full rounded-2xl bg-linear-to-br from-primary-200 via-primary-600 to-primary-950 p-1.5 sm:p-2 shadow-2xl">
                       <div className="w-full h-full flex items-center justify-center">
                         <ZoomImage
@@ -183,7 +175,7 @@ export function HomeContent() {
                       ))}
                     </div>
                     <Link
-                      href={withLocalePath(location, "/stack")}
+                      href={withLocalePath(locale, "/stack")}
                       className="underline underline-offset-4 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white font-semibold"
                     >
                       {translations.home.textButtonStack}

@@ -1,7 +1,5 @@
 "use client";
-import { useCallback, useEffect, useState, useMemo, useRef } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-
+import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/libs/cn";
 
 export const FlipWords = ({
@@ -13,71 +11,63 @@ export const FlipWords = ({
   duration?: number;
   className?: string;
 }>) => {
-  const shouldReduceMotion = useReducedMotion();
-  const [currentWord, setCurrentWord] = useState(words[0] || "");
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [resetKey, setResetKey] = useState(0);
-  const wordsRef = useRef<string[]>(words);
-  const hasStartedCycleRef = useRef(false);
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [exitWord, setExitWord] = useState<string | null>(null);
+
+  const [animKey, setAnimKey] = useState(0);
+  const [busy, setBusy] = useState(false);
+  const indexRef = useRef(0);
+  const wordsRef = useRef(words);
 
   useEffect(() => {
-    const wordsChanged =
-      words.length !== wordsRef.current.length ||
-      words[0] !== wordsRef.current[0];
-
-    if (wordsChanged && words.length > 0) {
-      setCurrentWord(words[0]);
-      setIsAnimating(false);
-      setResetKey((prev) => prev + 1);
-      wordsRef.current = words;
-    }
+    const prev = wordsRef.current;
+    if (words[0] === prev[0] && words.length === prev.length) return;
+    wordsRef.current = words;
+    indexRef.current = 0;
+    setCurrentIdx(0);
+    setExitWord(null);
+    setAnimKey(0);
+    setBusy(false);
   }, [words]);
 
-  const currentIndex = useMemo(() => {
-    return Math.max(0, words.indexOf(currentWord));
-  }, [currentWord, words]);
-
-  const startAnimation = useCallback(() => {
-    if (words.length === 0) return;
-    const nextIndex = (currentIndex + 1) % words.length;
-    hasStartedCycleRef.current = true;
-    setCurrentWord(words[nextIndex]);
-    setIsAnimating(true);
-  }, [currentIndex, words]);
-
   useEffect(() => {
-    if (isAnimating) return;
-    const timer = setTimeout(startAnimation, duration);
-    return () => clearTimeout(timer);
-  }, [isAnimating, duration, startAnimation]);
+    if (busy || words.length <= 1) return;
+    const id = setTimeout(() => {
+      const nextIdx = (indexRef.current + 1) % wordsRef.current.length;
+      setExitWord(wordsRef.current[indexRef.current] ?? null);
+      indexRef.current = nextIdx;
+      setCurrentIdx(nextIdx);
+      setAnimKey((k) => k + 1);
+      setBusy(true);
+    }, duration);
+    return () => clearTimeout(id);
+  }, [busy, duration, words.length]);
+
+  const onExitEnd = useCallback(() => {
+    setExitWord(null);
+    setBusy(false);
+  }, []);
 
   return (
-    <AnimatePresence
-      key={resetKey}
-      onExitComplete={() => setIsAnimating(false)}
-    >
-      <motion.div
-        key={currentWord}
-        initial={
-          hasStartedCycleRef.current
-            ? { opacity: 0, y: shouldReduceMotion ? 0 : 8 }
-            : { opacity: 1, y: 0 }
-        }
-        animate={{ opacity: 1, y: 0 }}
-        exit={{
-          opacity: 0,
-          y: shouldReduceMotion ? 0 : -8,
-          filter: shouldReduceMotion ? "blur(0px)" : "blur(2px)",
-          position: "absolute",
-        }}
-        transition={{ duration: shouldReduceMotion ? 0.1 : 0.2, ease: "easeOut" }}
+    <span className={cn("relative inline-block", className)}>
+      {exitWord !== null && (
+        <span
+          className="absolute left-0 top-0 whitespace-nowrap text-neutral-900 dark:text-neutral-100 animate-flip-out"
+          onAnimationEnd={onExitEnd}
+          aria-hidden="true"
+        >
+          {exitWord}
+        </span>
+      )}
+      <span
+        key={animKey}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100",
-          className,
+          "inline-block whitespace-nowrap text-neutral-900 dark:text-neutral-100",
+          animKey > 0 && "animate-flip-in",
         )}
       >
-        <span className="inline-block whitespace-nowrap">{currentWord}</span>
-      </motion.div>
-    </AnimatePresence>
+        {words[currentIdx] ?? ""}
+      </span>
+    </span>
   );
 };

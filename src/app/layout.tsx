@@ -100,6 +100,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} translate="no" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://vitals.vercel-insights.com" />
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
       </head>
