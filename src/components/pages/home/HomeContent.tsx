@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   LuMapPin,
   LuCoffee,
@@ -74,12 +75,10 @@ export function HomeContent({
                 <Link
                   href={withLocalePath(locale, "/about")}
                   className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-transform duration-300 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
-                  style={{ willChange: "transform" }}
                 >
                   {translations.home.textButtonAbout}
                   <LuArrowRight
                     className="hidden lg:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                    style={{ willChange: "transform" }}
                   />
                 </Link>
 
@@ -88,11 +87,9 @@ export function HomeContent({
                   target="_blank"
                   rel="noreferrer"
                   className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl backdrop-blur-sm group"
-                  style={{ willChange: "background-color" }}
                 >
                   <LiaHandSpock
                     className="hidden lg:flex mr-3 h-6 w-6 group-hover:rotate-360 duration-500 transition-transform"
-                    style={{ willChange: "transform" }}
                   />
                   {translations.home.textButtonResume}
                 </Link>
@@ -130,7 +127,7 @@ export function HomeContent({
                     <div className="absolute inset-0 bg-linear-to-br from-primary-400 via-primary-600 to-primary-800 rounded-4xl opacity-80" />
                     <div className="relative w-full h-full rounded-2xl bg-linear-to-br from-primary-200 via-primary-600 to-primary-950 p-1.5 sm:p-2 shadow-2xl">
                       <div className="w-full h-full flex items-center justify-center">
-                        <ZoomImage
+                        <Image
                           src="/images/me-desenho.jpeg"
                           alt="Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em React, Next.js e TypeScript. Desenvolvedor frontend e fullstack em Pelotas, Brasil."
                           width={180}
@@ -139,6 +136,7 @@ export function HomeContent({
                           style={{ width: "100%", height: "auto" }}
                           sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 200px"
                           priority
+                          quality={85}
                         />
                       </div>
                     </div>
@@ -163,11 +161,9 @@ export function HomeContent({
                           >
                             <div
                               className={`relative w-12 h-12 rounded-xl ${tech.bgColor} ${tech.borderColor} border shadow-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg backdrop-blur-sm`}
-                              style={{ willChange: "transform" }}
                             >
                               <tech.icon
                                 className={`w-6 h-6 ${tech.iconColor} transition-transform duration-300 group-hover:scale-110`}
-                                style={{ willChange: "transform" }}
                               />
                             </div>
                           </div>

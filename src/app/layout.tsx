@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { cookies, headers } from "next/headers";
 
 import { ThemeProvider } from "next-themes";
 import { AnalyticsWrapper, JsonLd } from "@/components/utils";
@@ -9,7 +8,6 @@ import {
   SEO_KEYWORDS,
   DEFAULT_OG_IMAGE,
 } from "@/constants/seo";
-import { DEFAULT_LOCALE, resolvePreferredLocale } from "@/libs/i18n";
 import { fontMavenPro } from "./fonts";
 import "./globals.css";
 
@@ -83,22 +81,13 @@ export const viewport: Viewport = {
   ],
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const headerStore = await headers();
-  const localeCookie = cookieStore.get("app-language")?.value;
-  const acceptLanguage = headerStore.get("accept-language");
-  const locale = resolvePreferredLocale({
-    cookieLocale: localeCookie ?? DEFAULT_LOCALE,
-    acceptLanguage,
-  });
-
   return (
-    <html lang={locale} translate="no" suppressHydrationWarning data-scroll-behavior="smooth">
+    <html lang="pt" translate="no" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://vitals.vercel-insights.com" />

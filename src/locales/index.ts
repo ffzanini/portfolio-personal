@@ -3,10 +3,11 @@ export { default as en } from "./en";
 export { default as es } from "./es";
 export type { Translations } from "./pt";
 
+import { cache } from "react";
 import type { Translations } from "./pt";
 import type { Locale } from "@/libs/i18n";
 
-export async function loadLocale(locale: Locale): Promise<Translations> {
+export const loadLocale = cache(async function loadLocale(locale: Locale): Promise<Translations> {
   switch (locale) {
     case "en":
       return (await import("./en")).default;
@@ -15,4 +16,4 @@ export async function loadLocale(locale: Locale): Promise<Translations> {
     default:
       return (await import("./pt")).default;
   }
-}
+});
