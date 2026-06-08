@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 
 import { ThemeProvider } from "next-themes";
 import { AnalyticsWrapper, JsonLd } from "@/components/utils";
@@ -81,20 +82,20 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nonce = (await headers()).get("x-nonce") ?? "";
+
   return (
     <html lang="pt" translate="no" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="preconnect" href="https://vitals.vercel-insights.com" />
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="dark" nonce={nonce}>
           <JsonLd />
           {children}
           <AnalyticsWrapper />

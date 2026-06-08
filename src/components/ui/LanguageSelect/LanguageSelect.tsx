@@ -76,19 +76,22 @@ export function LanguageSelect({
           <span>{selectedLang.label}</span>
         </span>
         <LuArrowDown
-          className={cn("ml-2 transition-transform duration-200", open && "rotate-180")}
+          className={cn(
+            "ml-2 transition-transform duration-200",
+            open && "rotate-180",
+          )}
         />
       </button>
 
       {open && (
-        <ul
+        <div
           id={listboxId}
           role="menu"
           tabIndex={-1}
           className="absolute z-10 mt-2 w-full bg-gray-100 dark:bg-dark-theme xl:bg-black/5 xl:dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-lg shadow-lg"
         >
           {languages.map((lang, index) => (
-            <li
+            <div
               key={lang.code}
               className={cn(
                 "hover:bg-black/15 dark:hover:bg-white/15",
@@ -122,9 +125,9 @@ export function LanguageSelect({
                 <span>{lang.flag}</span>
                 <span>{lang.label}</span>
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );

@@ -9,7 +9,7 @@ import {
 } from "react-icons/lu";
 import { LiaHandSpock } from "react-icons/lia";
 
-import { ZoomImage, Tooltip } from "@/components/ui";
+import { Tooltip } from "@/components/ui";
 import { FlipWords } from "@/components/ui/FlipWords";
 import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
@@ -77,9 +77,7 @@ export function HomeContent({
                   className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-transform duration-300 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                 >
                   {translations.home.textButtonAbout}
-                  <LuArrowRight
-                    className="hidden lg:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                  />
+                  <LuArrowRight className="hidden lg:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <Link
@@ -88,9 +86,7 @@ export function HomeContent({
                   rel="noreferrer"
                   className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl backdrop-blur-sm group"
                 >
-                  <LiaHandSpock
-                    className="hidden lg:flex mr-3 h-6 w-6 group-hover:rotate-360 duration-500 transition-transform"
-                  />
+                  <LiaHandSpock className="hidden lg:flex mr-3 h-6 w-6 group-hover:rotate-360 duration-500 transition-transform" />
                   {translations.home.textButtonResume}
                 </Link>
               </div>
@@ -145,9 +141,9 @@ export function HomeContent({
                     </div>
                   </div>
                   <div className="text-center space-y-3 sm:space-y-4">
-                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                    <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                       {translations.home.stack}
-                    </h3>
+                    </h2>
                     <div className="flex justify-center gap-2 xl:gap-3">
                       {mainTechStack.map((tech, index) => (
                         <Tooltip
@@ -164,6 +160,7 @@ export function HomeContent({
                             >
                               <tech.icon
                                 className={`w-6 h-6 ${tech.iconColor} transition-transform duration-300 group-hover:scale-110`}
+                                aria-label={tech.name}
                               />
                             </div>
                           </div>

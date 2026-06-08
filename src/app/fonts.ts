@@ -12,20 +12,20 @@ export const fontMavenPro = mavenPro({
 });
 
 export const fontRyanaLovely = localFont({
-  src: "../../public/fonts/Ryana-Lovely.ttf",
+  src: "../../public/fonts/Ryana-Lovely.woff2",
   variable: "--font-ryanaLovely",
   display: "swap",
   preload: false,
 });
 
 export const pixeloidSans = localFont({
-  src: "../../public/fonts/PixeloidSans.ttf",
+  src: "../../public/fonts/PixeloidSans.woff2",
   variable: "--font-pixeloidsans",
   display: "swap",
 });
 
 export const pixeloidSansBold = localFont({
-  src: "../../public/fonts/PixeloidSans-Bold.ttf",
+  src: "../../public/fonts/PixeloidSans-Bold.woff2",
   variable: "--font-pixeloidsans-bold",
   display: "swap",
 });

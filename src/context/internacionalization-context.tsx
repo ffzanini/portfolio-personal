@@ -59,7 +59,6 @@ const InternacionalizationProvider = ({
   const router = useRouter();
   const [isLanguageSwitching, setIsLanguageSwitching] = useState(false);
 
-  // Cache starts with the locale provided by the server — no client-side fetch on first load
   const [translationsCache, setTranslationsCache] = useState<
     Partial<Record<Locale, Translations>>
   >({ [initialLocale]: initialTranslations });
@@ -74,8 +73,9 @@ const InternacionalizationProvider = ({
 
   const location = useMemo<Locations>(() => {
     if (pathnameLocale) return pathnameLocale;
-    if (typeof window !== "undefined") {
-      const storedLanguage = globalThis.window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    if (globalThis.window !== undefined) {
+      const storedLanguage =
+        globalThis.window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
       if (storedLanguage && isValidLocale(storedLanguage)) {
         return storedLanguage;
       }
@@ -84,7 +84,6 @@ const InternacionalizationProvider = ({
     return initialLocale;
   }, [initialLocale, pathnameLocale]);
 
-  // Load locale chunk on demand — fires only when navigating to an uncached locale
   useEffect(() => {
     if (translationsCache[location]) return;
     loadLocale(location).then((loaded) => {
@@ -96,7 +95,7 @@ const InternacionalizationProvider = ({
   }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (globalThis.window === undefined) return;
     localStorage.setItem(LANGUAGE_STORAGE_KEY, location);
     document.cookie = `${LANGUAGE_STORAGE_KEY}=${location};path=/;max-age=31536000;samesite=lax`;
   }, [location]);
@@ -114,7 +113,7 @@ const InternacionalizationProvider = ({
     (lang: Locations) => {
       if (lang === location) return;
       setIsLanguageSwitching(true);
-      if (typeof window !== "undefined") {
+      if (globalThis.window !== undefined) {
         localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
         document.cookie = `${LANGUAGE_STORAGE_KEY}=${lang};path=/;max-age=31536000;samesite=lax`;
       }
