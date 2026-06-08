@@ -1,6 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
-
 import { ThemeProvider } from "next-themes";
 import { AnalyticsWrapper, JsonLd } from "@/components/utils";
 import {
@@ -82,20 +80,18 @@ export const viewport: Viewport = {
   ],
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const nonce = (await headers()).get("x-nonce") ?? "";
-
   return (
     <html lang="pt" translate="no" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" nonce={nonce}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <JsonLd />
           {children}
           <AnalyticsWrapper />
