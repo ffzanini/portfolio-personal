@@ -1,7 +1,4 @@
-"use client";
-
 import DOMPurify from "isomorphic-dompurify";
-import { useMemo } from "react";
 
 type Props = {
   json: string;
@@ -14,33 +11,23 @@ export function SanitizedText({
   typeText = "div",
   className = "",
 }: Readonly<Props>) {
-  const sanitizedText = useMemo(() => {
-    return DOMPurify.sanitize(json, {
-      ADD_ATTR: ["target", "rel"],
-    });
-  }, [json]);
+  const sanitizedText = DOMPurify.sanitize(json, {
+    ADD_ATTR: ["target", "rel"],
+  });
 
-  switch (typeText) {
-    case "div":
-      return (
-        <div
-          className={`sanitized-json ${className}`}
-          dangerouslySetInnerHTML={{ __html: sanitizedText }}
-        />
-      );
-    case "span":
-      return (
-        <span
-          className={`sanitized-json ${className}`}
-          dangerouslySetInnerHTML={{ __html: sanitizedText }}
-        />
-      );
-    default:
-      return (
-        <div
-          className={`sanitized-json ${className}`}
-          dangerouslySetInnerHTML={{ __html: sanitizedText }}
-        />
-      );
+  if (typeText === "span") {
+    return (
+      <span
+        className={`sanitized-json ${className}`}
+        dangerouslySetInnerHTML={{ __html: sanitizedText }}
+      />
+    );
   }
+
+  return (
+    <div
+      className={`sanitized-json ${className}`}
+      dangerouslySetInnerHTML={{ __html: sanitizedText }}
+    />
+  );
 }

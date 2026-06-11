@@ -10,7 +10,7 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-import { loadLocale, type Translations } from "@/locales";
+import { loadLocale, type Translations } from "@/locales/load-locale";
 import {
   DEFAULT_LOCALE,
   getLocaleFromBrowserLanguage,

@@ -8,7 +8,8 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "optimize-images": "node scripts/optimize-images.mjs"
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "analyze": "ANALYZE=true next build --webpack"
   },
   "dependencies": {
     "@notionhq/client": "5.22.0",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
+    "@next/bundle-analyzer": "^16.2.9",
     "@tailwindcss/postcss": "^4.3.0",
     "@types/dateformat": "^5.0.3",
     "@types/node": "^25.9.2",
@@ -40,7 +42,7 @@
     "autoprefixer": "^10.5.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "16.2.7",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.1",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
   }

@@ -1,5 +1,5 @@
 import { type Locale } from "@/libs/i18n";
-import { loadLocale } from "@/locales";
+import { loadLocale } from "@/locales/load-locale";
 import { Navbar } from "@/components/ui";
 import { HomeContent } from "@/components/pages/home/HomeContent";
 

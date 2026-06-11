@@ -4,7 +4,7 @@ import AppProvider from "@/providers/AppProvider";
 import { ClientToaster } from "@/components/utils";
 import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import { isValidLocale, SUPPORTED_LOCALES } from "@/libs/i18n";
-import { loadLocale } from "@/locales";
+import { loadLocale } from "@/locales/load-locale";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
