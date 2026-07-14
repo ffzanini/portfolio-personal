@@ -1,12 +1,25 @@
 {
-  "title": "Del Código a la Entrega",
+  "title": "Del código a la entrega",
   "breadcrumb_begin": "Proyectos",
   "breadcrumb_end": "Especificaciones",
-  "sub_title": "A lo largo de mi carrera he participado en la creación de proyectos que impactaron positivamente a personas y negocios. Aquí puedes navegar por sitios que desarrollé y que son usados por miles de personas cada día. La mayoría de los proyectos listados siguen activos; otros fueron descontinuados y algunos no figuran por motivos contractuales.",
+  "sub_title": "Sitios y productos que ayudé a construir — muchos aún activos y en uso diario. Algunos se descontinuaron; otros no aparecen por motivos contractuales.",
   "projects_title": "Proyectos Destacados",
-  "projects_all": "Lista completa de proyectos",
+  "projects_all": "Todos los proyectos",
   "github": "Proyecto disponible en GitHub",
   "return": "Volver",
+  "featured_badge": "Destacado",
+  "view_details": "Ver detalles",
+  "demo": "Demo",
+  "visit_site": "Visitar sitio",
+  "status_online": "En línea",
+  "status_offline": "Fuera de línea",
+  "empty_filter": "No se encontraron proyectos para este filtro.",
+  "filters": {
+    "all": "Todos",
+    "fullstack": "Full Stack",
+    "frontend": "Frontend",
+    "backend": "Backend"
+  },
   "projects": [
     {
       "id": 1,
@@ -19,7 +32,7 @@
         "Además, este proyecto también sirve como mi laboratorio de pruebas, donde implemento nuevas bibliotecas y tecnologías antes de usarlas en proyectos reales. Esto me permite estar siempre actualizado con las últimas tendencias del mercado y asegurar calidad y eficiencia en mi trabajo."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Frontend moderno con Next.js y TypeScript",
         "Animaciones con Framer Motion",
@@ -56,7 +69,7 @@
         "El sitio del DOVE Research Centre (Centro de Investigación en Desarrollo Humano y Violencia) de la Universidad Federal de Pelotas fue desarrollado como una plataforma institucional bilingüe, ofreciendo contenido en inglés y portugués. Con una presentación clara y moderna, el sitio destaca el trabajo del centro de forma accesible y bien estructurada."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Estructura de navegación multilingüe",
         "Menú jerárquico y responsivo",
@@ -95,7 +108,7 @@
         "El proyecto JA Índio Jiu Jitsu, en Pelotas (RS), fue diseñado como un sitio responsivo y organizado que ofrece programación de clases gratuitas, horarios, descripción de programas (por nivel y público), testimonios, contacto y filosofía de la academia — con el objetivo de divulgar el trabajo de la academia, inspirar a nuevos estudiantes y fortalecer la conexión con el público."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Presentación institucional de la academia",
         "Calendario de clases",
@@ -133,7 +146,7 @@
         "La plataforma es compatible con el uso en aulas, laboratorios, dispositivos móviles y offline, promoviendo la inclusión digital en las escuelas. Su arquitectura híbrida prioriza la seguridad (LGPD), accesibilidad y escalabilidad, y ya está presente en más de 1.700 escuelas, con miles de usuarios activos."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Plataforma educativa gamificada",
         "Gestión completa de rutas y plataforma vía backoffice",
@@ -170,7 +183,7 @@
         "Este portal es un área exclusiva para dueños de tiendas y sus colaboradores, orientado a la comunicación corporativa, informes de ventas, gestión de contratos, auditoría fiscal, boletos de pago, beneficios, noticias, promociones y procesos internos. Los usuarios acceden por una interfaz segura y cifrada, con autenticación de usuario y contraseña, en conformidad con la LGPD, garantizando acceso a las funciones según perfil y contrato."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Área de login para comerciantes",
         "Informe de ventas",
@@ -207,7 +220,7 @@
         "El objetivo era el mismo que la versión actual: mostrar mi trabajo, estudios y pruebas. Siéntete libre de explorar la versión anterior."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Frontend moderno con Next.js y TypeScript",
         "Animaciones con Framer Motion",
@@ -239,7 +252,7 @@
         "El objetivo es ofrecer una página de currículum online centrada en rendimiento, claridad y responsividad. Desarrollada con tecnologías modernas, la estructura es limpia y organizada, con navegación fluida entre las secciones. Es completamente mobile-first, con buena experiencia de lectura e interacción en cualquier dispositivo, transiciones suaves y animaciones sutiles."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Frontend moderno con Next.js y TypeScript",
         "Animaciones con Framer Motion",
@@ -267,7 +280,7 @@
         "El sitio web de nav9.tech fue desarrollado como plataforma institucional para presentar la empresa, sus servicios y soluciones tecnológicas. Con un diseño moderno y responsivo, el sitio ofrece una experiencia clara y profesional para visitantes interesados en conocer los servicios ofrecidos por la empresa."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Diseño moderno y responsivo",
         "Presentación institucional",
@@ -298,7 +311,7 @@
         "La plataforma fue desarrollada para apoyar a académicos, equipos de países y organizaciones internacionales en el avance de la toma de decisiones basada en evidencia y la rendición de cuentas por los resultados de RMNCH+N."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Plataforma de datos interactiva",
         "Selección de países e indicadores",
@@ -335,7 +348,7 @@
         "También se priorizaron rendimiento, responsividad y SEO local, con estructura de páginas dedicada para fortalecer búsquedas regionales relacionadas con contabilidad y aumentar la conversión de contacto comercial."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Sitio institucional con páginas dedicadas (Sobre, Abrir empresa, Cambiar de contador y Oficina)",
         "Estructura de contenido orientada a conversión con CTAs estratégicos",
@@ -364,7 +377,7 @@
   ],
   "load": "Cargar más",
   "contact": {
-    "title": "Listo para un pull request de ideas",
+    "title": "¿Tienes un proyecto en mente?",
     "description": "Estoy abierto a nuevos proyectos, consultorías e intercambios sobre creación de productos digitales o desarrollo de juegos. Siéntete libre de enviarme un mensaje en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o dejar un recado en la ",
     "contact": "página de contacto."
   }

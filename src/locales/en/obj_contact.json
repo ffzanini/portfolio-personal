@@ -35,18 +35,23 @@
     ]
   },
   "testimonials": {
-    "title": "Testimonials from those who have worked with me",
+    "title": "Testimonials",
     "sub_title": "Those who have worked with me have something to say — and I am truly grateful.",
     "testimonials": [
       {
-        "quote": "It was rewarding to see the positive response to the website since its launch. The reception was incredibly warm. The visuals, layout, content, navigation — everything has been enthusiastically praised. Even my father, who took a look at the code, said it was “clean”; coming from him, that is a huge compliment. On launch day alone we had over 1,000 visitors. I have received messages highlighting the organization, clarity, and identity of DOVE, which has become even stronger with our online presence. I am deeply grateful to everyone involved. Without a doubt, a success.",
-        "name": "Joseph Murray",
-        "title": "Director at DOVE Research"
+        "quote": "Felipe Zanini is a professional who stood out in every project he worked on at nav9. Stakeholders consistently praised his ability to translate technical demands into language accessible to every audience, making alignment across teams much easier — on top of being highly dedicated and focused on delivering value. He stands out for the quality of his deliveries and for constantly raising the technical bar of the people around him. Other developers see him as someone who shares knowledge and helps the group grow, making him a reference within the company. That is why he naturally becomes a solid pillar of delivery on every team he joins.",
+        "name": "Felipe Adamoli",
+        "title": "Co-Founder at Techleads.club"
       },
       {
         "quote": "Felipe was one of the best professionals I have had the opportunity to work with — always dedicated and 100% focused on delivering projects with quality, regardless of the challenges. He cares about every stage of the development process, not limiting himself to coding. In the projects we worked on together, he performed very well as tech lead with the client and achieved strong results with the team. He communicates effectively and knows how to stand out in difficult situations. Felipe learns quickly and has great autonomy to lead any project.",
         "name": "Igor Casconi de Oliveira",
         "title": "Software Engineer"
+      },
+      {
+        "quote": "It was rewarding to see the positive response to the website since its launch. The reception was incredibly warm. The visuals, layout, content, navigation — everything has been enthusiastically praised. Even my father, who took a look at the code, said it was “clean”; coming from him, that is a huge compliment. On launch day alone we had over 1,000 visitors. I have received messages highlighting the organization, clarity, and identity of DOVE, which has become even stronger with our online presence. I am deeply grateful to everyone involved. Without a doubt, a success.",
+        "name": "Joseph Murray",
+        "title": "Director at DOVE Research"
       }
     ]
   },
@@ -54,8 +59,8 @@
   "success": "Message sent successfully.",
   "error": "Your message was not sent. Please try again later.",
   "tooltip": "Fill in all fields and use a valid email",
-  "button_text_ready": "Ready to send",
-  "button_text_not_ready": "Waiting for input",
+  "button_text_ready": "Send message",
+  "button_text_not_ready": "Complete the form",
   "button_text_sending": "Sending your message",
   "footer": {
     "title": "My story does not end here",

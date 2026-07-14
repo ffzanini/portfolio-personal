@@ -7,9 +7,33 @@ const notionDatabaseId = process.env.NOTION_DATABASE_KEY;
 
 const notion = notionApiKey ? new Client({ auth: notionApiKey }) : null;
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_MESSAGE_LENGTH = 2000;
 const MAX_NAME_LENGTH = 100;
+const MAX_EMAIL_LOCAL_LENGTH = 64;
+const MAX_EMAIL_DOMAIN_LENGTH = 255;
+
+const isValidEmail = (email: string): boolean => {
+  const at = email.indexOf("@");
+  if (at < 1 || at !== email.lastIndexOf("@")) return false;
+
+  const local = email.slice(0, at);
+  const domain = email.slice(at + 1);
+  if (
+    local.length > MAX_EMAIL_LOCAL_LENGTH ||
+    domain.length < 3 ||
+    domain.length > MAX_EMAIL_DOMAIN_LENGTH
+  ) {
+    return false;
+  }
+  if (local.includes(" ") || domain.includes(" ")) return false;
+
+  const lastDot = domain.lastIndexOf(".");
+  if (lastDot < 1 || lastDot === domain.length - 1) return false;
+  if (domain.includes("..")) return false;
+
+  return true;
+};
+
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
 const requestsByIp = new Map<string, { count: number; resetAt: number }>();
@@ -47,7 +71,7 @@ const parsePayload = (payload: unknown) => {
   const email = typeof obj.email === "string" ? obj.email.trim().toLowerCase() : "";
   const message = typeof obj.message === "string" ? obj.message.trim() : "";
   if (!name || !email || !message) return null;
-  if (!EMAIL_REGEX.test(email)) return null;
+  if (!isValidEmail(email)) return null;
   if (name.length > MAX_NAME_LENGTH) return null;
   if (message.length > MAX_MESSAGE_LENGTH) return null;
   return { name, email, message };

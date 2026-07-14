@@ -2,7 +2,15 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/app/data/projects";
 import { SITE_URL } from "@/constants/seo";
 
-const staticPaths = ["", "/about", "/stack", "/projects", "/contact"];
+const staticPaths = [
+  "",
+  "/about",
+  "/stack",
+  "/arcade",
+  "/arcade/pixel-art",
+  "/projects",
+  "/contact",
+];
 const locales = ["pt", "en", "es"] as const;
 
 const buildAlternateLanguages = (path: string) => ({

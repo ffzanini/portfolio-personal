@@ -1,15 +1,15 @@
 {
   "title": "Detrás del código",
-  "sub_title": "Mi misión es acercar a las personas y la tecnología mediante la programación y el contenido digital — creando experiencias que inspiran, enseñan y transforman.",
+  "sub_title": "Mi misión es acercar a las personas y la tecnología mediante la programación y el contenido digital — creando experiencias digitales claras, útiles y bien hechas.",
   "description": {
     "title": "El camino hasta aquí",
-    "begin": "Mucho gusto. Mi nombre es Felipe Frantz Zanini, ingeniero de software apasionado por el jiu-jitsu, el running, el desarrollo de juegos independientes, Dota 2, los guiones, el pixel art, la música y las inversiones. Tengo 31 años y vivo en Pelotas, Rio Grande do Sul, Brasil.",
-    "middle": "Mi camino en el desarrollo de software comenzó en 2008, durante la escuela técnica. En 2010, tras completar el curso, inicié mi primera pasantía en programación y, desde entonces, nunca he dejado de estudiar y evolucionar. Al ser contratado como ingeniero de software, he participado en más de <b>90 proyectos</b>, usando diversas tecnologías, con énfasis en PHP.",
-    "education": "Apasionado por el área y en constante búsqueda de mejora, obtuve la Licenciatura en Gestión de TI y la Especialización en Gestión de TI. También inicié la Maestría en Ciencias de la Computación.",
-    "end": "Actualmente soy Ingeniero de Software Senior & Arquitecto Frontend en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A</b></a>, donde contribuyo al desarrollo de soluciones tecnológicas innovadoras que transforman la experiencia digital de los clientes."
+    "begin": "Mucho gusto. Mi nombre es Felipe Frantz Zanini, ingeniero de software apasionado por el jiu-jitsu, el running, el desarrollo de juegos independientes, Dota 2, los guiones, el pixel art, la música y las inversiones. Tengo 33 años y vivo en Pelotas, Rio Grande do Sul, Brasil.",
+    "middle": "Mi camino en el desarrollo de software comenzó en 2008, durante la escuela técnica. En 2010, tras completar el curso, inicié mi primera pasantía en programación y, desde entonces, sigo evolucionando en el área. Contratado como ingeniero de software aún en 2010, he participado en más de <b>90 proyectos</b>, usando lenguajes como PHP, JavaScript, Ruby y Python, además de frameworks y bibliotecas.",
+    "education": "Impulsado por la pasión por la tecnología y el deseo de mejorar de forma continua, completé la formación en Gestión de TI, una especialización en Planificación Estratégica en TI e inicié la Maestría en Ciencias de la Computación, que no llegué a concluir por motivos personales. Ante el avance de la IA, curso una posgrado en IA y automatización para mantenerme alineado con el mercado y seguir creciendo en la carrera.",
+    "end": "Actualmente soy Ingeniero de Software Senior & Arquitecto Frontend en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b>, donde contribuyo a productos digitales que mejoran la experiencia de comerciantes y clientes de la red."
   },
   "skills": {
-    "title": "De la imaginación al impacto",
+    "title": "Cómo conduzco un proyecto",
     "subtitle": "Una mirada a mi proceso para convertir ideas en productos digitales",
     "process": [
       {
@@ -53,7 +53,7 @@
   "site": {
     "title": "Café, código y deploy",
     "subtitle": "Un resumen técnico de las tecnologías y herramientas que hacen de este sitio algo personal — todo lo que ocurre detrás de los clics.",
-    "description": "Este sitio fue desarrollado con los conceptos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, usando el framework <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, con deployment en <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, estilizado con <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animaciones con <b><a href='https://motion.dev/' target='_blank'>Framer-Motion</a></b> e íconos de la biblioteca <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. La tipografía es <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. Este portafolio también sirve como vitrina de contenidos futuros y laboratorio de pruebas — donde experimento con bibliotecas y herramientas — y reúne algunos de mis ",
+    "description": "Este sitio fue desarrollado con los conceptos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, usando el framework <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, con deployment en <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, estilizado con <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animaciones con <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b> e íconos de la biblioteca <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. La tipografía es <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. Este portafolio también sirve como vitrina de contenidos futuros y laboratorio de pruebas — donde experimento con bibliotecas y herramientas — y reúne algunos de mis ",
     "projects": "proyectos."
   }
 }

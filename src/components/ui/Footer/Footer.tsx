@@ -3,9 +3,13 @@ import { memo } from "react";
 
 import { socials } from "@/constants/socials";
 import { Tooltip } from "@/components/ui";
+import { useTranslation } from "@/context";
+import { fillTemplate } from "@/libs/page-metadata";
 
 function FooterComponent() {
   const yearNow = new Date().getFullYear();
+  const { translations } = useTranslation();
+  const ui = translations.ui;
 
   return (
     <footer className="flex flex-col lg:flex-row justify-between items-center">
@@ -19,25 +23,28 @@ function FooterComponent() {
       <div className="px-6 pt-6">
         <div className="mb-6 flex justify-center">
           <div className="flex flex-row gap-3 items-center">
-            {socials.map(({ href, icon: Icon, name }) => (
-              <Tooltip
-                key={href}
-                text={`${name === "Email" ? "Send" : "Open"} ${name}`}
-                position="top"
-              >
-                <div className="footer-icon px-2">
-                  <a
-                    aria-label={name}
-                    target="_blank"
-                    href={href}
-                    className="flex justify-center items-center"
-                    rel="noreferrer"
-                  >
-                    <Icon className="h-5 w-5" />
-                  </a>
-                </div>
-              </Tooltip>
-            ))}
+            {socials.map(({ href, icon: Icon, name }) => {
+              const tooltip =
+                name === "Email"
+                  ? ui.footer_send_email
+                  : fillTemplate(ui.footer_open, { name });
+
+              return (
+                <Tooltip key={href} text={tooltip} position="top">
+                  <div className="footer-icon px-2">
+                    <a
+                      aria-label={name}
+                      target="_blank"
+                      href={href}
+                      className="flex justify-center items-center"
+                      rel="noreferrer"
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  </div>
+                </Tooltip>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import {
   RiYoutubeLine,
   RiMailLine,
 } from "react-icons/ri";
+import { SiItchdotio } from "react-icons/si";
 
 export const socials = [
   {
@@ -32,6 +33,11 @@ export const socials = [
     icon: RiYoutubeLine,
     href: "https://www.youtube.com/channel/UCVHgTgRK0M5kt2Gvi60b7Eg",
     name: "YouTube",
+  },
+  {
+    icon: SiItchdotio,
+    href: "https://ffzanini.itch.io/",
+    name: "itch.io",
   },
   {
     icon: RiMailLine,

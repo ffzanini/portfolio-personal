@@ -25,10 +25,6 @@ export function Navbar() {
   const { translations, setLocation, location } = useTranslation();
   const { theme, setTheme } = useTheme();
 
-  const [phrases, setPhrases] = useState(() =>
-    theme === "dark" ? "Face the light!" : "Darkness reigns!",
-  );
-
   const pathname = usePathname();
   const localizedPath = useCallback(
     (path: string) => withLocalePath(location, path),
@@ -38,13 +34,60 @@ export function Navbar() {
 
   const currentTheme = theme || "dark";
 
-  const toggleTheme = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
-  };
+  const showThemeToast = useCallback((nextTheme: "light" | "dark") => {
+    const goingToLight = nextTheme === "light";
+    const pool = goingToLight ? dawnbreaker : nightStalker;
+    const phrase =
+      pool[crypto.getRandomValues(new Uint32Array(1))[0]! % pool.length] ??
+      pool[0];
+    const hero = goingToLight ? "Dawnbreaker" : "Night Stalker";
+    const imageSrc = goingToLight
+      ? "/images/toast/dawn.webp"
+      : "/images/toast/night.webp";
+
+    toast.custom((t) => (
+      <div
+        className={cn(
+          t.visible ? "toast-animate-fade-in" : "toast-animate-fade-out",
+          "w-full shadow-lg rounded-lg flex ring-1 ring-black/10 dark:ring-white/10 overflow-hidden",
+          "bg-white-theme dark:bg-dark-theme border border-gray-200/50 dark:border-gray-700/50",
+        )}
+      >
+        <div className="flex min-w-0 flex-1 items-start p-4">
+          <div className="shrink-0 pt-0.5">
+            <Image
+              className="rounded-sm"
+              src={imageSrc}
+              width={100}
+              height={100}
+              alt={translations.ui.dota_hero_alt}
+              loading="lazy"
+            />
+          </div>
+          <div className="ml-3 min-w-0 flex-1">
+            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              {hero}
+            </p>
+            <p className="mt-1 text-base text-gray-700 dark:text-gray-300">
+              {phrase}
+            </p>
+          </div>
+          <button
+            onClick={() => toast.dismiss(t.id)}
+            className="ml-4 shrink-0 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+          >
+            <LuX className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+    ));
+  }, [translations.ui.dota_hero_alt]);
+
+  const handleThemeToggle = useCallback(() => {
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    showThemeToast(nextTheme);
+  }, [currentTheme, setTheme, showThemeToast]);
 
   const renderText = (name: string) => {
     switch (name) {
@@ -52,70 +95,14 @@ export function Navbar() {
         return translations.navbar.aboutPage;
       case "stack":
         return translations.navbar.stackPage;
-      case "contents":
-        return translations.navbar.contentsPage;
+      case "arcade":
+        return translations.navbar.arcadePage;
       case "projects":
         return translations.navbar.projectsPage;
       case "contact":
         return translations.navbar.contactPage;
       default:
     }
-  };
-
-  const showRandomPhrases = () => {
-    let randomIndex;
-    if (theme === "dark") {
-      randomIndex = Math.floor(Math.random() * nightStalker.length);
-      setPhrases(nightStalker[randomIndex]);
-    } else {
-      randomIndex = Math.floor(Math.random() * dawnbreaker.length);
-      setPhrases(dawnbreaker[randomIndex]);
-    }
-  };
-
-  const renderPhrase = () => {
-    toast.custom((t) => (
-      <div
-        key={t.id}
-        className={`${
-          t.visible ? "toast-animate-fade-in" : "toast-animate-fade-out"
-        } relative z-9999 max-w-md w-full shadow-lg rounded-lg flex ring-1 ring-black/10 dark:ring-white/10 
-      bg-white-theme dark:bg-dark-theme border border-gray-200/50 dark:border-gray-700/50`}
-      >
-        <div className="flex-1 w-0 p-4">
-          <div className="flex items-start">
-            <div className="shrink-0 pt-0.5">
-              <Image
-                className="rounded-sm"
-                src={
-                  theme === "dark"
-                    ? "/images/toast/dawn.webp"
-                    : "/images/toast/night.webp"
-                }
-                width={100}
-                height={100}
-                alt="Dota Hero"
-                loading="lazy"
-              />
-            </div>
-            <div className="ml-3 flex-1">
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                {theme === "dark" ? "Dawnbreaker" : "Night Stalker"}
-              </p>
-              <p className="mt-1 text-base text-gray-700 dark:text-gray-300">
-                {phrases}
-              </p>
-            </div>
-            <button
-              onClick={() => toast.dismiss(t.id)}
-              className="ml-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
-            >
-              <LuX className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
-      </div>
-    ));
   };
 
   useEffect(() => {
@@ -148,14 +135,14 @@ export function Navbar() {
       <div className="mx-auto px-6 xl:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-8">
-            <Tooltip text="Back to home">
+            <Tooltip text={translations.ui.back_home}>
               <Link
                 href={localizedPath("/")}
                 className={cn(
-                  `${fontRyanaLovely.className} opacity-60 transition-opacity duration-200 hover:opacity-100 text-3xl`,
-                  {
-                    "opacity-100": pathname === "/",
-                  },
+                  `${fontRyanaLovely.className} text-3xl transition-[opacity,color] duration-200`,
+                  isActive("/")
+                    ? "opacity-100 text-black dark:text-white"
+                    : "opacity-60 text-gray-500 dark:text-gray-300 hover:opacity-100 hover:text-black dark:hover:text-white",
                 )}
                 title="Felipe Frantz Zanini"
               >
@@ -194,15 +181,19 @@ export function Navbar() {
               <LanguageSelect selected={location} onChange={setLocation} />
             </div>
             <Tooltip
-              text={`${currentTheme !== "dark" ? "To the Dark" : "To the Light"}`}
+              text={
+                currentTheme === "dark"
+                  ? translations.ui.theme_to_light
+                  : translations.ui.theme_to_dark
+              }
             >
               <button
-                onClick={() => {
-                  toggleTheme();
-                  showRandomPhrases();
-                  renderPhrase();
-                }}
-                aria-label={currentTheme !== "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                onClick={handleThemeToggle}
+                aria-label={
+                  currentTheme === "dark"
+                    ? translations.ui.switch_to_light
+                    : translations.ui.switch_to_dark
+                }
                 className="cursor-pointer"
               >
                 {currentTheme === "dark" ? (
@@ -218,7 +209,11 @@ export function Navbar() {
           <button
             className="xl:hidden"
             onClick={() => setIsOpenMenu(!isOpenMenu)}
-            aria-label={isOpenMenu ? "Close menu" : "Open menu"}
+            aria-label={
+              isOpenMenu
+                ? translations.ui.close_menu
+                : translations.ui.open_menu
+            }
             aria-expanded={isOpenMenu}
           >
             {isOpenMenu ? (
@@ -259,12 +254,14 @@ export function Navbar() {
 
                 <button
                   onClick={() => {
-                    toggleTheme();
-                    showRandomPhrases();
-                    renderPhrase();
+                    handleThemeToggle();
                     setIsOpenMenu(false);
                   }}
-                  aria-label={currentTheme !== "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                  aria-label={
+                    currentTheme === "dark"
+                      ? translations.ui.switch_to_light
+                      : translations.ui.switch_to_dark
+                  }
                   className="cursor-pointer"
                 >
                   {currentTheme === "dark" ? (

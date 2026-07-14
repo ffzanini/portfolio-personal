@@ -4,11 +4,14 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { Tooltip } from "@/components/ui";
+import { useTranslation } from "@/context";
 import { cn } from "@/libs/cn";
 
 export function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
+  const { translations } = useTranslation();
+  const label = translations.ui.back_to_top;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +33,7 @@ export function ScrollToTopButton() {
   return (
     <button
       onClick={goTop}
-      aria-label="Back to top"
+      aria-label={label}
       className={cn(
         "fixed bottom-4 right-1 lg:bottom-20 lg:right-4 p-2 cursor-pointer z-40",
         "transition-all duration-300 ease-out motion-reduce:transition-none",
@@ -39,12 +42,12 @@ export function ScrollToTopButton() {
           : "opacity-0 translate-y-5 pointer-events-none",
       )}
     >
-      <Tooltip text="Back to top" position="top">
+      <Tooltip text={label} position="top">
         <Image
           src="/images/point_up.svg"
           width={36}
           height={36}
-          alt="point up"
+          alt={translations.ui.point_up_alt}
           loading="lazy"
           className="z-40"
         />

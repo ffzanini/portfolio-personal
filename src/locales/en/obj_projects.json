@@ -1,12 +1,25 @@
 {
-  "title": "From Code to Delivery",
+  "title": "From code to delivery",
   "breadcrumb_begin": "Projects",
   "breadcrumb_end": "Specifications",
-  "sub_title": "Throughout my career, I have participated in the creation of projects that positively impacted people and businesses. Here you can browse through sites I have developed that are used by thousands of people every day. Most of the projects listed are still active; some have been discontinued, and others are not included due to contractual reasons.",
+  "sub_title": "Sites and products I helped build — many still live and used daily. Some were discontinued; others are omitted for contractual reasons.",
   "projects_title": "Featured Projects",
-  "projects_all": "Full list of projects",
+  "projects_all": "All projects",
   "github": "Project available on GitHub",
-  "return": "Return",
+  "return": "Back",
+  "featured_badge": "Featured",
+  "view_details": "View details",
+  "demo": "Demo",
+  "visit_site": "Visit site",
+  "status_online": "Online",
+  "status_offline": "Offline",
+  "empty_filter": "No projects found for this filter.",
+  "filters": {
+    "all": "All",
+    "fullstack": "Full Stack",
+    "frontend": "Frontend",
+    "backend": "Backend"
+  },
   "projects": [
     {
       "id": 1,
@@ -19,7 +32,7 @@
         "This project also serves as my testing lab, where I implement new libraries and technologies before using them in real-world applications. It helps me stay up-to-date with the latest market trends and maintain the quality and efficiency of my work."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Modern frontend with Next.js and TypeScript",
         "Animations with Framer Motion",
@@ -40,11 +53,11 @@
       ],
       "achievementsTitle": "Achievements",
       "achievements": [
-        "Refined and smooth UX",
-        "High performance",
+        "UX in 3 languages with dark mode",
+        "Performance optimized for Next.js and Vercel",
         "Internationalization ready for recruiters",
-        "Reusability and scalability",
-        "Integration with external services"
+        "Reusable, scalable components",
+        "Working contact form"
       ]
     },
     {
@@ -56,7 +69,7 @@
         "The website of the DOVE Research Centre (Center for Research on Human Development and Violence) at the Federal University of Pelotas was developed as a bilingual institutional platform, offering content in both English and Portuguese. With a clear and modern layout, the site showcases the center's work in a highly accessible and well-structured way."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Multilingual navigation structure",
         "Responsive and hierarchical menu",
@@ -79,7 +92,7 @@
       ],
       "achievementsTitle": "Achievements",
       "achievements": [
-        "International accessibility",
+        "Bilingual institutional site with CMS for the editorial team",
         "Engagement with target audience",
         "Academic transparency and visibility",
         "Established institutional authority",
@@ -95,7 +108,7 @@
         "The JA Índio Jiu Jitsu project, in Pelotas, RS, was designed as a responsive, organized site offering free class scheduling, class times, program descriptions (by level and audience), testimonials, contact information, and the academy's philosophy — with the goal of showcasing the academy's work, inspiring new students, and strengthening the connection with the audience."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Institutional presentation of the academy",
         "Class calendar",
@@ -133,7 +146,7 @@
         "The platform is compatible with classroom, lab, mobile, and offline environments, promoting digital inclusion in schools. Its hybrid architecture prioritizes security (LGPD), accessibility, and scalability, currently used in over 1,700 schools with thousands of active users."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Gamified educational platform",
         "Full management of learning paths via backoffice",
@@ -170,7 +183,7 @@
         "The portal is an exclusive area for store owners and their teams, focused on corporate communication, sales info, contract management, tax audits, invoice handling, benefits, news, promotions, and internal processes. Users access through a secure, encrypted interface with user/password authentication, in full compliance with LGPD, ensuring access to functions according to profile and contract."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Login area for store owners",
         "Sales reporting",
@@ -207,7 +220,7 @@
         "The goal was the same as the current version: to showcase my work, studies, and experiments. Feel free to explore the previous version."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Modern frontend with Next.js and TypeScript",
         "Animations with Framer Motion",
@@ -232,14 +245,14 @@
     },
     {
       "id": 7,
-      "title": "Currículum Online",
+      "title": "Online résumé",
       "description": "A minimalist and highly functional online résumé page, featuring clear sections for experience, stack, projects, and contact — with light animations, responsive design, and optimized performance.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The goal is to offer a high-performance, clear, and responsive online résumé. Built with modern technologies, the site has a clean, organized structure with smooth navigation across sections. It is entirely mobile-first, with a strong reading and interaction experience on any device, smooth transitions, and subtle animations."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Modern frontend with Next.js and TypeScript",
         "Animations with Framer Motion",
@@ -267,7 +280,7 @@
         "The nav9.tech website was developed as an institutional platform to present the company, its services, and technological solutions. With a modern and responsive design, the site offers a clear and professional experience for visitors interested in learning about the services offered by the company."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Modern and responsive design",
         "Institutional presentation",
@@ -298,7 +311,7 @@
         "The platform was developed to support academics, country teams, and international organizations in advancing evidence-based decision-making and accountability for RMNCH+N outcomes."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Interactive data platform",
         "Country and indicator selection",
@@ -335,7 +348,7 @@
         "Special attention was also given to performance, responsiveness, and local SEO, with dedicated page structure to strengthen accounting-related regional searches and improve contact conversion."
       ],
       "stackTitle": "Technology Stack",
-      "featuresTitle": "Implemented Features",
+      "featuresTitle": "Implemented features",
       "features": [
         "Institutional website with dedicated pages (About, Open Company, Switch Accountant, and Office)",
         "Conversion-oriented content structure with strategic CTAs",
@@ -364,7 +377,7 @@
   ],
   "load": "Load more",
   "contact": {
-    "title": "Ready for a pull request of ideas",
+    "title": "Got a project in mind?",
     "description": "I am open to new projects, consulting, and conversations about building digital products or game development. Feel free to message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a message on the ",
     "contact": "contact page."
   }

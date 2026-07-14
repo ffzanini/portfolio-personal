@@ -1,6 +1,8 @@
+"use client";
+
 import { memo } from "react";
 import Link from "next/link";
-import { LuExternalLink, LuGithub, LuSparkles } from "react-icons/lu";
+import { LuExternalLink, LuGithub, LuArrowRight } from "react-icons/lu";
 
 import { Project } from "@/app/data/projects";
 import { cn } from "@/libs/cn";
@@ -11,145 +13,137 @@ import { withLocalePath } from "@/libs/i18n";
 interface CardProps {
   project: Project;
   index: number;
-  lower: boolean;
+  /** Featured layout: larger emphasis, badge, all tech tags */
+  featured?: boolean;
 }
 
-function CardComponent({ project, index, lower }: Readonly<CardProps>) {
+function formatYear(date: string) {
+  const year = new Date(date).getFullYear();
+  return Number.isFinite(year) ? String(year) : null;
+}
+
+function CardComponent({
+  project,
+  index,
+  featured = false,
+}: Readonly<CardProps>) {
   const { translations, location } = useTranslation();
-  const projectTranslate = translations.projects.projects.find(
+  const copy = translations.projects;
+  const projectTranslate = copy.projects.find(
     (translate) => translate.id === project.id,
   );
+  const detailsHref = withLocalePath(
+    location,
+    `/projects/${project.navigation}`,
+  );
+  const year = formatYear(project.date);
+  const categoryLabel =
+    copy.filters[project.category as keyof typeof copy.filters] ??
+    project.category;
+  const techPreview = featured
+    ? project.technologies
+    : project.technologies.slice(0, 4);
+  const remainingTech = featured
+    ? 0
+    : Math.max(0, project.technologies.length - techPreview.length);
 
   return (
-    <div className="flex flex-col group h-full">
-      <div
-        className="flex flex-col h-full rounded-xl overflow-hidden ring-1 ring-black/10 dark:ring-black/40"
-        style={{ animationDelay: `${index * 0.2}s` }}
+    <article
+      className="group flex h-full flex-col overflow-hidden rounded-xl ring-1 ring-black/10 dark:ring-white/10 bg-white-theme/80 dark:bg-dark-theme/80 transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-600/10"
+      style={{ animationDelay: `${index * 50}ms` }}
+    >
+      <Link
+        href={detailsHref}
+        className="flex flex-1 flex-col rounded-t-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >
-        <div className="aspect-video overflow-hidden border-b border-black/10 dark:border-black/40">
+        <div className="aspect-video overflow-hidden border-b border-black/10 dark:border-white/10">
           <ZoomImage
-            className="aspect-video w-full object-cover group-hover:scale-125 transition-transform duration-700"
+            className="aspect-video w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
             width={1200}
             height={675}
             src={project.image}
             alt={String(projectTranslate?.title)}
-            style={{ willChange: "transform" }}
           />
         </div>
-        <div className="flex flex-col bg-white-theme/80 dark:bg-dark-theme/80 flex-1 px-4 pt-4 pb-6">
-          <div className="flex items-start justify-between gap-2 mb-2">
-            <h3 className="text-2xl font-bold leading-snug truncate">
-              {projectTranslate?.title}
-            </h3>
-            {!lower && (
-              <div className="font-semibold bg-primary-300 border border-primary-800 dark:border-primary-300 dark:bg-primary-800 px-2 rounded-full whitespace-nowrap">
-                Destaque
-              </div>
+
+        <div className="flex flex-1 flex-col gap-3 px-4 pb-3 pt-4">
+          <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-black/55 dark:text-white/55">
+            <span className="rounded-md bg-black/5 px-2 py-0.5 capitalize dark:bg-white/5">
+              {categoryLabel}
+            </span>
+            {year && <span>{year}</span>}
+            {featured && (
+              <span className="rounded-md bg-primary-600/15 px-2 py-0.5 text-primary-800 dark:text-primary-300">
+                {copy.featured_badge}
+              </span>
             )}
           </div>
 
-          <div className="flex flex-col flex-1 gap-2">
-            <p className="leading-relaxed">{projectTranslate?.description}</p>
+          <h3 className="text-xl font-bold leading-snug line-clamp-2 sm:text-2xl">
+            {projectTranslate?.title}
+          </h3>
+
+          <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-black/70 dark:text-white/70 sm:text-base">
+            {projectTranslate?.description}
+          </p>
+
+          <div className="flex flex-wrap gap-1.5">
+            {techPreview.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-md border border-black/10 bg-black/5 px-2 py-0.5 text-xs font-medium dark:border-white/10 dark:bg-white/5"
+              >
+                {tag}
+              </span>
+            ))}
+            {remainingTech > 0 && (
+              <span className="px-1.5 py-0.5 text-xs text-black/45 dark:text-white/45">
+                +{remainingTech}
+              </span>
+            )}
           </div>
 
-          <div className="mt-4">
-            <div className="flex flex-wrap gap-2 mb-4">
-              {(lower
-                ? project.technologies.slice(0, 3)
-                : project.technologies
-              ).map((tag) => (
-                <span
-                  key={tag}
-                  className={cn(
-                    "text-xs font-medium px-2 py-0.5 bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl",
-                  )}
-                >
-                  {tag}
-                </span>
-              ))}
-              {lower && project.technologies.length > 3 && (
-                <span className="px-2 py-1 text-xs text-gray-400">
-                  +{project.technologies.length - 3}
-                </span>
-              )}
-            </div>
-
-            <div className="flex space-x-2">
-              {!lower ? (
-                <>
-                  {project.github && (
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
-                    >
-                      <LuGithub className="md:mr-2 h-4 w-4" />
-                      <span className="hidden md:flex">GitHub</span>
-                    </Link>
-                  )}
-                  {project.demo && (
-                    <Link
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-3 py-1.5 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
-                    >
-                      <LuExternalLink className="md:mr-2 h-4 w-4" />
-                      <span className="hidden md:flex">Demo</span>
-                    </Link>
-                  )}
-                  <Link
-                    href={withLocalePath(
-                      location,
-                      `/projects/${project.navigation}`,
-                    )}
-                    className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-3 py-1.5 rounded-sm backdrop-blur-sm group/sparkles"
-                  >
-                    <LuSparkles className="hidden md:flex mr-2 h-4 w-4 group-hover/sparkles:rotate-360 duration-500 transition-transform" />
-                    Ver detalhes
-                  </Link>
-                </>
-              ) : (
-                <>
-                  {project.github && (
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="GitHub"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
-                    >
-                      <LuGithub className="h-5 w-5" aria-hidden={true} />
-                    </Link>
-                  )}
-                  {project.demo && (
-                    <Link
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="Demo"
-                      className="flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-2 py-1 rounded-sm transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
-                    >
-                      <LuExternalLink className="h-5 w-5" aria-hidden={true} />
-                    </Link>
-                  )}
-                  <Link
-                    href={withLocalePath(
-                      location,
-                      `/projects/${project.navigation}`,
-                    )}
-                    className="flex flex-row justify-center items-center border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-2 py-1 rounded-sm backdrop-blur-sm group"
-                  >
-                    Ver detalhes
-                  </Link>
-                </>
-              )}
-            </div>
-          </div>
+          <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-700 dark:text-primary-300">
+            {copy.view_details}
+            <LuArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+          </span>
         </div>
-      </div>
-    </div>
+      </Link>
+
+      {(project.demo || project.github) && (
+        <div className="flex flex-wrap items-center gap-2 border-t border-black/10 px-4 py-3 dark:border-white/10">
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={copy.demo}
+              className="inline-flex items-center gap-1.5 rounded-md bg-linear-to-r from-primary-400 to-primary-600 px-3 py-1.5 text-sm font-semibold text-white shadow-md shadow-primary-600/20 transition-[transform,background-color] duration-150 hover:from-primary-500 hover:to-primary-700 active:scale-[0.97]"
+            >
+              <LuExternalLink className="h-4 w-4" aria-hidden />
+              <span>{copy.demo}</span>
+            </a>
+          )}
+
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-semibold",
+                "border border-black/15 transition-colors duration-150 hover:bg-black/5",
+                "dark:border-white/15 dark:hover:bg-white/10",
+              )}
+            >
+              <LuGithub className="h-4 w-4" aria-hidden />
+              <span>GitHub</span>
+            </a>
+          )}
+        </div>
+      )}
+    </article>
   );
 }
 

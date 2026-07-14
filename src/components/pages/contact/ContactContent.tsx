@@ -104,20 +104,22 @@ export function ContactContent() {
                   </span>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                 {translations.contact.testimonials.testimonials.map(
                   (testimonial) => (
                     <div
                       key={testimonial.name}
-                      className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                      className="flex h-full flex-col bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
                     >
                       <LuQuote className="w-8 h-8 text-primary-600 mb-4 shrink-0" />
-                      <p className="italic mb-6 grow">
+                      <p className="italic leading-relaxed text-[0.95rem] mb-6 grow">
                         &quot;{testimonial.quote}&quot;
                       </p>
-                      <div className="mt-auto">
-                        <p className="font-semibold ">{testimonial.name}</p>
-                        <p className="text-sm ">{testimonial.title}</p>
+                      <div className="mt-auto border-t border-black/10 dark:border-white/10 pt-4">
+                        <p className="font-semibold">{testimonial.name}</p>
+                        <p className="text-sm text-black/70 dark:text-white/70">
+                          {testimonial.title}
+                        </p>
                       </div>
                     </div>
                   ),
@@ -161,6 +163,13 @@ function ContactForm() {
 
   const enableSubmit = formState.isDirty && formState.isValid;
 
+  let submitLabel = translations.contact.button_text_not_ready;
+  if (isSubmitting) {
+    submitLabel = translations.contact.button_text_sending;
+  } else if (enableSubmit) {
+    submitLabel = translations.contact.button_text_ready;
+  }
+
   const onSubmit = handleSubmit(async ({ name, email, message }) => {
     setIsSubmitting(true);
     toast.promise(
@@ -172,7 +181,7 @@ function ContactForm() {
         body: JSON.stringify({ name, email, message }),
       })
         .then((res) => {
-          if (!res.ok) throw new Error("Erro na requisição");
+          if (!res.ok) throw new Error(translations.contact.error);
           return res.json();
         })
         .then(() => {
@@ -218,7 +227,13 @@ function ContactForm() {
             <input
               {...register("email", {
                 required: true,
-                pattern: /\S+@\S+\.\S+/,
+                validate: (value) => {
+                  const at = value.indexOf("@");
+                  if (at < 1 || at !== value.lastIndexOf("@")) return false;
+                  const domain = value.slice(at + 1);
+                  const dot = domain.lastIndexOf(".");
+                  return dot > 0 && dot < domain.length - 1 && !value.includes(" ");
+                },
               })}
               placeholder={translations.contact.form.email}
               className={cn(
@@ -240,11 +255,7 @@ function ContactForm() {
                 type="submit"
                 className="disabled:grayscale disabled:cursor-not-allowed cursor-pointer w-full flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
               >
-                {isSubmitting
-                  ? (translations.contact as typeof translations.contact & { button_text_sending: string }).button_text_sending
-                  : enableSubmit
-                    ? translations.contact.button_text_ready
-                    : translations.contact.button_text_not_ready}
+                {submitLabel}
               </button>
             </Tooltip>
           </div>

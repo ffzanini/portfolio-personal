@@ -1,4 +1,3 @@
-/** @type {import('next-sitemap').IConfig} */
 const SITE_URL = "https://ffzanini.dev";
 
 const projectSlugs = [
@@ -11,6 +10,7 @@ const projectSlugs = [
   "resume",
 ];
 
+/** @type {import('next-sitemap').IConfig} */
 const config = {
   siteUrl: SITE_URL,
   generateRobotsTxt: true,
@@ -31,18 +31,21 @@ const config = {
     const base = [
       await config.transform(config, "/", { priority: 1, changefreq: "weekly" }),
       await config.transform(config, "/about"),
+      await config.transform(config, "/arcade"),
+      await config.transform(config, "/arcade/pixel-art"),
       await config.transform(config, "/contact"),
       await config.transform(config, "/projects"),
       await config.transform(config, "/stack"),
     ];
-    const projectPaths = await Promise.all(
-      projectSlugs.map((slug) =>
-        config.transform(config, `/projects/${slug}`, {
+    const projectPaths = [];
+    for (const slug of projectSlugs) {
+      projectPaths.push(
+        await config.transform(config, `/projects/${slug}`, {
           priority: 0.6,
           changefreq: "monthly",
-        })
-      )
-    );
+        }),
+      );
+    }
     return [...base, ...projectPaths];
   },
 };

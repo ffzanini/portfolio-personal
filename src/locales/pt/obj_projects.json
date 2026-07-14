@@ -2,11 +2,24 @@
   "title": "Do código à entrega",
   "breadcrumb_begin": "Projetos",
   "breadcrumb_end": "Especificações",
-  "sub_title": "Ao longo da carreira, participei da criação de projetos que impactaram positivamente pessoas e negócios. Aqui você pode navegar por sites que desenvolvi e que são usados por milhares de pessoas todos os dias. A maioria dos projetos listados ainda está ativa; outros foram descontinuados, e alguns não constam aqui por motivos contratuais.",
+  "sub_title": "Sites e produtos que ajudei a construir — muitos ainda ativos e usados no dia a dia. Alguns foram descontinuados; outros não aparecem por motivos contratuais.",
   "projects_title": "Projetos em foco",
-  "projects_all": "Lista completa de projetos",
+  "projects_all": "Todos os projetos",
   "github": "Projeto disponível no GitHub",
   "return": "Voltar",
+  "featured_badge": "Destaque",
+  "view_details": "Ver detalhes",
+  "demo": "Demo",
+  "visit_site": "Visitar site",
+  "status_online": "Online",
+  "status_offline": "Offline",
+  "empty_filter": "Nenhum projeto encontrado para este filtro.",
+  "filters": {
+    "all": "Todos",
+    "fullstack": "Full Stack",
+    "frontend": "Frontend",
+    "backend": "Backend"
+  },
   "projects": [
     {
       "id": 1,
@@ -21,7 +34,7 @@
 
       "stackTitle": "Stack Tecnológico",
 
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Frontend moderno com Next.js e TypeScript",
         "Animações com Framer Motion",
@@ -33,7 +46,7 @@
         "Preloading inteligente"
       ],
 
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Gerenciamento multilingue eficiente",
         "Controle preciso de animações",
@@ -42,10 +55,10 @@
         "Linguagem selecionada dinamicamente baseada na localidade de acesso"
       ],
 
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
-        "UX refinada e fluida",
-        "Alta performance",
+        "UX em 3 idiomas com dark mode",
+        "Performance otimizada para Next.js e Vercel",
         "Internacionalização pronta para recrutadores",
         "Reutilização e escalabilidade",
         "Integração com produtos externos"
@@ -54,7 +67,7 @@
     {
       "id": 2,
       "title": "DOVE Research Centre",
-      "description": "Apresentar com clareza linhas de pesquisa, oferecer acesso a publicações científicas, perfis de equipe, inscrições para o grupo, tudo em uma estrutura responsiva e organizada.",
+      "description": "Apresenta linhas de pesquisa, publicações científicas, perfis da equipe e inscrições em uma estrutura responsiva e organizada.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
         "O site do DOVE Research Centre (Centro de Pesquisas em Desenvolvimento Humano e Violência) da Universidade Federal de Pelotas foi desenvolvido como uma plataforma institucional bilíngue, oferecendo seu conteúdo em inglês e português. Com uma apresentação clara e moderna, o site destaca o trabalho realizado pelo centro de forma extremamente acessível e bem estruturada."
@@ -62,7 +75,7 @@
 
       "stackTitle": "Stack Tecnológico",
 
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Estrutura de navegação multilingue",
         "Menu responsivo e hierarquizado",
@@ -75,7 +88,7 @@
         "Painel administrativo para controle total das páginas do site"
       ],
 
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Internacionalização em site institucional",
         "Gerenciamento eficiente de PDFs",
@@ -85,12 +98,12 @@
         "Design leve e acessível"
       ],
 
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Acessibilidade internacional",
         "Engajamento com o público-alvo",
         "Transparência e visibilidade acadêmica",
-        "Autoridade institucional consolidada",
+        "Site bilíngue institucional com CMS para a equipe editorial",
         "Escalabilidade editorial"
       ]
     },
@@ -105,7 +118,7 @@
 
       "stackTitle": "Stack Tecnológico",
 
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Apresentação institucional da academia",
         "Calendário de aulas",
@@ -116,7 +129,7 @@
         "Páginas para divulgação de cursos"
       ],
 
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Organização dinâmica dos horários das aulas",
         "Galeria leve e acessível",
@@ -124,7 +137,7 @@
         "Responsividade e compatibilidade multiplataforma"
       ],
 
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Melhora significativa no visual profissional",
         "Maior conversão de alunos",
@@ -147,7 +160,7 @@
 
       "stackTitle": "Stack Tecnológico",
 
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Plataforma educacional gamificada",
         "Gerenciamento de todas trilhas e plataforma através do backoffice",
@@ -158,7 +171,7 @@
         "Design exclusivo de acesso"
       ],
 
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Escalabilidade e infraestrutura distribuída",
         "Sincronização online/offline",
@@ -168,7 +181,7 @@
         "Layout exclusivo conforme o tipo de acesso (perfil de escola)"
       ],
 
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Adoção ampla em instituições (+1700 escolas)",
         "Aumento na aprendizagem e atenção do aluno",
@@ -179,7 +192,7 @@
     {
       "id": 5,
       "title": "Iguatemi S.A.",
-      "description": "O Portal Iguatemi é um B2B bem protegido que permite o lojista acessar informações de seu contrato, enviar documentos e participar de oportunidades de marketing dentro da rede Iguatemi, tudo seguindo os padrões de LGPD.",
+      "description": "O Portal Iguatemi é uma plataforma B2B segura que permite ao lojista acessar informações do contrato, enviar documentos e participar de oportunidades de marketing na rede Iguatemi, em conformidade com a LGPD.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
         "Durante meu período na nav9.tech, atuei como parceiro de tecnologia de várias empresas; entre elas, colaborei por mais de 3 anos no desenvolvimento dos produtos dos Shoppings Iguatemi, com foco no Portal do Lojista.",
@@ -188,7 +201,7 @@
 
       "stackTitle": "Stack Tecnológico",
 
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Área de login para lojistas",
         "Informe de vendas",
@@ -200,7 +213,7 @@
         "Geolocalização de shoppings"
       ],
 
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Gestão de acessos paralelos",
         "Conformidade com LGPD e segurança da informação",
@@ -209,7 +222,7 @@
         "SEO e performance para múltiplas seções"
       ],
 
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Empreendimento amplo e escalável contemplando 15 shoppings e mais de 2800 lojas",
         "Aumento de 83% nas auditorias fiscais",
@@ -229,7 +242,7 @@
 
       "stackTitle": "Stack Tecnológico",
 
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Frontend moderno com Next.js e TypeScript",
         "Animações com Framer Motion",
@@ -239,7 +252,7 @@
         "Sistema de traduções"
       ],
 
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Gerenciamento multilingue eficiente",
         "Controle preciso de animações",
@@ -247,7 +260,7 @@
         "Sanitização segura de HTML dinâmico"
       ],
 
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Alta performance",
         "Internacionalização pronta para recrutadores",
@@ -265,7 +278,7 @@
 
       "stackTitle": "Stack Tecnológico",
 
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Frontend moderno com Next.js e TypeScript",
         "Animações com Framer Motion",
@@ -273,14 +286,14 @@
         "Sistema de traduções"
       ],
 
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Gerenciamento multilingue eficiente",
         "Deploy e cache com a Vercel",
         "Sanitização segura de HTML dinâmico"
       ],
 
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Alta performance",
         "Internacionalização pronta para recrutadores"
@@ -289,26 +302,26 @@
     {
       "id": 8,
       "title": "nav9.tech",
-      "description": "Site institucional da nav9.tech, empresa de tecnologia focada em desenvolvimento de soluções digitais inovadoras.",
+      "description": "Site institucional da nav9.tech, empresa de tecnologia focada em desenvolvimento de produtos digitais.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
         "O site da nav9.tech foi desenvolvido como plataforma institucional para apresentar a empresa, seus serviços e soluções tecnológicas. Com design moderno e responsivo, o site oferece uma experiência clara e profissional para visitantes interessados em conhecer os serviços oferecidos pela empresa."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Design responsivo e moderno",
         "Apresentação institucional",
         "Seções de serviços e soluções",
         "Navegação intuitiva"
       ],
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Design profissional e atrativo",
         "Performance e otimização",
         "Responsividade multiplataforma"
       ],
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Presença digital profissional",
         "Melhor comunicação com clientes",
@@ -326,7 +339,7 @@
         "A plataforma foi desenvolvida para apoiar acadêmicos, equipes de países e organizações internacionais no avanço da tomada de decisão baseada em evidências e na responsabilização pelos resultados de RMNCH+N."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Plataforma de dados interativa",
         "Seleção de países e indicadores",
@@ -336,7 +349,7 @@
         "Interface multilingue",
         "Design responsivo"
       ],
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Gerenciamento de grandes volumes de dados",
         "Visualização complexa de indicadores",
@@ -344,7 +357,7 @@
         "Padronização e harmonização de dados",
         "Interface intuitiva para dados técnicos"
       ],
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Acesso facilitado a dados padronizados",
         "Suporte à pesquisa e análise de políticas",
@@ -363,7 +376,7 @@
         "Também houve atenção especial para performance, responsividade e SEO local, com estrutura de páginas dedicada para fortalecer buscas relacionadas a contabilidade na região e aumentar a taxa de contato comercial."
       ],
       "stackTitle": "Stack Tecnológico",
-      "featuresTitle": "Funcionalidades Implementadas",
+      "featuresTitle": "Funcionalidades implementadas",
       "features": [
         "Site institucional com páginas dedicadas (Sobre, Abrir empresa, Mudar de contador e Escritório)",
         "Estrutura de conteúdo orientada a conversão com CTAs estratégicos",
@@ -372,7 +385,7 @@
         "Integração de contato via WhatsApp para atendimento rápido",
         "Organização visual focada em legibilidade e confiança"
       ],
-      "challengesTitle": "Desafios Técnicos",
+      "challengesTitle": "Desafios técnicos",
       "challenges": [
         "Equilibrar linguagem comercial com conteúdo técnico de contabilidade",
         "Estruturar páginas de serviço sem poluir a experiência de navegação",
@@ -380,7 +393,7 @@
         "Consolidar SEO local para intenção de busca regional",
         "Manter consistência de identidade visual em todos os pontos de contato"
       ],
-      "achievementsTitle": "Resultados Alcançados",
+      "achievementsTitle": "Resultados alcançados",
       "achievements": [
         "Presença digital institucional sólida e profissional",
         "Jornada de contato mais clara para novos clientes",
@@ -393,7 +406,7 @@
   "load": "Carregar mais",
 
   "contact": {
-    "title": "Pronto para um pull request de ideias",
+    "title": "Tem um projeto em mente?",
     "description": "Estou aberto a novos projetos, consultorias e trocas sobre construção de produtos digitais ou desenvolvimento de jogos. Sinta-se à vontade para me enviar uma mensagem no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou deixar um recado na ",
     "contact": "página de contato."
   }

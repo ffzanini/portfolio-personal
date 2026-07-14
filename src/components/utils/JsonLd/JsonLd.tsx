@@ -67,11 +67,12 @@ const personSchema = {
   },
   alumniOf: {
     "@type": "Organization",
-    name: "Universidade",
+    name: "Gestão da Tecnologia da Informação",
   },
   worksFor: {
     "@type": "Organization",
-    name: "Freelancer",
+    name: "Iguatemi S.A.",
+    url: "https://www.iguatemi.com.br",
   },
   award: "Faixa Marrom de Jiu Jitsu",
   knowsLanguage: ["pt-BR", "en", "es"],
@@ -94,14 +95,6 @@ const websiteSchema = {
     url: SITE_URL,
   },
   inLanguage: ["pt-BR", "en", "es"],
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/pt/projects?search={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const organizationSchema = {

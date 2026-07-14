@@ -1,0 +1,140 @@
+{
+  "title": "Arcade",
+  "sub_title": "Game dev, pixel art, and indie experiments — from prototype to screen.",
+  "coming_soon": {
+    "eyebrow": "INSERT COIN",
+    "title": "Under construction",
+    "description": "The Arcade is still being built. Soon: videos, indie games, and pixel art right here."
+  },
+  "header": {
+    "eyebrow": "PRESS START",
+    "title": "Game dev behind the scenes",
+    "description": "On the channel I share my process for making games: pixel art, mechanics, tools, my day-to-day, and design decisions.",
+    "cta": "Open YouTube channel"
+  },
+  "videos": {
+    "title": "Keep exploring the channel",
+    "sub_title": "Tutorials, making-of videos, and behind-the-scenes game development.",
+    "empty": "Channel videos show up here automatically. Meanwhile, visit YouTube so you don't miss anything.",
+    "watch": "Watch on YouTube",
+    "latest_badge": "New"
+  },
+  "games": {
+    "title": "Games developed",
+    "sub_title": "The latest published builds — prototypes, jams, and indie experiments.",
+    "play": "Play on itch.io",
+    "see_all": "See all on itch.io",
+    "empty": "New games will show up here as they are published. Meanwhile, follow the itch.io profile.",
+    "status": {
+      "released": "Released",
+      "prototype": "Prototype",
+      "wip": "In progress"
+    },
+    "items": []
+  },
+  "pixelart": {
+    "title": "Pixel art",
+    "sub_title": "Hand-crafted sprites and icons — every pixel on purpose.",
+    "see_more": "See more",
+    "items": [
+      {
+        "id": "hero",
+        "title": "Hero",
+        "description": "A 16×16 protagonist with a readable silhouette at low resolution."
+      },
+      {
+        "id": "slime",
+        "title": "Slime",
+        "description": "A simple enemy, great for hitbox tests and combat feedback."
+      },
+      {
+        "id": "sword",
+        "title": "Blade",
+        "description": "A combat item with diagonal read and strong contrast."
+      },
+      {
+        "id": "chest",
+        "title": "Chest",
+        "description": "Reward prop with a highlighted center lock."
+      },
+      {
+        "id": "key",
+        "title": "Key",
+        "description": "Dungeon key — clear read even at 16×16."
+      },
+      {
+        "id": "heart",
+        "title": "Life",
+        "description": "Arcade-style HP HUD with few pixels and maximum impact."
+      },
+      {
+        "id": "coin",
+        "title": "Coin",
+        "description": "Score coin with a center highlight for quick feedback."
+      },
+      {
+        "id": "mana",
+        "title": "Mana",
+        "description": "Mana vial for secondary resource bars."
+      },
+      {
+        "id": "potion",
+        "title": "Potion",
+        "description": "Classic pickup — glow and color to stand out on the floor."
+      },
+      {
+        "id": "gem",
+        "title": "Gem",
+        "description": "Rare loot crystal with a diamond silhouette."
+      },
+      {
+        "id": "scroll",
+        "title": "Scroll",
+        "description": "Quest/lore item with readable lines in miniature."
+      },
+      {
+        "id": "bat",
+        "title": "Bat",
+        "description": "Aerial enemy study with open wings."
+      },
+      {
+        "id": "hero-alt",
+        "title": "Hero (alt)",
+        "description": "Protagonist palette variation for mood tests."
+      },
+      {
+        "id": "torch",
+        "title": "Torch",
+        "description": "Lighting prop with suggested flicker in the flame."
+      }
+    ],
+    "collection": {
+      "title": "Pixel art collection",
+      "sub_title": "Full set organized by game packs and asset type.",
+      "breadcrumb": "Arcade",
+      "filter_group": "Group",
+      "filter_type": "Type",
+      "filter_all": "All",
+      "empty": "No sprites found with these filters.",
+      "results": "sprites",
+      "groups": {
+        "dungeon-kit": "Dungeon Kit",
+        "ui-hud": "UI / HUD",
+        "pickups": "Pickups",
+        "studies": "Studies"
+      },
+      "types": {
+        "character": "Character",
+        "enemy": "Enemy",
+        "item": "Item",
+        "prop": "Prop",
+        "ui": "UI"
+      }
+    }
+  },
+  "footer": {
+    "title": "Want to follow the next stages?",
+    "message": "Subscribe to the channel and follow builds, fails, and wins from the indie process.",
+    "cta": "Go to YouTube"
+  }
+}

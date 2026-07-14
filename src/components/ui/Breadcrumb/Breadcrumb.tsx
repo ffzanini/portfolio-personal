@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SITE_URL } from "@/constants/seo";
+import { useTranslation } from "@/context";
 
 type BreadcrumbProps = {
   path: Array<{ label?: string; link?: string }>;
@@ -11,8 +12,9 @@ type BreadcrumbProps = {
 
 export function Breadcrumb({ path, dirty }: Readonly<BreadcrumbProps>) {
   const pathname = usePathname();
+  const { translations } = useTranslation();
   const validPath = path.filter((item) => item.label);
-  
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -30,7 +32,7 @@ export function Breadcrumb({ path, dirty }: Readonly<BreadcrumbProps>) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <nav aria-label="Breadcrumb" className="flex flex-row">
+      <nav aria-label={translations.ui.breadcrumb} className="flex flex-row">
         {path.map(({ label, link }, index) => {
           const IS_NOT_FIRST = index !== 0;
           const IS_NOT_LAST = index !== path.length - 1;
@@ -40,7 +42,9 @@ export function Breadcrumb({ path, dirty }: Readonly<BreadcrumbProps>) {
           return (
             <Fragment key={label}>
               {IS_NOT_FIRST && (
-                <span className="mx-2 text-base 2xl:text-lg" aria-hidden="true">›</span>
+                <span className="mx-2 text-base 2xl:text-lg" aria-hidden="true">
+                  ›
+                </span>
               )}
 
               {link && IS_NOT_LAST && !dirty ? (
@@ -52,7 +56,9 @@ export function Breadcrumb({ path, dirty }: Readonly<BreadcrumbProps>) {
                   {label}
                 </Link>
               ) : (
-                <span className="text-base 2xl:text-lg" aria-current="page">{label}</span>
+                <span className="text-base 2xl:text-lg" aria-current="page">
+                  {label}
+                </span>
               )}
             </Fragment>
           );

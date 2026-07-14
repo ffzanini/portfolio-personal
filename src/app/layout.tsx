@@ -10,9 +10,8 @@ import {
 import { fontMavenPro } from "./fonts";
 import "./globals.css";
 
-const title = `${PERSON.name} | ${PERSON.jobTitle} | Desenvolvedor React & Next.js | ffzanini`;
-const description =
-  "Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em desenvolvimento web, React, Next.js e TypeScript. Explore projetos desenvolvidos, conheça minha stack tecnológica e entre em contato. Desenvolvedor frontend e fullstack disponível para novos desafios em Pelotas, Brasil.";
+const title = `${PERSON.name} | ${PERSON.jobTitle} | ffzanini`;
+const description = PERSON.description;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -37,8 +36,8 @@ export const metadata: Metadata = {
     siteName: `${PERSON.name} | Portfolio`,
     title,
     description,
-    locale: "pt_BR",
-    alternateLocale: ["en_US", "es_ES"],
+    locale: "en_US",
+    alternateLocale: ["pt_BR", "es_ES"],
     images: [
       {
         url: DEFAULT_OG_IMAGE.url,
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
     creator: "@ffzanini",
   },
   alternates: {
-    canonical: `${SITE_URL}/pt`,
+    canonical: `${SITE_URL}/en`,
     languages: {
       "pt-BR": `${SITE_URL}/pt`,
       en: `${SITE_URL}/en`,

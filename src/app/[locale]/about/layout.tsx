@@ -1,24 +1,31 @@
 import type { Metadata } from "next";
-import { SITE_URL, PERSON } from "@/constants/seo";
 
-export const metadata: Metadata = {
-  title: "Sobre Mim",
-  description:
-    "Conheça Felipe Frantz Zanini (ffzanini): Senior Software Engineer & Frontend Architect especializado em React, Next.js e TypeScript.",
-  alternates: {
-    canonical: `${SITE_URL}/pt/about`,
-    languages: {
-      "pt-BR": `${SITE_URL}/pt/about`,
-      en: `${SITE_URL}/en/about`,
-      es: `${SITE_URL}/es/about`,
-    },
-  },
-  openGraph: {
-    title: `Sobre Mim | ${PERSON.name} - ${PERSON.jobTitle}`,
-    url: `${SITE_URL}/pt/about`,
-    type: "profile",
-  },
+import { isValidLocale, normalizeLocale } from "@/libs/i18n";
+import { buildPageMetadata } from "@/libs/page-metadata";
+import { loadLocale } from "@/locales/load-locale";
+
+type LayoutProps = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({
+  params,
+}: Readonly<LayoutProps>): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  if (!isValidLocale(rawLocale)) return {};
+
+  const locale = normalizeLocale(rawLocale);
+  const translations = await loadLocale(locale);
+
+  return buildPageMetadata({
+    locale,
+    path: "/about",
+    title: translations.ui.seo.about_title,
+    description: translations.ui.seo.about_description,
+    openGraphType: "profile",
+  });
+}
 
 export default function AboutLayout({
   children,

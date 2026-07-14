@@ -1,0 +1,140 @@
+{
+  "title": "Arcade",
+  "sub_title": "Game dev, pixel art y experimentos indie — del prototipo a la pantalla.",
+  "coming_soon": {
+    "eyebrow": "INSERT COIN",
+    "title": "En construcción",
+    "description": "El Arcade aún se está montando. Pronto: videos, juegos indie y pixel art por aquí."
+  },
+  "header": {
+    "eyebrow": "PRESS START",
+    "title": "Bastidores del game dev",
+    "description": "En el canal comparto mi proceso para crear juegos: pixel art, mecánicas, herramientas, mi día a día y decisiones de diseño.",
+    "cta": "Abrir canal de YouTube"
+  },
+  "videos": {
+    "title": "Sigue explorando el canal",
+    "sub_title": "Tutoriales, videos de proceso y detrás de cámaras del desarrollo de juegos.",
+    "empty": "Los videos del canal aparecen aquí automáticamente. Mientras tanto, visita YouTube para no perderte nada.",
+    "watch": "Ver en YouTube",
+    "latest_badge": "Nuevo"
+  },
+  "games": {
+    "title": "Juegos desarrollados",
+    "sub_title": "Los últimos builds publicados — prototipos, jams y experimentos indie.",
+    "play": "Jugar en itch.io",
+    "see_all": "Ver todos en itch.io",
+    "empty": "Los nuevos juegos aparecerán aquí cuando se publiquen. Mientras tanto, sigue el perfil en itch.io.",
+    "status": {
+      "released": "Lanzado",
+      "prototype": "Prototipo",
+      "wip": "En progreso"
+    },
+    "items": []
+  },
+  "pixelart": {
+    "title": "Pixel art",
+    "sub_title": "Sprites e iconos hechos a mano — cada píxel con intención.",
+    "see_more": "Ver más",
+    "items": [
+      {
+        "id": "hero",
+        "title": "Héroe",
+        "description": "Protagonista 16×16 con silueta legible en baja resolución."
+      },
+      {
+        "id": "slime",
+        "title": "Slime",
+        "description": "Enemigo simple, ideal para probar hitbox y feedback."
+      },
+      {
+        "id": "sword",
+        "title": "Hoja",
+        "description": "Ítem de combate con lectura diagonal y contraste fuerte."
+      },
+      {
+        "id": "chest",
+        "title": "Cofre",
+        "description": "Prop de recompensa con cierre central destacado."
+      },
+      {
+        "id": "key",
+        "title": "Llave",
+        "description": "Llave de dungeon — lectura clara incluso en 16×16."
+      },
+      {
+        "id": "heart",
+        "title": "Vida",
+        "description": "HUD de HP estilo arcade, con pocos píxeles y máximo impacto."
+      },
+      {
+        "id": "coin",
+        "title": "Moneda",
+        "description": "Moneda de score con brillo central para feedback rápido."
+      },
+      {
+        "id": "mana",
+        "title": "Maná",
+        "description": "Frasco de maná para barras de recurso secundario."
+      },
+      {
+        "id": "potion",
+        "title": "Poción",
+        "description": "Pickup clásico — brillo y color para destacar en el suelo."
+      },
+      {
+        "id": "gem",
+        "title": "Gema",
+        "description": "Cristal de loot raro con silueta en diamante."
+      },
+      {
+        "id": "scroll",
+        "title": "Pergamino",
+        "description": "Ítem de quest/lore con líneas legibles en miniatura."
+      },
+      {
+        "id": "bat",
+        "title": "Murciélago",
+        "description": "Estudio de enemigo aéreo con alas abiertas."
+      },
+      {
+        "id": "hero-alt",
+        "title": "Héroe (alt)",
+        "description": "Variación de paleta del protagonista para tests de mood."
+      },
+      {
+        "id": "torch",
+        "title": "Antorcha",
+        "description": "Prop de iluminación con flicker sugerido en la llama."
+      }
+    ],
+    "collection": {
+      "title": "Colección de pixel art",
+      "sub_title": "Set completo organizado por packs de juego y tipo de asset.",
+      "breadcrumb": "Arcade",
+      "filter_group": "Grupo",
+      "filter_type": "Tipo",
+      "filter_all": "Todos",
+      "empty": "No se encontraron sprites con esos filtros.",
+      "results": "sprites",
+      "groups": {
+        "dungeon-kit": "Dungeon Kit",
+        "ui-hud": "UI / HUD",
+        "pickups": "Pickups",
+        "studies": "Estudios"
+      },
+      "types": {
+        "character": "Personaje",
+        "enemy": "Enemigo",
+        "item": "Ítem",
+        "prop": "Prop",
+        "ui": "UI"
+      }
+    }
+  },
+  "footer": {
+    "title": "¿Quieres seguir las próximas fases?",
+    "message": "Suscríbete al canal y sigue builds, fails y victorias del proceso indie.",
+    "cta": "Ir a YouTube"
+  }
+}

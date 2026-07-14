@@ -35,18 +35,23 @@
     ]
   },
   "testimonials": {
-    "title": "Depoimentos de quem já trabalhou comigo",
+    "title": "Depoimentos",
     "sub_title": "Quem já trabalhou comigo tem algo a dizer — e eu só tenho a agradecer.",
     "testimonials": [
       {
-        "quote": "Foi gratificante ver a repercussão positiva do site desde o lançamento. A recepção foi extremamente calorosa. O visual, o layout, o conteúdo, a navegação — tudo tem sido elogiado com entusiasmo. Até meu pai, que deu uma olhada no código, comentou que estava “limpo”; vindo dele, é um grande elogio. Só no lançamento tivemos mais de 1.000 visitantes. Recebo mensagens destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente a todos os envolvidos. Sem dúvida, um sucesso.",
-        "name": "Joseph Murray",
-        "title": "Diretor do DOVE Research"
+        "quote": "O Felipe Zanini é um profissional que se destacou nos projetos por onde passou dentro da nav9. Sempre foi muito elogiado pelos stakeholders por conseguir traduzir demandas técnicas para uma linguagem acessível a todos os públicos, facilitando o alinhamento entre áreas — além de ser muito dedicado e preocupado com a entrega de valor. Se destaca pela qualidade das entregas e por buscar constantemente elevar a barra técnica do time ao seu redor. É reconhecido pelos outros desenvolvedores como alguém que compartilha conhecimento e ajuda na evolução do grupo, sendo uma referência dentro da empresa. Por isso, naturalmente se torna um pilar sólido de entregas nos times em que atua.",
+        "name": "Felipe Adamoli",
+        "title": "Co-Founder da Techleads.club"
       },
       {
         "quote": "Felipe foi um dos melhores profissionais com quem tive oportunidade de trabalhar — sempre dedicado e 100% focado em entregar os projetos com qualidade, independentemente dos desafios. Preocupa-se com todas as etapas do processo de desenvolvimento, não se limitando a programar. Nos projetos em que trabalhamos juntos, desempenhou muito bem o papel de tech lead junto ao cliente e conseguiu grandes entregas com o time. Comunica-se bem e sabe se destacar em momentos difíceis. Felipe tem muita facilidade para aprender e grande autonomia para conduzir qualquer projeto.",
         "name": "Igor Casconi de Oliveira",
         "title": "Engenheiro de Software"
+      },
+      {
+        "quote": "Foi gratificante ver a repercussão positiva do site desde o lançamento. A recepção foi extremamente calorosa. O visual, o layout, o conteúdo, a navegação — tudo tem sido elogiado com entusiasmo. Até meu pai, que deu uma olhada no código, comentou que estava “limpo”; vindo dele, é um grande elogio. Só no lançamento tivemos mais de 1.000 visitantes. Recebo mensagens destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente a todos os envolvidos. Sem dúvida, um sucesso.",
+        "name": "Joseph Murray",
+        "title": "Diretor do DOVE Research"
       }
     ]
   },
@@ -54,8 +59,8 @@
   "success": "Mensagem enviada com sucesso.",
   "error": "Sua mensagem não foi enviada. Tente novamente mais tarde.",
   "tooltip": "Preencha todos os campos e use um e-mail válido",
-  "button_text_ready": "Pronto para enviar",
-  "button_text_not_ready": "Aguardando preenchimento",
+  "button_text_ready": "Enviar mensagem",
+  "button_text_not_ready": "Preencha o formulário",
   "button_text_sending": "Enviando sua mensagem",
 
   "footer": {

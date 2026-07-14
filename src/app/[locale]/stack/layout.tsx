@@ -1,24 +1,30 @@
 import type { Metadata } from "next";
-import { SITE_URL, PERSON } from "@/constants/seo";
 
-export const metadata: Metadata = {
-  title: "Stack Tecnológica",
-  description:
-    "Conheça a stack tecnológica de Felipe Frantz Zanini (ffzanini): ferramentas, linguagens e tecnologias usadas no desenvolvimento web.",
-  alternates: {
-    canonical: `${SITE_URL}/pt/stack`,
-    languages: {
-      "pt-BR": `${SITE_URL}/pt/stack`,
-      en: `${SITE_URL}/en/stack`,
-      es: `${SITE_URL}/es/stack`,
-    },
-  },
-  openGraph: {
-    title: `Stack Tecnológica | ${PERSON.name}`,
-    url: `${SITE_URL}/pt/stack`,
-    type: "website",
-  },
+import { isValidLocale, normalizeLocale } from "@/libs/i18n";
+import { buildPageMetadata } from "@/libs/page-metadata";
+import { loadLocale } from "@/locales/load-locale";
+
+type LayoutProps = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({
+  params,
+}: Readonly<LayoutProps>): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  if (!isValidLocale(rawLocale)) return {};
+
+  const locale = normalizeLocale(rawLocale);
+  const translations = await loadLocale(locale);
+
+  return buildPageMetadata({
+    locale,
+    path: "/stack",
+    title: translations.ui.seo.stack_title,
+    description: translations.ui.seo.stack_description,
+  });
+}
 
 export default function StackLayout({
   children,

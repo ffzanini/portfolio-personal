@@ -1,24 +1,30 @@
 import type { Metadata } from "next";
-import { SITE_URL, PERSON } from "@/constants/seo";
 
-export const metadata: Metadata = {
-  title: "Projetos",
-  description:
-    "Explore projetos desenvolvidos por Felipe Frantz Zanini (ffzanini): desenvolvimento web, React, Next.js, TypeScript, frontend e fullstack.",
-  alternates: {
-    canonical: `${SITE_URL}/pt/projects`,
-    languages: {
-      "pt-BR": `${SITE_URL}/pt/projects`,
-      en: `${SITE_URL}/en/projects`,
-      es: `${SITE_URL}/es/projects`,
-    },
-  },
-  openGraph: {
-    title: `Projetos | ${PERSON.name}`,
-    url: `${SITE_URL}/pt/projects`,
-    type: "website",
-  },
+import { isValidLocale, normalizeLocale } from "@/libs/i18n";
+import { buildPageMetadata } from "@/libs/page-metadata";
+import { loadLocale } from "@/locales/load-locale";
+
+type LayoutProps = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({
+  params,
+}: Readonly<LayoutProps>): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  if (!isValidLocale(rawLocale)) return {};
+
+  const locale = normalizeLocale(rawLocale);
+  const translations = await loadLocale(locale);
+
+  return buildPageMetadata({
+    locale,
+    path: "/projects",
+    title: translations.ui.seo.projects_title,
+    description: translations.ui.seo.projects_description,
+  });
+}
 
 export default function ProjectsLayout({
   children,
