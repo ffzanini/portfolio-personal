@@ -4,7 +4,7 @@ import { memo } from "react";
 import { socials } from "@/constants/socials";
 import { Tooltip } from "@/components/ui";
 import { useTranslation } from "@/context";
-import { fillTemplate } from "@/libs/page-metadata";
+import { fillTemplate } from "@/libs/fill-template";
 
 function FooterComponent() {
   const yearNow = new Date().getFullYear();

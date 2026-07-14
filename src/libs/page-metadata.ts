@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE, PERSON, SITE_URL } from "@/constants/seo";
 import { type Locale, withLocalePath } from "@/libs/i18n";
 
+export { fillTemplate } from "@/libs/fill-template";
+
 const OG_LOCALE: Record<Locale, string> = {
   pt: "pt_BR",
   en: "en_US",
@@ -67,14 +69,4 @@ export function buildPageMetadata({
       images: [DEFAULT_OG_IMAGE.url],
     },
   };
-}
-
-export function fillTemplate(
-  template: string,
-  values: Record<string, string>,
-): string {
-  return Object.entries(values).reduce(
-    (result, [key, value]) => result.replaceAll(`{${key}}`, value),
-    template,
-  );
 }

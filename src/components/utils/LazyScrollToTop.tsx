@@ -2,7 +2,10 @@
 import dynamic from "next/dynamic";
 
 const ScrollToTopButton = dynamic(
-  () => import("@/components/utils").then((mod) => ({ default: mod.ScrollToTopButton })),
+  () =>
+    import("@/components/utils/ScrollToTop").then((mod) => ({
+      default: mod.ScrollToTopButton,
+    })),
   { ssr: false },
 );
 

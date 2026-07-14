@@ -16,7 +16,7 @@ import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { withLocalePath } from "@/libs/i18n";
 import { SITE_URL, PERSON } from "@/constants/seo";
-import { fillTemplate } from "@/libs/page-metadata";
+import { fillTemplate } from "@/libs/fill-template";
 import { cn } from "@/libs/cn";
 
 interface ProjectDetailsContentProps {
