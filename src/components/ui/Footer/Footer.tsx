@@ -12,7 +12,7 @@ function FooterComponent() {
   const ui = translations.ui;
 
   return (
-    <footer className="flex flex-col lg:flex-row justify-between items-center">
+    <footer className="flex flex-col items-center justify-between lg:flex-row">
       <div className="px-6 pt-6 lg:pt-0">
         <div className="flex justify-center">
           <p className="flex flex-col lg:flex-row">
@@ -22,7 +22,7 @@ function FooterComponent() {
       </div>
       <div className="px-6 pt-6">
         <div className="mb-6 flex justify-center">
-          <div className="flex flex-row gap-3 items-center">
+          <div className="flex flex-row items-center gap-3">
             {socials.map(({ href, icon: Icon, name }) => {
               const tooltip =
                 name === "Email"
@@ -36,7 +36,7 @@ function FooterComponent() {
                       aria-label={name}
                       target="_blank"
                       href={href}
-                      className="flex justify-center items-center"
+                      className="flex items-center justify-center"
                       rel="noreferrer"
                     >
                       <Icon className="h-5 w-5" />

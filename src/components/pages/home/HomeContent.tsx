@@ -29,16 +29,16 @@ export function HomeContent({
 }: Readonly<HomeContentProps>) {
   return (
     <HomeScrollLock>
-      <div className="flex h-dvh max-h-dvh flex-col overflow-hidden bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
-        <main className="relative z-10 mx-auto flex min-h-0 w-full max-w-7xl flex-1 items-center justify-center overflow-x-clip px-3 pt-16 lg:pt-20">
-          <div className="grid max-h-full w-full grid-cols-1 items-center gap-4 overflow-visible lg:grid-cols-2 lg:gap-8">
-            <div className="order-2 space-y-3 sm:space-y-4 lg:order-1 xl:space-y-6">
-              <div className="space-y-2 sm:space-y-3">
-                <div className="space-y-1 sm:space-y-2">
-                  <p className="text-lg font-medium text-gray-600 sm:text-xl dark:text-gray-400">
+      <div className="flex min-h-screen flex-col bg-linear-to-br from-primary-200 via-white-theme to-white-theme lg:h-dvh lg:max-h-dvh lg:overflow-hidden dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
+        <main className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-6 pt-20 pb-8 lg:min-h-0 lg:overflow-x-clip lg:pt-20 lg:pb-4 xl:px-3">
+          <div className="grid w-full grid-cols-1 items-center gap-6 lg:max-h-full lg:grid-cols-2 lg:gap-8">
+            <div className="order-2 space-y-4 sm:space-y-6 lg:order-1 xl:space-y-8">
+              <div className="space-y-2 sm:space-y-4">
+                <div className="space-y-2">
+                  <p className="text-xl font-medium text-gray-600 dark:text-gray-400">
                     {translations.home.welcome}
                   </p>
-                  <h1 className="text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
+                  <h1 className="text-4xl leading-tight font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
                     <span className="bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 bg-clip-text text-transparent dark:from-primary-800 dark:via-primary-600 dark:to-primary-400">
                       {translations.home.name}
                     </span>
@@ -47,15 +47,15 @@ export function HomeContent({
                 <div className="min-h-7.5 lg:min-h-[2.344rem] xl:min-h-[2.813rem]">
                   <FlipWords
                     words={translations.home.roles}
-                    className="text-xl leading-tight font-medium sm:text-2xl lg:text-3xl xl:text-4xl"
+                    className="text-2xl leading-tight font-medium lg:text-3xl xl:text-4xl"
                   />
                 </div>
                 <SanitizedText
                   json={translations.home.description}
-                  className="line-clamp-4 text-sm leading-relaxed text-gray-600 sm:line-clamp-none sm:text-base dark:text-gray-300"
+                  className="text-base leading-relaxed text-gray-600 dark:text-gray-300"
                 />
               </div>
-              <div className="flex flex-wrap items-center gap-2 text-xs sm:gap-4 sm:text-sm">
+              <div className="flex flex-wrap items-center gap-3 text-xs sm:gap-4 sm:text-sm">
                 <div className="flex items-center gap-1.5">
                   <LuMapPin className="h-4 w-4 text-primary-600" />
                   <span className="text-sm">{translations.home.location}</span>
@@ -70,7 +70,7 @@ export function HomeContent({
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:gap-4">
+              <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:gap-4">
                 <Link
                   href={withLocalePath(locale, "/about")}
                   className="group flex flex-row items-center justify-center rounded-xl bg-linear-to-r from-primary-400 to-primary-600 px-6 py-2.5 font-semibold text-white shadow-lg shadow-primary-600/25 transition-transform duration-300 hover:from-primary-500 hover:to-primary-700 hover:shadow-xl sm:px-8 sm:py-3"
@@ -91,10 +91,10 @@ export function HomeContent({
               </div>
             </div>
 
-            <div className="order-1 flex justify-center overflow-visible lg:order-2 lg:justify-end">
-              <div className="relative overflow-visible p-6 sm:p-8 lg:p-10 scale-90 sm:scale-95 lg:scale-100">
+            <div className="order-1 mt-8 flex justify-center lg:order-2 lg:mt-0 lg:justify-end">
+              <div className="relative p-8 sm:p-10">
                 <div
-                  className="absolute top-2 left-2 z-20 animate-float-up rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl backdrop-blur-sm sm:top-0 sm:left-0 sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
+                  className="absolute top-0 left-0 z-20 animate-float-up rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl backdrop-blur-sm sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
                   style={{ willChange: "transform" }}
                 >
                   <div className="flex items-center space-x-2 sm:space-x-3">
@@ -105,7 +105,7 @@ export function HomeContent({
                   </div>
                 </div>
                 <div
-                  className="absolute right-2 bottom-2 z-20 animate-float-down rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl backdrop-blur-sm sm:right-0 sm:bottom-0 sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
+                  className="absolute right-0 bottom-0 z-20 animate-float-down rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl backdrop-blur-sm sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
                   style={{ willChange: "transform" }}
                 >
                   <div className="flex items-center space-x-2 sm:space-x-3">
@@ -116,7 +116,7 @@ export function HomeContent({
                   </div>
                 </div>
                 <div className="relative z-0 rounded-3xl border border-gray-200/50 bg-white/80 p-4 shadow-2xl backdrop-blur-xl sm:p-6 lg:p-8 dark:border-gray-700/50 dark:bg-black/50">
-                  <div className="relative mx-auto mb-4 h-28 w-28 sm:mb-6 sm:h-40 sm:w-40 lg:h-50 lg:w-50">
+                  <div className="relative mx-auto mb-4 h-32 w-32 sm:mb-6 sm:h-40 sm:w-40 lg:h-50 lg:w-50">
                     <div className="absolute inset-0 rounded-4xl bg-linear-to-br from-primary-400 via-primary-600 to-primary-800 opacity-80" />
                     <div className="relative h-full w-full rounded-2xl bg-linear-to-br from-primary-200 via-primary-600 to-primary-950 p-1.5 shadow-2xl sm:p-2">
                       <div className="flex h-full w-full items-center justify-center">
@@ -127,7 +127,7 @@ export function HomeContent({
                           height={180}
                           className="rounded-xl"
                           style={{ width: "100%", height: "auto" }}
-                          sizes="(max-width: 640px) 112px, (max-width: 1024px) 160px, 200px"
+                          sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 200px"
                           priority
                           quality={85}
                         />
@@ -153,10 +153,10 @@ export function HomeContent({
                             style={{ animationDelay: `${index * 0.1}s` }}
                           >
                             <div
-                              className={`relative flex h-10 w-10 items-center justify-center rounded-xl border shadow-sm backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg sm:h-12 sm:w-12 ${tech.bgColor} ${tech.borderColor}`}
+                              className={`relative flex h-12 w-12 items-center justify-center rounded-xl border shadow-sm backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg ${tech.bgColor} ${tech.borderColor}`}
                             >
                               <tech.icon
-                                className={`h-5 w-5 transition-transform duration-300 group-hover:scale-110 sm:h-6 sm:w-6 ${tech.iconColor}`}
+                                className={`h-6 w-6 transition-transform duration-300 group-hover:scale-110 ${tech.iconColor}`}
                                 aria-label={tech.name}
                               />
                             </div>
@@ -176,7 +176,7 @@ export function HomeContent({
             </div>
           </div>
         </main>
-        <div className="shrink-0">
+        <div className="relative z-0 shrink-0">
           <LazyFooter />
         </div>
       </div>
