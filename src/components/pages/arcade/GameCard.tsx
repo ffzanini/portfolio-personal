@@ -2,7 +2,7 @@ import Image from "next/image";
 import { LuExternalLink, LuGamepad2 } from "react-icons/lu";
 
 import type { IndieGame } from "@/app/data/arcade";
-import { pixeloidSansBold } from "@/app/fonts";
+import { pixeloidSansBold } from "@/app/fonts-pixeloid";
 import { cn } from "@/libs/cn";
 
 type GameCardProps = {

@@ -17,15 +17,3 @@ export const fontRyanaLovely = localFont({
   display: "swap",
   preload: false,
 });
-
-export const pixeloidSans = localFont({
-  src: "../../public/fonts/PixeloidSans.woff2",
-  variable: "--font-pixeloidsans",
-  display: "swap",
-});
-
-export const pixeloidSansBold = localFont({
-  src: "../../public/fonts/PixeloidSans-Bold.woff2",
-  variable: "--font-pixeloidsans-bold",
-  display: "swap",
-});

@@ -11,7 +11,8 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 import { LuMoonStar, LuSun, LuX } from "react-icons/lu";
 
 import { fontRyanaLovely } from "@/app/fonts";
-import { LanguageSelect, Tooltip } from "@/components/ui";
+import { LanguageSelect } from "@/components/ui/LanguageSelect";
+import { Tooltip } from "@/components/ui/Tooltip";
 import { navItems } from "@/constants/navbar";
 import { nightStalker, dawnbreaker } from "@/constants/phrases";
 import { useTranslation } from "@/context";
@@ -73,6 +74,7 @@ export function Navbar() {
             </p>
           </div>
           <button
+            type="button"
             onClick={() => toast.dismiss(t.id)}
             className="ml-4 shrink-0 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
           >
@@ -188,6 +190,7 @@ export function Navbar() {
               }
             >
               <button
+                type="button"
                 onClick={handleThemeToggle}
                 aria-label={
                   currentTheme === "dark"
@@ -207,6 +210,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             className="xl:hidden"
             onClick={() => setIsOpenMenu(!isOpenMenu)}
             aria-label={
@@ -253,6 +257,7 @@ export function Navbar() {
                 </div>
 
                 <button
+                  type="button"
                   onClick={() => {
                     handleThemeToggle();
                     setIsOpenMenu(false);

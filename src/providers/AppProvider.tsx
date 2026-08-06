@@ -1,6 +1,6 @@
 import { InternacionalizationProvider } from "@/context/internacionalization-context";
 import { DEFAULT_LOCALE, type Locale } from "@/libs/i18n";
-import type { Translations } from "@/locales";
+import type { InitialTranslations } from "@/locales/load-locale";
 
 export function AppProvider({
   children,
@@ -9,7 +9,7 @@ export function AppProvider({
 }: Readonly<{
   children: React.ReactNode;
   initialLocale?: Locale;
-  initialTranslations: Translations;
+  initialTranslations: InitialTranslations;
 }>) {
   return (
     <InternacionalizationProvider

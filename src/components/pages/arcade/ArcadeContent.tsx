@@ -8,7 +8,7 @@ import {
   ITCH_IO_PROFILE_URL,
   latestIndieGames,
 } from "@/app/data/arcade";
-import { pixeloidSans, pixeloidSansBold } from "@/app/fonts";
+import { pixeloidSans, pixeloidSansBold } from "@/app/fonts-pixeloid";
 import { GameCard } from "@/components/pages/arcade/GameCard";
 import { PixelArtCard } from "@/components/pages/arcade/PixelArtCard";
 import { VideoCard } from "@/components/pages/arcade/VideoCard";

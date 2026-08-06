@@ -2,7 +2,7 @@
 
 import { LuConstruction } from "react-icons/lu";
 
-import { pixeloidSans, pixeloidSansBold } from "@/app/fonts";
+import { pixeloidSans, pixeloidSansBold } from "@/app/fonts-pixeloid";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { cn } from "@/libs/cn";

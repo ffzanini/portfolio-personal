@@ -11,7 +11,7 @@ import {
   type PixelArtGroupId,
   type PixelArtTypeId,
 } from "@/app/data/arcade";
-import { pixeloidSans, pixeloidSansBold } from "@/app/fonts";
+import { pixeloidSans, pixeloidSansBold } from "@/app/fonts-pixeloid";
 import { PixelArtCard } from "@/components/pages/arcade/PixelArtCard";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";

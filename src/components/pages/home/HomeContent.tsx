@@ -9,24 +9,21 @@ import {
 } from "react-icons/lu";
 import { LiaHandSpock } from "react-icons/lia";
 
-import { Tooltip } from "@/components/ui";
+import { Tooltip } from "@/components/ui/Tooltip";
 import { FlipWords } from "@/components/ui/FlipWords";
-import { SanitizedText } from "@/components/utils";
+import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
-import { mainTechStack } from "@/constants/stack";
+import { mainTechStack } from "@/constants/main-tech-stack";
 import { withLocalePath, type Locale } from "@/libs/i18n";
 import type { Translations } from "@/locales";
 import { HomeScrollLock } from "@/components/pages/home/HomeScrollLock";
 
 interface HomeContentProps {
-  translations: Translations;
+  home: Translations["home"];
   locale: Locale;
 }
 
-export function HomeContent({
-  translations,
-  locale,
-}: Readonly<HomeContentProps>) {
+export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
   return (
     <HomeScrollLock>
       <div className="flex min-h-screen flex-col bg-linear-to-br from-primary-200 via-white-theme to-white-theme lg:h-dvh lg:max-h-dvh lg:overflow-hidden dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
@@ -36,37 +33,37 @@ export function HomeContent({
               <div className="space-y-2 sm:space-y-4">
                 <div className="space-y-2">
                   <p className="text-xl font-medium text-gray-600 dark:text-gray-400">
-                    {translations.home.welcome}
+                    {home.welcome}
                   </p>
                   <h1 className="text-4xl leading-tight font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
                     <span className="bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 bg-clip-text text-transparent dark:from-primary-800 dark:via-primary-600 dark:to-primary-400">
-                      {translations.home.name}
+                      {home.name}
                     </span>
                   </h1>
                 </div>
                 <div className="min-h-7.5 lg:min-h-[2.344rem] xl:min-h-[2.813rem]">
                   <FlipWords
-                    words={translations.home.roles}
+                    words={home.roles}
                     className="text-2xl leading-tight font-medium lg:text-3xl xl:text-4xl"
                   />
                 </div>
                 <SanitizedText
-                  json={translations.home.description}
+                  json={home.description}
                   className="text-base leading-relaxed text-gray-600 dark:text-gray-300"
                 />
               </div>
               <div className="flex flex-wrap items-center gap-3 text-xs sm:gap-4 sm:text-sm">
                 <div className="flex items-center gap-1.5">
                   <LuMapPin className="h-4 w-4 text-primary-600" />
-                  <span className="text-sm">{translations.home.location}</span>
+                  <span className="text-sm">{home.location}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <LuCalendar className="h-4 w-4 text-primary-600" />
-                  <span className="text-sm">{translations.home.experience}</span>
+                  <span className="text-sm">{home.experience}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <LuCoffee className="h-4 w-4 text-primary-600" />
-                  <span className="text-sm">{translations.home.projects}</span>
+                  <span className="text-sm">{home.projects}</span>
                 </div>
               </div>
 
@@ -75,7 +72,7 @@ export function HomeContent({
                   href={withLocalePath(locale, "/about")}
                   className="group flex flex-row items-center justify-center rounded-xl bg-linear-to-r from-primary-400 to-primary-600 px-6 py-2.5 font-semibold text-white shadow-lg shadow-primary-600/25 transition-transform duration-300 hover:from-primary-500 hover:to-primary-700 hover:shadow-xl sm:px-8 sm:py-3"
                 >
-                  {translations.home.textButtonAbout}
+                  {home.textButtonAbout}
                   <LuArrowRight className="ml-3 hidden h-5 w-5 transition-transform group-hover:translate-x-1 lg:flex" />
                 </Link>
 
@@ -86,7 +83,7 @@ export function HomeContent({
                   className="group flex flex-row items-center justify-center rounded-xl border-2 border-gray-300 px-6 py-2.5 font-semibold text-gray-700 backdrop-blur-sm hover:bg-gray-100 sm:px-8 sm:py-3 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800/50"
                 >
                   <LiaHandSpock className="mr-3 hidden h-6 w-6 transition-transform duration-500 group-hover:rotate-360 lg:flex" />
-                  {translations.home.textButtonResume}
+                  {home.textButtonResume}
                 </Link>
               </div>
             </div>
@@ -139,7 +136,7 @@ export function HomeContent({
                   </div>
                   <div className="space-y-3 text-center sm:space-y-4">
                     <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-                      {translations.home.stack}
+                      {home.stack}
                     </h2>
                     <div className="flex justify-center gap-2 xl:gap-3">
                       {mainTechStack.map((tech, index) => (
@@ -168,7 +165,7 @@ export function HomeContent({
                       href={withLocalePath(locale, "/stack")}
                       className="font-semibold text-gray-600 underline underline-offset-4 hover:text-black dark:text-gray-300 dark:hover:text-white"
                     >
-                      {translations.home.textButtonStack}
+                      {home.textButtonStack}
                     </Link>
                   </div>
                 </div>

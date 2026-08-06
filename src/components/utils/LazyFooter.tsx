@@ -2,12 +2,11 @@
 import dynamic from "next/dynamic";
 
 const Footer = dynamic(
-  () => import("@/components/ui").then((mod) => ({ default: mod.Footer })),
+  () =>
+    import("@/components/ui/Footer").then((mod) => ({ default: mod.Footer })),
   {
     ssr: true,
-    loading: () => (
-      <div className="h-30 lg:h-18" />
-    ),
+    loading: () => <div className="h-30 lg:h-18" />,
   },
 );
 

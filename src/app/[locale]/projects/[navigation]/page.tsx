@@ -1,7 +1,10 @@
 import { cache } from "react";
 import { notFound } from "next/navigation";
-import { Navbar } from "@/components/ui";
+import { Navbar } from "@/components/ui/Navbar";
 import ProjectDetails from "@/app/[locale]/projects/[navigation]/ProjectDetails";
+import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
+import { type Locale, isValidLocale } from "@/libs/i18n";
+import { loadLocale } from "@/locales/load-locale";
 
 interface PageProps {
   params: Promise<{
@@ -26,17 +29,23 @@ export async function generateStaticParams() {
   );
 }
 
-export default async function LocaleProjectDetailsPage({ params }: Readonly<PageProps>) {
-  const projects = await getProjects();
-  const navigation = (await params).navigation;
-  const project = projects.find((item) => item.navigation === navigation);
+export default async function LocaleProjectDetailsPage({
+  params,
+}: Readonly<PageProps>) {
+  const { locale: rawLocale, navigation } = await params;
+  const locale = (isValidLocale(rawLocale) ? rawLocale : "pt") as Locale;
+  const [{ projects }, projectList] = await Promise.all([
+    loadLocale(locale),
+    getProjects(),
+  ]);
+  const project = projectList.find((item) => item.navigation === navigation);
 
   if (!project) notFound();
 
   return (
-    <>
+    <TranslationsPatch patch={{ projects }}>
       <Navbar />
       <ProjectDetails project={project} />
-    </>
+    </TranslationsPatch>
   );
 }

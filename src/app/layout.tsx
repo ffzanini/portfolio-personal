@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "next-themes";
-import { AnalyticsWrapper, JsonLd } from "@/components/utils";
+import { AnalyticsWrapper } from "@/components/utils/Analytics";
+import { JsonLd } from "@/components/utils/JsonLd";
 import {
   SITE_URL,
   PERSON,

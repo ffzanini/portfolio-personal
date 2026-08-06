@@ -11,7 +11,7 @@ import {
 } from "react";
 
 import type { PixelSprite } from "@/app/data/arcade";
-import { pixeloidSansBold } from "@/app/fonts";
+import { pixeloidSansBold } from "@/app/fonts-pixeloid";
 import { cn } from "@/libs/cn";
 
 type PixelArtCardProps = {

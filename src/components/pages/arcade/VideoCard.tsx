@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { LuClock3, LuGamepad2, LuPlay } from "react-icons/lu";
-import { pixeloidSans, pixeloidSansBold } from "@/app/fonts";
+import { pixeloidSans, pixeloidSansBold } from "@/app/fonts-pixeloid";
 import type { YouTubeVideo } from "@/libs/youtube";
 import { cn } from "@/libs/cn";
 

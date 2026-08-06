@@ -1,11 +1,22 @@
-import { Navbar } from "@/components/ui";
+import { Navbar } from "@/components/ui/Navbar";
 import { StackContent } from "@/components/pages/stack/StackContent";
+import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
+import { type Locale, isValidLocale } from "@/libs/i18n";
+import { loadLocale } from "@/locales/load-locale";
 
-export default function LocaleStackPage() {
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function LocaleStackPage({ params }: Readonly<PageProps>) {
+  const { locale: rawLocale } = await params;
+  const locale = (isValidLocale(rawLocale) ? rawLocale : "pt") as Locale;
+  const { stack } = await loadLocale(locale);
+
   return (
-    <>
+    <TranslationsPatch patch={{ stack }}>
       <Navbar />
       <StackContent />
-    </>
+    </TranslationsPatch>
   );
 }

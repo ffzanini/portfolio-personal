@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { type Locale, isValidLocale, normalizeLocale } from "@/libs/i18n";
-import { loadLocale } from "@/locales/load-locale";
+import { loadLocaleChrome, loadLocaleHome } from "@/locales/load-locale";
 import { buildPageMetadata } from "@/libs/page-metadata";
-import { Navbar } from "@/components/ui";
+import { Navbar } from "@/components/ui/Navbar";
 import { HomeContent } from "@/components/pages/home/HomeContent";
 
 type PageProps = {
@@ -16,7 +16,7 @@ export async function generateMetadata({
   if (!isValidLocale(rawLocale)) return {};
 
   const locale = normalizeLocale(rawLocale);
-  const translations = await loadLocale(locale);
+  const translations = await loadLocaleChrome(locale);
 
   return buildPageMetadata({
     locale,
@@ -27,19 +27,14 @@ export async function generateMetadata({
 }
 
 export default async function LocaleHomePage({ params }: Readonly<PageProps>) {
-  const { locale } = await params;
-  const translations = await loadLocale(locale as Locale);
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as Locale;
+  const home = await loadLocaleHome(locale);
 
   return (
     <>
-      <link
-        rel="preload"
-        href="/images/me-desenho.jpeg"
-        as="image"
-        fetchPriority="high"
-      />
       <Navbar />
-      <HomeContent translations={translations} locale={locale as Locale} />
+      <HomeContent home={home} locale={locale} />
     </>
   );
 }

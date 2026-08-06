@@ -10,7 +10,11 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-import { loadLocale, type Translations } from "@/locales/load-locale";
+import {
+  loadLocale,
+  type InitialTranslations,
+  type Translations,
+} from "@/locales/load-locale";
 import {
   DEFAULT_LOCALE,
   getLocaleFromBrowserLanguage,
@@ -28,7 +32,7 @@ export interface InternacionalizationInterface {
   isLanguageSwitching: boolean;
 }
 
-const InternacionalizationContext = createContext(
+export const InternacionalizationContext = createContext(
   {} as InternacionalizationInterface,
 );
 
@@ -53,14 +57,14 @@ const InternacionalizationProvider = ({
 }: Readonly<{
   children: ReactNode;
   initialLocale?: Locations;
-  initialTranslations: Translations;
+  initialTranslations: InitialTranslations;
 }>) => {
   const pathname = usePathname();
   const router = useRouter();
   const [isLanguageSwitching, setIsLanguageSwitching] = useState(false);
 
   const [translationsCache, setTranslationsCache] = useState<
-    Partial<Record<Locale, Translations>>
+    Partial<Record<Locale, InitialTranslations | Translations>>
   >({ [initialLocale]: initialTranslations });
 
   const pathnameLocale = useMemo(() => {
@@ -130,7 +134,8 @@ const InternacionalizationProvider = ({
     [location, pathname, router],
   );
 
-  const translations = translationsCache[location] ?? initialTranslations;
+  const translations = (translationsCache[location] ??
+    initialTranslations) as Translations;
 
   const objTranslations = useMemo(() => {
     return {

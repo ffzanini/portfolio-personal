@@ -4,7 +4,7 @@ import AppProvider from "@/providers/AppProvider";
 import { ClientToaster } from "@/components/utils/ClientToaster";
 import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import { isValidLocale, SUPPORTED_LOCALES } from "@/libs/i18n";
-import { loadLocale } from "@/locales/load-locale";
+import { loadLocaleChrome } from "@/locales/load-locale";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const initialTranslations = await loadLocale(locale);
+  const initialTranslations = await loadLocaleChrome(locale);
 
   return (
     <AppProvider initialLocale={locale} initialTranslations={initialTranslations}>

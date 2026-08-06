@@ -2,7 +2,7 @@
 import { memo } from "react";
 
 import { socials } from "@/constants/socials";
-import { Tooltip } from "@/components/ui";
+import { Tooltip } from "@/components/ui/Tooltip";
 import { useTranslation } from "@/context";
 import { fillTemplate } from "@/libs/fill-template";
 
