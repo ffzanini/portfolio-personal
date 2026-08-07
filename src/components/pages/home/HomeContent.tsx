@@ -91,7 +91,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
             <div className="order-1 mt-8 flex justify-center lg:order-2 lg:mt-0 lg:justify-end">
               <div className="relative p-8 sm:p-10">
                 <div
-                  className="absolute top-0 left-0 z-20 animate-float-up rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl backdrop-blur-sm sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
+                  className="absolute top-0 left-0 z-20 animate-float-up rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
                   style={{ willChange: "transform" }}
                 >
                   <div className="flex items-center space-x-2 sm:space-x-3">
@@ -102,7 +102,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                   </div>
                 </div>
                 <div
-                  className="absolute right-0 bottom-0 z-20 animate-float-down rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl backdrop-blur-sm sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
+                  className="absolute right-0 bottom-0 z-20 animate-float-down rounded-2xl border border-gray-200/50 bg-white/95 p-3 shadow-xl sm:p-4 dark:border-gray-700/50 dark:bg-black/70"
                   style={{ willChange: "transform" }}
                 >
                   <div className="flex items-center space-x-2 sm:space-x-3">
@@ -112,13 +112,13 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                     </span>
                   </div>
                 </div>
-                <div className="relative z-0 rounded-3xl border border-gray-200/50 bg-white/80 p-4 shadow-2xl backdrop-blur-xl sm:p-6 lg:p-8 dark:border-gray-700/50 dark:bg-black/50">
+                <div className="relative z-0 rounded-3xl border border-gray-200/50 bg-white/90 p-4 shadow-2xl sm:p-6 lg:p-8 dark:border-gray-700/50 dark:bg-black/60">
                   <div className="relative mx-auto mb-4 h-32 w-32 sm:mb-6 sm:h-40 sm:w-40 lg:h-50 lg:w-50">
                     <div className="absolute inset-0 rounded-4xl bg-linear-to-br from-primary-400 via-primary-600 to-primary-800 opacity-80" />
                     <div className="relative h-full w-full rounded-2xl bg-linear-to-br from-primary-200 via-primary-600 to-primary-950 p-1.5 shadow-2xl sm:p-2">
                       <div className="flex h-full w-full items-center justify-center">
                         <Image
-                          src="/images/me-desenho.jpeg"
+                          src="/images/me-desenho-400.jpeg"
                           alt="Felipe Frantz Zanini (ffzanini) - Senior Software Engineer & Frontend Architect especializado em React, Next.js e TypeScript. Desenvolvedor frontend e fullstack em Pelotas, Brasil."
                           width={180}
                           height={180}
@@ -126,7 +126,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                           style={{ width: "100%", height: "auto" }}
                           sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 200px"
                           priority
-                          quality={85}
+                          quality={75}
                         />
                       </div>
                     </div>

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 import AppProvider from "@/providers/AppProvider";
-import { ClientToaster } from "@/components/utils/ClientToaster";
+import { LazyClientToaster } from "@/components/utils/ClientToaster";
 import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import { isValidLocale, SUPPORTED_LOCALES } from "@/libs/i18n";
 import { loadLocaleChrome } from "@/locales/load-locale";
@@ -10,6 +10,8 @@ type LocaleLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -30,7 +32,7 @@ export default async function LocaleLayout({
   return (
     <AppProvider initialLocale={locale} initialTranslations={initialTranslations}>
       {children}
-      <ClientToaster />
+      <LazyClientToaster />
       <LazyScrollToTop />
     </AppProvider>
   );

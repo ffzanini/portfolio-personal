@@ -127,7 +127,7 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        `fixed top-0 w-full z-50 backdrop-blur-xl ${
+        `fixed top-0 w-full z-50 backdrop-blur-md ${
           isScrolled
             ? "border-b border-gray-200/40 dark:border-gray-800/40"
             : ""

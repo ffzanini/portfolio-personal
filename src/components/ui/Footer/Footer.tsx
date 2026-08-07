@@ -6,8 +6,9 @@ import { Tooltip } from "@/components/ui/Tooltip";
 import { useTranslation } from "@/context";
 import { fillTemplate } from "@/libs/fill-template";
 
+const COPYRIGHT_YEAR = 2026;
+
 function FooterComponent() {
-  const yearNow = new Date().getFullYear();
   const { translations } = useTranslation();
   const ui = translations.ui;
 
@@ -16,7 +17,7 @@ function FooterComponent() {
       <div className="px-6 pt-6 lg:pt-0">
         <div className="flex justify-center">
           <p className="flex flex-col lg:flex-row">
-            ©{yearNow} Felipe Frantz Zanini
+            ©{COPYRIGHT_YEAR} Felipe Frantz Zanini
           </p>
         </div>
       </div>

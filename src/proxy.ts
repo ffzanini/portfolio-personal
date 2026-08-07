@@ -3,6 +3,13 @@ import { isValidLocale, resolvePreferredLocale } from "@/libs/i18n";
 
 const isDev = process.env.NODE_ENV === "development";
 
+const LANGUAGE_COOKIE = "app-language";
+const LANGUAGE_COOKIE_OPTIONS = {
+  path: "/",
+  maxAge: 60 * 60 * 24 * 365,
+  sameSite: "lax" as const,
+};
+
 const CSP = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://va.vercel-scripts.com`,
@@ -17,6 +24,20 @@ const CSP = [
   "upgrade-insecure-requests",
 ].join("; ");
 
+function withCsp(response: NextResponse) {
+  response.headers.set("Content-Security-Policy", CSP);
+  return response;
+}
+
+function setLanguageCookieIfNeeded(
+  response: NextResponse,
+  currentCookie: string | undefined,
+  locale: string,
+) {
+  if (currentCookie === locale) return;
+  response.cookies.set(LANGUAGE_COOKIE, locale, LANGUAGE_COOKIE_OPTIONS);
+}
+
 export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
@@ -28,36 +49,24 @@ export function proxy(req: NextRequest) {
     return NextResponse.next();
   }
 
+  const cookieLocale = req.cookies.get(LANGUAGE_COOKIE)?.value;
   const firstSegment = pathname.split("/").find(Boolean);
+
   if (firstSegment && isValidLocale(firstSegment)) {
-    const response = NextResponse.next();
-    response.headers.set("Content-Security-Policy", CSP);
-    response.cookies.set("app-language", firstSegment, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 365,
-      sameSite: "lax",
-    });
-    return response;
+    return withCsp(NextResponse.next());
   }
 
-  const cookieLocale = req.cookies.get("app-language")?.value;
-  const headerLocale = req.headers.get("accept-language");
   const resolvedLocale = resolvePreferredLocale({
     cookieLocale,
-    acceptLanguage: headerLocale,
+    acceptLanguage: req.headers.get("accept-language"),
   });
 
   const url = req.nextUrl.clone();
   url.pathname =
     pathname === "/" ? `/${resolvedLocale}` : `/${resolvedLocale}${pathname}`;
 
-  const response = NextResponse.redirect(url);
-  response.headers.set("Content-Security-Policy", CSP);
-  response.cookies.set("app-language", resolvedLocale, {
-    path: "/",
-    maxAge: 60 * 60 * 24 * 365,
-    sameSite: "lax",
-  });
+  const response = withCsp(NextResponse.redirect(url));
+  setLanguageCookieIfNeeded(response, cookieLocale, resolvedLocale);
   return response;
 }
 
