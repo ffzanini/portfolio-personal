@@ -2,7 +2,11 @@ export const SUPPORTED_LOCALES = ["pt", "en", "es"] as const;
 
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
+/** Site default when there is no browser signal (Brazilian portfolio). */
 export const DEFAULT_LOCALE: Locale = "pt";
+
+/** Fallback when the browser language is neither pt, en, nor es. */
+export const INTERNATIONAL_FALLBACK_LOCALE: Locale = "en";
 
 export const isValidLocale = (value: string): value is Locale =>
   SUPPORTED_LOCALES.includes(value as Locale);
@@ -10,11 +14,11 @@ export const isValidLocale = (value: string): value is Locale =>
 export const normalizeLocale = (value?: string | null): Locale =>
   value && isValidLocale(value) ? value : DEFAULT_LOCALE;
 
-const mapBaseLanguageToLocale = (baseLanguage: string): Locale => {
+const mapBaseLanguageToLocale = (baseLanguage: string): Locale | null => {
   if (baseLanguage === "pt") return "pt";
   if (baseLanguage === "es") return "es";
   if (baseLanguage === "en") return "en";
-  return DEFAULT_LOCALE;
+  return null;
 };
 
 export const getLocaleFromBrowserLanguage = (
@@ -22,7 +26,7 @@ export const getLocaleFromBrowserLanguage = (
 ): Locale => {
   if (!browserLanguage) return DEFAULT_LOCALE;
   const baseLanguage = browserLanguage.toLowerCase().split("-")[0] ?? "";
-  return mapBaseLanguageToLocale(baseLanguage);
+  return mapBaseLanguageToLocale(baseLanguage) ?? INTERNATIONAL_FALLBACK_LOCALE;
 };
 
 export const getLocaleFromAcceptLanguage = (
@@ -46,12 +50,12 @@ export const getLocaleFromAcceptLanguage = (
     if (!item.lang) continue;
     const base = item.lang.split("-")[0] ?? "";
     if (base === "*") continue;
-    if (base === "pt" || base === "en" || base === "es") {
-      return mapBaseLanguageToLocale(base);
-    }
+    const mapped = mapBaseLanguageToLocale(base);
+    if (mapped) return mapped;
   }
 
-  return DEFAULT_LOCALE;
+  // Browser sent languages, but none are pt/en/es → international English
+  return INTERNATIONAL_FALLBACK_LOCALE;
 };
 
 export const resolvePreferredLocale = ({

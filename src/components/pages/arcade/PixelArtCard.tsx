@@ -161,8 +161,9 @@ export function PixelArtCard({
         "group flex h-full flex-col overflow-hidden rounded-none",
         "bg-black/5 dark:bg-white/5",
         "ring-1 ring-black/10 dark:ring-white/10",
-        "transition-[transform,box-shadow] duration-200 ease-out",
-        "hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-600/10",
+        "transition-[box-shadow,ring-color] duration-200 ease-out",
+        "hover:shadow-xl hover:shadow-primary-600/25 hover:ring-primary-600/40",
+        "dark:hover:shadow-primary-600/30 dark:hover:ring-primary-400/40",
       )}
       style={{ animationDelay: `${index * 50}ms` }}
     >

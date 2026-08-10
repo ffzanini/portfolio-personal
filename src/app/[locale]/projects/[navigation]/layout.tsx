@@ -4,7 +4,7 @@ import { projects } from "@/app/data/projects";
 import { PERSON } from "@/constants/seo";
 import { isValidLocale, normalizeLocale } from "@/libs/i18n";
 import { buildPageMetadata, fillTemplate } from "@/libs/page-metadata";
-import { loadLocale } from "@/locales/load-locale";
+import { loadLocaleChrome, loadLocaleProjects } from "@/locales/load-locale";
 
 type Props = {
   children: React.ReactNode;
@@ -18,9 +18,12 @@ export async function generateMetadata({
   if (!isValidLocale(rawLocale)) return {};
 
   const locale = normalizeLocale(rawLocale);
-  const translations = await loadLocale(locale);
+  const [{ ui }, projectsCopy] = await Promise.all([
+    loadLocaleChrome(locale),
+    loadLocaleProjects(locale),
+  ]);
   const project = projects.find((item) => item.navigation === navigation);
-  const seo = translations.ui.seo;
+  const seo = ui.seo;
 
   if (!project) {
     return buildPageMetadata({
@@ -31,7 +34,7 @@ export async function generateMetadata({
     });
   }
 
-  const projectCopy = translations.projects.projects.find(
+  const projectCopy = projectsCopy.projects.find(
     (item) => item.id === project.id,
   );
   const title = projectCopy?.title ?? navigation;

@@ -8,7 +8,6 @@ import {
   LuArrowRight,
   LuSend,
 } from "react-icons/lu";
-
 import {
   RiNumber1,
   RiNumber2,
@@ -18,7 +17,7 @@ import {
   RiNumber6,
 } from "react-icons/ri";
 
-import { ZoomImage } from "@/components/ui";
+import { ZoomImage } from "@/components/ui/ZoomImage";
 import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { photos } from "@/constants/about";
@@ -27,6 +26,7 @@ import { withLocalePath } from "@/libs/i18n";
 
 export function AboutContent() {
   const { translations, location } = useTranslation();
+
   const renderIco = (id: number) => {
     const iconClass = "h-6 w-6";
 
@@ -63,7 +63,7 @@ export function AboutContent() {
           <div className="flex flex-col my-8 cv-auto">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
                   <LuCarFront className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">
@@ -98,7 +98,7 @@ export function AboutContent() {
           <div className="flex flex-col my-8 cv-auto">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
                   <LuBrain className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">
@@ -115,10 +115,10 @@ export function AboutContent() {
                 {translations.about.skills.process.map((process) => (
                   <div
                     key={process.id}
-                    className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                    className="rounded-2xl border border-black/10 bg-black/1 p-4 backdrop-blur-sm transition-[box-shadow,border-color] duration-200 hover:border-primary-600/30 hover:shadow-xl hover:shadow-primary-600/25 dark:border-white/10 dark:bg-white/1 dark:hover:border-primary-400/30 dark:hover:shadow-primary-600/30"
                   >
                     <div className="flex flex-row items-center gap-2 pb-2">
-                      <div className="w-8 h-8 min-w-8 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 rounded-full flex items-center justify-center">
+                      <div className="flex h-9 w-9 min-w-9 items-center justify-center rounded-full bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800">
                         {renderIco(process.id)}
                       </div>
                       <h4 className="text-xl font-medium">{process.title}</h4>
@@ -138,14 +138,14 @@ export function AboutContent() {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                 <Link
                   href={withLocalePath(location, "/stack")}
-                  className="flex flex-row justify-center items-center border border-primary-600 bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-4 py-2 rounded-xl transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                  className="flex flex-row justify-center items-center border border-primary-600 bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-4 py-2 rounded-lg transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
                 >
                   {translations.about.stack.button}
                   <LuArrowRight className="hidden md:flex ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href={withLocalePath(location, "/contact")}
-                  className="flex flex-row justify-center items-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-4 py-2 rounded-xl backdrop-blur-sm group"
+                  className="flex flex-row justify-center items-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 font-semibold px-4 py-2 rounded-lg backdrop-blur-sm group"
                 >
                   {translations.about.stack.contact}
                   <LuSend className="hidden md:flex ml-3 h-5 w-5 group-hover:rotate-360 duration-500 transition-transform" />
@@ -156,7 +156,7 @@ export function AboutContent() {
           <div className="flex flex-col mt-8 cv-auto">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
                   <LuCoffee className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">

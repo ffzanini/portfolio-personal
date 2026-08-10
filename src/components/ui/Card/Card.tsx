@@ -7,7 +7,7 @@ import { LuExternalLink, LuGithub, LuArrowRight } from "react-icons/lu";
 import { Project } from "@/app/data/projects";
 import { cn } from "@/libs/cn";
 import { useTranslation } from "@/context";
-import { ZoomImage } from "@/components/ui";
+import { ZoomImage } from "@/components/ui/ZoomImage";
 import { withLocalePath } from "@/libs/i18n";
 
 interface CardProps {
@@ -49,7 +49,7 @@ function CardComponent({
 
   return (
     <article
-      className="group flex h-full flex-col overflow-hidden rounded-xl ring-1 ring-black/10 dark:ring-white/10 bg-white-theme/80 dark:bg-dark-theme/80 transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-600/10"
+      className="group flex h-full flex-col overflow-hidden rounded-xl ring-1 ring-black/10 bg-white-theme/80 transition-[box-shadow,ring-color] duration-200 ease-out hover:shadow-xl hover:shadow-primary-600/25 hover:ring-primary-600/40 dark:ring-white/10 dark:bg-dark-theme/80 dark:hover:shadow-primary-600/30 dark:hover:ring-primary-400/40"
       style={{ animationDelay: `${index * 50}ms` }}
     >
       <Link

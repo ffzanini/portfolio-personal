@@ -4,7 +4,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import ProjectDetails from "@/app/[locale]/projects/[navigation]/ProjectDetails";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
-import { loadLocale } from "@/locales/load-locale";
+import { loadLocaleProjects } from "@/locales/load-locale";
 
 interface PageProps {
   params: Promise<{
@@ -34,8 +34,8 @@ export default async function LocaleProjectDetailsPage({
 }: Readonly<PageProps>) {
   const { locale: rawLocale, navigation } = await params;
   const locale = (isValidLocale(rawLocale) ? rawLocale : "pt") as Locale;
-  const [{ projects }, projectList] = await Promise.all([
-    loadLocale(locale),
+  const [projects, projectList] = await Promise.all([
+    loadLocaleProjects(locale),
     getProjects(),
   ]);
   const project = projectList.find((item) => item.navigation === navigation);

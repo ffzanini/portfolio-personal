@@ -4,7 +4,7 @@ import { PixelArtCollectionContent } from "@/components/pages/arcade/PixelArtCol
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { ARCADE_ENABLED } from "@/libs/arcade-ui";
 import { type Locale, isValidLocale } from "@/libs/i18n";
-import { loadLocale } from "@/locales/load-locale";
+import { loadLocaleArcade } from "@/locales/load-locale";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -15,7 +15,7 @@ export default async function LocalePixelArtPage({
 }: Readonly<PageProps>) {
   const { locale: rawLocale } = await params;
   const locale = (isValidLocale(rawLocale) ? rawLocale : "pt") as Locale;
-  const { arcade } = await loadLocale(locale);
+  const arcade = await loadLocaleArcade(locale);
 
   if (!ARCADE_ENABLED) {
     return (

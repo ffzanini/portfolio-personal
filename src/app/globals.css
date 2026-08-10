@@ -9,14 +9,41 @@
   --color-primary-50: #fff0f2;
   --color-primary-100: #ffe2e7;
   --color-primary-200: #ffc9d5;
-  --color-primary-300: #ff9db3; /* dark theme */
+  --color-primary-300: #ff9db3;
   --color-primary-400: #ff668b;
   --color-primary-500: #ff3067;
-  --color-primary-600: #f32263; /* main color */
-  --color-primary-700: #cc0447; /* variant color */
-  --color-primary-800: #aa0743; /* light theme */
+  --color-primary-600: #f32263;
+  --color-primary-700: #cc0447;
+  --color-primary-800: #aa0743;
   --color-primary-900: #920940;
   --color-primary-950: #52001e;
+
+  /* Keep Tailwind defaults — overriding these made rounded-lg look like pills */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+
+  --spacing-section: 5rem;
+  --spacing-gutter: 1.5rem;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --animate-hero-enter: hero-enter 420ms var(--ease-out-strong) both;
+  --animate-hero-enter-delayed: hero-enter 520ms var(--ease-out-strong) 80ms both;
+
+  @keyframes hero-enter {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer utilities {
@@ -76,35 +103,6 @@
     height: 100%;
   }
 
-  @keyframes float-up {
-    0%,
-    100% {
-      transform: translateY(-10px);
-    }
-    50% {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes float-down {
-    0%,
-    100% {
-      transform: translateY(10px);
-    }
-    50% {
-      transform: translateY(0);
-    }
-  }
-
-  .animate-float-up {
-    animation: float-up 3s ease-in-out infinite;
-  }
-
-  .animate-float-down {
-    animation: float-down 3s ease-in-out infinite;
-    animation-delay: 1s;
-  }
-
   @keyframes flip-out {
     from {
       opacity: 1;
@@ -135,6 +133,43 @@
 
   .animate-flip-in {
     animation: flip-in 200ms ease-out forwards;
+  }
+
+  @keyframes float-up {
+    0%,
+    100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float-down {
+    0%,
+    100% {
+      transform: translateY(10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float-up {
+    animation: float-up 3s ease-in-out infinite;
+  }
+
+  .animate-float-down {
+    animation: float-down 3s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .animate-hero-enter {
+    animation: var(--animate-hero-enter);
+  }
+
+  .animate-hero-enter-delayed {
+    animation: var(--animate-hero-enter-delayed);
   }
 
   /* content-visibility for below-fold sections */
@@ -169,6 +204,14 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Desktop home: lock scroll without a client effect */
+@media (min-width: 1024px) {
+  html:has([data-home-scroll-lock]),
+  body:has([data-home-scroll-lock]) {
+    overflow: hidden;
+  }
 }
 
 @supports (view-transition-name: root) {
@@ -247,8 +290,6 @@ select {
 .footer-icon a:hover {
   color: var(--primary);
 }
-
-/* change scroll bars layout */
 
 *::-webkit-scrollbar {
   width: 0.01px;

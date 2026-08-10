@@ -2,7 +2,7 @@ import { Navbar } from "@/components/ui/Navbar";
 import { AboutContent } from "@/components/pages/about/AboutContent";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
-import { loadLocale } from "@/locales/load-locale";
+import { loadLocaleAbout } from "@/locales/load-locale";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -11,7 +11,7 @@ type PageProps = {
 export default async function LocaleAboutPage({ params }: Readonly<PageProps>) {
   const { locale: rawLocale } = await params;
   const locale = (isValidLocale(rawLocale) ? rawLocale : "pt") as Locale;
-  const { about } = await loadLocale(locale);
+  const about = await loadLocaleAbout(locale);
 
   return (
     <TranslationsPatch patch={{ about }}>

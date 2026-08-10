@@ -69,7 +69,7 @@ export function LanguageSelect({
         onKeyDown={(event) => {
           if (event.key === "Escape") setOpen(false);
         }}
-        className="flex items-center justify-between w-full bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 px-3 py-2 rounded-lg hover:outline-none hover:ring-1 hover:ring-primary-800 dark:hover:ring-primary-300"
+        className="flex w-full items-center justify-between rounded-md border border-black/10 bg-black/5 px-3 py-2 backdrop-blur-sm hover:outline-none hover:ring-1 hover:ring-primary-800 dark:border-white/10 dark:bg-white/5 dark:hover:ring-primary-300"
       >
         <span className="flex items-center gap-2">
           <span>{selectedLang.flag}</span>
@@ -88,7 +88,7 @@ export function LanguageSelect({
           id={listboxId}
           role="menu"
           tabIndex={-1}
-          className="absolute z-10 mt-2 w-full bg-gray-100 dark:bg-dark-theme xl:bg-black/5 xl:dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-lg shadow-lg"
+          className="absolute z-10 mt-2 w-full rounded-md border border-black/10 bg-gray-100 shadow-lg backdrop-blur-sm dark:border-white/10 dark:bg-dark-theme xl:bg-black/5 xl:dark:bg-white/5"
         >
           {languages.map((lang, index) => (
             <div
@@ -96,8 +96,8 @@ export function LanguageSelect({
               className={cn(
                 "hover:bg-black/15 dark:hover:bg-white/15",
                 selected === lang.code && "bg-black/15 dark:bg-white/15",
-                index === 0 && "rounded-t-lg",
-                index === languages.length - 1 && "rounded-b-lg",
+                index === 0 && "rounded-t-md",
+                index === languages.length - 1 && "rounded-b-md",
               )}
             >
               <button

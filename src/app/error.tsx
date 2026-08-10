@@ -23,13 +23,13 @@ export default function ErrorPage({ error, reset }: Readonly<ErrorProps>) {
         <button
           type="button"
           onClick={reset}
-          className="rounded-full border border-foreground/20 px-5 py-2 text-sm transition-colors hover:border-primary hover:text-primary"
+          className="rounded-lg border border-foreground/20 px-5 py-2 text-sm transition-colors hover:border-primary hover:text-primary"
         >
           Tentar novamente
         </button>
         <Link
           href="/"
-          className="rounded-full border border-foreground/20 px-5 py-2 text-sm transition-colors hover:border-primary hover:text-primary"
+          className="rounded-lg border border-foreground/20 px-5 py-2 text-sm transition-colors hover:border-primary hover:text-primary"
         >
           Início
         </Link>

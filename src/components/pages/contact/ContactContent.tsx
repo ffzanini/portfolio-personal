@@ -15,7 +15,7 @@ import {
 import toast from "react-hot-toast";
 
 import { useTranslation } from "@/context";
-import { Tooltip } from "@/components/ui";
+import { Tooltip } from "@/components/ui/Tooltip";
 import { SanitizedText } from "@/components/utils";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { cn } from "@/libs/cn";
@@ -58,7 +58,7 @@ export function ContactContent() {
           <div className="flex flex-col mt-8">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
                   <LuFootprints className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">
@@ -74,7 +74,7 @@ export function ContactContent() {
                 {translations.contact.next.steps.map((step) => (
                   <div
                     key={step.id}
-                    className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                    className="rounded-2xl border border-black/10 bg-black/5 p-8 backdrop-blur-sm transition-[box-shadow,border-color] duration-200 hover:border-primary-600/30 hover:shadow-xl hover:shadow-primary-600/25 dark:border-white/10 dark:bg-white/5 dark:hover:border-primary-400/30 dark:hover:shadow-primary-600/30"
                   >
                     <div className="flex flex-row justify-center items-center gap-2 pb-2">
                       <div className="w-28 h-28 min-w-28 bg-primary-100 dark:bg-primary-800/70 rounded-full flex items-center justify-center border-[5px] border-primary-600 dark:border-primary-300">
@@ -92,7 +92,7 @@ export function ContactContent() {
           <div className="flex flex-col my-8">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
                   <LuHandshake className="h-6 w-6" />
                 </div>
                 <div className="flex flex-col items-start">
@@ -109,7 +109,7 @@ export function ContactContent() {
                   (testimonial) => (
                     <div
                       key={testimonial.name}
-                      className="flex h-full flex-col bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                      className="flex h-full flex-col rounded-2xl border border-black/10 bg-black/5 p-6 backdrop-blur-sm transition-[box-shadow,border-color] duration-200 hover:border-primary-600/30 hover:shadow-xl hover:shadow-primary-600/25 dark:border-white/10 dark:bg-white/5 dark:hover:border-primary-400/30 dark:hover:shadow-primary-600/30"
                     >
                       <LuQuote className="w-8 h-8 text-primary-600 mb-4 shrink-0" />
                       <p className="italic leading-relaxed text-[0.95rem] mb-6 grow">
@@ -202,7 +202,7 @@ function ContactForm() {
     <div className="flex flex-col mt-4 lg:mt-8">
       <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
         <div className="flex flex-row items-start mb-6">
-          <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+          <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
             <LuMail className="h-6 w-6" />
           </div>
           <div className="flex flex-col items-start">
@@ -253,7 +253,7 @@ function ContactForm() {
               <button
                 disabled={!enableSubmit || isSubmitting}
                 type="submit"
-                className="disabled:grayscale disabled:cursor-not-allowed cursor-pointer w-full flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
+                className="disabled:grayscale disabled:cursor-not-allowed cursor-pointer w-full flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
               >
                 {submitLabel}
               </button>

@@ -58,7 +58,7 @@ export function StackContent() {
                 style={{ animationDelay: `${categoryIndex * 0.1}s` }}
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
                     <category.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <div className="flex flex-col items-start">
@@ -118,7 +118,7 @@ export function StackContent() {
           </div>
           <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8 my-8">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-xl flex items-center justify-center mr-4">
+              <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
                 <LuBriefcaseBusiness className="h-6 w-6" aria-hidden="true" />
               </div>
               <div className="flex flex-col items-start">
@@ -134,7 +134,7 @@ export function StackContent() {
               {translations.stack.strengths.items.map((item) => (
                 <div
                   key={item.title}
-                  className="bg-black/1 dark:bg-white/1 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-4 transition-[transform,box-shadow] hover:shadow-xl hover:shadow-primary-600/10 hover:scale-[1.02]"
+                  className="rounded-2xl border border-black/10 bg-black/1 p-4 backdrop-blur-sm transition-[box-shadow,border-color] duration-200 hover:border-primary-600/30 hover:shadow-xl hover:shadow-primary-600/25 dark:border-white/10 dark:bg-white/1 dark:hover:border-primary-400/30 dark:hover:shadow-primary-600/30"
                 >
                   <div className="flex flex-row items-center gap-2 pb-2">
                     <h3 className="text-xl font-semibold">{item.title}</h3>

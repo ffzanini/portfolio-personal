@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { isValidLocale, normalizeLocale } from "@/libs/i18n";
 import { buildPageMetadata } from "@/libs/page-metadata";
-import { loadLocale } from "@/locales/load-locale";
+import { loadLocaleChrome } from "@/locales/load-locale";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export async function generateMetadata({
   if (!isValidLocale(rawLocale)) return {};
 
   const locale = normalizeLocale(rawLocale);
-  const translations = await loadLocale(locale);
+  const translations = await loadLocaleChrome(locale);
 
   return buildPageMetadata({
     locale,

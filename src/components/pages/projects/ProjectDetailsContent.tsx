@@ -11,7 +11,8 @@ import {
 } from "react-icons/lu";
 
 import { Project } from "@/app/data/projects";
-import { Breadcrumb, ZoomImage } from "@/components/ui";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { ZoomImage } from "@/components/ui/ZoomImage";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { withLocalePath } from "@/libs/i18n";
@@ -199,7 +200,7 @@ export function ProjectDetailsContent({
                 className="flex flex-col rounded-2xl border border-black/10 bg-black/2 p-4 backdrop-blur-sm dark:border-white/10 dark:bg-white/2"
               >
                 <div className="mb-3 flex items-center gap-2">
-                  <div className="flex h-8 w-8 min-w-8 items-center justify-center rounded-full bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800">
+                  <div className="flex h-8 w-8 min-w-8 items-center justify-center rounded-md bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800">
                     <Icon className="h-5 w-5" aria-hidden />
                   </div>
                   <h3 className="text-lg font-medium">{title}</h3>

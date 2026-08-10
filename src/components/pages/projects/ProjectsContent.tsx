@@ -186,7 +186,7 @@ export function ProjectsContent() {
                     <button
                       type="button"
                       onClick={handleLoadMore}
-                      className="cursor-pointer rounded-xl bg-linear-to-r from-primary-400 to-primary-600 px-6 py-2.5 font-semibold text-white shadow-lg shadow-primary-600/25 transition-[transform,box-shadow,background-color] duration-200 hover:from-primary-500 hover:to-primary-700 hover:shadow-xl active:scale-[0.98] sm:px-8 sm:py-3"
+                      className="cursor-pointer rounded-lg bg-linear-to-r from-primary-400 to-primary-600 px-6 py-2.5 font-semibold text-white shadow-lg shadow-primary-600/25 transition-[transform,box-shadow,background-color] duration-200 hover:from-primary-500 hover:to-primary-700 hover:shadow-xl active:scale-[0.98] sm:px-8 sm:py-3"
                     >
                       {copy.load}
                     </button>

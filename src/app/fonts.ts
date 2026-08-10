@@ -8,12 +8,12 @@ export const fontMavenPro = mavenPro({
   preload: true,
   adjustFontFallback: true,
   fallback: ["system-ui", "arial"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "700"],
 });
 
 export const fontRyanaLovely = localFont({
   src: "../../public/fonts/Ryana-Lovely.woff2",
   variable: "--font-ryanaLovely",
   display: "swap",
-  preload: false,
+  preload: true,
 });
