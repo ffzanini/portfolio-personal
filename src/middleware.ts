@@ -44,6 +44,6 @@ export function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     "/",
-    String.raw`/((?!pt|en|es|_next|api|.*\..*).*)`,
+    "/((?!pt|en|es|_next|api|.*\\..*).*)",
   ],
 };
