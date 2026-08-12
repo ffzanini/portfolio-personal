@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/ui/Navbar";
 import { ProjectsContent } from "@/components/pages/projects/ProjectsContent";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
@@ -17,7 +16,6 @@ export default async function LocaleProjectsPage({
 
   return (
     <TranslationsPatch patch={{ projects }}>
-      <Navbar />
       <ProjectsContent />
     </TranslationsPatch>
   );

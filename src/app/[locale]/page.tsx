@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { type Locale, isValidLocale, normalizeLocale } from "@/libs/i18n";
 import { loadLocaleChrome, loadLocaleHome } from "@/locales/load-locale";
 import { buildPageMetadata } from "@/libs/page-metadata";
-import { Navbar } from "@/components/ui/Navbar";
 import { HomeContent } from "@/components/pages/home/HomeContent";
 
 type PageProps = {
@@ -31,10 +30,5 @@ export default async function LocaleHomePage({ params }: Readonly<PageProps>) {
   const locale = rawLocale as Locale;
   const home = await loadLocaleHome(locale);
 
-  return (
-    <>
-      <Navbar />
-      <HomeContent home={home} locale={locale} />
-    </>
-  );
+  return <HomeContent home={home} locale={locale} />;
 }

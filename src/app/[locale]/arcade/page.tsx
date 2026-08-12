@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/ui/Navbar";
 import { ArcadeContent } from "@/components/pages/arcade/ArcadeContent";
 import { ArcadeUnderConstruction } from "@/components/pages/arcade/ArcadeUnderConstruction";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
@@ -21,7 +20,6 @@ export default async function LocaleArcadePage({
   if (!ARCADE_ENABLED) {
     return (
       <TranslationsPatch patch={{ arcade }}>
-        <Navbar />
         <ArcadeUnderConstruction />
       </TranslationsPatch>
     );
@@ -31,7 +29,6 @@ export default async function LocaleArcadePage({
 
   return (
     <TranslationsPatch patch={{ arcade }}>
-      <Navbar />
       <ArcadeContent videos={videos} />
     </TranslationsPatch>
   );

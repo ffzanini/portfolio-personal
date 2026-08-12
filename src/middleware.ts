@@ -8,26 +8,16 @@ const LANGUAGE_COOKIE_OPTIONS = {
   sameSite: "lax" as const,
 };
 
-/**
- * Edge-only locale redirect for paths that lack a /pt|/en|/es prefix.
- * Localized routes return next() immediately so ISR/CDN stays on the cold path.
- */
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-
-  if (
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/api") ||
-    pathname.includes(".")
-  ) {
-    return NextResponse.next();
-  }
-
   const firstSegment = pathname.split("/").find(Boolean);
 
-  // Already localized — never prepend another locale (prevents /es/es/es… loops).
-  // Matcher negative-lookahead alone is not reliable under Next's path-to-regexp.
-  if (firstSegment && isValidLocale(firstSegment)) {
+  if (
+    (firstSegment && isValidLocale(firstSegment)) ||
+    firstSegment === "_next" ||
+    firstSegment === "api" ||
+    (pathname !== "/" && pathname.includes("."))
+  ) {
     return NextResponse.next();
   }
 
@@ -54,6 +44,6 @@ export function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     "/",
-    "/((?!_next/static|_next/image|favicon.ico|.*\\..*).*)",
+    String.raw`/((?!pt|en|es|_next|api|.*\..*).*)`,
   ],
 };

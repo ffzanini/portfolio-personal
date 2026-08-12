@@ -16,7 +16,7 @@ import toast from "react-hot-toast";
 
 import { useTranslation } from "@/context";
 import { Tooltip } from "@/components/ui/Tooltip";
-import { SanitizedText } from "@/components/utils";
+import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { cn } from "@/libs/cn";
 

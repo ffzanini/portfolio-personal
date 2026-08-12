@@ -97,7 +97,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          disableTransitionOnChange
+        >
           <JsonLd />
           {children}
           <AnalyticsWrapper />

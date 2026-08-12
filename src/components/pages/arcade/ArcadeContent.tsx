@@ -12,7 +12,7 @@ import { pixeloidSans, pixeloidSansBold } from "@/app/fonts-pixeloid";
 import { GameCard } from "@/components/pages/arcade/GameCard";
 import { PixelArtCard } from "@/components/pages/arcade/PixelArtCard";
 import { VideoCard } from "@/components/pages/arcade/VideoCard";
-import { SanitizedText } from "@/components/utils";
+import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import {

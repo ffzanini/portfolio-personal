@@ -14,6 +14,9 @@
   "not_found_message": "A página que você está procurando não existe ou foi movida.",
   "not_found_home": "Voltar para o início",
   "dota_hero_alt": "Herói de Dota 2",
+  "photo_carousel": "Fotos",
+  "photo_previous": "Foto anterior",
+  "photo_next": "Próxima foto",
   "project_image_alt": "{title} — projeto de {name} usando {tech}",
   "seo": {
     "home_title": "Engenheiro de Software & Arquiteto Frontend",

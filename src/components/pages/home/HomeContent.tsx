@@ -9,7 +9,6 @@ import {
 } from "react-icons/lu";
 import { LiaHandSpock } from "react-icons/lia";
 
-import { Tooltip } from "@/components/ui/Tooltip";
 import { FlipWords } from "@/components/ui/FlipWords";
 import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
@@ -32,11 +31,11 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
         <div className="grid w-full grid-cols-1 items-center gap-6 lg:max-h-full lg:grid-cols-2 lg:gap-8">
           <div className="order-2 space-y-4 sm:space-y-6 lg:order-1 xl:space-y-8">
             <div className="space-y-2 sm:space-y-4">
-              <div className="animate-hero-enter space-y-2">
+              <div className="space-y-2">
                 <p className="text-xl font-medium text-gray-600 dark:text-gray-400">
                   {home.welcome}
                 </p>
-                <h1 className="text-4xl leading-tight font-bold sm:text-4xl lg:text-5xl xl:text-6xl">
+                <h1 className="text-4xl leading-tight font-bold text-primary-600 sm:text-4xl lg:text-5xl xl:text-6xl dark:text-primary-300">
                   <span className="bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 bg-clip-text text-transparent dark:from-primary-800 dark:via-primary-600 dark:to-primary-400">
                     {home.name}
                   </span>
@@ -138,26 +137,17 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                     {home.stack}
                   </h2>
                   <div className="flex justify-center gap-2 xl:gap-3">
-                    {mainTechStack.map((tech, index) => (
-                      <Tooltip
-                        key={tech.name}
-                        text={tech.name}
-                        position="top"
-                      >
+                    {mainTechStack.map((tech) => (
+                      <div key={tech.name} className="group relative" title={tech.name}>
                         <div
-                          className="group relative"
-                          style={{ animationDelay: `${index * 0.1}s` }}
+                          className={`relative flex h-12 w-12 items-center justify-center rounded-lg border shadow-sm backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg ${tech.bgColor} ${tech.borderColor}`}
                         >
-                          <div
-                            className={`relative flex h-12 w-12 items-center justify-center rounded-lg border shadow-sm backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg ${tech.bgColor} ${tech.borderColor}`}
-                          >
-                            <tech.icon
-                              className={`h-6 w-6 transition-transform duration-300 group-hover:scale-110 ${tech.iconColor}`}
-                              aria-label={tech.name}
-                            />
-                          </div>
+                          <tech.icon
+                            className={`h-6 w-6 transition-transform duration-300 group-hover:scale-110 ${tech.iconColor}`}
+                            aria-label={tech.name}
+                          />
                         </div>
-                      </Tooltip>
+                      </div>
                     ))}
                   </div>
                   <Link

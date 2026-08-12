@@ -1,34 +1,36 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { fontRyanaLovely } from "@/app/fonts";
-import { Tooltip } from "@/components/ui/Tooltip";
-import { useTranslation } from "@/context";
-import { cn } from "@/libs/cn";
-import { withLocalePath } from "@/libs/i18n";
 
 type NavbarBrandProps = {
-  isActive: boolean;
+  href: string;
+  backHomeLabel: string;
+  onNavigate?: () => void;
 };
 
-export function NavbarBrand({ isActive }: Readonly<NavbarBrandProps>) {
-  const { translations, location } = useTranslation();
+export function NavbarBrand({
+  href,
+  backHomeLabel,
+  onNavigate,
+}: Readonly<NavbarBrandProps>) {
+  const pathname = usePathname();
+  const isHome = pathname === href;
 
   return (
-    <Tooltip text={translations.ui.back_home}>
-      <Link
-        href={withLocalePath(location, "/")}
-        className={cn(
-          `${fontRyanaLovely.className} text-3xl transition-[opacity,color] duration-200`,
-          isActive
-            ? "opacity-100 text-black dark:text-white"
-            : "opacity-60 text-gray-500 dark:text-gray-300 hover:opacity-100 hover:text-black dark:hover:text-white",
-        )}
-        title="Felipe Frantz Zanini"
-      >
-        <p>2fZ</p>
-      </Link>
-    </Tooltip>
+    <Link
+      href={href}
+      onClick={onNavigate}
+      title={backHomeLabel}
+      className={`${fontRyanaLovely.className} text-3xl transition-[opacity,color] duration-200 ${
+        isHome
+          ? "text-black opacity-100 dark:text-white"
+          : "text-gray-500 opacity-60 hover:text-black hover:opacity-100 dark:text-gray-300 dark:hover:text-white"
+      }`}
+    >
+      <span>2fZ</span>
+    </Link>
   );
 }

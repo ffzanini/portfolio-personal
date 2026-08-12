@@ -1,6 +1,5 @@
 import { cache } from "react";
 import { notFound } from "next/navigation";
-import { Navbar } from "@/components/ui/Navbar";
 import ProjectDetails from "@/app/[locale]/projects/[navigation]/ProjectDetails";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
@@ -44,7 +43,6 @@ export default async function LocaleProjectDetailsPage({
 
   return (
     <TranslationsPatch patch={{ projects }}>
-      <Navbar />
       <ProjectDetails project={project} />
     </TranslationsPatch>
   );

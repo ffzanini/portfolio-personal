@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/ui/Navbar";
 import { ArcadeUnderConstruction } from "@/components/pages/arcade/ArcadeUnderConstruction";
 import { PixelArtCollectionContent } from "@/components/pages/arcade/PixelArtCollectionContent";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
@@ -20,7 +19,6 @@ export default async function LocalePixelArtPage({
   if (!ARCADE_ENABLED) {
     return (
       <TranslationsPatch patch={{ arcade }}>
-        <Navbar />
         <ArcadeUnderConstruction />
       </TranslationsPatch>
     );
@@ -28,7 +26,6 @@ export default async function LocalePixelArtPage({
 
   return (
     <TranslationsPatch patch={{ arcade }}>
-      <Navbar />
       <PixelArtCollectionContent />
     </TranslationsPatch>
   );

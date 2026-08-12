@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/ui/Navbar";
 import { ContactContent } from "@/components/pages/contact/ContactContent";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
@@ -17,7 +16,6 @@ export default async function LocaleContactPage({
 
   return (
     <TranslationsPatch patch={{ contact }}>
-      <Navbar />
       <ContactContent />
     </TranslationsPatch>
   );

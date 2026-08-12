@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 
+import { Navbar } from "@/components/ui/Navbar";
 import AppProvider from "@/providers/AppProvider";
-import { LazyClientToaster } from "@/components/utils/ClientToaster";
+import { LazyClientToaster } from "@/components/utils/ClientToaster/LazyClientToaster";
 import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import { isValidLocale, SUPPORTED_LOCALES } from "@/libs/i18n";
 import { loadLocaleChrome } from "@/locales/load-locale";
@@ -31,6 +32,7 @@ export default async function LocaleLayout({
 
   return (
     <AppProvider initialLocale={locale} initialTranslations={initialTranslations}>
+      <Navbar locale={locale} chrome={initialTranslations} />
       {children}
       <LazyClientToaster />
       <LazyScrollToTop />

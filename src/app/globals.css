@@ -30,20 +30,6 @@
 
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
-
-  --animate-hero-enter: hero-enter 420ms var(--ease-out-strong) both;
-  --animate-hero-enter-delayed: hero-enter 520ms var(--ease-out-strong) 80ms both;
-
-  @keyframes hero-enter {
-    from {
-      opacity: 0;
-      transform: translateY(0.75rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 }
 
 @layer utilities {
@@ -162,14 +148,6 @@
   .animate-float-down {
     animation: float-down 3s ease-in-out infinite;
     animation-delay: 1s;
-  }
-
-  .animate-hero-enter {
-    animation: var(--animate-hero-enter);
-  }
-
-  .animate-hero-enter-delayed {
-    animation: var(--animate-hero-enter-delayed);
   }
 
   /* content-visibility for below-fold sections */

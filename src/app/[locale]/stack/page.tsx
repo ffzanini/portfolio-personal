@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/ui/Navbar";
 import { StackContent } from "@/components/pages/stack/StackContent";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
@@ -15,7 +14,6 @@ export default async function LocaleStackPage({ params }: Readonly<PageProps>) {
 
   return (
     <TranslationsPatch patch={{ stack }}>
-      <Navbar />
       <StackContent />
     </TranslationsPatch>
   );

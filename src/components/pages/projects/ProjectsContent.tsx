@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { LuFilter } from "react-icons/lu";
 import Link from "next/link";
 
-import { SanitizedText } from "@/components/utils";
+import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { projects } from "@/app/data/projects";

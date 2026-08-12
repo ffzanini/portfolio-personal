@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/ui/Navbar";
 import { AboutContent } from "@/components/pages/about/AboutContent";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
@@ -15,7 +14,6 @@ export default async function LocaleAboutPage({ params }: Readonly<PageProps>) {
 
   return (
     <TranslationsPatch patch={{ about }}>
-      <Navbar />
       <AboutContent />
     </TranslationsPatch>
   );

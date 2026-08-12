@@ -3,7 +3,7 @@ import { type CSSProperties } from "react";
 import Link from "next/link";
 import { LuBriefcaseBusiness, LuStar } from "react-icons/lu";
 
-import { SanitizedText } from "@/components/utils";
+import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { categories } from "@/constants/stack";
 import { useTranslation } from "@/context";

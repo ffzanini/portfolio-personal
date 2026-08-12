@@ -1,6 +1,5 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { cn } from "@/libs/cn";
 
 export const FlipWords = ({
   words,
@@ -48,8 +47,16 @@ export const FlipWords = ({
     setBusy(false);
   }, []);
 
+  const wrapperClass = className
+    ? `relative inline-block ${className}`
+    : "relative inline-block";
+  const wordClass =
+    animKey > 0
+      ? "inline-block whitespace-nowrap text-neutral-900 dark:text-neutral-100 animate-flip-in"
+      : "inline-block whitespace-nowrap text-neutral-900 dark:text-neutral-100";
+
   return (
-    <span className={cn("relative inline-block", className)}>
+    <span className={wrapperClass}>
       {exitWord !== null && (
         <span
           className="absolute left-0 top-0 whitespace-nowrap text-neutral-900 dark:text-neutral-100 animate-flip-out"
@@ -59,13 +66,7 @@ export const FlipWords = ({
           {exitWord}
         </span>
       )}
-      <span
-        key={animKey}
-        className={cn(
-          "inline-block whitespace-nowrap text-neutral-900 dark:text-neutral-100",
-          animKey > 0 && "animate-flip-in",
-        )}
-      >
+      <span key={animKey} className={wordClass}>
         {words[currentIdx] ?? ""}
       </span>
     </span>

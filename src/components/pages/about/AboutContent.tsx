@@ -17,8 +17,9 @@ import {
   RiNumber6,
 } from "react-icons/ri";
 
+import { AboutPhotoSlider } from "@/components/pages/about/AboutPhotoSlider";
 import { ZoomImage } from "@/components/ui/ZoomImage";
-import { SanitizedText } from "@/components/utils";
+import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
 import { photos } from "@/constants/about";
 import { useTranslation } from "@/context";
@@ -81,7 +82,7 @@ export function AboutContent() {
                 />
                 <SanitizedText json={translations.about.description.end} />
               </div>
-              <div className="md:grid grid-cols-5 gap-4 pb-6 hidden">
+              <div className="hidden grid-cols-5 gap-4 pb-6 lg:grid">
                 {photos.map((photo) => (
                   <ZoomImage
                     key={photo.src}
@@ -92,6 +93,9 @@ export function AboutContent() {
                     className={photo.className}
                   />
                 ))}
+              </div>
+              <div className="pb-2 lg:hidden">
+                <AboutPhotoSlider photos={photos} />
               </div>
             </div>
           </div>
