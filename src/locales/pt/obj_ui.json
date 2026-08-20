@@ -17,6 +17,9 @@
   "photo_carousel": "Fotos",
   "photo_previous": "Foto anterior",
   "photo_next": "Próxima foto",
+  "testimonial_carousel": "Depoimentos",
+  "testimonial_previous": "Depoimento anterior",
+  "testimonial_next": "Próximo depoimento",
   "project_image_alt": "{title} — projeto de {name} usando {tech}",
   "seo": {
     "home_title": "Engenheiro de Software & Arquiteto Frontend",

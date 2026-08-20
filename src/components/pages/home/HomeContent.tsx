@@ -122,10 +122,11 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                       width={180}
                       height={180}
                       className="h-full w-full rounded-lg object-cover"
-                      sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 200px"
+                      sizes="200px"
                       priority
                       fetchPriority="high"
                       quality={75}
+                      unoptimized
                     />
                   </div>
                   <div className="absolute -right-1 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full border-3 border-white bg-green-500 sm:-right-2 sm:-bottom-2 sm:h-8 sm:w-8 sm:border-4 dark:border-gray-900">

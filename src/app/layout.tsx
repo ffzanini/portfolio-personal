@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import { AnalyticsWrapper } from "@/components/utils/Analytics";
 import { JsonLd } from "@/components/utils/JsonLd";
@@ -8,6 +9,8 @@ import {
   SEO_KEYWORDS,
   DEFAULT_OG_IMAGE,
 } from "@/constants/seo";
+import { IntroGreetings } from "@/components/intro/IntroGreetings";
+import { INTRO_BOOTSTRAP_SCRIPT } from "@/components/intro/intro-bootstrap";
 import { fontMavenPro } from "./fonts";
 import "./globals.css";
 
@@ -97,6 +100,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
       </head>
       <body className={`${fontMavenPro.className} antialiased`}>
+        <Script
+          id="intro-bootstrap"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: INTRO_BOOTSTRAP_SCRIPT }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -104,6 +112,7 @@ export default function RootLayout({
         >
           <JsonLd />
           {children}
+          <IntroGreetings />
           <AnalyticsWrapper />
         </ThemeProvider>
       </body>

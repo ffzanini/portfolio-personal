@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { fontRyanaLovely } from "@/app/fonts";
+import { fontRyanaLovely } from "@/app/fonts-ryana";
 
 type NavbarBrandProps = {
   href: string;

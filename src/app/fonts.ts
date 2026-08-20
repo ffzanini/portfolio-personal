@@ -1,5 +1,4 @@
 import { Maven_Pro as mavenPro } from "next/font/google";
-import localFont from "next/font/local";
 
 export const fontMavenPro = mavenPro({
   subsets: ["latin"],
@@ -9,11 +8,4 @@ export const fontMavenPro = mavenPro({
   adjustFontFallback: true,
   fallback: ["system-ui", "arial"],
   weight: ["400", "700"],
-});
-
-export const fontRyanaLovely = localFont({
-  src: "../../public/fonts/Ryana-Lovely.woff2",
-  variable: "--font-ryanaLovely",
-  display: "swap",
-  preload: false,
 });

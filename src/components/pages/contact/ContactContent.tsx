@@ -18,6 +18,7 @@ import { useTranslation } from "@/context";
 import { Tooltip } from "@/components/ui/Tooltip";
 import { SanitizedText } from "@/components/utils/SanitizedText";
 import { LazyFooter } from "@/components/utils/LazyFooter";
+import { TestimonialsSlider } from "@/components/pages/contact/TestimonialsSlider";
 import { cn } from "@/libs/cn";
 
 export function ContactContent() {
@@ -42,8 +43,8 @@ export function ContactContent() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
-      <main className="pt-20 lg:pt-32 pb-8">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <main className="pt-20 pb-8 lg:pt-32">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent mb-6 p-3">
               {translations.contact.title}
@@ -104,18 +105,18 @@ export function ContactContent() {
                   </span>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+              <div className="hidden grid-cols-1 gap-8 xl:grid xl:grid-cols-3">
                 {translations.contact.testimonials.testimonials.map(
                   (testimonial) => (
                     <div
                       key={testimonial.name}
                       className="flex h-full flex-col rounded-2xl border border-black/10 bg-black/5 p-6 backdrop-blur-sm transition-[box-shadow,border-color] duration-200 hover:border-primary-600/30 hover:shadow-xl hover:shadow-primary-600/25 dark:border-white/10 dark:bg-white/5 dark:hover:border-primary-400/30 dark:hover:shadow-primary-600/30"
                     >
-                      <LuQuote className="w-8 h-8 text-primary-600 mb-4 shrink-0" />
-                      <p className="italic leading-relaxed text-[0.95rem] mb-6 grow">
+                      <LuQuote className="mb-4 h-8 w-8 shrink-0 text-primary-600" />
+                      <p className="mb-6 grow text-[0.95rem] leading-relaxed italic">
                         &quot;{testimonial.quote}&quot;
                       </p>
-                      <div className="mt-auto border-t border-black/10 dark:border-white/10 pt-4">
+                      <div className="mt-auto border-t border-black/10 pt-4 dark:border-white/10">
                         <p className="font-semibold">{testimonial.name}</p>
                         <p className="text-sm text-black/70 dark:text-white/70">
                           {testimonial.title}
@@ -125,9 +126,14 @@ export function ContactContent() {
                   ),
                 )}
               </div>
+              <div className="xl:hidden">
+                <TestimonialsSlider
+                  testimonials={translations.contact.testimonials.testimonials}
+                />
+              </div>
             </div>
           </div>
-          <div className="flex flex-col">
+          <div className="mt-8 flex flex-col lg:mt-12">
             <div className="flex flex-col items-start gap-3">
               <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
                 {translations.contact.footer.title}

@@ -8,16 +8,23 @@ const LANGUAGE_COOKIE_OPTIONS = {
   sameSite: "lax" as const,
 };
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const firstSegment = pathname.split("/").find(Boolean);
 
   if (
-    (firstSegment && isValidLocale(firstSegment)) ||
     firstSegment === "_next" ||
     firstSegment === "api" ||
     (pathname !== "/" && pathname.includes("."))
   ) {
+    return NextResponse.next();
+  }
+
+  if (firstSegment && isValidLocale(firstSegment)) {
+    return NextResponse.next();
+  }
+
+  if (pathname === "/") {
     return NextResponse.next();
   }
 
@@ -28,22 +35,19 @@ export function middleware(req: NextRequest) {
   });
 
   const url = req.nextUrl.clone();
-  url.pathname =
-    pathname === "/" ? `/${resolvedLocale}` : `/${resolvedLocale}${pathname}`;
+  url.pathname = `/${resolvedLocale}${pathname}`;
 
   const response = NextResponse.redirect(url);
-  response.headers.set("Cache-Control", "private, no-store");
-
   if (cookieLocale !== resolvedLocale) {
-    response.cookies.set(LANGUAGE_COOKIE, resolvedLocale, LANGUAGE_COOKIE_OPTIONS);
+    response.cookies.set(
+      LANGUAGE_COOKIE,
+      resolvedLocale,
+      LANGUAGE_COOKIE_OPTIONS,
+    );
   }
-
   return response;
 }
 
 export const config = {
-  matcher: [
-    "/",
-    "/((?!pt|en|es|_next|api|.*\\..*).*)",
-  ],
+  matcher: ["/", "/((?!pt|en|es|_next|api|.*\\..*).*)"],
 };

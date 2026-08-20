@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { Navbar } from "@/components/ui/Navbar";
 import AppProvider from "@/providers/AppProvider";
-import { LazyClientToaster } from "@/components/utils/ClientToaster/LazyClientToaster";
+import { LazyClientToaster } from "@/components/utils/ClientToaster";
 import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import { isValidLocale, SUPPORTED_LOCALES } from "@/libs/i18n";
 import { loadLocaleChrome } from "@/locales/load-locale";
@@ -12,7 +12,8 @@ type LocaleLayoutProps = {
   params: Promise<{ locale: string }>;
 };
 
-export const revalidate = 3600;
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));

@@ -32,6 +32,26 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  async redirects() {
+    return [
+      { source: "/about", destination: "/pt/about", permanent: true },
+      { source: "/stack", destination: "/pt/stack", permanent: true },
+      { source: "/projects", destination: "/pt/projects", permanent: true },
+      {
+        source: "/projects/:navigation",
+        destination: "/pt/projects/:navigation",
+        permanent: true,
+      },
+      { source: "/contact", destination: "/pt/contact", permanent: true },
+      { source: "/arcade", destination: "/pt/arcade", permanent: true },
+      {
+        source: "/arcade/pixel-art",
+        destination: "/pt/arcade/pixel-art",
+        permanent: true,
+      },
+    ];
+  },
+
   images: {
     formats: ["image/avif", "image/webp"],
     // Cap at 1920 — portfolio never needs 2048/3840 hero candidates for LCP
@@ -94,7 +114,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, s-maxage=3600, stale-while-revalidate=86400",
+            value: "public, s-maxage=86400, stale-while-revalidate=604800",
           },
         ],
       },
@@ -103,7 +123,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, s-maxage=3600, stale-while-revalidate=86400",
+            value: "public, s-maxage=86400, stale-while-revalidate=604800",
           },
         ],
       },

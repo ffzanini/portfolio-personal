@@ -60,7 +60,7 @@ export function NavbarChrome({
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full border-b backdrop-blur-xl transition-[background-color] duration-200 ${
+      className={`fixed top-0 z-50 w-full border-b backdrop-blur-md transition-[background-color] duration-200 ${
         isScrolled
           ? "border-black/10 bg-white-theme/1 dark:border-white/10 dark:bg-dark-theme/1"
           : "border-transparent"

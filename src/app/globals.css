@@ -33,6 +33,21 @@
 }
 
 @layer utilities {
+  @keyframes intro-greet {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .intro-greet {
+    animation: intro-greet 160ms var(--ease-out-strong) both;
+  }
+
   @keyframes loading-slide {
     0% {
       transform: translateX(-120%);
@@ -182,6 +197,13 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+html[data-intro],
+html[data-intro] body,
+html:has([data-intro-lock]),
+body:has([data-intro-lock]) {
+  overflow: hidden;
 }
 
 /* Desktop home: lock scroll without a client effect */

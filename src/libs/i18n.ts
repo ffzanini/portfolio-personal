@@ -29,6 +29,21 @@ export const getLocaleFromBrowserLanguage = (
   return mapBaseLanguageToLocale(baseLanguage) ?? INTERNATIONAL_FALLBACK_LOCALE;
 };
 
+export const getLocaleFromNavigatorLanguages = (
+  languages: readonly (string | null | undefined)[],
+): Locale => {
+  const list = languages.filter((language): language is string =>
+    Boolean(language),
+  );
+  for (const language of list) {
+    const mapped = mapBaseLanguageToLocale(
+      language.toLowerCase().split("-")[0] ?? "",
+    );
+    if (mapped) return mapped;
+  }
+  return list.length > 0 ? INTERNATIONAL_FALLBACK_LOCALE : DEFAULT_LOCALE;
+};
+
 export const getLocaleFromAcceptLanguage = (
   acceptLanguageHeader?: string | null,
 ): Locale => {
