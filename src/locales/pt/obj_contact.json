@@ -1,55 +1,55 @@
 {
   "title": "Entre em contato",
-  "sub_title": "Sinta-se à vontade para entrar em contato por aqui ou pelo <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>. Estou sempre disponível para trocar ideias sobre desenvolvimento, projetos e o que mais surgir.",
+  "sub_title": "Escreve para <b><a href='mailto:devffzanini@gmail.com'>devffzanini@gmail.com</a></b>, fala pelo <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou usa o formulário abaixo, o que for melhor para você. Sempre topo conversar sobre desenvolvimento, projetos e o que mais surgir.",
   "form": {
     "title": "Envie uma mensagem",
-    "sub_title": "Sem intermediários — vamos direto ao ponto.",
+    "sub_title": "Sem intermediários, vamos direto ao ponto.",
     "name": "Seu nome",
     "email": "E-mail",
     "message": "Digite sua mensagem"
   },
   "next": {
     "title": "Próximos passos",
-    "sub_title": "Entenda como funciona o processo — do envio da sua ideia até a proposta.",
+    "sub_title": "É mais ou menos assim, da sua mensagem até a proposta.",
     "steps": [
       {
         "id": 1,
         "title": "Envio",
-        "description": "Você preenche o formulário com o tema da conversa e compartilha alguns detalhes da sua ideia ou projeto."
+        "description": "Você me conta o assunto e compartilha um pouco da ideia ou do projeto."
       },
       {
         "id": 2,
         "title": "Retorno",
-        "description": "Assim que recebo sua mensagem, respondo em até 48 horas para agendarmos uma conversa."
+        "description": "Eu respondo em até 48 horas para a gente marcar uma conversa."
       },
       {
         "id": 3,
         "title": "Alinhamento",
-        "description": "Agendamos uma reunião para alinhar detalhes, objetivos e requisitos do projeto."
+        "description": "A gente se encontra para alinhar detalhes, objetivos e o que o projeto precisa."
       },
       {
         "id": 4,
         "title": "Proposta",
-        "description": "Com base na nossa conversa, preparo uma proposta personalizada com todos os detalhes para você avaliar com calma."
+        "description": "Depois eu monto uma proposta com tudo organizado, para você olhar com calma."
       }
     ]
   },
   "testimonials": {
     "title": "Depoimentos",
-    "sub_title": "Quem já trabalhou comigo tem algo a dizer — e eu só tenho a agradecer.",
+    "sub_title": "Quem já trabalhou comigo tem algo a dizer, e eu só tenho a agradecer.",
     "testimonials": [
       {
-        "quote": "O Felipe Zanini é um profissional que se destacou nos projetos por onde passou dentro da nav9. Sempre foi muito elogiado pelos stakeholders por conseguir traduzir demandas técnicas para uma linguagem acessível a todos os públicos, facilitando o alinhamento entre áreas — além de ser muito dedicado e preocupado com a entrega de valor. Se destaca pela qualidade das entregas e por buscar constantemente elevar a barra técnica do time ao seu redor. É reconhecido pelos outros desenvolvedores como alguém que compartilha conhecimento e ajuda na evolução do grupo, sendo uma referência dentro da empresa. Por isso, naturalmente se torna um pilar sólido de entregas nos times em que atua.",
+        "quote": "O Felipe Zanini é um profissional que se destacou nos projetos por onde passou dentro da nav9. Sempre foi muito elogiado pelos stakeholders por conseguir traduzir demandas técnicas para uma linguagem acessível a todos os públicos, facilitando o alinhamento entre áreas, além de ser muito dedicado e preocupado com a entrega de valor. Se destaca pela qualidade das entregas e por buscar constantemente elevar a barra técnica do time ao seu redor. É reconhecido pelos outros desenvolvedores como alguém que compartilha conhecimento e ajuda na evolução do grupo, sendo uma referência dentro da empresa. Por isso, naturalmente se torna um pilar sólido de entregas nos times em que atua.",
         "name": "Felipe Adamoli",
         "title": "Co-Founder da Techleads.club"
       },
       {
-        "quote": "Felipe foi um dos melhores profissionais com quem tive oportunidade de trabalhar — sempre dedicado e 100% focado em entregar os projetos com qualidade, independentemente dos desafios. Preocupa-se com todas as etapas do processo de desenvolvimento, não se limitando a programar. Nos projetos em que trabalhamos juntos, desempenhou muito bem o papel de tech lead junto ao cliente e conseguiu grandes entregas com o time. Comunica-se bem e sabe se destacar em momentos difíceis. Felipe tem muita facilidade para aprender e grande autonomia para conduzir qualquer projeto.",
+        "quote": "Felipe foi um dos melhores profissionais com quem tive oportunidade de trabalhar, sempre dedicado e 100% focado em entregar os projetos com qualidade, independentemente dos desafios. Preocupa-se com todas as etapas do processo de desenvolvimento, não se limitando a programar. Nos projetos em que trabalhamos juntos, desempenhou muito bem o papel de tech lead junto ao cliente e conseguiu grandes entregas com o time. Comunica-se bem e sabe se destacar em momentos difíceis. Felipe tem muita facilidade para aprender e grande autonomia para conduzir qualquer projeto.",
         "name": "Igor Casconi de Oliveira",
         "title": "Engenheiro de Software"
       },
       {
-        "quote": "Foi gratificante ver a repercussão positiva do site desde o lançamento. A recepção foi extremamente calorosa. O visual, o layout, o conteúdo, a navegação — tudo tem sido elogiado com entusiasmo. Até meu pai, que deu uma olhada no código, comentou que estava “limpo”; vindo dele, é um grande elogio. Só no lançamento tivemos mais de 1.000 visitantes. Recebo mensagens destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente a todos os envolvidos. Sem dúvida, um sucesso.",
+        "quote": "Foi gratificante ver a repercussão positiva do site desde o lançamento. A recepção foi extremamente calorosa. O visual, o layout, o conteúdo, a navegação, tudo tem sido elogiado com entusiasmo. Até meu pai, que deu uma olhada no código, comentou que estava “limpo”; vindo dele, é um grande elogio. Só no lançamento tivemos mais de 1.000 visitantes. Recebo mensagens destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente a todos os envolvidos. Sem dúvida, um sucesso.",
         "name": "Joseph Murray",
         "title": "Diretor do DOVE Research"
       }
@@ -65,6 +65,6 @@
 
   "footer": {
     "title": "Minha história não para por aqui",
-    "message": "Confira meu <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículo completo</a></b> e descubra em detalhes tudo o que já produzi em mais de 10 anos de experiência em tecnologia."
+    "message": "Dá uma olhada no meu <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículo completo</a></b> se quiser a versão longa do que eu venho construindo há mais de 10 anos em tech."
   }
 }

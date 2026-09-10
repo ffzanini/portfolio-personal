@@ -2,7 +2,7 @@
   "title": "From code to delivery",
   "breadcrumb_begin": "Projects",
   "breadcrumb_end": "Specifications",
-  "sub_title": "Sites and products I helped build — many still live and used daily. Some were discontinued; others are omitted for contractual reasons.",
+  "sub_title": "Sites and products I helped build, many still live and used daily. Some were discontinued; others are omitted for contractual reasons.",
   "projects_title": "Featured Projects",
   "projects_all": "All projects",
   "github": "Project available on GitHub",
@@ -24,12 +24,12 @@
     {
       "id": 1,
       "title": "Personal portfolio built with Next.js, Tailwind, and TypeScript",
-      "description": "An interactive showcase of my skills, projects, and experiments with new technologies — all designed with a focus on usability and constant evolution.",
+      "description": "An interactive showcase of my skills, projects, and experiments with new technologies, all designed with a focus on usability and constant evolution.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "Welcome to my portfolio. This project was designed as a showcase of my skills, experiences, and work throughout my career. Here you will find a collection of my projects, highlighting my capabilities and the dedication I bring to each one.",
-        "The design is inspired by usability and mobile-first principles, ensuring navigation is as intuitive as possible so each section is easy to explore and visitors get a complete view of my work and who I am.",
-        "This project also serves as my testing lab, where I implement new libraries and technologies before using them in real-world applications. It helps me stay up-to-date with the latest market trends and maintain the quality and efficiency of my work."
+        "Welcome to my portfolio. I built it to show the work I've done and how I like to work. You'll find a mix of projects here, each one with the care I try to put into the job.",
+        "I designed it around usability and mobile-first, so it's easy to move around and you get a clear picture of my work and who I am.",
+        "It's also my testing lab. I try new libraries here before I use them on client work, which helps me stay current."
       ],
       "stackTitle": "Technology Stack",
       "featuresTitle": "Implemented features",
@@ -63,7 +63,7 @@
     {
       "id": 2,
       "title": "DOVE Research Centre",
-      "description": "Clearly presenting research lines, providing access to publications, team profiles, and registration forms — all in a responsive and well-organized structure.",
+      "description": "Clearly presenting research lines, providing access to publications, team profiles, and registration forms, all in a responsive and well-organized structure.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The website of the DOVE Research Centre (Center for Research on Human Development and Violence) at the Federal University of Pelotas was developed as a bilingual institutional platform, offering content in both English and Portuguese. With a clear and modern layout, the site showcases the center's work in a highly accessible and well-structured way."
@@ -105,7 +105,7 @@
       "description": "A website developed to attract and engage potential students at any stage of their journey, from white belt to black belt. Featuring a responsive, appealing, and modern design.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "The JA Índio Jiu Jitsu project, in Pelotas, RS, was designed as a responsive, organized site offering free class scheduling, class times, program descriptions (by level and audience), testimonials, contact information, and the academy's philosophy — with the goal of showcasing the academy's work, inspiring new students, and strengthening the connection with the audience."
+        "The JA Índio Jiu Jitsu project, in Pelotas, RS, was designed as a responsive, organized site offering free class scheduling, class times, program descriptions (by level and audience), testimonials, contact information, and the academy's philosophy, with the goal of showcasing the academy's work, inspiring new students, and strengthening the connection with the audience."
       ],
       "stackTitle": "Technology Stack",
       "featuresTitle": "Implemented features",
@@ -140,7 +140,7 @@
       "description": "A hybrid, gamified educational platform with over 2,000 games aligned with the BNCC and adapted to each student's needs. It offers dashboards for teachers, pedagogical support, and multiplatform usage.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "While at nav9.tech, I had the opportunity to act as a tech partner to several companies; among them, I worked on several fronts of the EducaCross platform version 2.0.",
+        "While at nav9.tech, I got to work as a tech partner with a few companies. One of those was EducaCross 2.0, where I helped on several fronts.",
         "It is a robust and modern EdTech platform focused on teaching Math, Portuguese, Logic, and literacy, especially for Early Childhood and Elementary Education. With over 2,000 digital games aligned with the BNCC (Brazilian National Common Core), it combines adaptive gamification, hybrid learning, and real-time reporting to engage children aged 3 to 12.",
         "Educators and school managers have access to advanced dashboards that allow the creation of personalized learning paths, student progress monitoring, and data aligned with the BNCC. There is also pedagogical support and ongoing training for teachers, effectively connecting technology with educational practice.",
         "The platform is compatible with classroom, lab, mobile, and offline environments, promoting digital inclusion in schools. Its hybrid architecture prioritizes security (LGPD), accessibility, and scalability, currently used in over 1,700 schools with thousands of active users."
@@ -179,7 +179,7 @@
       "description": "The Iguatemi Portal is a secure B2B platform allowing store owners to access contract info, submit documents, and engage in marketing opportunities within the Iguatemi network, all in compliance with LGPD.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
-        "While at nav9.tech, I had the opportunity to collaborate for over 3 years on the development of Iguatemi's products, with a focus on the Store Owner Portal.",
+        "While at nav9.tech, I spent more than 3 years helping build Iguatemi's products, mostly on the Store Owner Portal.",
         "The portal is an exclusive area for store owners and their teams, focused on corporate communication, sales info, contract management, tax audits, invoice handling, benefits, news, promotions, and internal processes. Users access through a secure, encrypted interface with user/password authentication, in full compliance with LGPD, ensuring access to functions according to profile and contract."
       ],
       "stackTitle": "Technology Stack",
@@ -246,7 +246,7 @@
     {
       "id": 7,
       "title": "Online résumé",
-      "description": "A minimalist and highly functional online résumé page, featuring clear sections for experience, stack, projects, and contact — with light animations, responsive design, and optimized performance.",
+      "description": "A minimalist and highly functional online résumé page, featuring clear sections for experience, stack, projects, and contact, with light animations, responsive design, and optimized performance.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The goal is to offer a high-performance, clear, and responsive online résumé. Built with modern technologies, the site has a clean, organized structure with smooth navigation across sections. It is entirely mobile-first, with a strong reading and interaction experience on any device, smooth transitions, and subtle animations."
@@ -307,7 +307,7 @@
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The ICEH Retriever is a comprehensive data platform developed to provide open and easy access to standardized data on Reproductive, Maternal, Newborn, and Child Health and Nutrition (RMNCH+N) indicators worldwide. The platform covers over 100 indicators, more than 120 countries, and draws from more than 490 nationally representative surveys.",
-        "All indicators in the ICEH Retriever are harmonized and standardized, ensuring comparability over time and across countries. Data are available disaggregated by eight key inequality dimensions, enabling users to explore patterns and trends that highlight where progress is equitable—and where disparities persist.",
+        "All indicators in the ICEH Retriever are harmonized and standardized, ensuring comparability over time and across countries. Data are available disaggregated by eight key inequality dimensions, enabling users to explore patterns and trends that highlight where progress is equitable, and where disparities persist.",
         "The platform was developed to support academics, country teams, and international organizations in advancing evidence-based decision-making and accountability for RMNCH+N outcomes."
       ],
       "stackTitle": "Technology Stack",
@@ -378,7 +378,7 @@
   "load": "Load more",
   "contact": {
     "title": "Got a project in mind?",
-    "description": "I am open to new projects, consulting, and conversations about building digital products or game development. Feel free to message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a message on the ",
+    "description": "I'm open to new projects, consulting, and conversations about digital products or games. Message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a note on the ",
     "contact": "contact page."
   }
 }

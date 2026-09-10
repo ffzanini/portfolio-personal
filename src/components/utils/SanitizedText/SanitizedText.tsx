@@ -18,9 +18,17 @@ function readQuotedAttr(attrs: string, name: string): string | null {
   return attrs.slice(afterKey + 1, end).trim();
 }
 
+function isAllowedHref(href: string): boolean {
+  if (href.startsWith("https://") || href.startsWith("http://")) return true;
+  if (!href.startsWith("mailto:")) return false;
+
+  const address = href.slice("mailto:".length).split("?")[0];
+  return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(address);
+}
+
 function sanitizeAnchor(attrs: string): string {
   const href = readQuotedAttr(attrs, "href");
-  if (!href || (!href.startsWith("https://") && !href.startsWith("http://"))) {
+  if (!href || !isAllowedHref(href)) {
     return "";
   }
 

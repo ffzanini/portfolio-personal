@@ -1,12 +1,12 @@
 {
   "title": "Behind the code",
-  "sub_title": "My mission is to bring people and technology together through programming and digital content — creating clear, useful, well-crafted digital experiences.",
+  "sub_title": "I like bringing people and technology closer through code and digital content. Clear, useful, well-made experiences, that's the goal.",
   "description": {
     "title": "The road so far",
-    "begin": "Nice to meet you! My name is Felipe Frantz Zanini, a software engineer passionate about jiu-jitsu, running, indie game development, Dota 2, screenwriting, pixel art, music, and investments. I am 33 years old and live in Pelotas, Rio Grande do Sul, Brazil.",
-    "middle": "My journey in software development began in 2008, during technical school. In 2010, after completing the course, I started my first programming internship and have kept evolving in the field since. Hired as a software engineer still in 2010, I have worked on more than <b>90 projects</b>, using languages such as PHP, JavaScript, Ruby, and Python, as well as frameworks and libraries.",
-    "education": "Driven by a passion for technology and continuous improvement, I completed a degree in IT Management, a specialization in Strategic IT Planning, and started a Master’s in Computer Science, which I did not finish for personal reasons. Given the rise of AI, I am now pursuing a postgraduate program in AI and automation to stay aligned with the market and keep growing in my career.",
-    "end": "I currently work as a Senior Software Engineer & Frontend Architect at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b>, where I contribute to digital products that improve the experience for retailers and customers across the network."
+    "begin": "Nice to meet you! I'm Felipe Frantz Zanini, a software engineer who loves jiu-jitsu, running, indie games, Dota 2, screenwriting, pixel art, music, and investing. I'm 33 and live in Pelotas, Rio Grande do Sul, Brazil.",
+    "middle": "I started in software in 2008, during technical school. In 2010 I finished the course, landed my first programming internship, and I've been at it ever since. I was hired as a software engineer that same year, and I've worked on more than <b>90 projects</b> with PHP, JavaScript, Ruby, Python, plus plenty of frameworks and libraries.",
+    "education": "I've always wanted to keep learning. I finished a degree in IT Management, a specialization in Strategic IT Planning, and started a Master's in Computer Science, which I didn't finish for personal reasons. With AI moving so fast, I'm now doing a postgraduate program in AI and automation so I can stay current and keep growing.",
+    "end": "These days I'm a Senior Software Engineer & Frontend Architect at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b>, where I help build digital products that make life easier for retailers and customers across the network."
   },
   "skills": {
     "title": "How I run a project",
@@ -15,45 +15,45 @@
       {
         "id": 1,
         "title": "Understanding the motivation",
-        "description": "Everything starts with a good conversation. I listen to your ideas, understand your needs and motivations, translate that into something practical, and think about the best way to turn it into something visually appealing and functional."
+        "description": "It always starts with a conversation. I listen to what you want, why it matters, and then figure out a practical way to make it look good and actually work."
       },
       {
         "id": 2,
         "title": "Building the structure",
-        "description": "Before focusing on appearance, I define the project structure: which pages are needed, how the elements will behave, and how everything will be connected in a logical and efficient way."
+        "description": "Before I worry about how it looks, I map the structure: which pages we need, how things should behave, and how it all connects."
       },
       {
         "id": 3,
         "title": "Bringing the code to life",
-        "description": "Time to bring the project to life. I develop interfaces focused on usability, responsiveness, and performance. Each element is optimized to work well on any device, with fast loading and smooth navigation."
+        "description": "Then I build it. I care about usability, responsiveness, and performance, so it feels fast and easy on any device."
       },
       {
         "id": 4,
         "title": "External integrations",
-        "description": "When the project requires forms, authentication, or integration with other systems, I handle that as well — always with a focus on security, stability, and reliability."
+        "description": "If we need forms, auth, or hooks into other systems, I take that on too. Security and stability stay non-negotiable."
       },
       {
         "id": 5,
         "title": "Testing and quality assurance",
-        "description": "Before going live, I run various tests to ensure everything works as planned — across different browsers, devices, resolutions, and usage contexts."
+        "description": "Before it goes live, I test it. Different browsers, devices, screen sizes, real-world use. I want it to work the way we planned."
       },
       {
         "id": 6,
         "title": "Time to show the world",
-        "description": "To wrap it up, I publish the project and make everything ready for access. In the first few days, I monitor and provide support to address any issues that come up."
+        "description": "Then I ship it. In the first few days I keep an eye on things and jump in if anything comes up."
       }
     ]
   },
   "stack": {
     "title": "The gears behind the process",
-    "description": "Behind every click and line of code are technologies chosen with care and purpose. If you would like to see the full stack or send a message, use the buttons below.",
+    "description": "Behind every click and line of code are technologies I picked on purpose. If you want the full stack or just want to say hi, the buttons below will get you there.",
     "button": "View full stack",
     "contact": "Send message"
   },
   "site": {
     "title": "Coffee, code & deploy",
-    "subtitle": "A technical summary of the technologies and tools that make this site mine — everything that happens behind the clicks.",
-    "description": "This site was built using <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b> concepts, with the <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b> framework, deployed on <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, styled with <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animated with <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b>, and using icons from <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. The typography is <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. This portfolio also serves as a showcase for future content and a testing lab — where I try out libraries and tools — and brings together some of my ",
+    "subtitle": "A quick look at the tools that make this site feel like mine, and what happens behind the clicks.",
+    "description": "I built this site with <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b> in mind, using <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, hosted on <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, styled with <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animated with <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b>, and icons from <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. The typeface is <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. It's also my lab. I try new libraries here, and it gathers some of my ",
     "projects": "projects."
   }
 }

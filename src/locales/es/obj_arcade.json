@@ -1,6 +1,6 @@
 {
   "title": "Arcade",
-  "sub_title": "Game dev, pixel art y experimentos indie — del prototipo a la pantalla.",
+  "sub_title": "Game dev, pixel art y experimentos indie, del prototipo a la pantalla.",
   "coming_soon": {
     "eyebrow": "INSERT COIN",
     "title": "En construcción",
@@ -21,7 +21,7 @@
   },
   "games": {
     "title": "Juegos desarrollados",
-    "sub_title": "Los últimos builds publicados — prototipos, jams y experimentos indie.",
+    "sub_title": "Los últimos builds publicados, prototipos, jams y experimentos indie.",
     "play": "Jugar en itch.io",
     "see_all": "Ver todos en itch.io",
     "empty": "Los nuevos juegos aparecerán aquí cuando se publiquen. Mientras tanto, sigue el perfil en itch.io.",
@@ -34,7 +34,7 @@
   },
   "pixelart": {
     "title": "Pixel art",
-    "sub_title": "Sprites e iconos hechos a mano — cada píxel con intención.",
+    "sub_title": "Sprites e iconos hechos a mano, cada píxel con intención.",
     "see_more": "Ver más",
     "items": [
       {
@@ -60,7 +60,7 @@
       {
         "id": "key",
         "title": "Llave",
-        "description": "Llave de dungeon — lectura clara incluso en 16×16."
+        "description": "Llave de dungeon, lectura clara incluso en 16×16."
       },
       {
         "id": "heart",
@@ -80,7 +80,7 @@
       {
         "id": "potion",
         "title": "Poción",
-        "description": "Pickup clásico — brillo y color para destacar en el suelo."
+        "description": "Pickup clásico, brillo y color para destacar en el suelo."
       },
       {
         "id": "gem",

@@ -2,10 +2,33 @@ import { Client } from "@notionhq/client";
 import { NextResponse } from "next/server";
 import dateFormat from "dateformat";
 
-const notionApiKey = process.env.NOTION_API_KEY;
-const notionDatabaseId = process.env.NOTION_DATABASE_KEY;
+const notionApiKey = process.env.NEXT_PUBLIC_NOTION_API_KEY;
+const notionDatabaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_KEY;
 
 const notion = notionApiKey ? new Client({ auth: notionApiKey }) : null;
+
+type NotionDatabaseWithSources = {
+  data_sources?: Array<{ id?: string }>;
+};
+
+let cachedDataSourceId: string | null = null;
+
+async function resolveDataSourceId(
+  client: Client,
+  databaseId: string
+): Promise<string | null> {
+  if (cachedDataSourceId) return cachedDataSourceId;
+
+  const database = (await client.databases.retrieve({
+    database_id: databaseId,
+  })) as NotionDatabaseWithSources;
+
+  const dataSourceId = database.data_sources?.[0]?.id;
+  if (!dataSourceId) return null;
+
+  cachedDataSourceId = dataSourceId;
+  return dataSourceId;
+}
 
 const MAX_MESSAGE_LENGTH = 2000;
 const MAX_NAME_LENGTH = 100;
@@ -116,10 +139,18 @@ export async function POST(req: Request) {
   const dateFormated = dateFormat(now, "yyyy-mm-dd");
 
   try {
+    const dataSourceId = await resolveDataSourceId(notion, notionDatabaseId);
+    if (!dataSourceId) {
+      return NextResponse.json(
+        { ok: false, error: "Unable to create contact message" },
+        { status: 502 }
+      );
+    }
+
     await notion.pages.create({
       parent: {
-        database_id: notionDatabaseId,
-        type: "database_id",
+        type: "data_source_id",
+        data_source_id: dataSourceId,
       },
       properties: {
         ID: {
@@ -177,7 +208,8 @@ export async function POST(req: Request) {
         status: 201,
       }
     );
-  } catch {
+  } catch (error) {
+    console.error("[contact] Failed to create Notion page", error);
     return NextResponse.json(
       { ok: false, error: "Unable to create contact message" },
       {

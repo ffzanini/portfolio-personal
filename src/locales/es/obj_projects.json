@@ -2,7 +2,7 @@
   "title": "Del código a la entrega",
   "breadcrumb_begin": "Proyectos",
   "breadcrumb_end": "Especificaciones",
-  "sub_title": "Sitios y productos que ayudé a construir — muchos aún activos y en uso diario. Algunos se descontinuaron; otros no aparecen por motivos contractuales.",
+  "sub_title": "Sitios y productos que ayudé a construir, muchos aún activos y en uso diario. Algunos se descontinuaron; otros no aparecen por motivos contractuales.",
   "projects_title": "Proyectos Destacados",
   "projects_all": "Todos los proyectos",
   "github": "Proyecto disponible en GitHub",
@@ -24,12 +24,12 @@
     {
       "id": 1,
       "title": "Portafolio personal hecho con Next.js, Tailwind y TypeScript",
-      "description": "Una vitrina interactiva de mis habilidades, proyectos y experimentos con nuevas tecnologías — todo enfocado en usabilidad y evolución constante.",
+      "description": "Una vitrina interactiva de mis habilidades, proyectos y experimentos con nuevas tecnologías, todo enfocado en usabilidad y evolución constante.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "Bienvenido a mi portafolio. Este proyecto fue pensado como vitrina de mis habilidades, experiencias y trabajos a lo largo de mi carrera. Aquí encontrarás una colección que resalta mis competencias y la dedicación que pongo en cada proyecto.",
-        "El diseño está inspirado en los principios de usabilidad y mobile first, garantizando una navegación lo más intuitiva posible, para que cada sección sea fácil de explorar y se tenga una visión completa de mis trabajos y de quién soy.",
-        "Además, este proyecto también sirve como mi laboratorio de pruebas, donde implemento nuevas bibliotecas y tecnologías antes de usarlas en proyectos reales. Esto me permite estar siempre actualizado con las últimas tendencias del mercado y asegurar calidad y eficiencia en mi trabajo."
+        "Bienvenido a mi portafolio. Lo armé para mostrar el trabajo que hice y cómo me gusta trabajar. Aquí vas a ver una mezcla de proyectos, cada uno con el cuidado que intento ponerle.",
+        "Lo pensé en usabilidad y mobile first, para que sea fácil moverse y te quede claro mi trabajo y quién soy.",
+        "También es mi laboratorio. Pruebo librerías aquí antes de usarlas con clientes, y eso me ayuda a no quedarme atrás."
       ],
       "stackTitle": "Stack Tecnológico",
       "featuresTitle": "Funcionalidades implementadas",
@@ -63,7 +63,7 @@
     {
       "id": 2,
       "title": "DOVE Research Centre",
-      "description": "Presentar de forma clara líneas de investigación, acceso a publicaciones, perfiles del equipo e inscripciones — todo con una estructura responsiva y organizada.",
+      "description": "Presentar de forma clara líneas de investigación, acceso a publicaciones, perfiles del equipo e inscripciones, todo con una estructura responsiva y organizada.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "El sitio del DOVE Research Centre (Centro de Investigación en Desarrollo Humano y Violencia) de la Universidad Federal de Pelotas fue desarrollado como una plataforma institucional bilingüe, ofreciendo contenido en inglés y portugués. Con una presentación clara y moderna, el sitio destaca el trabajo del centro de forma accesible y bien estructurada."
@@ -105,7 +105,7 @@
       "description": "Sitio desarrollado para atraer e involucrar a posibles alumnos en cualquier etapa del camino, del cinturón blanco al negro, con diseño moderno, atractivo y responsivo.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "El proyecto JA Índio Jiu Jitsu, en Pelotas (RS), fue diseñado como un sitio responsivo y organizado que ofrece programación de clases gratuitas, horarios, descripción de programas (por nivel y público), testimonios, contacto y filosofía de la academia — con el objetivo de divulgar el trabajo de la academia, inspirar a nuevos estudiantes y fortalecer la conexión con el público."
+        "El proyecto JA Índio Jiu Jitsu, en Pelotas (RS), fue diseñado como un sitio responsivo y organizado que ofrece programación de clases gratuitas, horarios, descripción de programas (por nivel y público), testimonios, contacto y filosofía de la academia, para mostrar el trabajo de la academia, inspirar a gente nueva y acercarse más al público."
       ],
       "stackTitle": "Stack Tecnológico",
       "featuresTitle": "Funcionalidades implementadas",
@@ -217,7 +217,7 @@
       "description": "Versión 2.0 de mi portafolio personal, descontinuado.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
-        "El objetivo era el mismo que la versión actual: mostrar mi trabajo, estudios y pruebas. Siéntete libre de explorar la versión anterior."
+        "El objetivo era el mismo que ahora: mostrar mi trabajo, estudios y pruebas. Puedes pegarle una mirada a la versión anterior."
       ],
       "stackTitle": "Stack Tecnológico",
       "featuresTitle": "Funcionalidades implementadas",
@@ -378,7 +378,7 @@
   "load": "Cargar más",
   "contact": {
     "title": "¿Tienes un proyecto en mente?",
-    "description": "Estoy abierto a nuevos proyectos, consultorías e intercambios sobre creación de productos digitales o desarrollo de juegos. Siéntete libre de enviarme un mensaje en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o dejar un recado en la ",
+    "description": "Estoy abierto a proyectos nuevos, consultorías y charlas sobre productos digitales o juegos. Escríbeme en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o deja un recado en la ",
     "contact": "página de contacto."
   }
 }

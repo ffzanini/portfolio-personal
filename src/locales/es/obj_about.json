@@ -1,12 +1,12 @@
 {
   "title": "Detrás del código",
-  "sub_title": "Mi misión es acercar a las personas y la tecnología mediante la programación y el contenido digital — creando experiencias digitales claras, útiles y bien hechas.",
+  "sub_title": "Me gusta acercar a las personas y la tecnología con código y contenido digital. Experiencias claras, útiles y bien hechas, ese es el plan.",
   "description": {
     "title": "El camino hasta aquí",
-    "begin": "Mucho gusto. Mi nombre es Felipe Frantz Zanini, ingeniero de software apasionado por el jiu-jitsu, el running, el desarrollo de juegos independientes, Dota 2, los guiones, el pixel art, la música y las inversiones. Tengo 33 años y vivo en Pelotas, Rio Grande do Sul, Brasil.",
-    "middle": "Mi camino en el desarrollo de software comenzó en 2008, durante la escuela técnica. En 2010, tras completar el curso, inicié mi primera pasantía en programación y, desde entonces, sigo evolucionando en el área. Contratado como ingeniero de software aún en 2010, he participado en más de <b>90 proyectos</b>, usando lenguajes como PHP, JavaScript, Ruby y Python, además de frameworks y bibliotecas.",
-    "education": "Impulsado por la pasión por la tecnología y el deseo de mejorar de forma continua, completé la formación en Gestión de TI, una especialización en Planificación Estratégica en TI e inicié la Maestría en Ciencias de la Computación, que no llegué a concluir por motivos personales. Ante el avance de la IA, curso una posgrado en IA y automatización para mantenerme alineado con el mercado y seguir creciendo en la carrera.",
-    "end": "Actualmente soy Ingeniero de Software Senior & Arquitecto Frontend en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b>, donde contribuyo a productos digitales que mejoran la experiencia de comerciantes y clientes de la red."
+    "begin": "Mucho gusto. Soy Felipe Frantz Zanini, ingeniero de software. Me gustan el jiu-jitsu, correr, los juegos indie, Dota 2, los guiones, el pixel art, la música y las inversiones. Tengo 33 años y vivo en Pelotas, Rio Grande do Sul, Brasil.",
+    "middle": "Empecé en software en 2008, en la escuela técnica. En 2010 terminé el curso, conseguí mi primera práctica en programación y sigo en esto desde entonces. Ese mismo año me contrataron como ingeniero de software, y he trabajado en más de <b>90 proyectos</b> con PHP, JavaScript, Ruby, Python y unos cuantos frameworks y bibliotecas.",
+    "education": "Siempre quise seguir aprendiendo. Terminé Gestión de TI, una especialización en Planificación Estratégica en TI y empecé una maestría en Ciencias de la Computación, que no concluí por motivos personales. Con la IA moviéndose tan rápido, ahora estoy haciendo un posgrado en IA y automatización para no quedarme atrás y seguir creciendo.",
+    "end": "Hoy soy Ingeniero de Software Senior & Arquitecto Frontend en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b>, donde ayudo a construir productos digitales que les facilitan la vida a comerciantes y clientes de la red."
   },
   "skills": {
     "title": "Cómo conduzco un proyecto",
@@ -15,45 +15,45 @@
       {
         "id": 1,
         "title": "Entendiendo la motivación",
-        "description": "Todo comienza con una buena conversación. Escucho tus ideas, comprendo necesidades y motivaciones, traduzco eso en algo práctico y pienso en la mejor forma de convertirlo en algo visualmente atractivo y funcional."
+        "description": "Siempre empieza con una conversación. Escucho qué quieres, por qué importa, y busco una forma práctica de que se vea bien y funcione de verdad."
       },
       {
         "id": 2,
         "title": "Montando la estructura",
-        "description": "Antes de la apariencia, defino la estructura del proyecto: qué páginas serán necesarias, cómo se comportarán los elementos y de qué forma todo quedará conectado de manera lógica y eficiente."
+        "description": "Antes de pensar en cómo se ve, armo la estructura: qué páginas hacen falta, cómo se debería comportar cada cosa y cómo encaja todo."
       },
       {
         "id": 3,
         "title": "El código cobra vida",
-        "description": "Es hora de dar vida al proyecto. Desarrollo interfaces centradas en usabilidad, responsividad y rendimiento. Cada elemento está optimizado para funcionar bien en cualquier dispositivo, con carga rápida y navegación fluida."
+        "description": "Después lo construyo. Me importan la usabilidad, que sea responsivo y que vaya rápido, para que se sienta bien en cualquier dispositivo."
       },
       {
         "id": 4,
         "title": "Integraciones externas",
-        "description": "Cuando el proyecto requiere formularios, autenticación o integración con otros sistemas, también me encargo de ello — siempre con foco en seguridad, estabilidad y confiabilidad."
+        "description": "Si hacen falta formularios, login o conexiones con otros sistemas, también me ocupo. La seguridad y la estabilidad no se negocian."
       },
       {
         "id": 5,
         "title": "Pruebas y garantía de calidad",
-        "description": "Antes de publicar, realizo diversas pruebas para garantizar que todo funcione según lo previsto — en distintos navegadores, dispositivos, resoluciones y contextos de uso."
+        "description": "Antes de publicarlo, lo pruebo. Distintos navegadores, dispositivos, tamaños de pantalla, uso real. Quiero que funcione como lo hablamos."
       },
       {
         "id": 6,
         "title": "Hora de mostrarlo al mundo",
-        "description": "Para cerrar con broche de oro, publico el proyecto y dejo todo listo para su acceso. En los primeros días, acompaño y brindo soporte para ajustar cualquier detalle que aparezca."
+        "description": "Y lo publico. Los primeros días estoy atento y entro si aparece cualquier cosa."
       }
     ]
   },
   "stack": {
     "title": "Los engranajes detrás del proceso",
-    "description": "Detrás de cada clic y línea de código hay tecnologías elegidas con cuidado y propósito. Si quieres ver el stack completo o enviar un mensaje, usa los botones de abajo.",
+    "description": "Detrás de cada clic hay tecnologías que elegí a propósito. Si quieres ver el stack completo o solo saludar, los botones de abajo te llevan.",
     "button": "Ver stack completo",
     "contact": "Enviar mensaje"
   },
   "site": {
     "title": "Café, código y deploy",
-    "subtitle": "Un resumen técnico de las tecnologías y herramientas que hacen de este sitio algo personal — todo lo que ocurre detrás de los clics.",
-    "description": "Este sitio fue desarrollado con los conceptos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, usando el framework <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, con deployment en <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, estilizado con <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animaciones con <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b> e íconos de la biblioteca <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. La tipografía es <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. Este portafolio también sirve como vitrina de contenidos futuros y laboratorio de pruebas — donde experimento con bibliotecas y herramientas — y reúne algunos de mis ",
+    "subtitle": "Un vistazo rápido a las herramientas que hacen que este sitio se sienta mío, y lo que pasa detrás de los clics.",
+    "description": "Armé este sitio con <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, usando <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, alojado en <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, con <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animaciones de <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b> e íconos de <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. La tipografía es <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. También es mi laboratorio. Pruebo librerías aquí, y reúne algunos de mis ",
     "projects": "proyectos."
   }
 }

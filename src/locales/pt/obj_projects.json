@@ -2,7 +2,7 @@
   "title": "Do código à entrega",
   "breadcrumb_begin": "Projetos",
   "breadcrumb_end": "Especificações",
-  "sub_title": "Sites e produtos que ajudei a construir — muitos ainda ativos e usados no dia a dia. Alguns foram descontinuados; outros não aparecem por motivos contratuais.",
+  "sub_title": "Sites e produtos que ajudei a construir, muitos ainda ativos e usados no dia a dia. Alguns foram descontinuados; outros não aparecem por motivos contratuais.",
   "projects_title": "Projetos em foco",
   "projects_all": "Todos os projetos",
   "github": "Projeto disponível no GitHub",
@@ -24,12 +24,12 @@
     {
       "id": 1,
       "title": "Portfólio pessoal feito com Next.js, Tailwind e TypeScript",
-      "description": "Uma vitrine interativa das minhas habilidades, projetos e testes com novas tecnologias — tudo pensado com foco em usabilidade e evolução constante.",
+      "description": "Uma vitrine interativa das minhas habilidades, projetos e testes com novas tecnologias, tudo pensado com foco em usabilidade e evolução constante.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
-        "Bem-vindo ao meu portfólio. Este projeto foi pensado como vitrine das minhas habilidades, experiências e trabalhos ao longo da carreira. Aqui você encontra uma coleção do meu trabalho, com foco nas competências e na dedicação que trago a cada projeto.",
-        "O design foi inspirado nos princípios de usabilidade e mobile first, garantindo uma navegação o mais intuitiva possível, para que cada seção seja explorada com facilidade e se tenha uma visão completa dos meus trabalhos e de quem sou.",
-        "Além disso, este projeto também serve como meu laboratório de testes, onde implemento novas bibliotecas e tecnologias antes de utilizá-las em projetos reais. Isso me permite estar sempre atualizado com as últimas tecnologias do mercado e garantir a qualidade e eficiência em meus trabalhos."
+        "Bem-vindo ao meu portfólio. Eu montei para mostrar o trabalho que fiz e como eu gosto de trabalhar. Aqui tem um mix de projetos, cada um com o cuidado que eu tento colocar no que faço.",
+        "Pensei em usabilidade e mobile first, para ser fácil de circular e ficar claro o meu trabalho e quem eu sou.",
+        "Também é o meu laboratório. Testo bibliotecas aqui antes de usar em cliente, e isso me ajuda a não ficar para trás."
       ],
 
       "stackTitle": "Stack Tecnológico",
@@ -113,7 +113,7 @@
       "description": "Site desenvolvido para atrair e envolver possíveis alunos em qualquer estágio da jornada, da faixa branca à preta, com design responsivo, atrativo e moderno.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
-        "O projeto da JA Índio Jiu Jitsu, em Pelotas (RS), foi idealizado como um site responsivo e organizado, oferecendo agendamento de aulas gratuitas, horários, descrição dos programas (por nível e público), depoimentos, contato e filosofia da academia — com o objetivo de divulgar o trabalho da casa, inspirar novos alunos e fortalecer a conexão com o público."
+        "O projeto da JA Índio Jiu Jitsu, em Pelotas (RS), foi pensado como um site responsivo e organizado, com agendamento de aulas gratuitas, horários, descrição dos programas, depoimentos, contato e a filosofia da casa, para mostrar o trabalho da academia, inspirar gente nova e se aproximar mais do público."
       ],
 
       "stackTitle": "Stack Tecnológico",
@@ -152,7 +152,7 @@
       "description": "Plataforma educacional híbrida e gamificada, com mais de 2.000 jogos alinhados à BNCC e adaptados às necessidades de cada aluno. Oferece dashboards para professores, suporte pedagógico e uso multiplataforma.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
-        "Durante meu período na nav9.tech, tive a oportunidade de atuar como parceiro de tecnologia de várias empresas; entre elas, trabalhei em diversas frentes de desenvolvimento da versão 2.0 da plataforma EducaCross.",
+        "Na nav9.tech eu atuei como parceiro de tecnologia de algumas empresas. Uma delas foi a EducaCross 2.0, em que ajudei em várias frentes.",
         "É uma plataforma EdTech robusta e moderna, voltada ao ensino de Matemática, Língua Portuguesa, Lógica e alfabetização, com foco em Educação Infantil e Ensino Fundamental. Com mais de 2.000 jogos digitais alinhados à BNCC (Base Nacional Comum Curricular), combina gamificação adaptativa, aprendizagem híbrida e relatórios em tempo real para envolver crianças de 3 a 12 anos.",
         "Educadores e gestores têm acesso a dashboards avançados que permitem traçar trilhas personalizadas, monitorar o progresso dos alunos, e visualizar dados alinhados à BNCC. Além disso, há suporte pedagógico e formação continuada para professores, criando uma conexão efetiva entre tecnologia e prática educativa.",
         "A plataforma é compatível com uso em sala de aula, laboratórios, dispositivos móveis e offline, promovendo inclusão digital nas escolas. A arquitetura híbrida do produto prioriza segurança (LGPD), acessibilidade e escalabilidade, já que está presente em mais de 1.700 escolas, com milhares de usuários ativos."
@@ -195,7 +195,7 @@
       "description": "O Portal Iguatemi é uma plataforma B2B segura que permite ao lojista acessar informações do contrato, enviar documentos e participar de oportunidades de marketing na rede Iguatemi, em conformidade com a LGPD.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
-        "Durante meu período na nav9.tech, atuei como parceiro de tecnologia de várias empresas; entre elas, colaborei por mais de 3 anos no desenvolvimento dos produtos dos Shoppings Iguatemi, com foco no Portal do Lojista.",
+        "Na nav9.tech passei mais de 3 anos ajudando a construir os produtos do Iguatemi, principalmente o Portal do Lojista.",
         "O Portal do Lojista é uma área exclusiva para donos de loja e seus colaboradores, voltada à comunicação corporativa, informação de vendas, gestão de contratos, auditoria fiscal, recebimento de boletos, resgate de benefícios, notícias, promoções e demais processos internos. Os usuários acessam por uma interface criptografada e segura, com autenticação por usuário e senha, em conformidade com a LGPD, garantindo acesso às funções conforme o perfil e o contrato."
       ],
 
@@ -237,7 +237,7 @@
       "description": "Versão 2.0 do meu portfólio, atualmente descontinuada.",
       "longDescriptionTitle": "Visão geral do projeto",
       "longDescription": [
-        "O objetivo era o mesmo da versão atual: divulgar o trabalho, estudos e testes. Sinta-se à vontade para acessar e explorar a versão anterior."
+        "O objetivo era o mesmo de agora: mostrar o trabalho, os estudos e os testes. Pode dar uma olhada na versão anterior."
       ],
 
       "stackTitle": "Stack Tecnológico",
@@ -407,7 +407,7 @@
 
   "contact": {
     "title": "Tem um projeto em mente?",
-    "description": "Estou aberto a novos projetos, consultorias e trocas sobre construção de produtos digitais ou desenvolvimento de jogos. Sinta-se à vontade para me enviar uma mensagem no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou deixar um recado na ",
+    "description": "Estou aberto a projetos novos, consultorias e papo sobre produto digital ou jogo. Me chama no <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou deixa um recado na ",
     "contact": "página de contato."
   }
 }

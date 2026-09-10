@@ -1,6 +1,6 @@
 {
   "title": "Stack tecnológica",
-  "sub_title": "Muchas personas me preguntan qué herramientas, lenguajes y servicios uso o he usado en los proyectos — así que reuní todo en un solo lugar.",
+  "sub_title": "Me preguntan mucho qué herramientas, lenguajes y servicios uso, o usé, así que junté todo en un solo lugar.",
 
   "mainSpecialties": "Principales especialidades",
   "knownTech": "Tecnologías con las que trabajo",
@@ -11,11 +11,11 @@
 
   "strengths": {
     "title": "Competencias más allá del código",
-    "sub_title": "Habilidades que desarrollé a lo largo del camino para construir productos digitales de calidad.",
+    "sub_title": "Cosas que fui aprendiendo en el camino para armar productos digitales que aguantan el día a día.",
     "items": [
       {
         "title": "Desarrollo frontend",
-        "description": "Interfaces que combinan rendimiento, accesibilidad y diseño moderno — siempre pensadas en quienes las van a usar."
+        "description": "Interfaces que combinan rendimiento, accesibilidad y diseño moderno, siempre pensadas en quienes las van a usar."
       },
       {
         "title": "Diseño responsivo",
@@ -35,13 +35,13 @@
       },
       {
         "title": "Trabajo en equipo",
-        "description": "Colaboración efectiva con distintos perfiles — stakeholders, diseñadores y desarrolladores — promoviendo comunicación y resultados conjuntos."
+        "description": "Colaboración efectiva con distintos perfiles, stakeholders, diseñadores y desarrolladores, promoviendo comunicación y resultados conjuntos."
       }
     ]
   },
   "footer": {
     "title": "Mira estas skills en proyectos reales",
-    "message": "Las competencias y herramientas son solo el comienzo. Lo que marca la diferencia es cómo damos vida a soluciones reales, funcionales y bien pensadas. Descubre algunos de estos resultados en la ",
+    "message": "Las skills y las herramientas son solo el arranque. Lo que importa es cómo se vuelven productos que la gente usa. Mira algo de eso en la ",
     "project": "página de proyectos."
   }
 }

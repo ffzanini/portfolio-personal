@@ -118,7 +118,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                   <div className="relative flex h-full w-full items-center justify-center rounded-xl bg-linear-to-br from-primary-200 via-primary-600 to-primary-950 p-1.5 shadow-2xl sm:p-2">
                     <Image
                       src="/images/me-desenho-400.jpeg"
-                      alt="Felipe Frantz Zanini — Senior Software Engineer"
+                      alt="Felipe Frantz Zanini, Senior Software Engineer"
                       width={180}
                       height={180}
                       className="h-full w-full rounded-lg object-cover"

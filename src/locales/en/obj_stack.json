@@ -1,6 +1,6 @@
 {
   "title": "Tech stack",
-  "sub_title": "Many people ask me which tools, languages, and services I use or have used in the projects — so I gathered everything in one place.",
+  "sub_title": "People keep asking which tools, languages, and services I use, or have used, so I put everything in one place.",
 
   "mainSpecialties": "Main specialties",
   "knownTech": "Technologies I work with",
@@ -11,11 +11,11 @@
 
   "strengths": {
     "title": "Skills beyond code",
-    "sub_title": "Skills I have developed along the way to build high-quality digital products.",
+    "sub_title": "Skills I've picked up along the way to build digital products that actually hold up.",
     "items": [
       {
         "title": "Frontend development",
-        "description": "Interfaces that combine performance, accessibility, and modern design — always focused on the people who will use them."
+        "description": "Interfaces that combine performance, accessibility, and modern design, always focused on the people who will use them."
       },
       {
         "title": "Responsive design",
@@ -35,13 +35,13 @@
       },
       {
         "title": "Teamwork",
-        "description": "Effective collaboration with different profiles — stakeholders, designers, and developers — promoting communication and joint results."
+        "description": "Effective collaboration with different profiles, stakeholders, designers, and developers, promoting communication and joint results."
       }
     ]
   },
   "footer": {
     "title": "See these skills in real projects",
-    "message": "Skills and tools are just the beginning. What truly makes the difference is how we bring real, functional, and well-designed solutions to life. Discover some of these results on the ",
+    "message": "Skills and tools are only the start. What matters is how they turn into real products people can use. See some of that on the ",
     "project": "projects page."
   }
 }

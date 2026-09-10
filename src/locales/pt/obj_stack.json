@@ -1,6 +1,6 @@
 {
   "title": "Stack tecnológica",
-  "sub_title": "Muitas pessoas me perguntam quais ferramentas, linguagens e serviços eu uso ou já usei nos projetos — então reuni tudo em um só lugar.",
+  "sub_title": "O pessoal sempre pergunta quais ferramentas, linguagens e serviços eu uso, ou já usei, então juntei tudo num lugar só.",
 
   "mainSpecialties": "Principais especialidades",
   "knownTech": "Tecnologias com as quais trabalho",
@@ -11,11 +11,11 @@
 
   "strengths": {
     "title": "Competências além do código",
-    "sub_title": "Habilidades que desenvolvi ao longo da jornada para construir produtos digitais de qualidade.",
+    "sub_title": "Coisas que fui aprendendo no caminho para montar produtos digitais que aguentam o dia a dia.",
     "items": [
       {
         "title": "Desenvolvimento frontend",
-        "description": "Interfaces que combinam performance, acessibilidade e design moderno — sempre pensadas em quem vai utilizá-las."
+        "description": "Interfaces que combinam performance, acessibilidade e design moderno, sempre pensadas em quem vai utilizá-las."
       },
       {
         "title": "Design responsivo",
@@ -35,14 +35,14 @@
       },
       {
         "title": "Trabalho em equipe",
-        "description": "Colaboração eficaz com diferentes perfis — stakeholders, designers e desenvolvedores — promovendo comunicação e resultados em conjunto."
+        "description": "Colaboração eficaz com diferentes perfis, stakeholders, designers e desenvolvedores, promovendo comunicação e resultados em conjunto."
       }
     ]
   },
 
   "footer": {
     "title": "Veja essas skills em projetos reais",
-    "message": "Competências e ferramentas são apenas o começo. O que faz a diferença é como damos vida a soluções reais, funcionais e bem pensadas. Conheça alguns desses resultados na ",
+    "message": "Skill e ferramenta são só o começo. O que importa é como isso vira produto que a pessoa usa. Dá uma olhada nisso na ",
     "project": "página de projetos."
   }
 }

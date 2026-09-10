@@ -1,6 +1,6 @@
 {
   "title": "Arcade",
-  "sub_title": "Game dev, pixel art, and indie experiments — from prototype to screen.",
+  "sub_title": "Game dev, pixel art, and indie experiments, from prototype to screen.",
   "coming_soon": {
     "eyebrow": "INSERT COIN",
     "title": "Under construction",
@@ -21,10 +21,10 @@
   },
   "games": {
     "title": "Games developed",
-    "sub_title": "The latest published builds — prototypes, jams, and indie experiments.",
+    "sub_title": "The latest published builds, prototypes, jams, and indie experiments.",
     "play": "Play on itch.io",
     "see_all": "See all on itch.io",
-    "empty": "New games will show up here as they are published. Meanwhile, follow the itch.io profile.",
+    "empty": "New games will show up here as they're published. Meanwhile, follow the itch.io profile.",
     "status": {
       "released": "Released",
       "prototype": "Prototype",
@@ -34,7 +34,7 @@
   },
   "pixelart": {
     "title": "Pixel art",
-    "sub_title": "Hand-crafted sprites and icons — every pixel on purpose.",
+    "sub_title": "Hand-crafted sprites and icons, every pixel on purpose.",
     "see_more": "See more",
     "items": [
       {
@@ -60,7 +60,7 @@
       {
         "id": "key",
         "title": "Key",
-        "description": "Dungeon key — clear read even at 16×16."
+        "description": "Dungeon key, clear read even at 16×16."
       },
       {
         "id": "heart",
@@ -80,7 +80,7 @@
       {
         "id": "potion",
         "title": "Potion",
-        "description": "Classic pickup — glow and color to stand out on the floor."
+        "description": "Classic pickup, glow and color to stand out on the floor."
       },
       {
         "id": "gem",
