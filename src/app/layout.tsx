@@ -99,7 +99,10 @@ export default function RootLayout({
       <head>
         <link rel="dns-prefetch" href="https://resume.ffzanini.dev" />
       </head>
-      <body className={`${fontMavenPro.className} antialiased`}>
+      <body
+        className={`${fontMavenPro.className} antialiased`}
+        suppressHydrationWarning
+      >
         <Script
           id="intro-bootstrap"
           strategy="beforeInteractive"
