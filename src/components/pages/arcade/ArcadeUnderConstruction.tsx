@@ -3,11 +3,13 @@
 import { LuConstruction } from "react-icons/lu";
 
 import { pixeloidSans, pixeloidSansBold } from "@/app/fonts-pixeloid";
-import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { cn } from "@/libs/cn";
+import type { ReactNode } from "react";
 
-export function ArcadeUnderConstruction() {
+export function ArcadeUnderConstruction({
+  footer,
+}: Readonly<{ footer: ReactNode }>) {
   const { translations } = useTranslation();
   const copy = translations.arcade.coming_soon;
 
@@ -59,7 +61,7 @@ export function ArcadeUnderConstruction() {
         </div>
       </main>
 
-      <LazyFooter />
+      {footer}
     </div>
   );
 }

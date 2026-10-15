@@ -1,4 +1,5 @@
 import { ContactContent } from "@/components/pages/contact/ContactContent";
+import { LazyFooter } from "@/components/utils/LazyFooter";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
 import { loadLocaleContact } from "@/locales/load-locale";
@@ -16,7 +17,7 @@ export default async function LocaleContactPage({
 
   return (
     <TranslationsPatch patch={{ contact }}>
-      <ContactContent />
+      <ContactContent footer={<LazyFooter locale={locale} />} />
     </TranslationsPatch>
   );
 }

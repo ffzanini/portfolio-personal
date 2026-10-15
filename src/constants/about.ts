@@ -7,8 +7,8 @@ export const photos = [
     className: "rounded",
   },
   {
-    src: "/images/about/me_in_rocks.jpeg",
-    alt: "Felipe Frantz Zanini - desenvolvedor web e software engineer nas pedras da praia",
+    src: "/images/about/me_event.jpeg",
+    alt: "Felipe Frantz Zanini - desenvolvedor web e software engineer em evento",
     width: 732,
     height: 1024,
     className: "rounded -mt-4",
@@ -16,8 +16,8 @@ export const photos = [
   {
     src: "/images/about/me_medal.jpeg",
     alt: "Felipe Frantz Zanini (ffzanini) com medalha - desenvolvedor React e Next.js",
-    width: 2340,
-    height: 3276,
+    width: 1143,
+    height: 1600,
     className: "rounded",
   },
   {
@@ -30,22 +30,22 @@ export const photos = [
   {
     src: "/images/about/me_claudio_sleeping.jpeg",
     alt: "Felipe Frantz Zanini (ffzanini) com Claudio - desenvolvedor de software",
-    width: 2880,
-    height: 4032,
+    width: 1143,
+    height: 1600,
     className: "rounded",
   },
   {
     src: "/images/about/me_running.jpeg",
     alt: "Felipe Frantz Zanini correndo - software engineer e desenvolvedor web em Pelotas",
-    width: 2662,
-    height: 3727,
+    width: 1143,
+    height: 1600,
     className: "rounded",
   },
   {
     src: "/images/about/me_jiujitsu.jpeg",
     alt: "Felipe Frantz Zanini (ffzanini) praticando Jiu Jitsu - desenvolvedor React e faixa marrom",
-    width: 2340,
-    height: 3276,
+    width: 1143,
+    height: 1600,
     className: "rounded -mt-4",
   },
   {
@@ -58,8 +58,8 @@ export const photos = [
   {
     src: "/images/about/me_claudio_coffee.jpeg",
     alt: "Felipe Frantz Zanini (ffzanini) com Claudio tomando café - desenvolvedor fullstack",
-    width: 2206,
-    height: 3088,
+    width: 1143,
+    height: 1600,
     className: "rounded -mt-4",
   },
   {

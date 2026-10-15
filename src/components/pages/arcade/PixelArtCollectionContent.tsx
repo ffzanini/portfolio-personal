@@ -13,15 +13,17 @@ import {
 } from "@/app/data/arcade";
 import { pixeloidSans, pixeloidSansBold } from "@/app/fonts-pixeloid";
 import { PixelArtCard } from "@/components/pages/arcade/PixelArtCard";
-import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { withLocalePath } from "@/libs/i18n";
 import { cn } from "@/libs/cn";
+import type { ReactNode } from "react";
 
 type GroupFilter = "all" | PixelArtGroupId;
 type TypeFilter = "all" | PixelArtTypeId;
 
-export function PixelArtCollectionContent() {
+export function PixelArtCollectionContent({
+  footer,
+}: Readonly<{ footer: ReactNode }>) {
   const { translations, location } = useTranslation();
   const copy = translations.arcade.pixelart;
   const collection = copy.collection;
@@ -232,7 +234,7 @@ export function PixelArtCollectionContent() {
           )}
         </div>
       </main>
-      <LazyFooter />
+      {footer}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { ArcadeContent } from "@/components/pages/arcade/ArcadeContent";
 import { ArcadeUnderConstruction } from "@/components/pages/arcade/ArcadeUnderConstruction";
+import { LazyFooter } from "@/components/utils/LazyFooter";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { ARCADE_ENABLED } from "@/libs/arcade-ui";
 import { type Locale, isValidLocale } from "@/libs/i18n";
@@ -20,7 +21,7 @@ export default async function LocaleArcadePage({
   if (!ARCADE_ENABLED) {
     return (
       <TranslationsPatch patch={{ arcade }}>
-        <ArcadeUnderConstruction />
+        <ArcadeUnderConstruction footer={<LazyFooter locale={locale} />} />
       </TranslationsPatch>
     );
   }
@@ -29,7 +30,7 @@ export default async function LocaleArcadePage({
 
   return (
     <TranslationsPatch patch={{ arcade }}>
-      <ArcadeContent videos={videos} />
+      <ArcadeContent videos={videos} footer={<LazyFooter locale={locale} />} />
     </TranslationsPatch>
   );
 }

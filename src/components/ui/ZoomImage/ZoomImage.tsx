@@ -70,6 +70,7 @@ export function ZoomImage({
   sizes,
 }: Readonly<ZoomImageProps>) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [canZoom, setCanZoom] = useState(false);
   const [ZoomWrapper, setZoomWrapper] = useState<React.ComponentType<{ children: React.ReactNode }> | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -78,6 +79,21 @@ export function ZoomImage({
     import("./ZoomWrapper").then((mod) => {
       setZoomWrapper(() => mod.ZoomWrapper);
     });
+  };
+
+  const syncCanZoom = () => {
+    const img = containerRef.current?.querySelector("img");
+    if (!(img instanceof HTMLImageElement)) {
+      setCanZoom(false);
+      return;
+    }
+    const rect = img.getBoundingClientRect();
+    setCanZoom(
+      rect.width > 0 &&
+        rect.height > 0 &&
+        img.naturalWidth > 0 &&
+        img.naturalHeight > 0,
+    );
   };
 
   useEffect(() => {
@@ -93,6 +109,15 @@ export function ZoomImage({
     io.observe(el);
     return () => io.disconnect();
   }, [priority, ZoomWrapper]);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    syncCanZoom();
+    const observer = new ResizeObserver(() => syncCanZoom());
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [isLoaded]);
 
   const imageNode = (
     <ImageContent
@@ -123,7 +148,7 @@ export function ZoomImage({
           <LuLoader className="h-6 w-6 text-white dark:text-gray-200 animate-spin" />
         </div>
       )}
-      {ZoomWrapper ? (
+      {canZoom && ZoomWrapper ? (
         <ZoomWrapper>{imageNode}</ZoomWrapper>
       ) : (
         imageNode

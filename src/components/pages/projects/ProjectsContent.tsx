@@ -6,11 +6,11 @@ import { LuFilter } from "react-icons/lu";
 import Link from "next/link";
 
 import { SanitizedText } from "@/components/utils/SanitizedText";
-import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { projects } from "@/app/data/projects";
 import { withLocalePath } from "@/libs/i18n";
 import { cn } from "@/libs/cn";
+import type { ReactNode } from "react";
 
 const MotionDiv = dynamic(
   () => import("framer-motion").then((mod) => mod.motion.div),
@@ -27,7 +27,7 @@ const LOAD_STEP = 6;
 
 type FilterId = "all" | "fullstack" | "frontend" | "backend";
 
-export function ProjectsContent() {
+export function ProjectsContent({ footer }: Readonly<{ footer: ReactNode }>) {
   const { translations, location } = useTranslation();
   const copy = translations.projects;
   const [activeFilter, setActiveFilter] = useState<FilterId>("all");
@@ -223,7 +223,7 @@ export function ProjectsContent() {
           </div>
         </div>
       </main>
-      <LazyFooter />
+      {footer}
     </div>
   );
 }

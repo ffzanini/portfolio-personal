@@ -7,12 +7,39 @@
     "Desenvolvedor de Jogos Indie",
     "Faixa Marrom de Jiu-Jitsu"
   ],
-  "description": "Hoje sou Engenheiro de Software Sênior & Arquiteto de Frontend na <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> onde ajudo a construir produtos digitais usados por lojistas e clientes da rede. No tempo livre, sou instrutor na <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">JA Jiu Jitsu, Pelotas</a></b>.",
+  "description": "Atualmente sou <b>Engenheiro de Software Sênior & Arquiteto de Frontend</b> na <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A</a></b>, construindo produtos digitais para colaboradores e lojistas da rede.",
+  "descriptionLeisure": "No tempo livre, sou instrutor na academia <b><a href=\"https://www.indiobjj.com.br\" target=\"_blank\">Índio JA Jiu Jitsu</a></b>.",
   "location": "Pelotas, RS, Brasil",
   "experience": "+10 anos de experiência",
   "projects": "+90 projetos desenvolvidos",
   "stack": "Stack principal",
   "textButtonAbout": "Saiba mais sobre mim",
   "textButtonResume": "Acessar meu currículo",
-  "textButtonStack": "Ver tecnologias"
+  "textButtonStack": "Ver tecnologias",
+    "introStatus": "Montando a página",
+    "introSkip": "Pular",
+  "sheet": {
+    "player": "Player 1",
+    "base": "Pelotas, RS",
+    "languages": "Idiomas",
+    "level": "LVL 16",
+    "since": "desde 2010",
+    "belt": "Faixa marrom",
+    "classLabel": "Classe",
+    "className": "Engenheiro de Software",
+    "subclassLabel": "Subclasse",
+    "subclass": "Instrutor de Jiu Jitsu",
+    "viewSheet": "Ficha completa",
+    "hideSheet": "Ocultar ficha",
+    "inventory": "Inventário",
+    "special": "Golpe especial",
+    "specialTechnique": "Raspagem de Escopo:",
+    "specialMove": "pego o problema de ponta-cabeça, viro a complexidade a meu favor e termino no controle.",
+    "items": [
+      { "id": "code", "name": "Código", "stat": "+15 anos" },
+      { "id": "bjj", "name": "Jiu Jitsu", "stat": "Faixa marrom" },
+      { "id": "dota", "name": "Dota 2", "stat": "5218 MMR" },
+      { "id": "godot", "name": "Godot", "stat": "1 jogo em dev" }
+    ]
+  }
 }

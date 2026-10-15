@@ -4,5 +4,6 @@ export * from "./FlipWords";
 export * from "./Footer";
 export * from "./LanguageSelect";
 export * from "./Navbar";
+export * from "./Timeline";
 export * from "./Tooltip";
 export * from "./ZoomImage";

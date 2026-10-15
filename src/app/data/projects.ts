@@ -28,7 +28,7 @@ const projectsData: Project[] = [
     ],
     featured: false,
     active: true,
-    demo: "https://ffzanini.dev/",
+    demo: "https://www.ffzanini.dev/",
     github: "https://github.com/ffzanini/portifolio-personal",
     date: "2024-01-15",
   },

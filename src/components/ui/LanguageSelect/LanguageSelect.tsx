@@ -69,7 +69,7 @@ export function LanguageSelect({
         onKeyDown={(event) => {
           if (event.key === "Escape") setOpen(false);
         }}
-        className="flex w-full items-center justify-between rounded-md border border-black/10 bg-black/5 px-3 py-2 backdrop-blur-sm hover:outline-none hover:ring-1 hover:ring-primary-800 dark:border-white/10 dark:bg-white/5 dark:hover:ring-primary-300"
+        className="flex w-full cursor-pointer items-center justify-between rounded-md border border-black/10 bg-black/5 px-3 py-2 backdrop-blur-sm hover:outline-none hover:ring-1 hover:ring-primary-800 dark:border-white/10 dark:bg-white/5 dark:hover:ring-primary-300"
       >
         <span className="flex items-center gap-2">
           <span>{selectedLang.flag}</span>

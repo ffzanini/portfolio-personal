@@ -1,9 +1,10 @@
 {
   "title": "Tech stack",
-  "sub_title": "People keep asking which tools, languages, and services I use, or have used, so I put everything in one place.",
+  "sub_title": "I've used so much technology that I sometimes forget what was actually applied on a project, so I gathered here every tool, language, and service I work with or have worked with.",
 
-  "mainSpecialties": "Main specialties",
-  "knownTech": "Technologies I work with",
+  "mainSpecialties": "I use these every day",
+  "knownTech": "I use these sometimes",
+  "usedOnce": "Used it before, I'd use it again",
 
   "frontend": "Modern and responsive interfaces",
   "backend": "Robust and scalable APIs",
@@ -15,33 +16,33 @@
     "items": [
       {
         "title": "Frontend development",
-        "description": "Interfaces that combine performance, accessibility, and modern design, always focused on the people who will use them."
+        "description": "Interfaces that combine modern design, accessibility, quality, and performance, always considering every way a person might use them."
       },
       {
         "title": "Responsive design",
-        "description": "Interfaces designed with a mobile-first approach, adapted to different screen sizes, and focused on usability across all devices."
+        "description": "Building systems with a mobile-first approach, so the user always gets the best usability experience on any device."
       },
       {
         "title": "Software architecture",
-        "description": "Applications designed to scale: following DDD principles and engineering best practices to create scalable, organized, and sustainable architectures."
+        "description": "Structures designed so the product grows along with the business. DDD principles and engineering best practices for building scalable, organized, and sustainable architectures."
       },
       {
         "title": "Agile methodologies",
-        "description": "Application of agile practices such as Navway, Scrum, and Kanban to deliver value continuously and collaboratively."
+        "description": "Applying agile practices such as Scrum and Kanban. Always thinking about structure and organization to deliver the most value, continuously and collaboratively."
       },
       {
         "title": "Technical leadership",
-        "description": "Leading development teams with a focus on quality, code standardization, technical alignment, and mentoring."
+        "description": "Leading multidisciplinary development teams with a focus on quality, DRY, code standardization, technical alignment, and mentoring."
       },
       {
         "title": "Teamwork",
-        "description": "Effective collaboration with different profiles, stakeholders, designers, and developers, promoting communication and joint results."
+        "description": "Running collaborative projects with different user profiles, stakeholders, designers, and developers, promoting clear communication and solid results."
       }
     ]
   },
   "footer": {
-    "title": "See these skills in real projects",
-    "message": "Skills and tools are only the start. What matters is how they turn into real products people can use. See some of that on the ",
+    "title": "Interested in seeing these tools come to life?",
+    "message": "After all, tools are only tools if they aren't used in a coherent way. They're only the start. What really matters is the product this becomes for a real person. Check out some of these builds on the ",
     "project": "projects page."
   }
 }

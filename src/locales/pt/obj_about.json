@@ -1,12 +1,30 @@
 {
   "title": "Por trás do código",
-  "sub_title": "Gosto de aproximar pessoas e tecnologia com código e conteúdo digital. Experiências claras, úteis e bem feitas, esse é o plano.",
+  "sub_title": "Nessa seção tu vai poder saber um pouquinho mais sobre mim, minha trajetória e processo de trabalho.",
   "description": {
     "title": "A estrada até aqui",
-    "begin": "Prazer! Eu sou o Felipe Frantz Zanini, engenheiro de software. Curto jiu-jitsu, corrida, jogos indie, Dota 2, roteiro, pixel art, música e investimentos. Tenho 33 anos e moro em Pelotas, Rio Grande do Sul, Brasil.",
-    "middle": "Comecei em software em 2008, no técnico. Em 2010 terminei o curso, peguei meu primeiro estágio em programação e sigo nisso desde então. Fui efetivado como engenheiro de software no mesmo ano, e já atuei em mais de <b>90 projetos</b> com PHP, JavaScript, Ruby, Python e uns bons frameworks e bibliotecas.",
-    "education": "Sempre quis continuar aprendendo. Fiz Gestão da Tecnologia da Informação, especialização em Planejamento Estratégico em TI e comecei o Mestrado em Ciência da Computação, que não concluí por motivos pessoais. Com a IA andando tão rápido, agora estou numa pós em IA e automação para não ficar para trás e continuar crescendo.",
-    "end": "Hoje sou Engenheiro de Software Sênior & Arquiteto de Frontend na <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> onde ajudo a construir produtos digitais que deixam a vida mais fácil para lojistas e clientes da rede."
+    "chapters": [
+      {
+        "label": "Quem sou",
+        "title": "Prazer, Felipe.",
+        "body": "Sou o <b>Felipe Frantz Zanini</b>, engenheiro de software. No tatame, faixa marrom e instrutor de <b>jiu-jitsu</b>. No resto do tempo pratico corrida, jogo <b>Dota 2</b>, escrevo roteiros, faço pixel art, ouço música, cuido de investimentos e desenvolvo <b><a href='/pt/arcade'>jogos indie</a></b>.<br />Tenho 33 anos e moro em Pelotas, Rio Grande do Sul, Brasil."
+      },
+      {
+        "label": "O começo",
+        "title": "Do técnico ao primeiro estágio.",
+        "body": "Comecei em software em <b>2008</b>, no técnico. Em <b>2010</b> concluí o curso e entrei no primeiro estágio em programação. No mesmo ano fui efetivado como engenheiro de software, e é nisso que trabalho desde então.<br />De lá para cá, atuei na colaboração de mais de <b><a href='/pt/projects'>42+ projetos</a></b>, em áreas como agro, saúde, educação, contabilidade, e-commerce e intranets."
+      },
+      {
+        "label": "Aprendizado",
+        "title": "Nunca parei de estudar.",
+        "body": "Fiz graduação em <b>Gestão da Tecnologia da Informação</b> e especialização em <b>Planejamento Estratégico em TI</b>. Comecei o <b>Mestrado em Ciência da Computação</b>, que não concluí por motivos pessoais.<br />Com o avanço rápido e crescimento das IA's, estou cursando uma <b>pós em IA e automação</b>, para seguir me aprimorando e atender às expectativas pessoais e do mercado de trabalho."
+      },
+      {
+        "label": "Agora",
+        "title": "Arquiteto de Frontend.",
+        "body": "Hoje sou <b>Engenheiro de Software Sênior</b> e <b>Arquiteto de Frontend</b> na <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> onde colaboro para construir produtos digitais que facilitam as atividades do dia-a-dia de nossos colaboradores e clientes da rede."
+      }
+    ]
   },
   "skills": {
     "title": "Como conduzo um projeto",
@@ -14,46 +32,53 @@
     "process": [
       {
         "id": 1,
+        "label": "Escuta",
         "title": "Entendendo a motivação",
-        "description": "Sempre começa com uma conversa. Escuto o que você quer, por que isso importa, e acho um jeito prático de ficar bonito e funcionar de verdade."
+        "description": "Começamos com uma conversa. Escuto a tua ideia, o motivo e os pontos importantes. Com isso, juntos achamos um meio prático pra fazer funcionar de verdade."
       },
       {
         "id": 2,
+        "label": "Estrutura",
         "title": "Montando a estrutura",
-        "description": "Antes de pensar no visual, monto a estrutura: quais páginas a gente precisa, como as coisas devem se comportar e como tudo se conecta."
+        "description": "Agora é comigo. Antes de pensar no visual, monto a arquitetura do projeto e sua estrutura. Penso em quais páginas iremos precisar, como serão seus comportamentos e como tudo irá se conectar."
       },
       {
         "id": 3,
+        "label": "Construção",
         "title": "O código ganha vida",
-        "description": "Aí eu construo. Ligo para usabilidade, responsividade e performance, para ficar rápido e fácil em qualquer dispositivo."
+        "description": "Começando a construção focando sempre para a usabilidade, responsividade e performance do projeto. Porque além de ficar bonito, precisamos de algo eficiente, rápido e de fácil acesso em qualquer dispositivo."
       },
       {
         "id": 4,
+        "label": "Integração",
         "title": "Integrações externas",
-        "description": "Se precisar de formulários, login ou integração com outros sistemas, eu assumo isso também. Segurança e estabilidade não se negociam."
+        "description": "Se for permitido pelo sistema de terceiros e tua ideia precisar acoplar formulários ou até mesmo ter integração com outros sistemas, eu assumo isso também. Segurança e estabilidade sempre em conjunto com o desenvolvimento."
       },
       {
         "id": 5,
+        "label": "Qualidade",
         "title": "Testes e garantia de qualidade",
-        "description": "Antes de ir para o ar, eu testo. Navegadores diferentes, dispositivos, tamanhos de tela, uso de verdade. Quero que funcione como a gente combinou."
+        "description": "Antes de colocarmos para o ar, eu testo e valido tudo, todas possibilidades. Além de testes escritos no código, também realizo testes manuais em diferentes navegadores, dispositivos, tamanhos de tela, uso o sistema de verdade, pra garantir que tudo funcione conforme combinamos."
       },
       {
         "id": 6,
+        "label": "Entrega",
         "title": "Hora de mostrar ao mundo",
-        "description": "Depois eu publico. Nos primeiros dias fico de olho e entro se aparecer qualquer coisa."
+        "description": "Se precisar de um servidor, também posso ser esse cara, mas caso tu já tenha um próprio, te auxílio em todo o processo de publicação. Além disso, nos primeiros dias fico monitorando pra garantir que tudo ocorreu da melhor forma possível."
       }
     ]
   },
   "stack": {
     "title": "As engrenagens por trás do processo",
-    "description": "Por trás de cada clique estão tecnologias que eu escolhi de propósito. Se quiser ver a stack completa ou só dar um oi, os botões abaixo te levam.",
+    "description": "Por trás de cada clique, ideia e design, estão tecnologias que escolhi de propósito, que vêm sendo minhas ferramentas diárias de trabalho. Mas além delas, existe todo um ecossistema em que eu ainda posso atuar. Se quiser saber mais, fique à vontade para conferir a minha stack completa ou me manda uma mensagem.",
     "button": "Ver stack completa",
     "contact": "Enviar mensagem"
   },
   "site": {
     "title": "Café, código e deploy",
     "subtitle": "Um olhar rápido nas ferramentas que deixam este site com a minha cara, e o que acontece por trás dos cliques.",
-    "description": "Eu montei este site com <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, usando <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, hospedado na <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, com <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animações do <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b> e ícones da <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. A tipografia é <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. Também é o meu laboratório. Testo bibliotecas aqui, e ele reúne alguns dos meus ",
-    "projects": "projetos."
+    "description": "Comecei esse site utilizando os conceitos de <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, usando <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, hospedado na <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, com <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animações do <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b> e ícones da <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. A tipografia é <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b> e <b><a href='https://www.dafont.com/pixeloid-sans.font' target='_blank'>PixeloidSans</a></b>. Esse site, além de ser meu portfólio pessoal que contém boa parte dos meus ",
+    "projects": "projetos",
+    "description_end": ", também funciona como meu laboratório, aqui testo novas ideias de design, animações e bibliotecas antes de utilizar efetivamente em projetos reais."
   }
 }

@@ -48,6 +48,206 @@
     animation: intro-greet 160ms var(--ease-out-strong) both;
   }
 
+  @keyframes intro-cell-in {
+    from {
+      opacity: 0;
+      transform: scale(0.55);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .intro-cell {
+    opacity: 0;
+    animation: intro-cell-in 90ms linear forwards;
+  }
+
+  .intro-curtain {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100dvh;
+    background: #0c0c0e;
+    transition: background-color 700ms var(--ease-out-strong);
+  }
+
+  html[data-intro] .intro-curtain {
+    display: flex;
+    background: #0c0c0e;
+    color-scheme: dark;
+  }
+
+  html[data-intro="print"],
+  html[data-intro="print"] body {
+    background: #0c0c0e;
+  }
+
+  .intro-curtain-build {
+    background: transparent !important;
+    pointer-events: none;
+  }
+
+  .intro-stage {
+    display: flex;
+    width: min(100%, 920px);
+    max-height: calc(100dvh - 7rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .intro-stage {
+      gap: 3rem;
+    }
+  }
+
+  .intro-name {
+    max-width: 100%;
+  }
+
+  .intro-loader {
+    position: relative;
+    width: 188px;
+    height: 132px;
+  }
+
+  .intro-loader-sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 188px;
+    height: 118px;
+    pointer-events: none;
+  }
+
+  .intro-loader-track {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    gap: 4px;
+  }
+
+  .intro-loader-cell {
+    width: 8px;
+    height: 8px;
+    background: #2a2a2e;
+  }
+
+  .intro-loader-cell.is-on {
+    background: #f4f1ea;
+  }
+
+  .intro-loader-bubble {
+    position: absolute;
+    bottom: 16px;
+    background: #f4f1ea;
+    color: #141414;
+    padding: 4px 6px;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    transition: left 90ms linear;
+  }
+
+  .intro-status {
+    pointer-events: auto;
+    position: fixed;
+    bottom: 1.25rem;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transform: translateX(-50%);
+    color: #f4f1ea;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .intro-status button,
+  .intro-status kbd {
+    border: 2px solid #f4f1ea;
+    background: #0c0c0e;
+    padding: 0.45rem 0.7rem;
+    line-height: 1;
+  }
+
+  .intro-status button {
+    cursor: pointer;
+  }
+
+  .intro-status kbd {
+    font-family: inherit;
+  }
+
+  html[data-intro] [data-build] {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  html[data-intro] [data-build][data-built] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 420ms var(--ease-out-strong),
+      transform 420ms var(--ease-out-strong);
+  }
+
+  @keyframes route-enter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .route-enter {
+    animation: route-enter 420ms var(--ease-out-strong) both;
+  }
+
+  html[data-intro] .route-enter {
+    animation: none;
+  }
+
+  .route-enter-armed {
+    opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .intro-cell {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+
+    html[data-intro] [data-build][data-built] {
+      transition: none;
+    }
+
+    .route-enter,
+    .route-enter-armed {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   @keyframes loading-slide {
     0% {
       transform: translateX(-120%);
@@ -199,11 +399,26 @@ html {
   scroll-behavior: smooth;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+
+html[data-theme-vt="active"]::view-transition-group(root) {
+  animation-duration: var(--theme-vt-duration);
+}
+
+html[data-theme-vt="active"]::view-transition-new(root) {
+  clip-path: var(--theme-vt-clip-from);
+}
+
 html[data-intro],
 html[data-intro] body,
 html:has([data-intro-lock]),
 body:has([data-intro-lock]) {
   overflow: hidden;
+  scrollbar-width: none;
 }
 
 /* Desktop home: lock scroll without a client effect */

@@ -2,8 +2,6 @@ export const INTRO_BOOTSTRAP_SCRIPT = `(function () {
   var langKey = "app-language";
   var valid = { pt: 1, en: 1, es: 1 };
 
-  document.documentElement.setAttribute("data-intro", "1");
-
   var cookie = document.cookie.match(/(?:^|; )app-language=([^;]*)/);
   var locale = cookie && valid[cookie[1]] ? cookie[1] : "";
   if (!locale) {
@@ -39,6 +37,15 @@ export const INTRO_BOOTSTRAP_SCRIPT = `(function () {
     try {
       localStorage.setItem(langKey, locale);
     } catch (error) {}
+  }
+
+  var reduced = false;
+  try {
+    reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  } catch (error) {}
+
+  if (!reduced) {
+    document.documentElement.setAttribute("data-intro", "print");
   }
 
   if (path !== "/" && path !== "") return;

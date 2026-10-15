@@ -71,7 +71,7 @@ const personSchema = {
   },
   worksFor: {
     "@type": "Organization",
-    name: "Iguatemi S.A.",
+    name: "Iguatemi S.A",
     url: "https://www.iguatemi.com.br",
   },
   award: "Faixa Marrom de Jiu Jitsu",

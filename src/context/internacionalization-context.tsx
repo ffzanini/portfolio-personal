@@ -122,6 +122,8 @@ const InternacionalizationProvider = ({
         document.cookie = `${LANGUAGE_STORAGE_KEY}=${lang};path=/;max-age=31536000;samesite=lax`;
       }
       const nextPath = withLocalePath(lang, pathname || "/");
+      document.documentElement.lang =
+        lang === "pt" ? "pt-BR" : lang;
       const docWithTransition = document as Document & {
         startViewTransition?: (cb: () => void) => void;
       };

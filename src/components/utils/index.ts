@@ -5,5 +5,6 @@ export * from "./InitialLanguage";
 export * from "./JsonLd";
 export * from "./LazyFooter";
 export * from "./PreloadImage";
+export * from "./RouteEnter";
 export * from "./SanitizedText";
 export * from "./ScrollToTop";

@@ -1,17 +1,20 @@
 import { notFound } from "next/navigation";
 
+import { rootMetadata, rootViewport } from "@/app/root-metadata";
 import { Navbar } from "@/components/ui/Navbar";
-import AppProvider from "@/providers/AppProvider";
 import { LazyClientToaster } from "@/components/utils/ClientToaster";
 import { LazyScrollToTop } from "@/components/utils/LazyScrollToTop";
 import { isValidLocale, SUPPORTED_LOCALES } from "@/libs/i18n";
 import { loadLocaleChrome } from "@/locales/load-locale";
+import AppProvider from "@/providers/AppProvider";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
 
+export const metadata = rootMetadata;
+export const viewport = rootViewport;
 export const dynamic = "force-static";
 export const revalidate = 86400;
 

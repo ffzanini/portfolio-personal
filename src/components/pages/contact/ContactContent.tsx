@@ -17,11 +17,11 @@ import toast from "react-hot-toast";
 import { useTranslation } from "@/context";
 import { Tooltip } from "@/components/ui/Tooltip";
 import { SanitizedText } from "@/components/utils/SanitizedText";
-import { LazyFooter } from "@/components/utils/LazyFooter";
 import { TestimonialsSlider } from "@/components/pages/contact/TestimonialsSlider";
 import { cn } from "@/libs/cn";
+import type { ReactNode } from "react";
 
-export function ContactContent() {
+export function ContactContent({ footer }: Readonly<{ footer: ReactNode }>) {
   const { translations } = useTranslation();
 
   const renderIco = (id: number) => {
@@ -150,7 +150,7 @@ export function ContactContent() {
           </div>
         </div>
       </main>
-      <LazyFooter />
+      {footer}
     </div>
   );
 }

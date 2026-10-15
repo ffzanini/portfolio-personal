@@ -13,15 +13,16 @@ import {
 import { Project } from "@/app/data/projects";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ZoomImage } from "@/components/ui/ZoomImage";
-import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import { withLocalePath } from "@/libs/i18n";
 import { SITE_URL, PERSON } from "@/constants/seo";
 import { fillTemplate } from "@/libs/fill-template";
 import { cn } from "@/libs/cn";
+import type { ReactNode } from "react";
 
 interface ProjectDetailsContentProps {
   project: Project;
+  footer: ReactNode;
 }
 
 function formatYear(date: string) {
@@ -31,6 +32,7 @@ function formatYear(date: string) {
 
 export function ProjectDetailsContent({
   project,
+  footer,
 }: Readonly<ProjectDetailsContentProps>) {
   const { translations, location } = useTranslation();
   const copy = translations.projects;
@@ -231,7 +233,7 @@ export function ProjectDetailsContent({
         </div>
       </main>
 
-      <LazyFooter />
+      {footer}
     </div>
   );
 }

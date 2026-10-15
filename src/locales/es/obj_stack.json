@@ -1,9 +1,10 @@
 {
   "title": "Stack tecnológica",
-  "sub_title": "Me preguntan mucho qué herramientas, lenguajes y servicios uso, o usé, así que junté todo en un solo lugar.",
+  "sub_title": "Ya utilicé tanta tecnología que a veces hasta olvido lo que de hecho se aplicó en algún proyecto, así que reuní aquí todas las herramientas, lenguajes y servicios con los que trabajo o ya trabajé.",
 
-  "mainSpecialties": "Principales especialidades",
-  "knownTech": "Tecnologías con las que trabajo",
+  "mainSpecialties": "Las uso a diario",
+  "knownTech": "Las uso a veces",
+  "usedOnce": "Ya las usé, aún las usaría",
 
   "frontend": "Interfaces modernas y responsivas",
   "backend": "APIs robustas y escalables",
@@ -15,33 +16,33 @@
     "items": [
       {
         "title": "Desarrollo frontend",
-        "description": "Interfaces que combinan rendimiento, accesibilidad y diseño moderno, siempre pensadas en quienes las van a usar."
+        "description": "Interfaces que combinan diseño moderno, accesibilidad, calidad y rendimiento, pensando siempre en todos los escenarios de uso de la persona."
       },
       {
         "title": "Diseño responsivo",
-        "description": "Interfaces diseñadas con enfoque mobile first, adaptadas a diferentes tamaños de pantalla y centradas en la usabilidad en cualquier dispositivo."
+        "description": "Creación de sistemas con el enfoque mobile first, garantizando siempre la mejor experiencia de usabilidad para el usuario en cualquier dispositivo."
       },
       {
         "title": "Arquitectura de software",
-        "description": "Aplicaciones diseñadas para crecer: siguiendo principios de DDD y buenas prácticas de ingeniería para crear arquitecturas escalables, organizadas y sostenibles."
+        "description": "Estructuras pensadas para que el crecimiento del producto acompañe al negocio. Principios de DDD y buenas prácticas de ingeniería para crear arquitecturas escalables, organizadas y sostenibles."
       },
       {
         "title": "Metodologías ágiles",
-        "description": "Aplicación de prácticas ágiles como Navway, Scrum y Kanban para entregar valor de forma continua y colaborativa."
+        "description": "Aplicación de prácticas ágiles como Scrum y Kanban. Pensando siempre en la estructura y la organización para garantizar la máxima entrega de valor de forma continua y colaborativa."
       },
       {
         "title": "Liderazgo técnico",
-        "description": "Coordinación de equipos de desarrollo con foco en calidad, estandarización del código, alineación técnica y mentoría."
+        "description": "Coordinación de equipos multidisciplinarios de desarrollo con foco en calidad, DRY, estandarización del código, alineación técnica y mentorías."
       },
       {
         "title": "Trabajo en equipo",
-        "description": "Colaboración efectiva con distintos perfiles, stakeholders, diseñadores y desarrolladores, promoviendo comunicación y resultados conjuntos."
+        "description": "Ejecución de proyectos colaborativos con distintos perfiles de usuarios, stakeholders, diseñadores y desarrolladores, promoviendo una comunicación asertiva y buenos resultados."
       }
     ]
   },
   "footer": {
-    "title": "Mira estas skills en proyectos reales",
-    "message": "Las skills y las herramientas son solo el arranque. Lo que importa es cómo se vuelven productos que la gente usa. Mira algo de eso en la ",
+    "title": "¿Te interesa ver estas herramientas cobrar vida?",
+    "message": "Al fin y al cabo, las herramientas solo son herramientas si no se usan de forma coherente. Son solo el comienzo. Lo que de verdad importa es el producto en el que esto se va a convertir para una persona real. Mira algunos de estos desarrollos en la ",
     "project": "página de proyectos."
   }
 }

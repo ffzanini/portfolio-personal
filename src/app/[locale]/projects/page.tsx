@@ -1,4 +1,5 @@
 import { ProjectsContent } from "@/components/pages/projects/ProjectsContent";
+import { LazyFooter } from "@/components/utils/LazyFooter";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
 import { loadLocaleProjects } from "@/locales/load-locale";
@@ -16,7 +17,7 @@ export default async function LocaleProjectsPage({
 
   return (
     <TranslationsPatch patch={{ projects }}>
-      <ProjectsContent />
+      <ProjectsContent footer={<LazyFooter locale={locale} />} />
     </TranslationsPatch>
   );
 }

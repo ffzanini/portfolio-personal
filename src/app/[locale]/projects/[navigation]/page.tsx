@@ -1,6 +1,7 @@
 import { cache } from "react";
 import { notFound } from "next/navigation";
 import ProjectDetails from "@/app/[locale]/projects/[navigation]/ProjectDetails";
+import { LazyFooter } from "@/components/utils/LazyFooter";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
 import { loadLocaleProjects } from "@/locales/load-locale";
@@ -43,7 +44,10 @@ export default async function LocaleProjectDetailsPage({
 
   return (
     <TranslationsPatch patch={{ projects }}>
-      <ProjectDetails project={project} />
+      <ProjectDetails
+        project={project}
+        footer={<LazyFooter locale={locale} />}
+      />
     </TranslationsPatch>
   );
 }

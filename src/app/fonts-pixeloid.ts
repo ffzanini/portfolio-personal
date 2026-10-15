@@ -11,5 +11,5 @@ export const pixeloidSansBold = localFont({
   src: "../../public/fonts/PixeloidSans-Bold.woff2",
   variable: "--font-pixeloidsans-bold",
   display: "swap",
-  preload: false,
+  preload: true,
 });

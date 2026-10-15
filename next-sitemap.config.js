@@ -1,4 +1,4 @@
-const SITE_URL = "https://ffzanini.dev";
+const SITE_URL = "https://www.ffzanini.dev";
 
 const projectSlugs = [
   "portifolio_v3",

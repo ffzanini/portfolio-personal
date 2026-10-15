@@ -1,4 +1,4 @@
-export const SITE_URL = "https://ffzanini.dev" as const;
+export const SITE_URL = "https://www.ffzanini.dev" as const;
 
 export const PERSON = {
   name: "Felipe Frantz Zanini",

@@ -280,8 +280,9 @@ export function AboutPhotoSlider({ photos }: Readonly<AboutPhotoSliderProps>) {
                 height={photo.height}
                 draggable={false}
                 quality={75}
-                sizes="(max-width: 1024px) 70vw"
-                loading="eager"
+                sizes="(max-width: 1024px) 70vw, 40vw"
+                priority={photoIndex === index}
+                loading={photoIndex === index ? undefined : "lazy"}
                 className="h-full w-full object-cover"
               />
             </div>

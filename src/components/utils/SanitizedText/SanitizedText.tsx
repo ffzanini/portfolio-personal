@@ -19,6 +19,9 @@ function readQuotedAttr(attrs: string, name: string): string | null {
 }
 
 function isAllowedHref(href: string): boolean {
+  if (href.startsWith("/") && !href.startsWith("//")) {
+    return /^\/[A-Za-z0-9/_-]*$/.test(href);
+  }
   if (href.startsWith("https://") || href.startsWith("http://")) return true;
   if (!href.startsWith("mailto:")) return false;
 

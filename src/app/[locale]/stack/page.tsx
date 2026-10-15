@@ -1,4 +1,5 @@
 import { StackContent } from "@/components/pages/stack/StackContent";
+import { LazyFooter } from "@/components/utils/LazyFooter";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
 import { loadLocaleStack } from "@/locales/load-locale";
@@ -14,7 +15,7 @@ export default async function LocaleStackPage({ params }: Readonly<PageProps>) {
 
   return (
     <TranslationsPatch patch={{ stack }}>
-      <StackContent />
+      <StackContent footer={<LazyFooter locale={locale} />} />
     </TranslationsPatch>
   );
 }

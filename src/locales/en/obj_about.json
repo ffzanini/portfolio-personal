@@ -1,12 +1,30 @@
 {
   "title": "Behind the code",
-  "sub_title": "I like bringing people and technology closer through code and digital content. Clear, useful, well-made experiences, that's the goal.",
+  "sub_title": "In this section you'll get to know a little more about me, my path and how I work.",
   "description": {
     "title": "The road so far",
-    "begin": "Nice to meet you! I'm Felipe Frantz Zanini, a software engineer who loves jiu-jitsu, running, indie games, Dota 2, screenwriting, pixel art, music, and investing. I'm 33 and live in Pelotas, Rio Grande do Sul, Brazil.",
-    "middle": "I started in software in 2008, during technical school. In 2010 I finished the course, landed my first programming internship, and I've been at it ever since. I was hired as a software engineer that same year, and I've worked on more than <b>90 projects</b> with PHP, JavaScript, Ruby, Python, plus plenty of frameworks and libraries.",
-    "education": "I've always wanted to keep learning. I finished a degree in IT Management, a specialization in Strategic IT Planning, and started a Master's in Computer Science, which I didn't finish for personal reasons. With AI moving so fast, I'm now doing a postgraduate program in AI and automation so I can stay current and keep growing.",
-    "end": "These days I'm a Senior Software Engineer & Frontend Architect at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b>, where I help build digital products that make life easier for retailers and customers across the network."
+    "chapters": [
+      {
+        "label": "Who I am",
+        "title": "Nice to meet you, Felipe.",
+        "body": "I'm <b>Felipe Frantz Zanini</b>, a software engineer. On the mats, a brown belt and <b>jiu-jitsu</b> instructor. The rest of the time I go running, play <b>Dota 2</b>, write screenplays, make pixel art, listen to music, look after investments, and develop <b><a href='/en/arcade'>indie games</a></b>.<br />I'm 33 and I live in Pelotas, Rio Grande do Sul, Brazil."
+      },
+      {
+        "label": "The start",
+        "title": "From technical school to the first internship.",
+        "body": "I started in software in <b>2008</b>, in technical school. In <b>2010</b> I finished the course and landed my first programming internship. That same year I was hired as a software engineer, and that's the work I've done ever since.<br />Since then I've collaborated on more than <b><a href='/en/projects'>42+ projects</a></b>, in areas such as agriculture, health, education, accounting, e-commerce, and intranets."
+      },
+      {
+        "label": "Learning",
+        "title": "I never stopped studying.",
+        "body": "I completed a degree in <b>IT Management</b> and a specialization in <b>Strategic IT Planning</b>. I started a <b>Master's in Computer Science</b>, which I didn't finish for personal reasons.<br />With the rapid advance and growth of AIs, I'm taking a <b>postgraduate program in AI and automation</b>, to keep improving and meet both my own expectations and those of the job market."
+      },
+      {
+        "label": "Now",
+        "title": "Frontend Architect.",
+        "body": "Today I'm a <b>Senior Software Engineer</b> and <b>Frontend Architect</b> at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> where I collaborate to build digital products that make day-to-day activities easier for our employees and customers across the network."
+      }
+    ]
   },
   "skills": {
     "title": "How I run a project",
@@ -14,46 +32,53 @@
     "process": [
       {
         "id": 1,
+        "label": "Listen",
         "title": "Understanding the motivation",
-        "description": "It always starts with a conversation. I listen to what you want, why it matters, and then figure out a practical way to make it look good and actually work."
+        "description": "We start with a conversation. I listen to your idea, the reason, and the important points. From that, together we find a practical way to make it actually work."
       },
       {
         "id": 2,
+        "label": "Structure",
         "title": "Building the structure",
-        "description": "Before I worry about how it looks, I map the structure: which pages we need, how things should behave, and how it all connects."
+        "description": "Now it's on me. Before I think about how it looks, I set up the project architecture and its structure. I think through which pages we'll need, how they'll behave, and how everything will connect."
       },
       {
         "id": 3,
+        "label": "Build",
         "title": "Bringing the code to life",
-        "description": "Then I build it. I care about usability, responsiveness, and performance, so it feels fast and easy on any device."
+        "description": "I start building with a constant focus on the project's usability, responsiveness, and performance. Because besides looking good, we need something efficient, fast, and easy to reach on any device."
       },
       {
         "id": 4,
+        "label": "Integrate",
         "title": "External integrations",
-        "description": "If we need forms, auth, or hooks into other systems, I take that on too. Security and stability stay non-negotiable."
+        "description": "If the third-party system allows it and your idea needs forms, or even integration with other systems, I take that on too. Security and stability stay part of the development the whole way."
       },
       {
         "id": 5,
+        "label": "Quality",
         "title": "Testing and quality assurance",
-        "description": "Before it goes live, I test it. Different browsers, devices, screen sizes, real-world use. I want it to work the way we planned."
+        "description": "Before we put it live, I test and validate everything, every possibility. Besides tests written in the code, I also run manual tests on different browsers, devices, and screen sizes, and I use the system for real, to make sure everything works the way we agreed."
       },
       {
         "id": 6,
+        "label": "Ship",
         "title": "Time to show the world",
-        "description": "Then I ship it. In the first few days I keep an eye on things and jump in if anything comes up."
+        "description": "If you need a server, I can be that person too, but if you already have your own, I help you through the whole publishing process. On top of that, in the first few days I keep monitoring to make sure everything went as well as possible."
       }
     ]
   },
   "stack": {
     "title": "The gears behind the process",
-    "description": "Behind every click and line of code are technologies I picked on purpose. If you want the full stack or just want to say hi, the buttons below will get you there.",
+    "description": "Behind every click, idea, and design are technologies I chose on purpose, the tools I work with every day. Beyond them, there's a whole ecosystem I can still work in. If you want to know more, feel free to check out my full stack or send me a message.",
     "button": "View full stack",
     "contact": "Send message"
   },
   "site": {
     "title": "Coffee, code & deploy",
     "subtitle": "A quick look at the tools that make this site feel like mine, and what happens behind the clicks.",
-    "description": "I built this site with <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b> in mind, using <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, hosted on <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, styled with <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animated with <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b>, and icons from <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. The typeface is <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b>. It's also my lab. I try new libraries here, and it gathers some of my ",
-    "projects": "projects."
+    "description": "I started this site using the concepts of <b><a href='https://www.lukew.com/ff/entry.asp?1117' target='_blank'>Mobile First</a></b>, using <b><a href='https://nextjs.org/' target='_blank'>Next.js</a></b>, hosted on <b><a href='https://vercel.com/' target='_blank'>Vercel</a></b>, styled with <b><a href='https://tailwindcss.com/' target='_blank'>Tailwind</a></b>, animated with <b><a href='https://motion.dev/' target='_blank'>Framer Motion</a></b>, and icons from <b><a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></b>. The typeface is <b><a href='https://fonts.google.com/specimen/Maven+Pro' target='_blank'>Maven Pro</a></b> and <b><a href='https://www.dafont.com/pixeloid-sans.font' target='_blank'>PixeloidSans</a></b>. This site, besides being my personal portfolio that holds a good share of my ",
+    "projects": "projects",
+    "description_end": ", also works as my lab, where I test new design ideas, animations, and libraries before actually using them on real projects."
   }
 }

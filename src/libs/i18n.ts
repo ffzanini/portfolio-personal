@@ -8,6 +8,12 @@ export const DEFAULT_LOCALE: Locale = "pt";
 /** Fallback when the browser language is neither pt, en, nor es. */
 export const INTERNATIONAL_FALLBACK_LOCALE: Locale = "en";
 
+export const HTML_LANG: Record<Locale, string> = {
+  pt: "pt-BR",
+  en: "en",
+  es: "es",
+};
+
 export const isValidLocale = (value: string): value is Locale =>
   SUPPORTED_LOCALES.includes(value as Locale);
 

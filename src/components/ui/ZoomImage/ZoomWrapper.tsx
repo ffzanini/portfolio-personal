@@ -9,5 +9,9 @@ export function ZoomWrapper({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <Zoom classDialog="custom-zoom">{children}</Zoom>;
+  return (
+    <Zoom classDialog="custom-zoom" zoomMargin={0}>
+      {children}
+    </Zoom>
+  );
 }

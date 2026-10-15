@@ -1,120 +1,261 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import { cn } from "@/libs/cn";
+import { pixeloidSans } from "@/app/fonts-pixeloid";
 import { withLocalePath } from "@/libs/i18n";
+import enHome from "@/locales/en/obj_home.json";
+import esHome from "@/locales/es/obj_home.json";
+import ptHome from "@/locales/pt/obj_home.json";
 import { cacheMissingLocale } from "./intro-locale";
+import { IntroLoader } from "./IntroLoader";
+import { NameBlocks } from "./NameBlocks";
+import { markPageMounted, playHomeBuild } from "@/components/intro/page-mount";
+import {
+  clearIntroQuery,
+  introLocaleFromPath,
+  isIntroHomePath,
+  prefersReducedMotion,
+} from "./intro-seen";
 
-const WORD_MS = 165;
-const HOLD_MS = 700;
-const EXIT_MS = 700;
-const REDUCED_MS = 350;
-const GREETINGS = [
-  "Hello",
-  "Bonjour",
-  "स्वागत हे",
-  "Ciao",
-  "Olá",
-  "おい",
-  "Hallå",
-  "Guten tag",
-  "Hallo",
-  "Hola",
-  "Oi",
-] as const;
+const INTRO_COPY = {
+  pt: { status: ptHome.introStatus, skip: ptHome.introSkip },
+  en: { status: enHome.introStatus, skip: enHome.introSkip },
+  es: { status: esHome.introStatus, skip: esHome.introSkip },
+} as const;
 
-type Phase = "playing" | "exiting" | "done";
+type Phase = "boot" | "print" | "build" | "done";
 
-function nextWordDelay(index: number, reduced: boolean) {
-  if (reduced) return REDUCED_MS;
-  if (index < GREETINGS.length - 1) return WORD_MS;
-  return HOLD_MS;
+const ROLE = "Software Engineer";
+
+function IntroRole({ active }: Readonly<{ active: boolean }>) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!active) {
+      setCount(0);
+      return;
+    }
+    if (count >= ROLE.length) return;
+    const timer = window.setTimeout(() => setCount((value) => value + 1), 48);
+    return () => window.clearTimeout(timer);
+  }, [active, count]);
+
+  return (
+    <p
+      className={cn(
+        pixeloidSans.className,
+        "min-h-[1.4em] text-center text-sm tracking-[0.12em] text-[#f4f1ea] sm:text-base",
+      )}
+    >
+      <span aria-hidden>{ROLE.slice(0, count)}</span>
+      <span className="sr-only">{ROLE}</span>
+    </p>
+  );
+}
+
+function clearBuildStyles() {
+  document.querySelectorAll("[data-build]").forEach((node) => {
+    node.removeAttribute("data-built");
+    if (!(node instanceof HTMLElement)) return;
+    node.style.opacity = "";
+    node.style.transform = "";
+    node.style.transition = "";
+  });
+}
+
+function releaseHome() {
+  clearBuildStyles();
+  document.documentElement.removeAttribute("data-intro");
+  document.querySelector("[data-home-scroll-lock]")?.removeAttribute("inert");
 }
 
 export function IntroGreetings() {
   const router = useRouter();
   const pathname = usePathname();
-  const [phase, setPhase] = useState<Phase>("playing");
-  const [index, setIndex] = useState(0);
-  const [playDone, setPlayDone] = useState(false);
+  const [phase, setPhase] = useState<Phase>("boot");
+  const [loadProgress, setLoadProgress] = useState(0);
+  const [showRole, setShowRole] = useState(false);
+  const finishedRef = useRef(false);
+  const armBuildRef = useRef(false);
+  const pathLocale = introLocaleFromPath(pathname);
+  const copy = INTRO_COPY[pathLocale ?? "pt"];
 
-  useEffect(() => {
-    const locale = cacheMissingLocale(pathname);
-    if (pathname === "/") {
-      router.replace(withLocalePath(locale, "/"));
-    }
-  }, [pathname, router]);
+  const redirectHome = useCallback(() => {
+    if (window.location.pathname !== "/") return;
+    const locale = cacheMissingLocale("/");
+    router.replace(withLocalePath(locale, "/"));
+  }, [router]);
 
-  useEffect(() => {
-    if (phase !== "playing") return;
+  const finish = useCallback(() => {
+    if (finishedRef.current) return;
+    finishedRef.current = true;
+    armBuildRef.current = false;
+    clearIntroQuery();
+    releaseHome();
+    redirectHome();
+    setPhase("done");
+  }, [redirectHome]);
 
-    const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    const timer = window.setTimeout(() => {
-      if (reduced || index >= GREETINGS.length - 1) {
-        setPlayDone(true);
-        return;
+  const progressFrameRef = useRef(0);
+  const handleDuration = useCallback((durationMs: number) => {
+    window.cancelAnimationFrame(progressFrameRef.current);
+    const started = performance.now();
+    let lastPaint = 0;
+    const tick = (now: number) => {
+      const ratio = Math.min(1, (now - started) / durationMs);
+      if (ratio === 1 || now - lastPaint > 40) {
+        lastPaint = now;
+        setLoadProgress(ratio);
       }
-      setIndex((current) => current + 1);
-    }, nextWordDelay(index, reduced));
-
-    return () => window.clearTimeout(timer);
-  }, [index, phase]);
+      if (ratio < 1) progressFrameRef.current = window.requestAnimationFrame(tick);
+    };
+    progressFrameRef.current = window.requestAnimationFrame(tick);
+  }, []);
 
   useEffect(() => {
-    if (phase !== "playing" || !playDone) return;
-    if (pathname !== "/") {
-      setPhase("exiting");
+    return () => window.cancelAnimationFrame(progressFrameRef.current);
+  }, []);
+
+  const handleNameDone = useCallback(() => {
+    if (finishedRef.current) return;
+    if (window.location.pathname === "/" || window.location.pathname === "") {
+      armBuildRef.current = true;
+      redirectHome();
+      return;
+    }
+    if (isIntroHomePath(window.location.pathname)) {
+      setPhase("build");
+      return;
+    }
+    finish();
+  }, [finish, redirectHome]);
+
+  useLayoutEffect(() => {
+    if (finishedRef.current || phase !== "boot") return;
+    if (prefersReducedMotion()) return;
+    if (document.documentElement.dataset.intro !== "print") return;
+    setShowRole(false);
+    setPhase("print");
+  }, [phase]);
+
+  useEffect(() => {
+    if (!armBuildRef.current || finishedRef.current) return;
+    if (!isIntroHomePath(pathname) || pathname === "/") return;
+    armBuildRef.current = false;
+    setPhase("build");
+  }, [pathname]);
+
+  useEffect(() => {
+    if (finishedRef.current) {
+      if (pathname === "/") redirectHome();
       return;
     }
 
-    const fallback = window.setTimeout(() => {
-      const locale = cacheMissingLocale("/");
-      router.replace(withLocalePath(locale, "/"));
-    }, 400);
+    if (armBuildRef.current) return;
 
-    return () => window.clearTimeout(fallback);
-  }, [pathname, phase, playDone, router]);
+    if (phase === "print" || phase === "build") {
+      if (phase === "build" && !isIntroHomePath(pathname)) {
+        armBuildRef.current = false;
+        finishedRef.current = true;
+        releaseHome();
+        setPhase("done");
+      }
+      return;
+    }
+
+    if (prefersReducedMotion()) {
+      finishedRef.current = true;
+      clearIntroQuery();
+      releaseHome();
+      if (pathname === "/") redirectHome();
+      setPhase("done");
+      return;
+    }
+
+    if (document.documentElement.dataset.intro !== "print") {
+      finishedRef.current = true;
+      setPhase("done");
+      return;
+    }
+
+    document.documentElement.dataset.intro = "print";
+    document.querySelector("[data-home-scroll-lock]")?.setAttribute("inert", "");
+    setLoadProgress(0);
+    setShowRole(false);
+    setPhase("print");
+  }, [pathname, phase, redirectHome]);
 
   useEffect(() => {
-    if (phase !== "exiting") return;
-    const timer = window.setTimeout(() => {
-      delete document.documentElement.dataset.intro;
-      setPhase("done");
-    }, EXIT_MS);
-    return () => window.clearTimeout(timer);
-  }, [phase]);
+    if (phase !== "print" && phase !== "build") return;
+
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        finish();
+      }
+    };
+
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [finish, phase]);
+
+  useEffect(() => {
+    if (phase !== "build") return;
+
+    document.documentElement.dataset.intro = "build";
+    document.querySelector("[data-home-scroll-lock]")?.setAttribute("inert", "");
+
+    return playHomeBuild(
+      () => {
+        markPageMounted(window.location.pathname);
+        finish();
+      },
+      () => finish(),
+    );
+  }, [finish, phase]);
 
   if (phase === "done") return null;
 
-  const word = GREETINGS[index] ?? GREETINGS.at(-1) ?? "Oi";
+  const playing = phase === "print" || phase === "build";
 
   return (
     <div
-      data-intro-lock=""
+      data-intro-lock={playing ? "" : undefined}
       className={cn(
-        "fixed inset-0 z-9999 flex items-center justify-center bg-[#0c0c0e] transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]",
-        phase === "exiting" ? "-translate-y-full" : "translate-y-0",
+        "intro-curtain",
+        phase === "build" && "intro-curtain-build",
       )}
       role="status"
       aria-live="polite"
-      aria-busy="true"
+      aria-busy={playing}
     >
-      <p
-        key={word}
-        className="intro-greet flex items-center gap-3 text-4xl font-medium tracking-tight text-[#f4f1ea] sm:gap-4 sm:text-6xl md:text-7xl"
+      <div
+        className={cn(
+          "intro-stage transition-opacity duration-700",
+          phase === "build" && "pointer-events-none opacity-0",
+        )}
       >
-        <span
-          className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-primary-500 sm:h-3 sm:w-3"
-          aria-hidden
-        />
-        <span>{word}</span>
-      </p>
-      <span className="sr-only">Loading</span>
+        <div className="flex flex-col items-center gap-3 sm:gap-4">
+          <NameBlocks
+            active={phase === "print"}
+            onDone={handleNameDone}
+            onDuration={handleDuration}
+            onNameSettled={() => setShowRole(true)}
+          />
+          <IntroRole active={showRole} />
+        </div>
+        <IntroLoader progress={loadProgress} />
+      </div>
+      <div className={cn(pixeloidSans.className, "intro-status")}>
+        {phase === "build" ? <span>{copy.status}</span> : null}
+        {phase === "build" ? <span aria-hidden>·</span> : null}
+        <button type="button" onClick={finish}>
+          {copy.skip}
+        </button>
+      </div>
     </div>
   );
 }

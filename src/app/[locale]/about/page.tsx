@@ -1,4 +1,5 @@
 import { AboutContent } from "@/components/pages/about/AboutContent";
+import { LazyFooter } from "@/components/utils/LazyFooter";
 import { TranslationsPatch } from "@/components/utils/TranslationsPatch";
 import { type Locale, isValidLocale } from "@/libs/i18n";
 import { loadLocaleAbout } from "@/locales/load-locale";
@@ -14,7 +15,7 @@ export default async function LocaleAboutPage({ params }: Readonly<PageProps>) {
 
   return (
     <TranslationsPatch patch={{ about }}>
-      <AboutContent />
+      <AboutContent footer={<LazyFooter locale={locale} />} />
     </TranslationsPatch>
   );
 }

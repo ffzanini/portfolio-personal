@@ -1,17 +1,18 @@
-"use client";
-import { memo } from "react";
-
 import { socials } from "@/constants/socials";
 import { Tooltip } from "@/components/ui/Tooltip";
-import { useTranslation } from "@/context";
 import { fillTemplate } from "@/libs/fill-template";
 
 const COPYRIGHT_YEAR = 2026;
 
-function FooterComponent() {
-  const { translations } = useTranslation();
-  const ui = translations.ui;
+type FooterProps = {
+  sendEmailLabel: string;
+  openTemplate: string;
+};
 
+export function Footer({
+  sendEmailLabel,
+  openTemplate,
+}: Readonly<FooterProps>) {
   return (
     <footer className="flex flex-col items-center justify-between lg:flex-row">
       <div className="px-6 pt-6 lg:pt-0">
@@ -27,8 +28,8 @@ function FooterComponent() {
             {socials.map(({ href, icon: Icon, name }) => {
               const tooltip =
                 name === "Email"
-                  ? ui.footer_send_email
-                  : fillTemplate(ui.footer_open, { name });
+                  ? sendEmailLabel
+                  : fillTemplate(openTemplate, { name });
 
               return (
                 <Tooltip key={href} text={tooltip} position="top">
@@ -52,5 +53,3 @@ function FooterComponent() {
     </footer>
   );
 }
-
-export const Footer = memo(FooterComponent);

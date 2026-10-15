@@ -25,7 +25,22 @@ export function proxy(req: NextRequest) {
   }
 
   if (pathname === "/") {
-    return NextResponse.next();
+    const cookieLocale = req.cookies.get(LANGUAGE_COOKIE)?.value;
+    const resolvedLocale = resolvePreferredLocale({
+      cookieLocale,
+      acceptLanguage: req.headers.get("accept-language"),
+    });
+    const url = req.nextUrl.clone();
+    url.pathname = `/${resolvedLocale}`;
+    const response = NextResponse.redirect(url);
+    if (cookieLocale !== resolvedLocale) {
+      response.cookies.set(
+        LANGUAGE_COOKIE,
+        resolvedLocale,
+        LANGUAGE_COOKIE_OPTIONS,
+      );
+    }
+    return response;
   }
 
   const cookieLocale = req.cookies.get(LANGUAGE_COOKIE)?.value;

@@ -13,7 +13,6 @@ import { GameCard } from "@/components/pages/arcade/GameCard";
 import { PixelArtCard } from "@/components/pages/arcade/PixelArtCard";
 import { VideoCard } from "@/components/pages/arcade/VideoCard";
 import { SanitizedText } from "@/components/utils/SanitizedText";
-import { LazyFooter } from "@/components/utils/LazyFooter";
 import { useTranslation } from "@/context";
 import {
   YOUTUBE_CHANNEL_URL,
@@ -22,12 +21,14 @@ import {
 } from "@/libs/youtube";
 import { withLocalePath } from "@/libs/i18n";
 import { cn } from "@/libs/cn";
+import type { ReactNode } from "react";
 
 type ArcadeContentProps = {
   videos: YouTubeVideo[];
+  footer: ReactNode;
 };
 
-export function ArcadeContent({ videos }: Readonly<ArcadeContentProps>) {
+export function ArcadeContent({ videos, footer }: Readonly<ArcadeContentProps>) {
   const { translations, location } = useTranslation();
   const copy = translations.arcade;
 
@@ -343,7 +344,7 @@ export function ArcadeContent({ videos }: Readonly<ArcadeContentProps>) {
           </section>
         </div>
       </main>
-      <LazyFooter />
+      {footer}
     </div>
   );
 }
