@@ -85,7 +85,8 @@ web_modules/
 
 # Next.js build output
 .next
-scripts/
+scripts/*
+!scripts/patch-image-zoom.mjs
 out
 
 # Nuxt.js build / generate output
