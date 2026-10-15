@@ -48,7 +48,7 @@ function sampleLine(family: string, cell: number, fontSize: number, text: string
   const image = context.getImageData(0, 0, width, height);
   const cols = Math.ceil(width / cell);
   const rows = Math.ceil(height / cell);
-  const occupied: Cell[] = [];
+  const occupied: { col: number; row: number }[] = [];
 
   for (let row = 0; row < rows; row += 1) {
     for (let col = 0; col < cols; col += 1) {

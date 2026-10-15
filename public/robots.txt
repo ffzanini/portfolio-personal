@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ffzanini.dev
+Host: https://www.ffzanini.dev
 
 # Sitemaps
-Sitemap: https://ffzanini.dev/sitemap.xml
+Sitemap: https://www.ffzanini.dev/sitemap.xml
