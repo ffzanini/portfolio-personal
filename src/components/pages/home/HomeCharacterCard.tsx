@@ -39,6 +39,7 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
 
   return (
     <div
+      data-build="card"
       className={cn(
         pixeloidSans.className,
         "relative z-0 w-full overflow-hidden rounded-2xl border border-black/10 bg-white/75 p-4 shadow-2xl backdrop-blur-sm [-webkit-font-smoothing:none] sm:p-5 dark:border-white/15 dark:bg-black/60",
@@ -81,7 +82,10 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
       </div>
 
       <div className="space-y-2.5 text-left">
-        <div className="flex items-center justify-between gap-3 border-b border-black/10 pb-2.5 dark:border-white/10">
+        <div
+          data-build="card-player"
+          className="flex items-center justify-between gap-3 border-b border-black/10 pb-2.5 dark:border-white/10"
+        >
           <p className={cn(pixeloidSansBold.className, "text-base text-primary-700 dark:text-primary-300")}>
             {sheet.player}
           </p>
@@ -94,13 +98,13 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
             {sheet.level}
           </p>
         </div>
-        <p className="text-base">
+        <p data-build="card-class" className="text-base">
           <span className={cn(pixeloidSansBold.className, "text-primary-700 dark:text-primary-300")}>
             {sheet.classLabel}:
           </span>{" "}
           {sheet.className}
         </p>
-        <p className="text-base">
+        <p data-build="card-subclass" className="text-base">
           <span className={cn(pixeloidSansBold.className, "text-primary-700 dark:text-primary-300")}>
             {sheet.subclassLabel}:
           </span>{" "}
@@ -109,6 +113,7 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
 
         <button
           type="button"
+          data-build="card-subclass"
           className={cn(
             fontMavenPro.className,
             "mx-auto flex w-fit cursor-pointer items-center gap-1.5 text-base font-medium text-gray-600 transition-colors [-webkit-font-smoothing:antialiased] hover:text-gray-900 lg:hidden dark:text-gray-400 dark:hover:text-white",
@@ -135,7 +140,7 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
         >
           <div className="overflow-hidden">
             <div className="space-y-2.5 pt-2.5">
-              <div>
+              <div data-build="card-inventory">
                 <p className={cn(pixeloidSansBold.className, "mb-1 text-base text-primary-700 dark:text-primary-300")}>
                   {sheet.inventory}
                 </p>
@@ -156,7 +161,7 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
                 </ul>
               </div>
 
-              <div>
+              <div data-build="card-special">
                 <p className={cn(pixeloidSansBold.className, "text-base text-primary-700 dark:text-primary-300")}>
                   {sheet.special}
                 </p>

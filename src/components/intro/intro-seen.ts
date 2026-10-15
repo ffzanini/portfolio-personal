@@ -3,15 +3,20 @@ import { isValidLocale, type Locale } from "@/libs/i18n";
 export const HERO_INTRO_SEEN_KEY = "hero-intro-seen";
 
 export const INTRO_BUILD_ORDER = [
+  "card",
   "welcome",
-  "name",
-  "roles",
-  "description",
-  "meta",
-  "actions",
   "portrait",
-  "badges",
+  "name",
+  "card-player",
+  "roles",
+  "card-class",
+  "description",
+  "card-subclass",
+  "leisure",
+  "card-inventory",
   "stack",
+  "actions",
+  "card-special",
 ] as const;
 
 export function isIntroHomePath(pathname: string) {

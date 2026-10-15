@@ -1,5 +1,5 @@
 type Props = {
-  json: string;
+  json: unknown;
   typeText?: "div" | "span";
   className?: string;
 };
@@ -90,6 +90,7 @@ export function SanitizedText({
   typeText = "div",
   className = "",
 }: Readonly<Props>) {
+  if (typeof json !== "string") return null;
   const sanitizedText = sanitizeLocaleHtml(json);
   const sharedProps = {
     className: `sanitized-json ${className}`,

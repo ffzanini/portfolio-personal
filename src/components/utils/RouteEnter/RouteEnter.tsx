@@ -71,17 +71,31 @@ export function RouteEnter({ children }: Readonly<RouteEnterProps>) {
     if (root.hasAttribute("data-intro")) {
       if (isIntroHomePath(pathname)) return;
       setPhase("armed");
+      let settled = false;
+      let giveUp = 0;
+      const settle = () => {
+        if (settled) return;
+        settled = true;
+        observer.disconnect();
+        window.clearTimeout(giveUp);
+        root.removeAttribute("data-intro");
+        document.querySelector("[data-home-scroll-lock]")?.removeAttribute("inert");
+        play();
+      };
       const observer = new MutationObserver(() => {
         if (root.hasAttribute("data-intro")) return;
-        observer.disconnect();
-        play();
+        settle();
       });
       observer.observe(root, {
         attributes: true,
         attributeFilter: ["data-intro"],
       });
+      if (!root.hasAttribute("data-intro")) settle();
+      giveUp = window.setTimeout(settle, 1200);
       return () => {
+        settled = true;
         observer.disconnect();
+        window.clearTimeout(giveUp);
         stopRef.current();
         stopRef.current = () => undefined;
       };

@@ -1,4 +1,7 @@
-import { INTRO_BUILD_ORDER, prefersReducedMotion } from "@/components/intro/intro-seen";
+import {
+  INTRO_BUILD_ORDER,
+  prefersReducedMotion,
+} from "@/components/intro/intro-seen";
 
 const STEP_MS = 200;
 const TAIL_MS = 420;
@@ -11,7 +14,8 @@ const REVEAL =
   "opacity 420ms cubic-bezier(0.23, 1, 0.32, 1), transform 420ms cubic-bezier(0.23, 1, 0.32, 1)";
 
 export function pageKey(pathname: string) {
-  if (pathname.length > 1 && pathname.endsWith("/")) return pathname.slice(0, -1);
+  if (pathname.length > 1 && pathname.endsWith("/"))
+    return pathname.slice(0, -1);
   return pathname || "/";
 }
 
@@ -71,7 +75,8 @@ export function playHomeBuild(onDone: () => void, onMissing?: () => void) {
 
   const begin = () => {
     document.querySelectorAll("[data-build]").forEach((node) => {
-      if (!(node instanceof HTMLElement) || node.hasAttribute("data-built")) return;
+      if (!(node instanceof HTMLElement) || node.hasAttribute("data-built"))
+        return;
       hide(node);
     });
     window.requestAnimationFrame(() => {
@@ -172,7 +177,9 @@ function watchScrollMounts(root: HTMLElement) {
         if (!(section instanceof HTMLElement)) return;
         observer.unobserve(section);
 
-        const inner = [...section.querySelectorAll<HTMLElement>("[data-mount]")];
+        const inner = [
+          ...section.querySelectorAll<HTMLElement>("[data-mount]"),
+        ];
         inner.forEach((node) => hide(node));
         section.style.transition = REVEAL;
         section.style.opacity = "1";
@@ -206,7 +213,7 @@ function watchScrollMounts(root: HTMLElement) {
         }, SECTION_STEP_MS);
       });
     },
-    { threshold: 0.22 },
+    { rootMargin: "0px 0px 120px 0px", threshold: 0.1 },
   );
 
   sections.forEach((section) => observer.observe(section));

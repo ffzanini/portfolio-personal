@@ -6,6 +6,7 @@ import {
   LuBrain,
   LuCoffee,
   LuArrowRight,
+  LuChevronDown,
   LuSend,
 } from "react-icons/lu";
 
@@ -16,7 +17,71 @@ import { SanitizedText } from "@/components/utils/SanitizedText";
 import { photos } from "@/constants/about";
 import { useTranslation } from "@/context";
 import { withLocalePath } from "@/libs/i18n";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+
+type ChapterPart = {
+  text: string;
+  href?: string;
+};
+
+function MoreBelowHint({ label }: Readonly<{ label: string }>) {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const section = document.querySelector<HTMLElement>("[data-mount-when='scroll']");
+    if (!section) return;
+
+    const update = () => {
+      setShow(section.style.opacity === "0");
+    };
+
+    update();
+    const observer = new MutationObserver(update);
+    observer.observe(section, { attributes: true, attributeFilter: ["style"] });
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const goNext = () => {
+    const section = document.querySelector<HTMLElement>("[data-mount-when='scroll']");
+    if (!section) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const top = section.getBoundingClientRect().top + window.scrollY - 96;
+    window.scrollTo({ top, behavior: reduced ? "auto" : "smooth" });
+  };
+
+  if (!show) return null;
+
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      onClick={goNext}
+      className="mx-auto flex w-fit items-center justify-center px-4 pt-2 pb-12 text-primary-600 dark:text-primary-300"
+    >
+      <LuChevronDown aria-hidden className="h-7 w-7 animate-bounce motion-reduce:animate-none" />
+    </button>
+  );
+}
+
+function chapterParts(body: unknown): ChapterPart[] {
+  if (typeof body === "string") return [{ text: body }];
+  if (!Array.isArray(body)) return [];
+
+  const parts: ChapterPart[] = [];
+  for (const part of body) {
+    if (typeof part === "string") {
+      parts.push({ text: part });
+      continue;
+    }
+    if (!part || typeof part !== "object" || !("text" in part)) continue;
+    if (typeof part.text !== "string") continue;
+    const href = "href" in part && typeof part.href === "string" ? part.href : undefined;
+    parts.push(href ? { text: part.text, href } : { text: part.text });
+  }
+  return parts;
+}
 
 export function AboutContent({ footer }: Readonly<{ footer: ReactNode }>) {
   const { translations, location } = useTranslation();
@@ -88,7 +153,7 @@ export function AboutContent({ footer }: Readonly<{ footer: ReactNode }>) {
                             : "text-base leading-relaxed text-gray-700 dark:text-gray-300 [&_a]:font-bold [&_a]:text-gray-950 [&_a]:underline [&_a]:underline-offset-2 dark:[&_a]:text-white [&_b]:font-bold [&_b]:text-gray-950 dark:[&_b]:text-white"
                         }
                       >
-                        {chapter.body.map((part, partIndex) =>
+                        {chapterParts(chapter.body).map((part, partIndex) =>
                           "href" in part && part.href ? (
                             <Link
                               key={`${chapter.label}-${part.href}`}
@@ -129,7 +194,8 @@ export function AboutContent({ footer }: Readonly<{ footer: ReactNode }>) {
               </div>
             </div>
           </div>
-          <div className="my-8 flex flex-col" data-mount-when="scroll">
+          <MoreBelowHint label={translations.about.scroll_hint} />
+          <div className="mb-8 flex flex-col" data-mount-when="scroll">
             <div className="rounded-2xl border border-black/10 bg-black/5 p-8 backdrop-blur-sm dark:border-white/10 dark:bg-white/5">
               <div className="mb-6 flex flex-row items-start" data-mount>
                 <div className="mr-4 flex h-12 w-12 min-w-12 items-center justify-center rounded-md bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900">

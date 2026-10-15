@@ -161,38 +161,6 @@
     transition: left 90ms linear;
   }
 
-  .intro-status {
-    pointer-events: auto;
-    position: fixed;
-    bottom: 1.25rem;
-    left: 50%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transform: translateX(-50%);
-    color: #f4f1ea;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .intro-status button,
-  .intro-status kbd {
-    border: 2px solid #f4f1ea;
-    background: #0c0c0e;
-    padding: 0.45rem 0.7rem;
-    line-height: 1;
-  }
-
-  .intro-status button {
-    cursor: pointer;
-  }
-
-  .intro-status kbd {
-    font-family: inherit;
-  }
-
   html[data-intro] [data-build] {
     opacity: 0;
     transform: translateY(10px);

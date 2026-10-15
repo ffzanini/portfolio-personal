@@ -6,25 +6,15 @@ import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/libs/cn";
 import { pixeloidSans } from "@/app/fonts-pixeloid";
 import { withLocalePath } from "@/libs/i18n";
-import enHome from "@/locales/en/obj_home.json";
-import esHome from "@/locales/es/obj_home.json";
-import ptHome from "@/locales/pt/obj_home.json";
 import { cacheMissingLocale } from "./intro-locale";
 import { IntroLoader } from "./IntroLoader";
 import { NameBlocks } from "./NameBlocks";
 import { markPageMounted, playHomeBuild } from "@/components/intro/page-mount";
 import {
   clearIntroQuery,
-  introLocaleFromPath,
   isIntroHomePath,
   prefersReducedMotion,
 } from "./intro-seen";
-
-const INTRO_COPY = {
-  pt: { status: ptHome.introStatus, skip: ptHome.introSkip },
-  en: { status: enHome.introStatus, skip: enHome.introSkip },
-  es: { status: esHome.introStatus, skip: esHome.introSkip },
-} as const;
 
 type Phase = "boot" | "print" | "build" | "done";
 
@@ -80,9 +70,6 @@ export function IntroGreetings() {
   const [showRole, setShowRole] = useState(false);
   const finishedRef = useRef(false);
   const armBuildRef = useRef(false);
-  const pathLocale = introLocaleFromPath(pathname);
-  const copy = INTRO_COPY[pathLocale ?? "pt"];
-
   const redirectHome = useCallback(() => {
     if (window.location.pathname !== "/") return;
     const locale = cacheMissingLocale("/");
@@ -157,9 +144,11 @@ export function IntroGreetings() {
     if (armBuildRef.current) return;
 
     if (phase === "print" || phase === "build") {
-      if (phase === "build" && !isIntroHomePath(pathname)) {
+      if (!isIntroHomePath(pathname)) {
         armBuildRef.current = false;
         finishedRef.current = true;
+        window.cancelAnimationFrame(progressFrameRef.current);
+        clearIntroQuery();
         releaseHome();
         setPhase("done");
       }
@@ -187,20 +176,6 @@ export function IntroGreetings() {
     setShowRole(false);
     setPhase("print");
   }, [pathname, phase, redirectHome]);
-
-  useEffect(() => {
-    if (phase !== "print" && phase !== "build") return;
-
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        finish();
-      }
-    };
-
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [finish, phase]);
 
   useEffect(() => {
     if (phase !== "build") return;
@@ -248,13 +223,6 @@ export function IntroGreetings() {
           <IntroRole active={showRole} />
         </div>
         <IntroLoader progress={loadProgress} />
-      </div>
-      <div className={cn(pixeloidSans.className, "intro-status")}>
-        {phase === "build" ? <span>{copy.status}</span> : null}
-        {phase === "build" ? <span aria-hidden>·</span> : null}
-        <button type="button" onClick={finish}>
-          {copy.skip}
-        </button>
       </div>
     </div>
   );

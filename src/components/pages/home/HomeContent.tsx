@@ -52,15 +52,19 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                   className="text-2xl leading-tight font-medium lg:text-3xl xl:text-4xl"
                 />
               </div>
-              <div data-build="description" className="space-y-3">
-                <SanitizedText
-                  json={home.description}
-                  className="text-base leading-relaxed text-gray-600 dark:text-gray-300"
-                />
-                <SanitizedText
-                  json={home.descriptionLeisure}
-                  className="text-base leading-relaxed text-gray-600 dark:text-gray-300"
-                />
+              <div className="space-y-3">
+                <div data-build="description">
+                  <SanitizedText
+                    json={home.description}
+                    className="text-base leading-relaxed text-gray-600 dark:text-gray-300"
+                  />
+                </div>
+                <div data-build="leisure">
+                  <SanitizedText
+                    json={home.descriptionLeisure}
+                    className="text-base leading-relaxed text-gray-600 dark:text-gray-300"
+                  />
+                </div>
               </div>
             </div>
             <div
@@ -118,7 +122,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
           <div className="order-1 mt-8 flex w-full justify-center lg:order-2 lg:mt-0 lg:justify-end">
             <div className="relative w-full lg:max-w-md lg:p-10">
               <div
-                data-build="badges"
+                data-build="card"
                 className="invisible absolute -top-6 -left-4 z-30 animate-float-up rounded-lg border border-gray-200/50 bg-white/95 p-3 shadow-xl lg:top-0 lg:left-0 lg:p-4 dark:border-gray-700/50 dark:bg-black/70"
                 style={{ willChange: "transform" }}
               >
@@ -130,7 +134,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
                 </div>
               </div>
               <div
-                data-build="badges"
+                data-build="card"
                 className="invisible absolute -right-4 -bottom-6 z-30 animate-float-down rounded-lg border border-gray-200/50 bg-white/95 p-3 shadow-xl lg:right-0 lg:bottom-0 lg:p-4 dark:border-gray-700/50 dark:bg-black/70"
                 style={{ willChange: "transform" }}
               >
