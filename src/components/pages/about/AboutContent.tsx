@@ -81,14 +81,31 @@ export function AboutContent({ footer }: Readonly<{ footer: ReactNode }>) {
                       <h2 className="mb-3 text-xl font-bold sm:text-2xl">
                         {chapter.title}
                       </h2>
-                      <SanitizedText
-                        json={chapter.body}
+                      <div
                         className={
                           index === 0
                             ? "text-base leading-relaxed text-gray-700 dark:text-gray-300 [&_a]:font-bold [&_a]:text-gray-950 [&_a]:underline [&_a]:underline-offset-2 dark:[&_a]:text-white [&_b]:font-bold [&_b]:text-gray-950 dark:[&_b]:text-white [&_b:first-of-type]:text-lg"
                             : "text-base leading-relaxed text-gray-700 dark:text-gray-300 [&_a]:font-bold [&_a]:text-gray-950 [&_a]:underline [&_a]:underline-offset-2 dark:[&_a]:text-white [&_b]:font-bold [&_b]:text-gray-950 dark:[&_b]:text-white"
                         }
-                      />
+                      >
+                        {chapter.body.map((part, partIndex) =>
+                          "href" in part && part.href ? (
+                            <Link
+                              key={`${chapter.label}-${part.href}`}
+                              href={withLocalePath(location, part.href)}
+                              className="hover:text-(--primary)"
+                            >
+                              {part.text}
+                            </Link>
+                          ) : (
+                            <SanitizedText
+                              key={`${chapter.label}-${partIndex}`}
+                              json={part.text}
+                              typeText="span"
+                            />
+                          ),
+                        )}
+                      </div>
                     </article>
                   );
                 })}

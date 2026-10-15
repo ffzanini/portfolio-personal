@@ -61,7 +61,7 @@ export const categories = [
         usage: "daily",
         color: "#F7DF1E",
       },
-      { name: "Next.js", icon: SiNextdotjs, usage: "once", color: "#000000" },
+      { name: "Next.js", icon: SiNextdotjs, usage: "daily", color: "#000000" },
       { name: "Angular", icon: SiAngular, usage: "once", color: "#DD0031" },
       { name: "Vue.js", icon: SiVuedotjs, usage: "once", color: "#4FC08D" },
       { name: "Vite", icon: SiVite, usage: "daily", color: "#646CFF" },

@@ -7,22 +7,42 @@
       {
         "label": "Who I am",
         "title": "Nice to meet you, Felipe.",
-        "body": "I'm <b>Felipe Frantz Zanini</b>, a software engineer. On the mats, a brown belt and <b>jiu-jitsu</b> instructor. The rest of the time I go running, play <b>Dota 2</b>, write screenplays, make pixel art, listen to music, look after investments, and develop <b><a href='/en/arcade'>indie games</a></b>.<br />I'm 33 and I live in Pelotas, Rio Grande do Sul, Brazil."
+        "body": [
+          {
+            "text": "I'm <b>Felipe Frantz Zanini</b>, a software engineer. On the mats, a brown belt and <b>jiu-jitsu</b> instructor. The rest of the time I go running, play <b>Dota 2</b>, write screenplays, make pixel art, listen to music, look after investments, and develop "
+          },
+          { "text": "indie games", "href": "/arcade" },
+          { "text": ".<br />I'm 33 and I live in Pelotas, Rio Grande do Sul, Brazil." }
+        ]
       },
       {
         "label": "The start",
         "title": "From technical school to the first internship.",
-        "body": "I started in software in <b>2008</b>, in technical school. In <b>2010</b> I finished the course and landed my first programming internship. That same year I was hired as a software engineer, and that's the work I've done ever since.<br />Since then I've collaborated on more than <b><a href='/en/projects'>42+ projects</a></b>, in areas such as agriculture, health, education, accounting, e-commerce, and intranets."
+        "body": [
+          {
+            "text": "I started in software in <b>2008</b>, in technical school. In <b>2010</b> I finished the course and landed my first programming internship. That same year I was hired as a software engineer, and that's the work I've done ever since.<br />Since then I've collaborated on more than "
+          },
+          { "text": "42+ projects", "href": "/projects" },
+          { "text": ", in areas such as agriculture, health, education, accounting, e-commerce, and intranets." }
+        ]
       },
       {
         "label": "Learning",
         "title": "I never stopped studying.",
-        "body": "I completed a degree in <b>IT Management</b> and a specialization in <b>Strategic IT Planning</b>. I started a <b>Master's in Computer Science</b>, which I didn't finish for personal reasons.<br />With the rapid advance and growth of AIs, I'm taking a <b>postgraduate program in AI and automation</b>, to keep improving and meet both my own expectations and those of the job market."
+        "body": [
+          {
+            "text": "I completed a degree in <b>IT Management</b> and a specialization in <b>Strategic IT Planning</b>. I started a <b>Master's in Computer Science</b>, which I didn't finish for personal reasons.<br />With the rapid advance and growth of AIs, I'm taking a <b>postgraduate program in AI and automation</b>, to keep improving and meet both my own expectations and those of the job market."
+          }
+        ]
       },
       {
         "label": "Now",
         "title": "Frontend Architect.",
-        "body": "Today I'm a <b>Senior Software Engineer</b> and <b>Frontend Architect</b> at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> where I collaborate to build digital products that make day-to-day activities easier for our employees and customers across the network."
+        "body": [
+          {
+            "text": "Today I'm a <b>Senior Software Engineer</b> and <b>Frontend Architect</b> at <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> where I collaborate to build digital products that make day-to-day activities easier for our employees and customers across the network."
+          }
+        ]
       }
     ]
   },

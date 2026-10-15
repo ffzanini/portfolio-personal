@@ -7,22 +7,42 @@
       {
         "label": "Quién soy",
         "title": "Mucho gusto, Felipe.",
-        "body": "Soy <b>Felipe Frantz Zanini</b>, ingeniero de software. En el tatami, cinturón marrón e instructor de <b>jiu-jitsu</b>. El resto del tiempo practico correr, juego <b>Dota 2</b>, escribo guiones, hago pixel art, escucho música, cuido inversiones y desarrollo <b><a href='/es/arcade'>juegos indie</a></b>.<br />Tengo 33 años y vivo en Pelotas, Rio Grande do Sul, Brasil."
+        "body": [
+          {
+            "text": "Soy <b>Felipe Frantz Zanini</b>, ingeniero de software. En el tatami, cinturón marrón e instructor de <b>jiu-jitsu</b>. El resto del tiempo practico correr, juego <b>Dota 2</b>, escribo guiones, hago pixel art, escucho música, cuido inversiones y desarrollo "
+          },
+          { "text": "juegos indie", "href": "/arcade" },
+          { "text": ".<br />Tengo 33 años y vivo en Pelotas, Rio Grande do Sul, Brasil." }
+        ]
       },
       {
         "label": "El comienzo",
         "title": "De la escuela técnica a la primera práctica.",
-        "body": "Empecé en software en <b>2008</b>, en la escuela técnica. En <b>2010</b> terminé el curso y conseguí mi primera práctica en programación. Ese mismo año me contrataron como ingeniero de software, y es el trabajo que hago desde entonces.<br />Desde entonces participé en la colaboración de más de <b><a href='/es/projects'>42+ proyectos</a></b>, en áreas como agro, salud, educación, contabilidad, e-commerce e intranets."
+        "body": [
+          {
+            "text": "Empecé en software en <b>2008</b>, en la escuela técnica. En <b>2010</b> terminé el curso y conseguí mi primera práctica en programación. Ese mismo año me contrataron como ingeniero de software, y es el trabajo que hago desde entonces.<br />Desde entonces participé en la colaboración de más de "
+          },
+          { "text": "42+ proyectos", "href": "/projects" },
+          { "text": ", en áreas como agro, salud, educación, contabilidad, e-commerce e intranets." }
+        ]
       },
       {
         "label": "Aprendizaje",
         "title": "Nunca dejé de estudiar.",
-        "body": "Hice la graduación en <b>Gestión de la Tecnología de la Información</b> y una especialización en <b>Planificación Estratégica en TI</b>. Empecé la <b>Maestría en Ciencias de la Computación</b>, que no concluí por motivos personales.<br />Con el avance rápido y el crecimiento de las IA, estoy cursando un <b>posgrado en IA y automatización</b>, para seguir mejorando y atender las expectativas personales y del mercado laboral."
+        "body": [
+          {
+            "text": "Hice la graduación en <b>Gestión de la Tecnología de la Información</b> y una especialización en <b>Planificación Estratégica en TI</b>. Empecé la <b>Maestría en Ciencias de la Computación</b>, que no concluí por motivos personales.<br />Con el avance rápido y el crecimiento de las IA, estoy cursando un <b>posgrado en IA y automatización</b>, para seguir mejorando y atender las expectativas personales y del mercado laboral."
+          }
+        ]
       },
       {
         "label": "Ahora",
         "title": "Arquitecto Frontend.",
-        "body": "Hoy soy <b>Ingeniero de Software Senior</b> y <b>Arquitecto Frontend</b> en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> donde colaboro para construir productos digitales que facilitan las actividades del día a día de nuestros colaboradores y clientes de la red."
+        "body": [
+          {
+            "text": "Hoy soy <b>Ingeniero de Software Senior</b> y <b>Arquitecto Frontend</b> en <b><a href=\"https://www.iguatemi.com.br\" target=\"_blank\">Iguatemi S.A.</a></b> donde colaboro para construir productos digitales que facilitan las actividades del día a día de nuestros colaboradores y clientes de la red."
+          }
+        ]
       }
     ]
   },

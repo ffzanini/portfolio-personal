@@ -40,32 +40,32 @@ export function StackContent({ footer }: Readonly<{ footer: ReactNode }>) {
               {translations.stack.sub_title}
             </p>
           </div>
-          <div className="flex justify-center my-8 text-center" data-mount>
-            <div className="flex flex-col items-stretch gap-3 rounded-xl border border-black/10 bg-black/5 px-4 py-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:px-6 dark:border-white/10 dark:bg-white/5">
+          <div className="my-8 flex justify-center text-center" data-mount>
+            <div className="grid w-full grid-cols-2 items-center gap-x-3 gap-y-3 rounded-xl border border-black/10 bg-black/5 px-4 py-4 sm:flex sm:w-fit sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:px-6 dark:border-white/10 dark:bg-white/5">
               <div
-                className="flex cursor-pointer items-center space-x-2 rounded-lg px-2 py-1 transition-colors duration-200 hover:bg-green-500/10"
+                className="flex cursor-pointer items-center justify-center space-x-2 rounded-lg px-2 py-1 transition-colors duration-200 hover:bg-green-500/10"
                 onMouseEnter={() => setHighlight("daily")}
                 onMouseLeave={() => setHighlight(null)}
               >
-                <LuStar className="h-4 w-4 fill-green-500 text-green-500" aria-hidden="true" />
+                <LuStar className="h-4 w-4 shrink-0 fill-green-500 text-green-500" aria-hidden="true" />
                 <span className="text-md">
                   {translations.stack.mainSpecialties}
                 </span>
               </div>
               <div
-                className="flex cursor-pointer items-center space-x-2 rounded-lg px-2 py-1 transition-colors duration-200 hover:bg-orange-500/10"
+                className="flex cursor-pointer items-center justify-center space-x-2 rounded-lg px-2 py-1 transition-colors duration-200 hover:bg-orange-500/10"
                 onMouseEnter={() => setHighlight("sometimes")}
                 onMouseLeave={() => setHighlight(null)}
               >
-                <LuHistory className="h-4 w-4 text-orange-500" aria-hidden="true" />
+                <LuHistory className="h-4 w-4 shrink-0 text-orange-500" aria-hidden="true" />
                 <span className="text-md">{translations.stack.knownTech}</span>
               </div>
               <div
-                className="flex cursor-pointer items-center space-x-2 rounded-lg px-2 py-1 transition-colors duration-200 hover:bg-sky-400/10"
+                className="col-span-2 flex cursor-pointer items-center justify-center space-x-2 rounded-lg px-2 py-1 transition-colors duration-200 hover:bg-sky-400/10 sm:col-span-1"
                 onMouseEnter={() => setHighlight("once")}
                 onMouseLeave={() => setHighlight(null)}
               >
-                <LuFlag className="h-4 w-4 text-sky-400" aria-hidden="true" />
+                <LuFlag className="h-4 w-4 shrink-0 text-sky-400" aria-hidden="true" />
                 <span className="text-md">{translations.stack.usedOnce}</span>
               </div>
             </div>
