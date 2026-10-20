@@ -18,7 +18,19 @@ export default function ErrorPage({ error, reset }: Readonly<ErrorProps>) {
 
   useEffect(() => {
     console.error(error);
-  }, [error]);
+    const message = error.message ?? "";
+    const staleBundle =
+      error.name === "ChunkLoadError" ||
+      message.includes("Loading chunk") ||
+      message.includes("Failed to fetch dynamically imported module") ||
+      message.includes("Importing a module script failed");
+    if (!staleBundle) return;
+
+    const key = "chunk-reload";
+    if (sessionStorage.getItem(key) === pathname) return;
+    sessionStorage.setItem(key, pathname);
+    window.location.reload();
+  }, [error, pathname]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-linear-to-br from-primary-200 via-white-theme to-white-theme px-6 py-16 text-center dark:bg-linear-to-br dark:from-primary-950 dark:from-15% dark:via-dark-theme dark:via-30% dark:to-dark-theme dark:to-100%">

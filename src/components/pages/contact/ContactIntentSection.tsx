@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import {
@@ -100,6 +100,7 @@ export function ContactIntentSection() {
   const intent = copy.intent;
   const [subject, setSubject] = useState<ContactSubjectId>("project");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const messageCardRef = useRef<HTMLDivElement>(null);
   const selected = intent.subjects[subject];
   const isRecruiter = subject === "recruiter";
   const pelotasTime = usePelotasTime();
@@ -132,9 +133,14 @@ export function ContactIntentSection() {
     setValue("addon", "", { shouldValidate: true });
     if (next === "recruiter") {
       setValue("company", "", { shouldValidate: true });
-      return;
+    } else {
+      unregister("company");
     }
-    unregister("company");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    messageCardRef.current?.scrollIntoView({
+      behavior: reduced ? "auto" : "smooth",
+      block: "start",
+    });
   };
 
   const onSubmit = handleSubmit(async ({ name, email, company, addon, message }) => {
@@ -176,13 +182,15 @@ export function ContactIntentSection() {
   return (
     <section className="mt-8">
       <div className="mb-6 flex justify-center">
-        <p className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-4 py-1.5 text-sm dark:border-white/10 dark:bg-white/5">
-          <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" aria-hidden />
-          <span className="font-semibold">{intent.availability}</span>
-          <span className="text-black/35 dark:text-white/35" aria-hidden>
+        <p className="flex w-full max-w-xs flex-col items-center gap-1 rounded-2xl border border-black/10 bg-black/5 px-4 py-2.5 text-center text-sm dark:border-white/10 dark:bg-white/5 sm:inline-flex sm:w-auto sm:max-w-none sm:flex-row sm:gap-2 sm:rounded-full sm:py-1.5 sm:text-left">
+          <span className="inline-flex items-center justify-center gap-2">
+            <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" aria-hidden />
+            <span className="font-semibold">{intent.availability}</span>
+          </span>
+          <span className="hidden text-black/35 sm:inline dark:text-white/35" aria-hidden>
             ·
           </span>
-          <span>
+          <span className="whitespace-nowrap text-black/70 dark:text-white/70">
             {intent.city}
             {pelotasTime ? ` · ${pelotasTime}` : ""}
           </span>
@@ -228,7 +236,11 @@ export function ContactIntentSection() {
         })}
       </div>
 
-      <div className="mt-4 rounded-2xl border border-black/10 bg-black/5 p-6 backdrop-blur-sm sm:p-8 dark:border-white/10 dark:bg-white/5">
+      <div
+        ref={messageCardRef}
+        id="envie-uma-mensagem"
+        className="mt-4 scroll-mt-28 rounded-2xl border border-black/10 bg-black/5 p-6 backdrop-blur-sm sm:p-8 dark:border-white/10 dark:bg-white/5"
+      >
         <div className="mb-8 flex flex-row items-start">
           <div className="mr-4 flex h-12 w-12 min-w-12 items-center justify-center rounded-md bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900">
             <LuMail className="h-6 w-6" aria-hidden />
@@ -238,11 +250,11 @@ export function ContactIntentSection() {
             <span className="text-xs">{copy.form.sub_title}</span>
           </div>
         </div>
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-10">
+        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-10">
         <aside className="flex flex-col gap-5">
           <div>
             <h3 className="text-xl font-semibold">{selected.panelTitle}</h3>
-            <p className="mt-2 min-h-[4.5rem] text-sm leading-relaxed text-black/70 dark:text-white/70">
+            <p className="mt-2 text-sm leading-relaxed text-black/70 lg:min-h-[4.5rem] dark:text-white/70">
               {selected.panelDescription}
             </p>
           </div>

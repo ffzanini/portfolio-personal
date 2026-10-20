@@ -23,6 +23,7 @@ const CONTENT_SECURITY_POLICY = [
 
 const nextConfig: NextConfig = {
   compress: true,
+  deploymentId: process.env.VERCEL_DEPLOYMENT_ID,
 
   experimental: {
     optimizePackageImports: [

@@ -169,7 +169,7 @@ export function TestimonialsSlider({
       onBlurCapture={handleBlur}
       className="relative overflow-hidden rounded-2xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5"
     >
-      <div className="grid">
+      <div className="grid w-full min-w-0">
         {testimonials.map((testimonial, slideIndex) => {
           const active = slideIndex === activeIndex;
 
@@ -179,24 +179,24 @@ export function TestimonialsSlider({
               aria-hidden={active ? undefined : true}
               inert={active ? undefined : true}
               className={cn(
-                "col-start-1 row-start-1 flex h-full flex-col px-6 pt-6 pb-6 transition-opacity duration-700 ease-in-out motion-reduce:transition-none sm:px-8 sm:pt-8",
+                "col-start-1 row-start-1 flex h-full min-w-0 flex-col px-5 pt-6 pb-4 transition-opacity duration-700 ease-in-out motion-reduce:transition-none sm:px-8 sm:pt-8 sm:pb-6",
                 active ? "opacity-100" : "pointer-events-none opacity-0",
               )}
             >
               <LuQuote className="h-8 w-8 text-primary-500" aria-hidden />
-              <h3 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
+              <h3 className="mt-4 text-2xl font-bold leading-tight wrap-break-word sm:text-3xl">
                 {testimonial.headline}
               </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-black/60 dark:text-white/60 sm:text-base">
+              <p className="mt-2 min-w-0 flex-1 text-sm leading-relaxed wrap-break-word text-black/60 dark:text-white/60 sm:text-base">
                 {testimonial.quote}
               </p>
-              <div className="mt-8 flex h-11 items-center gap-3 pr-40">
+              <div className="mt-6 flex items-center gap-3 sm:mt-8 sm:h-11 sm:pr-40">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-700 text-sm font-semibold text-white">
                   {initials(testimonial.name)}
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-semibold">{testimonial.name}</span>
-                  <span className="block text-sm text-black/55 dark:text-white/55">
+                  <span className="block font-semibold wrap-break-word">{testimonial.name}</span>
+                  <span className="block text-sm wrap-break-word text-black/55 dark:text-white/55">
                     {testimonial.title}
                   </span>
                 </span>
@@ -208,25 +208,25 @@ export function TestimonialsSlider({
 
       <div
         className={cn(
-          "absolute right-6 z-10 flex h-11 items-center gap-3 sm:right-8",
-          showTimer ? "bottom-[calc(1.5rem+0.125rem)]" : "bottom-6",
+          "z-10 flex h-11 items-center justify-center gap-3 px-5 pb-4 sm:absolute sm:right-8 sm:justify-end sm:px-0 sm:pb-0",
+          showTimer ? "sm:bottom-[calc(1.5rem+0.125rem)]" : "sm:bottom-6",
         )}
       >
-        <p className="text-sm tabular-nums text-black/55 dark:text-white/55">
-          <span className="sr-only">{translations.ui.testimonial_carousel} </span>
-          {activeIndex + 1}/{count}
-        </p>
         <button
           type="button"
-          className="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-black/15 text-black/70 transition-colors duration-150 hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:border-white/15 dark:text-white/70 dark:hover:bg-white/10"
+          className="order-1 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-black/15 text-black/70 transition-colors duration-150 hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 sm:order-2 dark:border-white/15 dark:text-white/70 dark:hover:bg-white/10"
           aria-label={translations.ui.testimonial_previous}
           onClick={() => goTo(activeIndex - 1)}
         >
           <LuChevronLeft className="h-4 w-4" aria-hidden />
         </button>
+        <p className="order-2 text-sm tabular-nums text-black/55 sm:order-1 dark:text-white/55">
+          <span className="sr-only">{translations.ui.testimonial_carousel} </span>
+          {activeIndex + 1}/{count}
+        </p>
         <button
           type="button"
-          className="inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-black/15 text-black/70 transition-colors duration-150 hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:border-white/15 dark:text-white/70 dark:hover:bg-white/10"
+          className="order-3 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-black/15 text-black/70 transition-colors duration-150 hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:border-white/15 dark:text-white/70 dark:hover:bg-white/10"
           aria-label={translations.ui.testimonial_next}
           onClick={() => goTo(activeIndex + 1)}
         >
