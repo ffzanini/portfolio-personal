@@ -1,54 +1,77 @@
 {
   "title": "Get in touch",
-  "sub_title": "Email me at <b><a href='mailto:devffzanini@gmail.com'>devffzanini@gmail.com</a></b>, reach out on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b>, or use the form below, whatever's easier for you. I'm always up for talking about development, projects, or whatever comes up.",
+  "sub_title": "Pick a subject below and we'll talk whichever way is easier for you. I'm always up for a chat about development, projects, and whatever else comes up.",
   "form": {
     "title": "Send a message",
     "sub_title": "No middleman, straight to the point.",
-    "name": "Your name",
+    "name": "Name",
     "email": "Email",
-    "message": "Type your message"
+    "message": "Message",
+    "company": "Company",
+    "send": "Send"
   },
-  "next": {
-    "title": "Next steps",
-    "sub_title": "Here's how it usually goes, from your message to a proposal.",
-    "steps": [
-      {
-        "id": 1,
-        "title": "Submission",
-        "description": "You tell me what you want to talk about and share a bit about the idea or project."
+  "intent": {
+    "title": "What brings you here?",
+    "availability": "Available for new projects",
+    "city": "Pelotas",
+    "subjects": {
+      "project": {
+        "label": "I have a project",
+        "panelTitle": "Let's build something together",
+        "panelDescription": "Websites, web apps, and digital products from scratch, or evolving what you already have.",
+        "points": [
+          "Detailed proposal within 7 business days",
+          "Contract and invoice",
+          "Follow-up after delivery"
+        ],
+        "addon": "Reference link or briefing",
+        "cta": "See what I've already built"
       },
-      {
-        "id": 2,
-        "title": "Response",
-        "description": "I get back to you within 48 hours so we can set up a call."
+      "recruiter": {
+        "label": "I'm a recruiter",
+        "panelTitle": "Open to good opportunities",
+        "panelDescription": "Mid-level or senior roles in full-stack and front-end, working fully remotely.",
+        "points": [
+          "10+ years of experience",
+          "Experience as a tech lead and in full-stack development",
+          "Available in Portuguese, English, and Spanish"
+        ],
+        "addon": "Job link",
+        "cta": "View résumé"
       },
-      {
-        "id": 3,
-        "title": "Alignment",
-        "description": "We meet to align on details, goals, and what the project needs."
-      },
-      {
-        "id": 4,
-        "title": "Proposal",
-        "description": "Then I put together a proposal with everything laid out, so you can look it over at your own pace."
+      "chat": {
+        "label": "I just want to talk",
+        "panelTitle": "Want to grab a (virtual) coffee?",
+        "panelDescription": "If you have career questions, want mentoring, or feel like talking about technology and game development.",
+        "points": [
+          "No commitment",
+          "Reply within 48h",
+          "Also on LinkedIn"
+        ],
+        "addon": "Subject",
+        "cta": "Message me on LinkedIn"
       }
-    ]
+    },
+    "email": "devffzanini@gmail.com"
   },
   "testimonials": {
     "title": "Testimonials",
     "sub_title": "People who've worked with me have something to say, and I'm truly grateful.",
     "testimonials": [
       {
+        "headline": "A reference inside the company.",
         "quote": "Felipe Zanini is a professional who stood out in every project he worked on at nav9. Stakeholders consistently praised his ability to translate technical demands into language anyone could understand, which made alignment across teams much easier. He is also highly dedicated and focused on delivering value. He stands out for the quality of his work and for constantly raising the technical bar of the people around him. Other developers see him as someone who shares knowledge and helps the group grow, making him a reference within the company. That is why he naturally becomes a solid delivery pillar on every team he joins.",
         "name": "Felipe Adamoli",
         "title": "Co-Founder at Techleads.club"
       },
       {
+        "headline": "100% focused on delivering with quality.",
         "quote": "Felipe was one of the best professionals I have had the opportunity to work with, always dedicated and 100% focused on delivering projects with quality, regardless of the challenges. He cares about every stage of the development process, not limiting himself to coding. In the projects we worked on together, he performed very well as tech lead with the client and achieved strong results with the team. He communicates well and knows how to stand out in difficult moments. Felipe learns quickly and has great autonomy to lead any project.",
         "name": "Igor Casconi de Oliveira",
         "title": "Software Engineer"
       },
       {
+        "headline": "Over 1,000 visitors on launch day.",
         "quote": "It was rewarding to see the positive response to the website since launch. The reception was incredibly warm. The visuals, the layout, the content, the navigation, everything has been praised with enthusiasm. Even my father, who took a look at the code, said it was “clean”; coming from him, that is a huge compliment. On launch day alone we had over 1,000 visitors. I receive messages highlighting the organization, the clarity, and the identity of DOVE, which has become even stronger with our online presence. I am deeply grateful to everyone involved. Without a doubt, a success.",
         "name": "Joseph Murray",
         "title": "Director at DOVE Research"
@@ -63,7 +86,15 @@
   "button_text_not_ready": "Complete the form",
   "button_text_sending": "Sending your message",
   "footer": {
-    "title": "My story doesn't end here",
-    "message": "Check out my <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">full résumé</a></b> if you want the longer version of what I've been building for more than 10 years in tech."
+    "title_start": "My story",
+    "title_end": "doesn't end here",
+    "message": "The résumé is the long version of what I've been building. Seen everything here? Go back to the start and take another look.",
+    "resume": "View résumé",
+    "home": "Back to the start",
+    "stats": [
+      { "value": "+15", "label": "years in tech" },
+      { "value": "48h", "label": "response time" },
+      { "value": "+42", "label": "projects delivered" }
+    ]
   }
 }

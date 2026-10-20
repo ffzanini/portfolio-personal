@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "node scripts/patch-image-zoom.mjs",
+    "postinstall": "node scripts/patch-image-zoom.mjs && node scripts/patch-next-themes.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "analyze": "ANALYZE=true next build --webpack"
   },
@@ -28,6 +28,7 @@
     "react-hot-toast": "^2.6.0",
     "react-icons": "^5.6.0",
     "react-medium-image-zoom": "^5.4.6",
+    "run": "^2.1.8",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {

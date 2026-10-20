@@ -2,7 +2,7 @@
   "title": "Del código a la entrega",
   "breadcrumb_begin": "Proyectos",
   "breadcrumb_end": "Especificaciones",
-  "sub_title": "Sitios y productos que ayudé a construir, muchos aún activos y en uso diario. Algunos se descontinuaron; otros no aparecen por motivos contractuales.",
+  "sub_title": "Los problemas reales exigen soluciones reales. Estos son algunos de los sitios, sistemas y productos que ayudé a construir. Muchos siguen activos y forman parte de la rutina de empresas y personas. Otros fueron descontinuados o no pueden mostrarse por restricciones contractuales.",
   "projects_title": "Proyectos Destacados",
   "projects_all": "Todos los proyectos",
   "github": "Proyecto disponible en GitHub",
@@ -13,7 +13,21 @@
   "visit_site": "Visitar sitio",
   "status_online": "En línea",
   "status_offline": "Fuera de línea",
+  "internal_use": "Uso interno",
   "empty_filter": "No se encontraron proyectos para este filtro.",
+  "view_project": "Ver proyecto completo",
+  "timer_running": "Cambia solo cada 5 segundos. Pasa el cursor para pausar.",
+  "timer_paused": "En pausa. Vuelve a avanzar cuando salgas de esta área.",
+  "timer_reduced": "Elige el proyecto por el nombre.",
+  "previous_project": "Proyecto anterior",
+  "next_project": "Próximo proyecto",
+  "timeline": {
+    "context": "Contexto",
+    "challenge": "Desafío",
+    "solution": "Solución",
+    "build": "Cómo se construyó",
+    "result": "Resultado"
+  },
   "filters": {
     "all": "Todos",
     "fullstack": "Full Stack",
@@ -25,6 +39,9 @@
       "id": 1,
       "title": "Portafolio personal hecho con Next.js, Tailwind y TypeScript",
       "description": "Una vitrina interactiva de mis habilidades, proyectos y experimentos con nuevas tecnologías, todo enfocado en usabilidad y evolución constante.",
+      "summaryChallenge": "El trabajo y la forma de trabajar necesitaban un solo lugar claro, en más de un idioma.",
+      "summarySolution": "Sitio en Next.js con modo oscuro, traducciones y espacio para probar librerías nuevas.",
+      "summaryResult": "Vitrina en tres idiomas, con rendimiento listo para reclutadores.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "Bienvenido a mi portafolio. Lo armé para mostrar el trabajo que hice y cómo me gusta trabajar. Aquí vas a ver una mezcla de proyectos, cada uno con el cuidado que intento ponerle.",
@@ -64,6 +81,9 @@
       "id": 2,
       "title": "DOVE Research Centre",
       "description": "Presentar de forma clara líneas de investigación, acceso a publicaciones, perfiles del equipo e inscripciones, todo con una estructura responsiva y organizada.",
+      "summaryChallenge": "Investigación, publicaciones y equipo necesitaban una vitrina institucional en dos idiomas.",
+      "summarySolution": "Sitio bilingüe con noticias, PDFs, perfiles y panel para el equipo editorial.",
+      "summaryResult": "Presencia académica bilingüe, con contenido gestionado por el propio equipo.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "El sitio del DOVE Research Centre (Centro de Investigación en Desarrollo Humano y Violencia) de la Universidad Federal de Pelotas fue desarrollado como una plataforma institucional bilingüe, ofreciendo contenido en inglés y portugués. Con una presentación clara y moderna, el sitio destaca el trabajo del centro de forma accesible y bien estructurada."
@@ -103,6 +123,9 @@
       "id": 3,
       "title": "JA Índio Jiu Jitsu",
       "description": "Sitio desarrollado para atraer e involucrar a posibles alumnos en cualquier etapa del camino, del cinturón blanco al negro, con diseño moderno, atractivo y responsivo.",
+      "summaryChallenge": "Faltaba un lugar claro para presentar la academia y convertir interesados en alumnos.",
+      "summarySolution": "Sitio con clase de prueba, horarios, programas, testimonios y contacto.",
+      "summaryResult": "Más conversión de alumnos y mejor exposición de la academia.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "El proyecto JA Índio Jiu Jitsu, en Pelotas (RS), fue diseñado como un sitio responsivo y organizado que ofrece programación de clases gratuitas, horarios, descripción de programas (por nivel y público), testimonios, contacto y filosofía de la academia, para mostrar el trabajo de la academia, inspirar a gente nueva y acercarse más al público."
@@ -138,6 +161,9 @@
       "id": 4,
       "title": "EducaCross",
       "description": "Plataforma educativa híbrida y gamificada, con más de 2.000 juegos alineados con la BNCC y adaptados a las necesidades de cada alumno. Ofrece dashboards para profesores, soporte pedagógico y uso multiplataforma.",
+      "summaryChallenge": "Los profesores no veían el progreso individual en una red de miles de alumnos.",
+      "summarySolution": "Plataforma gamificada, con dashboards, rutas y más de 2.000 juegos alineados con la BNCC.",
+      "summaryResult": "Uso en más de 1.700 escuelas, con más participación de alumnos y familias.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "Durante mi período en nav9.tech, actué como socio tecnológico de varias empresas; entre ellas, trabajé en varios frentes del desarrollo de la versión 2.0 de la plataforma EducaCross.",
@@ -175,8 +201,11 @@
     },
     {
       "id": 5,
-      "title": "Iguatemi S.A",
+      "title": "PDL - Portal Iguatemi",
       "description": "El Portal Iguatemi es una plataforma B2B segura que permite a los comerciantes acceder a la información de su contrato, enviar documentos y participar en acciones de marketing dentro de la red Iguatemi, todo cumpliendo con la LGPD.",
+      "summaryChallenge": "Los comerciantes necesitaban tratar contrato, documentos y rutina interna con seguridad.",
+      "summarySolution": "Portal B2B con acceso por perfil, en conformidad con la LGPD.",
+      "summaryResult": "Operación de 15 centros comerciales y más de 2.800 tiendas en un entorno seguro.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "Durante mi período en nav9.tech, colaboré durante más de 3 años en el desarrollo de los productos de los Shoppings Iguatemi, con foco en el Portal del Comerciante.",
@@ -212,9 +241,85 @@
       ]
     },
     {
+      "id": 11,
+      "title": "PDL - Portal Iguatemi v2",
+      "description": "Nueva versión del Portal Iguatemi, con el frontend modernizado, más información de auditoría fiscal y boletos, y un backoffice para la operación interna.",
+      "summaryChallenge": "El portal necesitaba una interfaz actual y más auditoría fiscal y boletos a disposición del comerciante, con un flujo interno para validar lo que llega.",
+      "summarySolution": "Frontend rehecho, más de un 60% de información en el portal y un backoffice para tickets, solicitudes, libros fiscales e informes.",
+      "summaryResult": "Auditoría y boletos más disponibles, con revisión, aprobación e informes gerenciales en el backoffice.",
+      "longDescriptionTitle": "Resumen del Proyecto",
+      "longDescription": [
+        "La v2 del Portal Iguatemi modernizó todo el frontend con tecnologías actuales. El ingreso pasó a usar la cuenta Microsoft, y el trabajo fue más allá de la pantalla de login: el portal pasó a distribuir más información, con un aumento de más del 60% en la disponibilidad de auditoría fiscal y de boletos en la plataforma.",
+        "También construí un backoffice administrativo para el equipo interno. Desde ahí se validan y abren tickets, se aprueban solicitudes, se reenvían documentos, se revisan y auditan los libros fiscales enviados por los comerciantes, y se consultan informes gerenciales de boletos, usuarios, solicitudes y auditorías."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades implementadas",
+      "features": [
+        "Frontend modernizado con tecnologías actuales",
+        "Ingreso con cuenta Microsoft",
+        "Mayor disponibilidad de auditoría fiscal y boletos para el comerciante",
+        "Backoffice para validación y apertura de tickets",
+        "Aprobación de solicitudes y reenvío",
+        "Revisión y auditoría de libros fiscales enviados por los comerciantes",
+        "Informes gerenciales de boletos, usuarios, solicitudes y auditorías"
+      ],
+      "challengesTitle": "Desafíos Técnicos",
+      "challenges": [
+        "Modernizar el frontend sin interrumpir a quien ya usaba el portal",
+        "Ampliar la información de auditoría fiscal y boletos manteniendo la seguridad y el cumplimiento de la LGPD",
+        "Concentrar validación, aprobación, reenvío y auditoría en un solo backoffice",
+        "Entregar informes gerenciales sin exponer datos del comerciante fuera del perfil autorizado"
+      ],
+      "achievementsTitle": "Resultados Alcanzados",
+      "achievements": [
+        "Frontend completo modernizado",
+        "Más de un 60% de aumento en la distribución de información de auditoría fiscal y boletos",
+        "Backoffice especializado en línea",
+        "Revisión y auditoría de los libros fiscales enviados por los comerciantes",
+        "Informes gerenciales de boletos, usuarios, solicitudes y auditorías"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "PDA — Portal de Aprobaciones",
+      "description": "Portal de aprobaciones de Iguatemi, donde la dirección concentra el análisis y la aprobación de documentos, el seguimiento de solicitudes y otros controles de gestión.",
+      "summaryChallenge": "La dirección necesitaba un solo lugar para analizar documentos, ver solicitudes y seguir los controles de gestión.",
+      "summarySolution": "El PDA reúne esos ítems en un portal de aprobaciones, hecho para el día a día de la dirección.",
+      "summaryResult": "Análisis, aprobación y seguimiento concentrados en una plataforma de gestión.",
+      "longDescriptionTitle": "Resumen del Proyecto",
+      "longDescription": [
+        "El PDA es el portal de aprobaciones de Iguatemi. En él se concentraron ítems específicos que la dirección necesitaba para facilitar el trabajo de gestión de la empresa.",
+        "En la plataforma la dirección analiza y aprueba documentos, sigue solicitudes y usa los demás controles disponibles en el portal."
+      ],
+      "stackTitle": "Stack Tecnológico",
+      "featuresTitle": "Funcionalidades implementadas",
+      "features": [
+        "Análisis de documentos",
+        "Aprobación de documentos",
+        "Seguimiento de solicitudes",
+        "Controles de gestión reunidos en un solo portal",
+        "Acceso dirigido a lo que la dirección necesita en el día a día"
+      ],
+      "challengesTitle": "Desafíos Técnicos",
+      "challenges": [
+        "Reunir en un solo portal lo que usa la dirección, separado de la rutina del comerciante",
+        "Dejar el análisis y la aprobación de documentos claros para quien decide",
+        "Mantener solicitudes y controles visibles sin perder el rastro de cada decisión"
+      ],
+      "achievementsTitle": "Resultados Alcanzados",
+      "achievements": [
+        "Portal de aprobaciones dedicado a la dirección",
+        "Documentos analizados y aprobados en un único flujo",
+        "Solicitudes y controles de gestión disponibles en la plataforma"
+      ]
+    },
+    {
       "id": 6,
       "title": "Portafolio v2",
       "description": "Versión 2.0 de mi portafolio personal, descontinuado.",
+      "summaryChallenge": "El trabajo, los estudios y las pruebas necesitaban una versión propia del portafolio.",
+      "summarySolution": "Sitio en Next.js con modo oscuro, traducciones y formulario de contacto.",
+      "summaryResult": "Versión publicada, luego reemplazada por el portafolio actual.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "El objetivo era el mismo que ahora: mostrar mi trabajo, estudios y pruebas. Puedes pegarle una mirada a la versión anterior."
@@ -247,6 +352,9 @@
       "id": 7,
       "title": "Currículum Online",
       "description": "Una página de currículum online minimalista y altamente funcional, con secciones claras de experiencia, stack, proyectos y contacto, con animaciones ligeras, diseño responsivo y rendimiento optimizado.",
+      "summaryChallenge": "El currículum en PDF se desactualiza rápido y se lee mal en el celular.",
+      "summarySolution": "Una página única, ligera y siempre actualizada, con experiencia, stack y contacto.",
+      "summaryResult": "Un currículum que abre rápido y es fácil de mantener.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "El objetivo es ofrecer una página de currículum online centrada en rendimiento, claridad y responsividad. Desarrollada con tecnologías modernas, la estructura es limpia y organizada, con navegación fluida entre las secciones. Es completamente mobile-first, con buena experiencia de lectura e interacción en cualquier dispositivo, transiciones suaves y animaciones sutiles."
@@ -275,6 +383,9 @@
       "id": 8,
       "title": "nav9.tech",
       "description": "Sitio institucional de nav9.tech, empresa de tecnología enfocada en el desarrollo de soluciones digitales innovadoras.",
+      "summaryChallenge": "Había que comunicar el posicionamiento de la empresa en pocas secciones claras.",
+      "summarySolution": "Sitio institucional con servicios, navegación corta y layout responsivo.",
+      "summaryResult": "Presencia digital clara para quien busca los servicios.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "El sitio web de nav9.tech fue desarrollado como plataforma institucional para presentar la empresa, sus servicios y soluciones tecnológicas. Con un diseño moderno y responsivo, el sitio ofrece una experiencia clara y profesional para visitantes interesados en conocer los servicios ofrecidos por la empresa."
@@ -304,6 +415,9 @@
       "id": 9,
       "title": "ICEH Retriever",
       "description": "Plataforma integral de datos diseñada para proporcionar acceso abierto y fácil a datos estandarizados sobre indicadores de Salud Reproductiva, Materna, Neonatal e Infantil y Nutrición (RMNCH+N) en todo el mundo.",
+      "summaryChallenge": "Indicadores de salud dispersos en formatos difíciles de comparar.",
+      "summarySolution": "Búsqueda, filtros y exportación de indicadores estandarizados.",
+      "summaryResult": "Acceso abierto a datos comparables para investigación y políticas públicas.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "El ICEH Retriever es una plataforma integral de datos desarrollada para proporcionar acceso abierto y fácil a datos estandarizados sobre indicadores de Salud Reproductiva, Materna, Neonatal e Infantil y Nutrición (RMNCH+N) en todo el mundo. La plataforma cubre más de 100 indicadores, más de 120 países y utiliza datos de más de 490 encuestas nacionalmente representativas.",
@@ -341,6 +455,9 @@
       "id": 10,
       "title": "PortoCon Contabilidad",
       "description": "Sitio institucional enfocado en conversión local para captar clientes de servicios contables, con comunicación clara, atención humanizada y recorrido guiado por CTAs.",
+      "summaryChallenge": "Poca presencia digital para búsquedas locales.",
+      "summarySolution": "Páginas de servicio optimizadas para SEO local y contacto directo por WhatsApp.",
+      "summaryResult": "Recorrido de contacto más claro y base lista para crecer en búsqueda orgánica.",
       "longDescriptionTitle": "Resumen del Proyecto",
       "longDescription": [
         "PortoCon es una firma contable de Brusque con un posicionamiento centrado en atención personalizada, claridad de procesos y seguridad empresarial. El proyecto se desarrolló como un sitio institucional para convertir ese posicionamiento en una experiencia digital objetiva y confiable.",
@@ -378,7 +495,7 @@
   "load": "Cargar más",
   "contact": {
     "title": "¿Tienes un proyecto en mente?",
-    "description": "Estoy abierto a proyectos nuevos, consultorías y charlas sobre productos digitales o juegos. Escríbeme en <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o deja un recado en la ",
+    "description": "Estoy abierto a nuevos proyectos, consultorías y conversaciones sobre productos digitales y creación de juegos. Habla conmigo por <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> o envía un mensaje por la ",
     "contact": "página de contacto."
   }
 }

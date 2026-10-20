@@ -143,7 +143,9 @@ export function IntroGreetings() {
 
     if (armBuildRef.current) return;
 
-    if (phase === "print" || phase === "build") {
+    if (phase === "print") return;
+
+    if (phase === "build") {
       if (!isIntroHomePath(pathname)) {
         armBuildRef.current = false;
         finishedRef.current = true;

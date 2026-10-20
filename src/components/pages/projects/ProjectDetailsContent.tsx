@@ -2,15 +2,18 @@
 
 import Link from "next/link";
 import {
-  LuBadgeCheck,
+  LuArrowLeft,
+  LuArrowRight,
   LuExternalLink,
   LuGithub,
-  LuReply,
-  LuServerCrash,
-  LuTrophy,
+  LuLock,
 } from "react-icons/lu";
 
-import { Project } from "@/app/data/projects";
+import { Project, projects } from "@/app/data/projects";
+import {
+  ProjectProcessTimeline,
+  readTimelineImages,
+} from "@/components/pages/projects/ProjectProcessTimeline";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ZoomImage } from "@/components/ui/ZoomImage";
 import { useTranslation } from "@/context";
@@ -28,6 +31,66 @@ interface ProjectDetailsContentProps {
 function formatYear(date: string) {
   const year = new Date(date).getFullYear();
   return Number.isFinite(year) ? String(year) : null;
+}
+
+function neighborProjects(currentId: number) {
+  const ordered = [...projects].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+  const index = ordered.findIndex((item) => item.id === currentId);
+  if (index < 0 || ordered.length < 2) {
+    return { previous: undefined, next: undefined };
+  }
+
+  return {
+    previous: ordered.at(index - 1),
+    next: ordered.at((index + 1) % ordered.length),
+  };
+}
+
+function ProjectNavLink({
+  href,
+  label,
+  title,
+  direction,
+  className,
+}: Readonly<{
+  href: string;
+  label: string;
+  title: string;
+  direction: "previous" | "next";
+  className?: string;
+}>) {
+  const isPrevious = direction === "previous";
+
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "group flex flex-col rounded-2xl border border-black/10 bg-black/2 p-4 transition-colors duration-150 hover:border-primary-600/40 hover:bg-primary-600/5 dark:border-white/10 dark:bg-white/2 dark:hover:border-primary-400/40",
+        className,
+      )}
+    >
+      <span className="text-sm font-medium text-black/55 dark:text-white/55">
+        {label}
+      </span>
+      <span className="mt-1 flex items-center gap-3 text-lg font-bold">
+        {isPrevious && (
+          <LuArrowLeft
+            className="h-5 w-5 shrink-0 transition-transform duration-200 group-hover:-translate-x-0.5"
+            aria-hidden
+          />
+        )}
+        <span className="min-w-0 flex-1 break-words">{title}</span>
+        {!isPrevious && (
+          <LuArrowRight
+            className="ml-auto h-5 w-5 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
+            aria-hidden
+          />
+        )}
+      </span>
+    </Link>
+  );
 }
 
 export function ProjectDetailsContent({
@@ -62,26 +125,14 @@ export function ProjectDetailsContent({
     codeRepository: project.github || undefined,
   };
 
-  const detailPanels = [
-    {
-      key: "features",
-      title: projectTranslate?.featuresTitle,
-      items: projectTranslate?.features ?? [],
-      icon: LuBadgeCheck,
-    },
-    {
-      key: "challenges",
-      title: projectTranslate?.challengesTitle,
-      items: projectTranslate?.challenges ?? [],
-      icon: LuServerCrash,
-    },
-    {
-      key: "achievements",
-      title: projectTranslate?.achievementsTitle,
-      items: projectTranslate?.achievements ?? [],
-      icon: LuTrophy,
-    },
-  ];
+  const { previous: previousProject, next: nextProject } = neighborProjects(
+    project.id,
+  );
+  const imageAlt = fillTemplate(translations.ui.project_image_alt, {
+    title: projectTranslate?.title ?? project.navigation,
+    name: PERSON.name,
+    tech: project.technologies.slice(0, 3).join(", "),
+  });
 
   return (
     <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
@@ -150,34 +201,32 @@ export function ProjectDetailsContent({
                   GitHub
                 </a>
               )}
+              {!project.demo && !project.github && (
+                <span className="inline-flex items-center gap-2 rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-black/70 dark:border-white/15 dark:text-white/70">
+                  <LuLock className="h-4 w-4" aria-hidden />
+                  {copy.internal_use}
+                </span>
+              )}
             </div>
           </div>
 
-          <ZoomImage
-            className="mx-auto my-6 aspect-video w-full rounded-2xl object-cover md:w-[70%]"
-            src={project.image}
-            alt={fillTemplate(translations.ui.project_image_alt, {
-              title: projectTranslate?.title ?? project.navigation,
-              name: PERSON.name,
-              tech: project.technologies.slice(0, 3).join(", "),
-            })}
-            width={1200}
-            height={0}
-            priority
-          />
-
-          <div className="mb-8 lg:mb-10">
-            <h2 className="mb-3 text-xl font-bold">
-              {projectTranslate?.longDescriptionTitle}
-            </h2>
-            <div className="space-y-3">
-              {projectTranslate?.longDescription.map((content) => (
-                <p key={content} className="text-lg leading-relaxed">
-                  {content}
-                </p>
-              ))}
+          <figure className="mx-auto my-8 w-full overflow-hidden rounded-2xl border border-black/10 bg-neutral-200 shadow-2xl shadow-black/10 dark:border-white/10 dark:bg-[#2a2a2e] dark:shadow-black/40">
+            <div className="flex items-center gap-2 px-4 py-3" aria-hidden>
+              <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+              <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+              <span className="h-3 w-3 rounded-full bg-[#28c840]" />
             </div>
-          </div>
+            <ZoomImage
+              className="h-auto w-full object-cover"
+              src={project.image}
+              alt={imageAlt}
+              width={2556}
+              height={1270}
+              sizes="(min-width: 80rem) 80rem, 100vw"
+              quality={100}
+              priority
+            />
+          </figure>
 
           <div className="mb-10 lg:mb-12">
             <h2 className="mb-3 text-xl font-bold">
@@ -195,41 +244,55 @@ export function ProjectDetailsContent({
             </div>
           </div>
 
-          <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {detailPanels.map(({ key, title, items, icon: Icon }) => (
-              <div
-                key={key}
-                className="flex flex-col rounded-2xl border border-black/10 bg-black/2 p-4 backdrop-blur-sm dark:border-white/10 dark:bg-white/2"
-              >
-                <div className="mb-3 flex items-center gap-2">
-                  <div className="flex h-8 w-8 min-w-8 items-center justify-center rounded-md bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800">
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </div>
-                  <h3 className="text-lg font-medium">{title}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {items.map((content) => (
-                    <li key={content} className="flex gap-2 text-base leading-relaxed">
-                      <span className="text-primary-600 dark:text-primary-400" aria-hidden>
-                        •
-                      </span>
-                      <span>{content}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <ProjectProcessTimeline
+            labels={copy.timeline}
+            context={projectTranslate?.longDescription ?? []}
+            challenge={projectTranslate?.summaryChallenge ?? ""}
+            solution={projectTranslate?.summarySolution ?? ""}
+            featuresTitle={projectTranslate?.featuresTitle ?? ""}
+            features={projectTranslate?.features ?? []}
+            challengesTitle={projectTranslate?.challengesTitle ?? ""}
+            challenges={projectTranslate?.challenges ?? []}
+            results={projectTranslate?.achievements ?? []}
+            images={readTimelineImages(projectTranslate)}
+            imageAlt={imageAlt}
+          />
 
-          <div className="mt-8 flex justify-center">
-            <Link
-              href={withLocalePath(location, "/projects")}
-              className="inline-flex items-center gap-2 rounded-md bg-linear-to-r from-primary-400 to-primary-600 px-4 py-2 font-semibold text-white shadow-lg shadow-primary-600/25 transition-[transform,background-color] duration-150 hover:from-primary-500 hover:to-primary-700 active:scale-[0.97]"
-            >
-              <LuReply className="h-5 w-5" aria-hidden />
-              {copy.return}
-            </Link>
-          </div>
+          <nav
+            aria-label={`${copy.previous_project} / ${copy.next_project}`}
+            className="mt-10 grid gap-4 md:grid-cols-2"
+          >
+            {previousProject && (
+              <ProjectNavLink
+                href={withLocalePath(
+                  location,
+                  `/projects/${previousProject.navigation}`,
+                )}
+                label={copy.previous_project}
+                title={
+                  copy.projects.find((item) => item.id === previousProject.id)
+                    ?.title ?? previousProject.navigation
+                }
+                direction="previous"
+                className="md:col-start-1"
+              />
+            )}
+            {nextProject && (
+              <ProjectNavLink
+                href={withLocalePath(
+                  location,
+                  `/projects/${nextProject.navigation}`,
+                )}
+                label={copy.next_project}
+                title={
+                  copy.projects.find((item) => item.id === nextProject.id)
+                    ?.title ?? nextProject.navigation
+                }
+                direction="next"
+                className="md:col-start-2"
+              />
+            )}
+          </nav>
         </div>
       </main>
 

@@ -54,14 +54,18 @@ const nextConfig: NextConfig = {
 
   images: {
     formats: ["image/avif", "image/webp"],
-    // Cap at 1920 — portfolio never needs 2048/3840 hero candidates for LCP
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    // Project screenshots are ~2560px wide; keep that size available for the detail view.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2560],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 ano
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    qualities: [75, 80, 85],
+    qualities: [75, 80, 85, 100],
+    localPatterns: [
+      { pathname: "/**", search: "" },
+      { pathname: "/images/projects/**" },
+    ],
     remotePatterns: [
       {
         protocol: "https",

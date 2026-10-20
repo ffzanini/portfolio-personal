@@ -1,54 +1,77 @@
 {
   "title": "Entre em contato",
-  "sub_title": "Escreve para <b><a href='mailto:devffzanini@gmail.com'>devffzanini@gmail.com</a></b>, fala pelo <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> ou usa o formulário abaixo, o que for melhor para você. Sempre topo conversar sobre desenvolvimento, projetos e o que mais surgir.",
+  "sub_title": "Escolhe o assunto aqui embaixo e a gente se fala do jeito que ficar mais fácil para você. Sempre topo um papo sobre desenvolvimento, projetos e o que mais vier.",
   "form": {
     "title": "Envie uma mensagem",
     "sub_title": "Sem intermediários, vamos direto ao ponto.",
-    "name": "Seu nome",
+    "name": "Nome",
     "email": "E-mail",
-    "message": "Digite sua mensagem"
+    "message": "Mensagem",
+    "company": "Empresa",
+    "send": "Enviar"
   },
-  "next": {
-    "title": "Próximos passos",
-    "sub_title": "É mais ou menos assim, da sua mensagem até a proposta.",
-    "steps": [
-      {
-        "id": 1,
-        "title": "Envio",
-        "description": "Você me conta o assunto e compartilha um pouco da ideia ou do projeto."
+  "intent": {
+    "title": "O que te traz aqui?",
+    "availability": "Disponível para novos projetos",
+    "city": "Pelotas",
+    "subjects": {
+      "project": {
+        "label": "Tenho um projeto",
+        "panelTitle": "Vamos construir algo juntos",
+        "panelDescription": "Sites, aplicações web e produtos digitais do zero ou evoluindo o que você já tem.",
+        "points": [
+          "Proposta detalhada em até 7 dias úteis",
+          "Contrato e nota fiscal",
+          "Acompanhamento pós entrega"
+        ],
+        "addon": "Link de referência ou briefing",
+        "cta": "Ver o que eu já produzi"
       },
-      {
-        "id": 2,
-        "title": "Retorno",
-        "description": "Eu respondo em até 48 horas para a gente marcar uma conversa."
+      "recruiter": {
+        "label": "Sou recrutador(a)",
+        "panelTitle": "Aberto a boas oportunidades",
+        "panelDescription": "Posições de pleno / sênior em full-stack e front-end, atuando dentro do modelo de trabalho remoto.",
+        "points": [
+          "10+ anos de experiência",
+          "Experiência como tech lead e desenvolvimento full stack",
+          "Disponível em português, inglês e espanhol"
+        ],
+        "addon": "Link da vaga",
+        "cta": "Ver currículo"
       },
-      {
-        "id": 3,
-        "title": "Alinhamento",
-        "description": "A gente se encontra para alinhar detalhes, objetivos e o que o projeto precisa."
-      },
-      {
-        "id": 4,
-        "title": "Proposta",
-        "description": "Depois eu monto uma proposta com tudo organizado, para você olhar com calma."
+      "chat": {
+        "label": "Só quero conversar",
+        "panelTitle": "Bora tomar um café (virtual)?",
+        "panelDescription": "Se tiver dúvidas de carreira, deseja uma mentoria ou trocar ideia sobre tecnologia e desenvolvimento de jogos.",
+        "points": [
+          "Sem compromisso",
+          "Resposta em até 48h",
+          "Também no LinkedIn"
+        ],
+        "addon": "Assunto",
+        "cta": "Chamar no LinkedIn"
       }
-    ]
+    },
+    "email": "devffzanini@gmail.com"
   },
   "testimonials": {
     "title": "Depoimentos",
     "sub_title": "Quem já trabalhou comigo tem algo a dizer, e eu só tenho a agradecer.",
     "testimonials": [
       {
+        "headline": "Uma referência dentro da empresa.",
         "quote": "O Felipe Zanini é um profissional que se destacou nos projetos por onde passou dentro da nav9. Sempre foi muito elogiado pelos stakeholders por conseguir traduzir demandas técnicas para uma linguagem acessível a todos os públicos, facilitando o alinhamento entre áreas, além de ser muito dedicado e preocupado com a entrega de valor. Se destaca pela qualidade das entregas e por buscar constantemente elevar a barra técnica do time ao seu redor. É reconhecido pelos outros desenvolvedores como alguém que compartilha conhecimento e ajuda na evolução do grupo, sendo uma referência dentro da empresa. Por isso, naturalmente se torna um pilar sólido de entregas nos times em que atua.",
         "name": "Felipe Adamoli",
         "title": "Co-Founder da Techleads.club"
       },
       {
+        "headline": "100% focado em entregar com qualidade.",
         "quote": "Felipe foi um dos melhores profissionais com quem tive oportunidade de trabalhar, sempre dedicado e 100% focado em entregar os projetos com qualidade, independentemente dos desafios. Preocupa-se com todas as etapas do processo de desenvolvimento, não se limitando a programar. Nos projetos em que trabalhamos juntos, desempenhou muito bem o papel de tech lead junto ao cliente e conseguiu grandes entregas com o time. Comunica-se bem e sabe se destacar em momentos difíceis. Felipe tem muita facilidade para aprender e grande autonomia para conduzir qualquer projeto.",
         "name": "Igor Casconi de Oliveira",
         "title": "Engenheiro de Software"
       },
       {
+        "headline": "Mais de 1.000 visitantes no lançamento.",
         "quote": "Foi gratificante ver a repercussão positiva do site desde o lançamento. A recepção foi extremamente calorosa. O visual, o layout, o conteúdo, a navegação, tudo tem sido elogiado com entusiasmo. Até meu pai, que deu uma olhada no código, comentou que estava “limpo”; vindo dele, é um grande elogio. Só no lançamento tivemos mais de 1.000 visitantes. Recebo mensagens destacando a organização, a clareza e a identidade do DOVE, que ficou ainda mais forte com a presença online. Agradeço imensamente a todos os envolvidos. Sem dúvida, um sucesso.",
         "name": "Joseph Murray",
         "title": "Diretor do DOVE Research"
@@ -64,7 +87,15 @@
   "button_text_sending": "Enviando sua mensagem",
 
   "footer": {
-    "title": "Minha história não para por aqui",
-    "message": "Dá uma olhada no meu <b><a href=\"https://resume.ffzanini.dev\" target=\"_blank\">currículo completo</a></b> se quiser a versão longa do que eu venho construindo há mais de 10 anos em tech."
+    "title_start": "Minha história",
+    "title_end": "não para por aqui",
+    "message": "O currículo é a versão longa do que venho construindo. Já viu tudo por aqui? Volte ao início e dê mais uma volta.",
+    "resume": "Ver currículo",
+    "home": "Voltar ao início",
+    "stats": [
+      { "value": "+15", "label": "anos em tech" },
+      { "value": "48h", "label": "tempo de resposta" },
+      { "value": "+42", "label": "projetos entregues" }
+    ]
   }
 }

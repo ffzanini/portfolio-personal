@@ -6,9 +6,15 @@ interface TooltipProps {
   text: string | boolean;
   children: ReactNode;
   position?: "top" | "bottom" | "left" | "right";
+  className?: string;
 }
 
-export function Tooltip({ text, children, position = "bottom" }: Readonly<TooltipProps>) {
+export function Tooltip({
+  text,
+  children,
+  position = "bottom",
+  className,
+}: Readonly<TooltipProps>) {
   const tooltipId = useId();
   const base =
     "absolute px-2 py-1 text-[12px] rounded shadow whitespace-nowrap z-50 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-[opacity,transform] duration-150";
@@ -30,8 +36,10 @@ export function Tooltip({ text, children, position = "bottom" }: Readonly<Toolti
   };
 
   return (
-    <div className="relative group inline-block">
-      <span aria-describedby={text ? tooltipId : undefined}>{children}</span>
+    <div className={cn("group relative inline-block", className)}>
+      <span className="block w-full" aria-describedby={text ? tooltipId : undefined}>
+        {children}
+      </span>
       {text && (
         <div
           id={tooltipId}

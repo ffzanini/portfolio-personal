@@ -2,7 +2,7 @@
   "title": "From code to delivery",
   "breadcrumb_begin": "Projects",
   "breadcrumb_end": "Specifications",
-  "sub_title": "Sites and products I helped build, many still live and used daily. Some were discontinued; others are omitted for contractual reasons.",
+  "sub_title": "Real problems call for real solutions. These are some of the sites, systems, and products I helped build. Many are still live and part of the daily routine of companies and people. Others were discontinued or cannot be shown because of contractual restrictions.",
   "projects_title": "Featured Projects",
   "projects_all": "All projects",
   "github": "Project available on GitHub",
@@ -13,7 +13,21 @@
   "visit_site": "Visit site",
   "status_online": "Online",
   "status_offline": "Offline",
+  "internal_use": "Internal use",
   "empty_filter": "No projects found for this filter.",
+  "view_project": "View full project",
+  "timer_running": "It switches on its own every 5 seconds. Hover to pause.",
+  "timer_paused": "Paused. It resumes when you leave this area.",
+  "timer_reduced": "Choose a project by name.",
+  "previous_project": "Previous project",
+  "next_project": "Next project",
+  "timeline": {
+    "context": "Context",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "build": "How it was built",
+    "result": "Result"
+  },
   "filters": {
     "all": "All",
     "fullstack": "Full Stack",
@@ -25,6 +39,9 @@
       "id": 1,
       "title": "Personal portfolio built with Next.js, Tailwind, and TypeScript",
       "description": "An interactive showcase of my skills, projects, and experiments with new technologies, all designed with a focus on usability and constant evolution.",
+      "summaryChallenge": "Work and way of working needed one clear place, in more than one language.",
+      "summarySolution": "Next.js site with dark mode, translations, and room to try new libraries.",
+      "summaryResult": "A three-language showcase with performance ready for recruiters.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "Welcome to my portfolio. I built it to show the work I've done and how I like to work. You'll find a mix of projects here, each one with the care I try to put into the job.",
@@ -64,6 +81,9 @@
       "id": 2,
       "title": "DOVE Research Centre",
       "description": "Clearly presenting research lines, providing access to publications, team profiles, and registration forms, all in a responsive and well-organized structure.",
+      "summaryChallenge": "Research, publications, and the team needed a clear institutional home in two languages.",
+      "summarySolution": "Bilingual site with news, PDFs, profiles, and a panel for the editorial team.",
+      "summaryResult": "A bilingual academic presence, with content managed by the team itself.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The website of the DOVE Research Centre (Center for Research on Human Development and Violence) at the Federal University of Pelotas was developed as a bilingual institutional platform, offering content in both English and Portuguese. With a clear and modern layout, the site showcases the center's work in a highly accessible and well-structured way."
@@ -103,6 +123,9 @@
       "id": 3,
       "title": "JA Índio Jiu Jitsu",
       "description": "A website developed to attract and engage potential students at any stage of their journey, from white belt to black belt. Featuring a responsive, appealing, and modern design.",
+      "summaryChallenge": "The academy had no clear place to present itself and turn interested people into students.",
+      "summarySolution": "Site with a trial class, schedule, programs, testimonials, and contact.",
+      "summaryResult": "More student conversion and better visibility for the academy.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The JA Índio Jiu Jitsu project, in Pelotas, RS, was designed as a responsive, organized site offering free class scheduling, class times, program descriptions (by level and audience), testimonials, contact information, and the academy's philosophy, with the goal of showcasing the academy's work, inspiring new students, and strengthening the connection with the audience."
@@ -138,6 +161,9 @@
       "id": 4,
       "title": "EducaCross",
       "description": "A hybrid, gamified educational platform with over 2,000 games aligned with the BNCC and adapted to each student's needs. It offers dashboards for teachers, pedagogical support, and multiplatform usage.",
+      "summaryChallenge": "Teachers lacked a view of each student's progress across thousands of learners.",
+      "summarySolution": "Gamified platform with dashboards, learning paths, and 2,000+ BNCC-aligned games.",
+      "summaryResult": "Used in more than 1,700 schools, with stronger student and family engagement.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "While at nav9.tech, I got to work as a tech partner with a few companies. One of those was EducaCross 2.0, where I helped on several fronts.",
@@ -175,8 +201,11 @@
     },
     {
       "id": 5,
-      "title": "Iguatemi S.A",
+      "title": "PDL - Portal Iguatemi",
       "description": "The Iguatemi Portal is a secure B2B platform allowing store owners to access contract info, submit documents, and engage in marketing opportunities within the Iguatemi network, all in compliance with LGPD.",
+      "summaryChallenge": "Store owners needed a secure way to handle contracts, documents, and daily operations.",
+      "summarySolution": "B2B portal with access by profile, in compliance with LGPD.",
+      "summaryResult": "Operations for 15 malls and more than 2,800 stores in a secure environment.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "While at nav9.tech, I spent more than 3 years helping build Iguatemi's products, mostly on the Store Owner Portal.",
@@ -212,9 +241,85 @@
       ]
     },
     {
+      "id": 11,
+      "title": "PDL - Portal Iguatemi v2",
+      "description": "New version of the Iguatemi Portal, with a modernized frontend, more tax-audit and invoice information, and an admin back office for internal operations.",
+      "summaryChallenge": "The portal needed a current interface and more tax-audit and invoice information for store owners, plus an internal flow to validate what they send.",
+      "summarySolution": "A rebuilt frontend, more than 60% more information in the portal, and a back office for tickets, requests, tax books, and reports.",
+      "summaryResult": "Tax audits and invoices more available, with review, approval, and management reports in the back office.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "V2 of the Iguatemi Portal modernized the entire frontend with current technologies. Sign-in moved to a Microsoft account, and the work went further than the login screen: the portal now distributes more information, with more than a 60% increase in the availability of tax audits and invoices on the platform.",
+        "I also built an admin back office for the internal team. From there they validate and open tickets, approve requests, resend documents, review and audit the tax books sent by store owners, and follow management reports on invoices, users, requests, and audits."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented features",
+      "features": [
+        "Frontend modernized with current technologies",
+        "Sign-in with a Microsoft account",
+        "Greater availability of tax audits and invoices for store owners",
+        "Back office to validate and open tickets",
+        "Request approval and resending",
+        "Review and audit of tax books sent by store owners",
+        "Management reports for invoices, users, requests, and audits"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Modernizing the frontend without interrupting people already using the portal",
+        "Expanding tax-audit and invoice information while keeping security and LGPD compliance",
+        "Bringing validation, approval, resending, and audit into one back office",
+        "Delivering management reports without exposing store-owner data outside the authorized profile"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Entire frontend modernized",
+        "More than a 60% increase in the distribution of tax-audit and invoice information",
+        "Specialized back office live",
+        "Review and audit of tax books sent by store owners",
+        "Management reports for invoices, users, requests, and audits"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "PDA — Approvals Portal",
+      "description": "Iguatemi's approvals portal, where the board reviews and approves documents, follows requests, and uses the other management controls in one place.",
+      "summaryChallenge": "The board needed one place to review documents, see requests, and follow management controls.",
+      "summarySolution": "PDA gathers those items in an approvals portal built for the board's day-to-day work.",
+      "summaryResult": "Review, approval, and follow-up concentrated in one management platform.",
+      "longDescriptionTitle": "Project Overview",
+      "longDescription": [
+        "PDA is Iguatemi's approvals portal. It concentrates the specific items the board needed to make company management easier.",
+        "On the platform the board reviews and approves documents, follows requests, and uses the other controls available in the portal."
+      ],
+      "stackTitle": "Technology Stack",
+      "featuresTitle": "Implemented features",
+      "features": [
+        "Document review",
+        "Document approval",
+        "Request follow-up",
+        "Management controls gathered in one portal",
+        "Access focused on what the board needs day to day"
+      ],
+      "challengesTitle": "Technical Challenges",
+      "challenges": [
+        "Gathering in one portal only what the board uses, separate from the store-owner routine",
+        "Making document review and approval clear for the people who decide",
+        "Keeping requests and controls visible without losing the trail of each decision"
+      ],
+      "achievementsTitle": "Achievements",
+      "achievements": [
+        "Approvals portal dedicated to the board",
+        "Documents reviewed and approved in a single flow",
+        "Requests and management controls available on the platform"
+      ]
+    },
+    {
       "id": 6,
       "title": "Portfolio v2",
       "description": "Version 2.0 of my personal portfolio, now discontinued.",
+      "summaryChallenge": "Work, studies, and experiments needed their own portfolio version.",
+      "summarySolution": "Next.js site with dark mode, translations, and a working contact form.",
+      "summaryResult": "Published version, later replaced by the current portfolio.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The goal was the same as the current version: to showcase my work, studies, and experiments. Feel free to explore the previous version."
@@ -247,6 +352,9 @@
       "id": 7,
       "title": "Online résumé",
       "description": "A minimalist and highly functional online résumé page, featuring clear sections for experience, stack, projects, and contact, with light animations, responsive design, and optimized performance.",
+      "summaryChallenge": "Résumé PDFs go out of date quickly and are awkward to read on a phone.",
+      "summarySolution": "A single light page that stays current, with experience, stack, and contact.",
+      "summaryResult": "A résumé that opens fast and is easy to keep updated.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The goal is to offer a high-performance, clear, and responsive online résumé. Built with modern technologies, the site has a clean, organized structure with smooth navigation across sections. It is entirely mobile-first, with a strong reading and interaction experience on any device, smooth transitions, and subtle animations."
@@ -275,6 +383,9 @@
       "id": 8,
       "title": "nav9.tech",
       "description": "Institutional website for nav9.tech, a technology company focused on developing innovative digital solutions.",
+      "summaryChallenge": "The company needed to state its positioning in a few clear sections.",
+      "summarySolution": "Institutional site with services, short navigation, and a responsive layout.",
+      "summaryResult": "A clear digital presence for people looking for the services.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The nav9.tech website was developed as an institutional platform to present the company, its services, and technological solutions. With a modern and responsive design, the site offers a clear and professional experience for visitors interested in learning about the services offered by the company."
@@ -304,6 +415,9 @@
       "id": 9,
       "title": "ICEH Retriever",
       "description": "Comprehensive data platform designed to provide open and easy access to standardized data on Reproductive, Maternal, Newborn, and Child Health and Nutrition (RMNCH+N) indicators worldwide.",
+      "summaryChallenge": "Health indicators were scattered in formats that were hard to compare.",
+      "summarySolution": "Search, filters, and export of standardized indicators.",
+      "summaryResult": "Open access to comparable data for research and public policy.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "The ICEH Retriever is a comprehensive data platform developed to provide open and easy access to standardized data on Reproductive, Maternal, Newborn, and Child Health and Nutrition (RMNCH+N) indicators worldwide. The platform covers over 100 indicators, more than 120 countries, and draws from more than 490 nationally representative surveys.",
@@ -341,6 +455,9 @@
       "id": 10,
       "title": "PortoCon Accounting",
       "description": "Institutional website focused on local conversion for accounting client acquisition, with clear communication, humanized service, and a CTA-driven journey.",
+      "summaryChallenge": "Little digital presence for local searches.",
+      "summarySolution": "Service pages tuned for local SEO and direct WhatsApp contact.",
+      "summaryResult": "A clearer path to contact and a base ready to grow through search.",
       "longDescriptionTitle": "Project Overview",
       "longDescription": [
         "PortoCon is an accounting firm based in Brusque with a positioning centered on personalized service, process clarity, and business security. The project was built as an institutional website to translate that positioning into an objective and trustworthy digital journey.",
@@ -378,7 +495,7 @@
   "load": "Load more",
   "contact": {
     "title": "Got a project in mind?",
-    "description": "I'm open to new projects, consulting, and conversations about digital products or games. Message me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or leave a note on the ",
+    "description": "I'm open to new projects, consulting, and conversations about digital products and game development. Reach me on <b><a href='https://www.linkedin.com/in/ffzanini/' target='_blank'>LinkedIn</a></b> or send a message through the ",
     "contact": "contact page."
   }
 }

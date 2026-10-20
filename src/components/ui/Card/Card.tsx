@@ -1,13 +1,13 @@
 "use client";
 
 import { memo } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { LuExternalLink, LuGithub, LuArrowRight } from "react-icons/lu";
+import { LuExternalLink, LuGithub, LuLock } from "react-icons/lu";
 
 import { Project } from "@/app/data/projects";
 import { cn } from "@/libs/cn";
 import { useTranslation } from "@/context";
-import { ZoomImage } from "@/components/ui/ZoomImage";
 import { withLocalePath } from "@/libs/i18n";
 
 interface CardProps {
@@ -49,20 +49,20 @@ function CardComponent({
 
   return (
     <article
-      className="group flex h-full flex-col overflow-hidden rounded-xl ring-1 ring-black/10 bg-white-theme/80 transition-[box-shadow,ring-color] duration-200 ease-out hover:shadow-xl hover:shadow-primary-600/25 hover:ring-primary-600/40 dark:ring-white/10 dark:bg-dark-theme/80 dark:hover:shadow-primary-600/30 dark:hover:ring-primary-400/40"
+      className="flex h-full flex-col overflow-hidden rounded-xl bg-white-theme/80 ring-1 ring-black/10 transition-[box-shadow,ring-color] duration-200 ease-out has-[.card-main:hover]:shadow-xl has-[.card-main:hover]:shadow-primary-600/25 has-[.card-main:hover]:ring-primary-600/40 has-[.card-main:focus-visible]:shadow-xl has-[.card-main:focus-visible]:shadow-primary-600/25 has-[.card-main:focus-visible]:ring-primary-600/40 dark:bg-dark-theme/80 dark:ring-white/10 dark:has-[.card-main:hover]:shadow-primary-600/30 dark:has-[.card-main:hover]:ring-primary-400/40 dark:has-[.card-main:focus-visible]:shadow-primary-600/30 dark:has-[.card-main:focus-visible]:ring-primary-400/40"
       style={{ animationDelay: `${index * 50}ms` }}
     >
       <Link
         href={detailsHref}
-        className="flex flex-1 flex-col rounded-t-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+        className="card-main group flex flex-1 flex-col rounded-t-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
       >
-        <div className="aspect-video overflow-hidden border-b border-black/10 dark:border-white/10">
-          <ZoomImage
-            className="aspect-video w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-            width={1200}
-            height={675}
+        <div className="relative aspect-video overflow-hidden border-b border-black/10 dark:border-white/10">
+          <Image
+            className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03] group-focus-within:scale-[1.03]"
             src={project.image}
             alt={String(projectTranslate?.title)}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
 
@@ -83,9 +83,27 @@ function CardComponent({
             {projectTranslate?.title}
           </h3>
 
-          <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-black/70 dark:text-white/70 sm:text-base">
-            {projectTranslate?.description}
-          </p>
+          <div className="flex flex-1 flex-col gap-2">
+            <p className="line-clamp-3 text-sm leading-relaxed text-black/70 dark:text-white/70 sm:text-base">
+              {projectTranslate?.description}
+            </p>
+            {projectTranslate?.summaryChallenge && (
+              <p className="line-clamp-2 text-sm leading-relaxed text-black/70 dark:text-white/70">
+                <span className="font-semibold text-primary-700 dark:text-primary-300">
+                  {copy.timeline.challenge}:{" "}
+                </span>
+                {projectTranslate.summaryChallenge}
+              </p>
+            )}
+            {projectTranslate?.summarySolution && (
+              <p className="line-clamp-2 text-sm leading-relaxed text-black/70 dark:text-white/70">
+                <span className="font-semibold text-primary-700 dark:text-primary-300">
+                  {copy.timeline.solution}:{" "}
+                </span>
+                {projectTranslate.summarySolution}
+              </p>
+            )}
+          </div>
 
           <div className="flex flex-wrap gap-1.5">
             {techPreview.map((tag) => (
@@ -102,47 +120,47 @@ function CardComponent({
               </span>
             )}
           </div>
-
-          <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-700 dark:text-primary-300">
-            {copy.view_details}
-            <LuArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-          </span>
         </div>
       </Link>
 
-      {(project.demo || project.github) && (
-        <div className="flex flex-wrap items-center gap-2 border-t border-black/10 px-4 py-3 dark:border-white/10">
-          {project.demo && (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={copy.demo}
-              className="inline-flex items-center gap-1.5 rounded-md bg-linear-to-r from-primary-400 to-primary-600 px-3 py-1.5 text-sm font-semibold text-white shadow-md shadow-primary-600/20 transition-[transform,background-color] duration-150 hover:from-primary-500 hover:to-primary-700 active:scale-[0.97]"
-            >
-              <LuExternalLink className="h-4 w-4" aria-hidden />
-              <span>{copy.demo}</span>
-            </a>
-          )}
+      <div className="flex flex-wrap items-center gap-2 border-t border-black/10 px-4 py-3 dark:border-white/10">
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={copy.demo}
+            className="inline-flex items-center gap-1.5 rounded-md bg-linear-to-r from-primary-400 to-primary-600 px-3 py-1.5 text-sm font-semibold text-white shadow-md shadow-primary-600/20 transition-[transform,background-color] duration-150 hover:from-primary-500 hover:to-primary-700 active:scale-[0.97]"
+          >
+            <LuExternalLink className="h-4 w-4" aria-hidden />
+            <span>{copy.demo}</span>
+          </a>
+        )}
 
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className={cn(
-                "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-semibold",
-                "border border-black/15 transition-colors duration-150 hover:bg-black/5",
-                "dark:border-white/15 dark:hover:bg-white/10",
-              )}
-            >
-              <LuGithub className="h-4 w-4" aria-hidden />
-              <span>GitHub</span>
-            </a>
-          )}
-        </div>
-      )}
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className={cn(
+              "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-semibold",
+              "border border-black/15 transition-colors duration-150 hover:bg-black/5",
+              "dark:border-white/15 dark:hover:bg-white/10",
+            )}
+          >
+            <LuGithub className="h-4 w-4" aria-hidden />
+            <span>GitHub</span>
+          </a>
+        )}
+
+        {!project.demo && !project.github && (
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-black/15 px-3 py-1.5 text-sm font-semibold text-black/70 dark:border-white/15 dark:text-white/70">
+            <LuLock className="h-4 w-4" aria-hidden />
+            <span>{copy.internal_use}</span>
+          </span>
+        )}
+      </div>
     </article>
   );
 }

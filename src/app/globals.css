@@ -365,20 +365,9 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  mix-blend-mode: normal;
-  animation: none;
-}
-
-html[data-theme-vt="active"]::view-transition-group(root) {
-  animation-duration: var(--theme-vt-duration);
-}
-
-html[data-theme-vt="active"]::view-transition-new(root) {
-  clip-path: var(--theme-vt-clip-from);
+  background-color: var(--background);
+  scrollbar-width: none;
+  overflow-x: clip;
 }
 
 html[data-intro],
@@ -394,18 +383,6 @@ body:has([data-intro-lock]) {
   html:has([data-home-scroll-lock]),
   body:has([data-home-scroll-lock]) {
     overflow: hidden;
-  }
-}
-
-@supports (view-transition-name: root) {
-  :root {
-    view-transition-name: root;
-  }
-
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 180ms;
-    animation-timing-function: ease-out;
   }
 }
 
@@ -475,10 +452,13 @@ select {
 }
 
 *::-webkit-scrollbar {
-  width: 0.01px;
-  background-color: var(--background);
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: var(--background);
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner {
+  background: transparent;
 }

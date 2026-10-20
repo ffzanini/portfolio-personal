@@ -1,45 +1,16 @@
 "use client";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import {
-  LuFootprints,
-  LuCalendarDays,
-  LuFileText,
-  LuMail,
-  LuMessageSquareMore,
-  LuSend,
-  LuQuote,
-  LuHandshake,
-} from "react-icons/lu";
-
-import toast from "react-hot-toast";
+import Link from "next/link";
+import { LuArrowUpRight, LuHandshake, LuHouse } from "react-icons/lu";
 
 import { useTranslation } from "@/context";
-import { Tooltip } from "@/components/ui/Tooltip";
+import { withLocalePath } from "@/libs/i18n";
 import { SanitizedText } from "@/components/utils/SanitizedText";
+import { ContactIntentSection } from "@/components/pages/contact/ContactIntentSection";
 import { TestimonialsSlider } from "@/components/pages/contact/TestimonialsSlider";
-import { cn } from "@/libs/cn";
 import type { ReactNode } from "react";
 
 export function ContactContent({ footer }: Readonly<{ footer: ReactNode }>) {
-  const { translations } = useTranslation();
-
-  const renderIco = (id: number) => {
-    const iconClass = "h-12 w-12 text-primary-500 dark:text-primary-100";
-
-    switch (id) {
-      case 1:
-        return <LuSend className={iconClass} />;
-      case 2:
-        return <LuCalendarDays className={iconClass} />;
-      case 3:
-        return <LuMessageSquareMore className={iconClass} />;
-      case 4:
-        return <LuFileText className={iconClass} />;
-      default:
-        return null;
-    }
-  };
+  const { translations, location } = useTranslation();
 
   return (
     <div className="min-h-screen bg-linear-to-br from-primary-200 via-white-theme to-white-theme dark:bg-linear-to-br dark:from-primary-950 from-15% dark:via-dark-theme via-30% dark:to-dark-theme to-100%">
@@ -55,41 +26,7 @@ export function ContactContent({ footer }: Readonly<{ footer: ReactNode }>) {
             />
           </div>
 
-          <ContactForm />
-          <div className="flex flex-col mt-8">
-            <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
-              <div className="flex flex-row items-start mb-6">
-                <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
-                  <LuFootprints className="h-6 w-6" />
-                </div>
-                <div className="flex flex-col items-start">
-                  <h2 className="text-3xl font-bold">
-                    {translations.contact.next.title}
-                  </h2>
-                  <span className="text-xs">
-                    {translations.contact.next.sub_title}
-                  </span>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-                {translations.contact.next.steps.map((step) => (
-                  <div
-                    key={step.id}
-                    className="rounded-2xl border border-black/10 bg-black/5 p-8 backdrop-blur-sm transition-[box-shadow,border-color] duration-200 hover:border-primary-600/30 hover:shadow-xl hover:shadow-primary-600/25 dark:border-white/10 dark:bg-white/5 dark:hover:border-primary-400/30 dark:hover:shadow-primary-600/30"
-                  >
-                    <div className="flex flex-row justify-center items-center gap-2 pb-2">
-                      <div className="w-28 h-28 min-w-28 bg-primary-100 dark:bg-primary-800/70 rounded-full flex items-center justify-center border-[5px] border-primary-600 dark:border-primary-300">
-                        {renderIco(step.id)}
-                      </div>
-                    </div>
-                    <span className="text-base text-black dark:text-white">
-                      {step.description}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <ContactIntentSection />
           <div className="flex flex-col my-8">
             <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
               <div className="flex flex-row items-start mb-6">
@@ -105,168 +42,68 @@ export function ContactContent({ footer }: Readonly<{ footer: ReactNode }>) {
                   </span>
                 </div>
               </div>
-              <div className="hidden grid-cols-1 gap-8 xl:grid xl:grid-cols-3">
-                {translations.contact.testimonials.testimonials.map(
-                  (testimonial) => (
-                    <div
-                      key={testimonial.name}
-                      className="flex h-full flex-col rounded-2xl border border-black/10 bg-black/5 p-6 backdrop-blur-sm transition-[box-shadow,border-color] duration-200 hover:border-primary-600/30 hover:shadow-xl hover:shadow-primary-600/25 dark:border-white/10 dark:bg-white/5 dark:hover:border-primary-400/30 dark:hover:shadow-primary-600/30"
-                    >
-                      <LuQuote className="mb-4 h-8 w-8 shrink-0 text-primary-600" />
-                      <p className="mb-6 grow text-[0.95rem] leading-relaxed italic">
-                        &quot;{testimonial.quote}&quot;
-                      </p>
-                      <div className="mt-auto border-t border-black/10 pt-4 dark:border-white/10">
-                        <p className="font-semibold">{testimonial.name}</p>
-                        <p className="text-sm text-black/70 dark:text-white/70">
-                          {testimonial.title}
-                        </p>
-                      </div>
-                    </div>
-                  ),
-                )}
-              </div>
-              <div className="xl:hidden">
-                <TestimonialsSlider
-                  testimonials={translations.contact.testimonials.testimonials}
-                />
-              </div>
+              <TestimonialsSlider
+                testimonials={translations.contact.testimonials.testimonials}
+              />
             </div>
           </div>
-          <div className="mt-8 flex flex-col lg:mt-12">
-            <div className="flex flex-col items-start gap-3">
-              <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 dark:from-primary-800 dark:via-primary-600 dark:to-primary-400 bg-clip-text text-transparent">
-                {translations.contact.footer.title}
-              </h2>
-
-              <p className="inline-block">
-                <SanitizedText
-                  json={translations.contact.footer.message}
-                  typeText="span"
-                  className="text-lg"
-                />
-              </p>
+          <div className="relative mt-8 overflow-hidden rounded-2xl border border-black/10 bg-black/5 p-6 sm:p-8 dark:border-white/10 dark:bg-white/5">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 right-0 w-2/3 bg-linear-to-l from-primary-600/25 to-transparent"
+            />
+            <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-xl">
+                <h2 className="text-3xl font-bold leading-tight md:text-4xl">
+                  <span className="text-black dark:text-white">
+                    {translations.contact.footer.title_start}{" "}
+                  </span>
+                  <span className="text-primary-600 dark:text-primary-400">
+                    {translations.contact.footer.title_end}
+                  </span>
+                </h2>
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-black/70 dark:text-white/70 sm:text-base">
+                  {translations.contact.footer.message}
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="https://resume.ffzanini.dev"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-linear-to-r from-primary-400 to-primary-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-600/25 transition-[background-color,box-shadow] duration-200 hover:from-primary-500 hover:to-primary-700"
+                  >
+                    <LuArrowUpRight className="h-4 w-4" aria-hidden />
+                    {translations.contact.footer.resume}
+                  </a>
+                  <Link
+                    href={withLocalePath(location, "/")}
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-black/15 px-4 py-2.5 text-sm font-semibold transition-colors duration-150 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+                  >
+                    <LuHouse className="h-4 w-4" aria-hidden />
+                    {translations.contact.footer.home}
+                  </Link>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-5 lg:w-96 lg:shrink-0">
+                {translations.contact.footer.stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-xl border border-black/10 px-2 py-4 text-center dark:border-white/15"
+                  >
+                    <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 text-xs leading-tight text-black/60 dark:text-white/60">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </main>
       {footer}
-    </div>
-  );
-}
-
-function ContactForm() {
-  const { translations } = useTranslation();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const { register, handleSubmit, formState, reset } = useForm<{
-    name: string;
-    email: string;
-    message: string;
-  }>({
-    reValidateMode: "onChange",
-  });
-
-  const enableSubmit = formState.isDirty && formState.isValid;
-
-  let submitLabel = translations.contact.button_text_not_ready;
-  if (isSubmitting) {
-    submitLabel = translations.contact.button_text_sending;
-  } else if (enableSubmit) {
-    submitLabel = translations.contact.button_text_ready;
-  }
-
-  const onSubmit = handleSubmit(async ({ name, email, message }) => {
-    setIsSubmitting(true);
-    toast.promise(
-      fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, message }),
-      })
-        .then((res) => {
-          if (!res.ok) throw new Error(translations.contact.error);
-          return res.json();
-        })
-        .then(() => {
-          reset();
-        })
-        .finally(() => {
-          setIsSubmitting(false);
-        }),
-      {
-        loading: translations.contact.loading,
-        success: translations.contact.success,
-        error: translations.contact.error,
-      },
-    );
-  });
-
-  return (
-    <div className="flex flex-col mt-4 lg:mt-8">
-      <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-8">
-        <div className="flex flex-row items-start mb-6">
-          <div className="w-12 h-12 min-w-12 bg-linear-to-r from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-900 rounded-md flex items-center justify-center mr-4">
-            <LuMail className="h-6 w-6" />
-          </div>
-          <div className="flex flex-col items-start">
-            <h2 className="text-3xl font-bold">
-              {translations.contact.form.title}
-            </h2>
-            <span className="text-xs">
-              {translations.contact.form.sub_title}
-            </span>
-          </div>
-        </div>
-
-        <form className="space-y-6" onSubmit={onSubmit}>
-          <div className="flex flex-col lg:flex-row gap-6">
-            <input
-              {...register("name", { required: true })}
-              placeholder={translations.contact.form.name}
-              className={cn(
-                "flex h-10 w-full rounded-md border px-3 py-2 text-base ring-offset-background bg-black/5 border-black/20 dark:bg-white/5 dark:border-white/20 focus-visible:outline-none focus:border-primary-600",
-              )}
-            />
-            <input
-              {...register("email", {
-                required: true,
-                validate: (value) => {
-                  const at = value.indexOf("@");
-                  if (at < 1 || at !== value.lastIndexOf("@")) return false;
-                  const domain = value.slice(at + 1);
-                  const dot = domain.lastIndexOf(".");
-                  return dot > 0 && dot < domain.length - 1 && !value.includes(" ");
-                },
-              })}
-              placeholder={translations.contact.form.email}
-              className={cn(
-                "flex h-10 w-full rounded-md border px-3 py-2 text-base ring-offset-background bg-black/5 border-black/20 dark:bg-white/5 dark:border-white/20 focus-visible:outline-none focus:border-primary-600",
-              )}
-            />
-          </div>
-          <textarea
-            {...register("message", { required: true })}
-            placeholder={translations.contact.form.message}
-            className={cn(
-              "min-h-32 flex h-10 w-full rounded-md border px-3 py-2 text-base ring-offset-background bg-black/5 border-black/20 dark:bg-white/5 dark:border-white/20 focus-visible:outline-none focus:border-primary-600",
-            )}
-          />
-          <div className="flex flex-col 2xl:flex-row justify-center pb-4 2xl:pb-0 2xl:justify-center">
-            <Tooltip text={!enableSubmit && !isSubmitting && translations.contact.tooltip}>
-              <button
-                disabled={!enableSubmit || isSubmitting}
-                type="submit"
-                className="disabled:grayscale disabled:cursor-not-allowed cursor-pointer w-full flex flex-row justify-center items-center bg-linear-to-r from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-[transform,box-shadow,background-color] duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-primary-600/25 group"
-              >
-                {submitLabel}
-              </button>
-            </Tooltip>
-          </div>
-        </form>
-      </div>
     </div>
   );
 }

@@ -16,6 +16,7 @@ interface ZoomImageProps {
   style?: React.CSSProperties;
   priority?: boolean;
   sizes?: string;
+  quality?: number;
 }
 
 function ImageContent({
@@ -27,6 +28,7 @@ function ImageContent({
   style,
   priority,
   sizes,
+  quality,
   isLoaded,
   onLoad,
   onFirstClick,
@@ -50,7 +52,7 @@ function ImageContent({
       } ${priority && onFirstClick ? "cursor-zoom-in" : ""}`}
       loading={priority ? "eager" : "lazy"}
       priority={priority}
-      quality={priority ? 85 : 80}
+      quality={quality ?? (priority ? 85 : 80)}
       sizes={sizes ?? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
       style={style}
       placeholder="blur"
@@ -68,6 +70,7 @@ export function ZoomImage({
   style,
   priority = false,
   sizes,
+  quality,
 }: Readonly<ZoomImageProps>) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [canZoom, setCanZoom] = useState(false);
@@ -129,6 +132,7 @@ export function ZoomImage({
       style={style}
       priority={priority}
       sizes={sizes}
+      quality={quality}
       isLoaded={isLoaded}
       onLoad={() => setIsLoaded(true)}
       onFirstClick={ZoomWrapper ? undefined : loadZoom}

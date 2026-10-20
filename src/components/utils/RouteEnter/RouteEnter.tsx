@@ -91,7 +91,7 @@ export function RouteEnter({ children }: Readonly<RouteEnterProps>) {
         attributeFilter: ["data-intro"],
       });
       if (!root.hasAttribute("data-intro")) settle();
-      giveUp = window.setTimeout(settle, 1200);
+      giveUp = window.setTimeout(settle, 8000);
       return () => {
         settled = true;
         observer.disconnect();

@@ -7,7 +7,8 @@ import Link from "next/link";
 
 import { SanitizedText } from "@/components/utils/SanitizedText";
 import { useTranslation } from "@/context";
-import { projects } from "@/app/data/projects";
+import { getFeaturedProjects, projects } from "@/app/data/projects";
+import { FeaturedProjectsSlider } from "@/components/pages/projects/FeaturedProjectsSlider";
 import { withLocalePath } from "@/libs/i18n";
 import { cn } from "@/libs/cn";
 import type { ReactNode } from "react";
@@ -53,29 +54,12 @@ export function ProjectsContent({ footer }: Readonly<{ footer: ReactNode }>) {
       }));
   }, [categoryCounts, copy.filters]);
 
-  const featuredProjects = useMemo(
-    () => projects.filter((project) => project.featured).slice(0, 2),
-    [],
-  );
-
-  const featuredIds = useMemo(
-    () => new Set(featuredProjects.map((project) => project.id)),
-    [featuredProjects],
-  );
+  const featuredProjects = useMemo(() => getFeaturedProjects(), []);
 
   const filteredProjects = useMemo(() => {
-    const byCategory =
-      activeFilter === "all"
-        ? projects
-        : projects.filter((project) => project.category === activeFilter);
-
-    // Avoid duplicating featured cards in the main grid when viewing "all"
-    if (activeFilter === "all") {
-      return byCategory.filter((project) => !featuredIds.has(project.id));
-    }
-
-    return byCategory;
-  }, [activeFilter, featuredIds]);
+    if (activeFilter === "all") return projects;
+    return projects.filter((project) => project.category === activeFilter);
+  }, [activeFilter]);
 
   const visibleProjects = filteredProjects.slice(0, visibleCount);
   const hasMore = visibleCount < filteredProjects.length;
@@ -114,16 +98,7 @@ export function ProjectsContent({ footer }: Readonly<{ footer: ReactNode }>) {
                 {copy.projects_title}
               </h2>
 
-              <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                {featuredProjects.map((project, index) => (
-                  <Card
-                    key={project.id}
-                    project={project}
-                    index={index}
-                    featured
-                  />
-                ))}
-              </div>
+              <FeaturedProjectsSlider projects={featuredProjects} />
             </section>
           )}
 
@@ -202,7 +177,7 @@ export function ProjectsContent({ footer }: Readonly<{ footer: ReactNode }>) {
             )}
           </section>
 
-          <div className="mt-14 flex flex-col items-start gap-3 lg:mt-20">
+          <div className="mt-8 flex flex-col items-start gap-3">
             <h2 className="bg-linear-to-r from-primary-400 via-primary-600 to-primary-800 bg-clip-text text-3xl font-bold text-transparent md:text-4xl dark:from-primary-800 dark:via-primary-600 dark:to-primary-400">
               {copy.contact.title}
             </h2>
