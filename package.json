@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "node scripts/patch-image-zoom.mjs && node scripts/patch-next-themes.mjs",
+    "postinstall": "node scripts/patch-image-zoom.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "analyze": "ANALYZE=true next build --webpack"
   },
