@@ -8,8 +8,8 @@ import {
   contactSubjects,
 } from "@/constants/contact";
 
-const notionApiKey = process.env.NEXT_PUBLIC_NOTION_API_KEY;
-const notionDatabaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_KEY;
+const notionApiKey = process.env.NOTION_API_KEY;
+const notionDatabaseId = process.env.NOTION_DATABASE_KEY;
 
 const notion = notionApiKey ? new Client({ auth: notionApiKey }) : null;
 
@@ -21,7 +21,7 @@ let cachedDataSourceId: string | null = null;
 
 async function resolveDataSourceId(
   client: Client,
-  databaseId: string
+  databaseId: string,
 ): Promise<string | null> {
   if (cachedDataSourceId) return cachedDataSourceId;
 
@@ -99,7 +99,8 @@ const parsePayload = (payload: unknown) => {
   if (!payload || typeof payload !== "object") return null;
   const obj = payload as Record<string, unknown>;
   const name = typeof obj.name === "string" ? obj.name.trim() : "";
-  const email = typeof obj.email === "string" ? obj.email.trim().toLowerCase() : "";
+  const email =
+    typeof obj.email === "string" ? obj.email.trim().toLowerCase() : "";
   const message = typeof obj.message === "string" ? obj.message.trim() : "";
   const subject = typeof obj.subject === "string" ? obj.subject.trim() : "";
   const addon = typeof obj.addon === "string" ? obj.addon.trim() : "";
@@ -200,7 +201,9 @@ function readPropertyText(property: NotionPageProperty | undefined) {
     return property.title?.map((item) => item.plain_text ?? "").join("") ?? "";
   }
   if (property.type === "rich_text") {
-    return property.rich_text?.map((item) => item.plain_text ?? "").join("") ?? "";
+    return (
+      property.rich_text?.map((item) => item.plain_text ?? "").join("") ?? ""
+    );
   }
   if (property.type === "select") return property.select?.name ?? "";
   if (property.type === "status") return property.status?.name ?? "";
@@ -213,7 +216,7 @@ export async function POST(req: Request) {
   if (!notion || !notionDatabaseId) {
     return NextResponse.json(
       { ok: false, error: "Server misconfiguration" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 
@@ -221,7 +224,7 @@ export async function POST(req: Request) {
   if (isRateLimited(ip)) {
     return NextResponse.json(
       { ok: false, error: "Too many requests" },
-      { status: 429 }
+      { status: 429 },
     );
   }
 
@@ -231,7 +234,7 @@ export async function POST(req: Request) {
   } catch {
     return NextResponse.json(
       { ok: false, error: "Invalid JSON payload" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -239,7 +242,7 @@ export async function POST(req: Request) {
   if (!parsed) {
     return NextResponse.json(
       { ok: false, error: "Invalid request fields" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -252,7 +255,7 @@ export async function POST(req: Request) {
     if (!dataSourceId) {
       return NextResponse.json(
         { ok: false, error: "Unable to create contact message" },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -268,7 +271,7 @@ export async function POST(req: Request) {
       console.error("[contact] Notion columns not found", Object.keys(schema));
       return NextResponse.json(
         { ok: false, error: "Unable to create contact message" },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -300,16 +303,19 @@ export async function POST(req: Request) {
     );
 
     if (!savedSubject || !savedAddon) {
-      console.error("[contact] Notion saved the page without Subject or Addon", {
-        savedSubject,
-        savedAddon,
-        types: Object.fromEntries(
-          Object.entries(schema).map(([key, value]) => [key, value.type]),
-        ),
-      });
+      console.error(
+        "[contact] Notion saved the page without Subject or Addon",
+        {
+          savedSubject,
+          savedAddon,
+          types: Object.fromEntries(
+            Object.entries(schema).map(([key, value]) => [key, value.type]),
+          ),
+        },
+      );
       return NextResponse.json(
         { ok: false, error: "Unable to create contact message" },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -317,7 +323,7 @@ export async function POST(req: Request) {
       { ok: true },
       {
         status: 201,
-      }
+      },
     );
   } catch (error) {
     console.error("[contact] Failed to create Notion page", error);
@@ -325,7 +331,7 @@ export async function POST(req: Request) {
       { ok: false, error: "Unable to create contact message" },
       {
         status: 502,
-      }
+      },
     );
   }
 }
