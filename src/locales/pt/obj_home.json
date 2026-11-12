@@ -31,8 +31,8 @@
     "hideSheet": "Ocultar ficha",
     "inventory": "Inventário",
     "special": "Golpe especial",
-    "specialTechnique": "Raspagem de Escopo:",
-    "specialMove": "pego o problema de ponta-cabeça, viro a complexidade a meu favor e termino no controle.",
+    "specialTechnique": "Raspagem no Escopo:",
+    "specialMove": "pego um problema difícil ou de ponta-cabeça, viro a complexidade a meu favor e termino controlando a situação.",
     "items": [
       { "id": "code", "name": "Código", "stat": "+15 anos" },
       { "id": "bjj", "name": "Jiu Jitsu", "stat": "Faixa marrom" },

@@ -276,12 +276,10 @@
     from {
       opacity: 1;
       transform: translateY(0px);
-      filter: blur(0px);
     }
     to {
       opacity: 0;
       transform: translateY(-8px);
-      filter: blur(2px);
     }
   }
 

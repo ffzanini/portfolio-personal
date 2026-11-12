@@ -48,6 +48,7 @@ export function NavbarLinks({
             <Link
               key={item.path}
               href={href}
+              prefetch={false}
               className={`rounded-lg px-4 py-3 transition-colors ${
                 active
                   ? "bg-linear-to-r from-primary-950 via-primary-600 to-primary-300 font-bold text-white"
@@ -64,6 +65,7 @@ export function NavbarLinks({
           <Link
             key={item.path}
             href={href}
+            prefetch={false}
             className={`group relative py-2 text-sm text-[1rem] transition-colors ${
               active
                 ? "font-bold text-black dark:text-white"

@@ -4,7 +4,7 @@ export const pixeloidSans = localFont({
   src: "../../public/fonts/PixeloidSans.woff2",
   variable: "--font-pixeloidsans",
   display: "swap",
-  preload: false,
+  preload: true,
 });
 
 export const pixeloidSansBold = localFont({

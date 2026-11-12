@@ -31,8 +31,8 @@
     "hideSheet": "Ocultar ficha",
     "inventory": "Inventario",
     "special": "Golpe especial",
-    "specialTechnique": "Barrido de alcance:",
-    "specialMove": "agarro el problema de cabeza, giro la complejidad a mi favor y termino en control.",
+    "specialTechnique": "Barrido en el alcance:",
+    "specialMove": "agarro un problema difícil o de cabeza, giro la complejidad a mi favor y termino controlando la situación.",
     "items": [
       { "id": "code", "name": "Código", "stat": "+15 años" },
       { "id": "bjj", "name": "Jiu Jitsu", "stat": "Cinturón marrón" },

@@ -19,6 +19,7 @@ import {
 type Phase = "boot" | "print" | "build" | "done";
 
 const ROLE = "Software Engineer";
+const ROLE_STEP_MS = 16;
 
 function IntroRole({ active }: Readonly<{ active: boolean }>) {
   const [count, setCount] = useState(0);
@@ -29,7 +30,7 @@ function IntroRole({ active }: Readonly<{ active: boolean }>) {
       return;
     }
     if (count >= ROLE.length) return;
-    const timer = window.setTimeout(() => setCount((value) => value + 1), 48);
+    const timer = window.setTimeout(() => setCount((value) => value + 1), ROLE_STEP_MS);
     return () => window.clearTimeout(timer);
   }, [active, count]);
 
@@ -173,7 +174,6 @@ export function IntroGreetings() {
     }
 
     document.documentElement.dataset.intro = "print";
-    document.querySelector("[data-home-scroll-lock]")?.setAttribute("inert", "");
     setLoadProgress(0);
     setShowRole(false);
     setPhase("print");
@@ -183,7 +183,6 @@ export function IntroGreetings() {
     if (phase !== "build") return;
 
     document.documentElement.dataset.intro = "build";
-    document.querySelector("[data-home-scroll-lock]")?.setAttribute("inert", "");
 
     return playHomeBuild(
       () => {

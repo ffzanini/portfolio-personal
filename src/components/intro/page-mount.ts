@@ -242,9 +242,12 @@ export function playSectionBuild(root: HTMLElement, onDone: () => void) {
   const paced = explicit ? pieces : pieces.slice(0, SECTION_CAP);
   const rest = explicit ? [] : pieces.slice(SECTION_CAP);
   const stopScroll = watchScrollMounts(root);
+  const groups = groupPieces(paced);
+  const firstGroup = new Set(groups[0] ?? []);
 
   pieces.forEach((node) => {
     node.setAttribute("data-mount-piece", "");
+    if (firstGroup.has(node)) return;
     hide(node);
   });
 
@@ -264,7 +267,6 @@ export function playSectionBuild(root: HTMLElement, onDone: () => void) {
   frame = window.requestAnimationFrame(() => {
     if (cancelled) return;
     let step = 1;
-    const groups = groupPieces(paced);
     const first = groups[0];
     if (!first) {
       finish();

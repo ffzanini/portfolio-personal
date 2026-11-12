@@ -39,7 +39,6 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
 
   return (
     <div
-      data-build="card"
       className={cn(
         pixeloidSans.className,
         "relative z-0 w-full overflow-hidden rounded-2xl border border-black/10 bg-white/75 p-4 shadow-2xl backdrop-blur-sm [-webkit-font-smoothing:none] sm:p-5 dark:border-white/15 dark:bg-black/60",
@@ -58,10 +57,7 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
             "linear-gradient(to bottom, #000 0%, #000 12%, transparent 34%)",
         }}
       />
-      <div
-        data-build="portrait"
-        className="relative mx-auto mb-6 aspect-square h-36 w-36 sm:h-40 sm:w-40"
-      >
+      <div className="relative mx-auto mb-6 aspect-square h-36 w-36 sm:h-40 sm:w-40">
         <div className="absolute inset-0 rounded-xl bg-linear-to-br from-primary-400 via-primary-600 to-primary-800 opacity-80" />
         <div className="relative flex h-full w-full items-center justify-center rounded-xl bg-linear-to-br from-primary-200 via-primary-600 to-primary-950 p-1 shadow-2xl">
           <Image
@@ -77,11 +73,11 @@ export function HomeCharacterCard({ sheet }: Readonly<HomeCharacterCardProps>) {
           />
         </div>
         <div className="absolute -right-1 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full border-3 border-white bg-green-500 sm:-right-2 sm:-bottom-2 sm:h-7 sm:w-7 sm:border-4 dark:border-[#161618]">
-          <div className="h-2 w-2 animate-pulse rounded-full bg-white sm:h-2.5 sm:w-2.5" />
+          <div className="h-2 w-2 rounded-full bg-white opacity-80 sm:h-2.5 sm:w-2.5" />
         </div>
       </div>
 
-      <div className="space-y-2.5 text-left">
+      <div data-build="card" className="space-y-2.5 text-left">
         <div
           data-build="card-player"
           className="flex items-center justify-between gap-3 border-b border-black/10 pb-2.5 dark:border-white/10"

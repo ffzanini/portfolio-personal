@@ -10,9 +10,9 @@ const LABEL = "Felipe Frantz Zanini. Software Engineer";
 const MOBILE_LINES = ["FELIPE", "FRANTZ", "ZANINI"];
 const LAYER_MS = 28;
 const CELL_MS = 3;
-const HOLD_MS = 380;
-const MOBILE_CASCADE_MS = 1200;
-const LOADING_EXTRA_MS = 900;
+const HOLD_MS = 160;
+const CASCADE_CAP_MS = 700;
+const LOADING_EXTRA_MS = 200;
 
 type Cell = {
   col: number;
@@ -56,8 +56,8 @@ function sampleLine(family: string, cell: number, fontSize: number, text: string
       let ink = 0;
       const x0 = col * cell;
       const y0 = row * cell;
-      for (let sy = y0; sy < y0 + cell; sy += 1) {
-        for (let sx = x0; sx < x0 + cell; sx += 1) {
+      for (let sy = y0; sy < y0 + cell; sy += 2) {
+        for (let sx = x0; sx < x0 + cell; sx += 2) {
           if (sx >= width || sy >= height) continue;
           samples += 1;
           const alpha = image.data[(sy * width + sx) * 4 + 3] ?? 0;
@@ -102,7 +102,7 @@ function layoutName(family: string, viewport: number) {
     }
   }
 
-  const cellSize = narrow ? 4 : fontSize >= 64 ? 6 : 5;
+  const cellSize = narrow ? 4 : 8;
   const sampled = lines.map((line) => sampleLine(family, cellSize, fontSize, line));
   const widths = sampled.map((cells) =>
     cells.length === 0 ? 1 : cells.reduce((max, cell) => Math.max(max, cell.col), 0) + 1,
@@ -123,7 +123,7 @@ function layoutName(family: string, viewport: number) {
     rowOffset += lineRows + (narrow ? 1 : 0);
   });
 
-  const scale = narrow && nameEnd > MOBILE_CASCADE_MS ? MOBILE_CASCADE_MS / nameEnd : 1;
+  const scale = nameEnd > CASCADE_CAP_MS ? CASCADE_CAP_MS / nameEnd : 1;
   for (const cell of placed) cell.delay *= scale;
 
   return { cells: placed, cellSize, nameSettledMs: nameEnd * scale };
@@ -183,10 +183,7 @@ export function NameBlocks({ active, onDone, onDuration, onNameSettled }: Readon
         const visibleFor =
           (next.cells.length === 0 ? 300 : cascade + HOLD_MS) + LOADING_EXTRA_MS;
         onDurationRef.current?.(visibleFor);
-        settledTimer = window.setTimeout(
-          () => onNameSettledRef.current?.(),
-          next.nameSettledMs + 120,
-        );
+        settledTimer = window.setTimeout(() => onNameSettledRef.current?.(), 40);
         timer = window.setTimeout(() => onDoneRef.current(), visibleFor);
       } catch {
         const fallback = 1600 + LOADING_EXTRA_MS;

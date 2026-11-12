@@ -1,7 +1,5 @@
 import { isValidLocale, type Locale } from "@/libs/i18n";
 
-export const HERO_INTRO_SEEN_KEY = "hero-intro-seen";
-
 export const INTRO_BUILD_ORDER = [
   "card",
   "welcome",
@@ -32,28 +30,8 @@ export function introLocaleFromPath(pathname: string): Locale | null {
   return null;
 }
 
-export function introReplayRequested() {
-  return new URLSearchParams(window.location.search).get("intro") === "1";
-}
-
 export function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
-export function readIntroSeen() {
-  try {
-    return localStorage.getItem(HERO_INTRO_SEEN_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-export function writeIntroSeen() {
-  try {
-    localStorage.setItem(HERO_INTRO_SEEN_KEY, "1");
-  } catch {
-    // Private mode can reject storage. The intro still finishes this session.
-  }
 }
 
 export function clearIntroQuery() {

@@ -32,7 +32,7 @@
     "inventory": "Inventory",
     "special": "Special move",
     "specialTechnique": "Scope Sweep:",
-    "specialMove": "I take the problem upside down, turn the complexity in my favor, and finish in control.",
+    "specialMove": "I take a hard problem or one that's upside down, turn the complexity to my advantage, and end up controlling the situation.",
     "items": [
       { "id": "code", "name": "Code", "stat": "+15 years" },
       { "id": "bjj", "name": "Jiu Jitsu", "stat": "Brown belt" },

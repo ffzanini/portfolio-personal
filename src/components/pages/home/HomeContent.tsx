@@ -123,8 +123,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
             <div className="relative w-full lg:max-w-md lg:p-10">
               <div
                 data-build="card"
-                className="invisible absolute -top-6 -left-4 z-30 animate-float-up rounded-lg border border-gray-200/50 bg-white/95 p-3 shadow-xl lg:top-0 lg:left-0 lg:p-4 dark:border-gray-700/50 dark:bg-black/70"
-                style={{ willChange: "transform" }}
+                className="invisible absolute -top-6 -left-4 z-30 rounded-lg border border-gray-200/50 bg-white/95 p-3 shadow-xl lg:top-0 lg:left-0 lg:p-4 dark:border-gray-700/50 dark:bg-black/70"
               >
                 <div className="flex items-center gap-2">
                   <LuCodeXml className="h-4 w-4 text-primary-600 lg:h-5 lg:w-5" />
@@ -135,8 +134,7 @@ export function HomeContent({ home, locale }: Readonly<HomeContentProps>) {
               </div>
               <div
                 data-build="card"
-                className="invisible absolute -right-4 -bottom-6 z-30 animate-float-down rounded-lg border border-gray-200/50 bg-white/95 p-3 shadow-xl lg:right-0 lg:bottom-0 lg:p-4 dark:border-gray-700/50 dark:bg-black/70"
-                style={{ willChange: "transform" }}
+                className="invisible absolute -right-4 -bottom-6 z-30 rounded-lg border border-gray-200/50 bg-white/95 p-3 shadow-xl lg:right-0 lg:bottom-0 lg:p-4 dark:border-gray-700/50 dark:bg-black/70"
               >
                 <div className="flex items-center gap-2">
                   <LuCodeXml className="h-4 w-4 text-primary-600 lg:h-5 lg:w-5" />

@@ -18,8 +18,6 @@ import {
 } from "@/components/intro/page-mount";
 import { isIntroHomePath, prefersReducedMotion } from "@/components/intro/intro-seen";
 
-type Phase = "idle" | "armed";
-
 const RouteEnterFreshContext = createContext<React.RefObject<boolean> | null>(
   null,
 );
@@ -35,7 +33,6 @@ export function RouteEnter({ children }: Readonly<RouteEnterProps>) {
   const rootRef = useRef<HTMLDivElement>(null);
   const stopRef = useRef<() => void>(() => undefined);
   const [skip] = useState(() => parentFresh?.current ?? false);
-  const [phase, setPhase] = useState<Phase>("idle");
 
   useLayoutEffect(() => {
     freshRef.current = false;
@@ -47,7 +44,6 @@ export function RouteEnter({ children }: Readonly<RouteEnterProps>) {
     const play = () => {
       if (hasPageMounted(pathname) || prefersReducedMotion()) {
         markPageMounted(pathname);
-        setPhase("idle");
         return;
       }
       if (isIntroHomePath(pathname)) {
@@ -60,17 +56,14 @@ export function RouteEnter({ children }: Readonly<RouteEnterProps>) {
       const node = rootRef.current;
       if (!node) {
         markPageMounted(pathname);
-        setPhase("idle");
         return;
       }
-      setPhase("idle");
       stopRef.current = playSectionBuild(node, () => markPageMounted(pathname));
     };
 
     const root = document.documentElement;
     if (root.hasAttribute("data-intro")) {
       if (isIntroHomePath(pathname)) return;
-      setPhase("armed");
       let settled = false;
       let giveUp = 0;
       const settle = () => {
@@ -118,7 +111,7 @@ export function RouteEnter({ children }: Readonly<RouteEnterProps>) {
 
   return (
     <RouteEnterFreshContext.Provider value={freshRef}>
-      <div ref={rootRef} className={phase === "armed" ? "route-enter-armed" : undefined}>
+      <div ref={rootRef}>
         {children}
       </div>
     </RouteEnterFreshContext.Provider>
